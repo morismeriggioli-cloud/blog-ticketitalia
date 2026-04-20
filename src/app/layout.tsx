@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://blog.ticketitalia.it"),
+  metadataBase: new URL("https://blog.ticketitalia.com"),
   title: {
     default: "Ticket Italia Blog | Eventi, concerti e spettacoli live",
     template: "%s | Ticket Italia Blog",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Ticket Italia Blog",
     description:
       "Il magazine digitale per scoprire gli eventi live piu attesi in Italia.",
-    url: "https://blog.ticketitalia.it",
+    url: "https://blog.ticketitalia.com",
     siteName: "Ticket Italia Blog",
     locale: "it_IT",
     type: "website",

@@ -4,7 +4,7 @@ export const siteConfig = {
   ticketitaliaBaseUrl: "https://www.ticketitalia.com",
   defaultAuthor: "Redazione Ticket Italia",
   defaultCategory: "concerti",
-  sitemapUrl: "https://ticketitalia.com//index.php?route=feed/advanced_sitemap",
+  sitemapUrl: "https://blog.ticketitalia.com/sitemap.xml",
 } as const;
 
 export const articleDefaults = {
