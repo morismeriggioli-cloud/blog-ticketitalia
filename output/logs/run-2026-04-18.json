@@ -1,0 +1,22 @@
+{
+  "startedAt": "2026-04-18T10:05:19.910Z",
+  "model": "claude-sonnet-4-5",
+  "steps": {
+    "scout": {
+      "reportPath": "C:\\Users\\Lenovo\\Desktop\\Blog-Ticketitalia\\output\\articles\\scout-report-2026-04-18.json",
+      "found": 20
+    },
+    "redattore": {
+      "articlePath": "C:\\Users\\Lenovo\\Desktop\\Blog-Ticketitalia\\output\\articles\\ermal-meta-perugia-2026-biglietti-afterlife-live-club.ts",
+      "slug": "ermal-meta-perugia-2026-biglietti-afterlife-live-club"
+    },
+    "seo": {
+      "articlePath": "C:\\Users\\Lenovo\\Desktop\\Blog-Ticketitalia\\output\\articles\\ermal-meta-perugia-2026-biglietti-afterlife-live-club.ts",
+      "reportPath": "C:\\Users\\Lenovo\\Desktop\\Blog-Ticketitalia\\output\\articles\\ermal-meta-perugia-2026-biglietti-afterlife-live-club-seo-report.md",
+      "seoScore": {}
+    }
+  },
+  "status": "success",
+  "durationMs": 261110,
+  "completedAt": "2026-04-18T10:09:41.020Z"
+}

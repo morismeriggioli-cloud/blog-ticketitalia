@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">Biglietti eventi e Carta Cultura</title>
+  <desc id="desc">Illustrazione editoriale con biglietti digitali, carta bonus e luci da evento live.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#101114"/>
+      <stop offset="0.48" stop-color="#16393a"/>
+      <stop offset="1" stop-color="#4ec4c5"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e9fbfb"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#f9b10e"/>
+      <stop offset="1" stop-color="#4ec4c5"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="28" stdDeviation="28" flood-color="#101114" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bg)"/>
+  <path d="M0 690 C180 610 305 720 470 645 C650 565 760 405 960 450 C1148 492 1225 630 1400 560 L1400 900 L0 900 Z" fill="#ffffff" opacity="0.10"/>
+  <path d="M-40 225 C220 140 445 175 650 260 C860 348 1080 330 1440 190" fill="none" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+  <path d="M-60 318 C210 248 432 300 640 375 C858 454 1115 410 1450 298" fill="none" stroke="#ffffff" stroke-opacity="0.10" stroke-width="2"/>
+
+  <g opacity="0.32">
+    <circle cx="190" cy="160" r="5" fill="#f9b10e"/>
+    <circle cx="300" cy="245" r="4" fill="#ffffff"/>
+    <circle cx="1130" cy="170" r="6" fill="#f9b10e"/>
+    <circle cx="1210" cy="310" r="4" fill="#ffffff"/>
+    <circle cx="1040" cy="720" r="5" fill="#ffffff"/>
+    <circle cx="250" cy="720" r="6" fill="#4ec4c5"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <g transform="translate(350 185) rotate(-7)">
+      <rect x="0" y="0" width="520" height="330" rx="24" fill="url(#card)"/>
+      <rect x="36" y="44" width="448" height="54" rx="12" fill="#101114"/>
+      <rect x="36" y="124" width="260" height="24" rx="12" fill="#4ec4c5"/>
+      <rect x="36" y="170" width="390" height="18" rx="9" fill="#dfe4e1"/>
+      <rect x="36" y="206" width="330" height="18" rx="9" fill="#dfe4e1"/>
+      <rect x="36" y="258" width="150" height="38" rx="10" fill="#f9b10e"/>
+      <text x="60" y="78" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800">Carta Cultura</text>
+      <text x="58" y="284" fill="#101114" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="800">Eventi live</text>
+    </g>
+
+    <g transform="translate(610 318) rotate(8)">
+      <path d="M0 32 A32 32 0 0 1 32 0 H484 A32 32 0 0 1 516 32 V112 A42 42 0 0 0 516 196 V276 A32 32 0 0 1 484 308 H32 A32 32 0 0 1 0 276 V196 A42 42 0 0 0 0 112 Z" fill="#ffffff"/>
+      <rect x="42" y="44" width="260" height="28" rx="14" fill="#101114"/>
+      <rect x="42" y="100" width="380" height="20" rx="10" fill="#dfe4e1"/>
+      <rect x="42" y="138" width="320" height="20" rx="10" fill="#dfe4e1"/>
+      <rect x="42" y="206" width="165" height="44" rx="12" fill="#4ec4c5"/>
+      <circle cx="430" cy="72" r="38" fill="#f9b10e"/>
+      <text x="66" y="235" fill="#101114" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="800">Biglietto</text>
+    </g>
+  </g>
+
+  <g transform="translate(146 596)">
+    <rect x="0" y="0" width="308" height="104" rx="16" fill="#ffffff" opacity="0.92"/>
+    <rect x="24" y="24" width="74" height="56" rx="10" fill="#4ec4c5"/>
+    <rect x="120" y="26" width="148" height="16" rx="8" fill="#101114"/>
+    <rect x="120" y="56" width="116" height="14" rx="7" fill="#dfe4e1"/>
+  </g>
+
+  <text x="146" y="790" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="900" letter-spacing="-2">Bonus cultura, biglietti, eventi</text>
+  <text x="148" y="838" fill="#ffffff" fill-opacity="0.72" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Guida pratica Ticket Italia</text>
+</svg>

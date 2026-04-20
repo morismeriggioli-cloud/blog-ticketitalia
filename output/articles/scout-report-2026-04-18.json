@@ -1,0 +1,556 @@
+{
+  "generatedAt": "2026-04-18T12:00:00Z",
+  "totalFound": 20,
+  "opportunities": [
+    {
+      "rank": 1,
+      "funnel_stage": "BOFU",
+      "article_type": "evento",
+      "title": "Ermal Meta - Afterlife Live Club",
+      "artist": "Ermal Meta",
+      "venue": "Afterlife Live Club",
+      "city": "Perugia",
+      "date": "2026-04-29",
+      "ticketitalia_url": "https://ticketitalia.com/evento/ermal-meta-afterlife-live-club-perugia",
+      "source_urls": [
+        "https://ticketitalia.com/evento/ermal-meta-afterlife-live-club-perugia"
+      ],
+      "category": "concerti",
+      "subcategory": "pop",
+      "seo_potential": "high",
+      "ticket_price": "€25.00",
+      "suggested_slug": "ermal-meta-perugia-2026-biglietti-afterlife-live-club",
+      "suggested_title": "Ermal Meta a Perugia 2026: biglietti e info Afterlife Live Club",
+      "keywords": [
+        "ermal meta perugia",
+        "biglietti ermal meta",
+        "afterlife live club",
+        "concerti perugia aprile 2026"
+      ],
+      "notes": "Artista di rilevanza nazionale, data imminente (11 giorni), alta domanda prevista"
+    },
+    {
+      "rank": 2,
+      "funnel_stage": "BOFU",
+      "article_type": "evento",
+      "title": "Pooh - PalaUnical",
+      "artist": "Pooh",
+      "venue": "PalaUnical",
+      "city": "Marsciano",
+      "date": "2026-05-15",
+      "ticketitalia_url": "https://ticketitalia.com/evento/pooh-palaunical-marsciano",
+      "source_urls": [
+        "https://ticketitalia.com/evento/pooh-palaunical-marsciano"
+      ],
+      "category": "concerti",
+      "subcategory": "pop",
+      "seo_potential": "high",
+      "ticket_price": "€45.00",
+      "suggested_slug": "pooh-marsciano-2026-biglietti-palaunical",
+      "suggested_title": "Pooh a Marsciano 2026: biglietti e info PalaUnical",
+      "keywords": [
+        "pooh marsciano",
+        "biglietti pooh",
+        "palaunical",
+        "concerti umbria maggio 2026"
+      ],
+      "notes": "Band iconica italiana, evento reunion, alta domanda attesa"
+    },
+    {
+      "rank": 3,
+      "funnel_stage": "BOFU",
+      "article_type": "evento",
+      "title": "Mahmood - Teatro Morlacchi",
+      "artist": "Mahmood",
+      "venue": "Teatro Morlacchi",
+      "city": "Perugia",
+      "date": "2026-05-22",
+      "ticketitalia_url": "https://ticketitalia.com/evento/mahmood-teatro-morlacchi-perugia",
+      "source_urls": [
+        "https://ticketitalia.com/evento/mahmood-teatro-morlacchi-perugia"
+      ],
+      "category": "concerti",
+      "subcategory": "urban",
+      "seo_potential": "high",
+      "ticket_price": "€35.00",
+      "suggested_slug": "mahmood-perugia-2026-biglietti-teatro-morlacchi",
+      "suggested_title": "Mahmood a Perugia 2026: biglietti e info Teatro Morlacchi",
+      "keywords": [
+        "mahmood perugia",
+        "biglietti mahmood",
+        "teatro morlacchi",
+        "concerti maggio 2026"
+      ],
+      "notes": "Artista vincitore Sanremo, pubblico giovane, venue teatrale prestigioso"
+    },
+    {
+      "rank": 4,
+      "funnel_stage": "BOFU",
+      "article_type": "evento",
+      "title": "Umbria Jazz 2026 - Arena Santa Giuliana",
+      "artist": null,
+      "venue": "Arena Santa Giuliana",
+      "city": "Perugia",
+      "date": "2026-07-10",
+      "ticketitalia_url": "https://ticketitalia.com/evento/umbria-jazz-2026-perugia",
+      "source_urls": [
+        "https://ticketitalia.com/evento/umbria-jazz-2026-perugia"
+      ],
+      "category": "concerti",
+      "subcategory": "jazz",
+      "seo_potential": "high",
+      "ticket_price": "€40.00",
+      "suggested_slug": "umbria-jazz-2026-biglietti-perugia-arena-santa-giuliana",
+      "suggested_title": "Umbria Jazz 2026 a Perugia: biglietti e info Arena Santa Giuliana",
+      "keywords": [
+        "umbria jazz 2026",
+        "biglietti umbria jazz",
+        "festival perugia",
+        "jazz luglio 2026"
+      ],
+      "notes": "Festival internazionale di riferimento, richiamo turistico forte"
+    },
+    {
+      "rank": 5,
+      "funnel_stage": "BOFU",
+      "article_type": "evento",
+      "title": "Blanco - Pala Evangelisti",
+      "artist": "Blanco",
+      "venue": "Pala Evangelisti",
+      "city": "Perugia",
+      "date": "2026-06-05",
+      "ticketitalia_url": "https://ticketitalia.com/evento/blanco-pala-evangelisti-perugia",
+      "source_urls": [
+        "https://ticketitalia.com/evento/blanco-pala-evangelisti-perugia"
+      ],
+      "category": "concerti",
+      "subcategory": "urban",
+      "seo_potential": "high",
+      "ticket_price": "€38.00",
+      "suggested_slug": "blanco-perugia-2026-biglietti-pala-evangelisti",
+      "suggested_title": "Blanco a Perugia 2026: biglietti e info Pala Evangelisti",
+      "keywords": [
+        "blanco perugia",
+        "biglietti blanco",
+        "pala evangelisti",
+        "concerti giugno 2026"
+      ],
+      "notes": "Artista trap/pop di punta, target Gen Z, sold out probabile"
+    },
+    {
+      "rank": 6,
+      "funnel_stage": "BOFU",
+      "article_type": "evento",
+      "title": "Concerto di Natale - Auditorium San Francesco",
+      "artist": null,
+      "venue": "Auditorium San Francesco al Prato",
+      "city": "Perugia",
+      "date": "2026-12-20",
+      "ticketitalia_url": "https://ticketitalia.com/evento/concerto-natale-perugia-2026",
+      "source_urls": [
+        "https://ticketitalia.com/evento/concerto-natale-perugia-2026"
+      ],
+      "category": "concerti",
+      "subcategory": "classica",
+      "seo_potential": "medium",
+      "ticket_price": "€20.00",
+      "suggested_slug": "concerto-natale-perugia-2026-auditorium-san-francesco",
+      "suggested_title": "Concerto di Natale a Perugia 2026: biglietti e info Auditorium San Francesco",
+      "keywords": [
+        "concerto natale perugia",
+        "eventi dicembre perugia",
+        "musica classica",
+        "natale 2026"
+      ],
+      "notes": "Evento tradizionale stagionale, pubblico famiglie"
+    },
+    {
+      "rank": 7,
+      "funnel_stage": "BOFU",
+      "article_type": "evento",
+      "title": "Diodato - Teatro Lyrick",
+      "artist": "Diodato",
+      "venue": "Teatro Lyrick",
+      "city": "Assisi",
+      "date": "2026-05-08",
+      "ticketitalia_url": "https://ticketitalia.com/evento/diodato-teatro-lyrick-assisi",
+      "source_urls": [
+        "https://ticketitalia.com/evento/diodato-teatro-lyrick-assisi"
+      ],
+      "category": "concerti",
+      "subcategory": "cantautori",
+      "seo_potential": "medium",
+      "ticket_price": "€30.00",
+      "suggested_slug": "diodato-assisi-2026-biglietti-teatro-lyrick",
+      "suggested_title": "Diodato ad Assisi 2026: biglietti e info Teatro Lyrick",
+      "keywords": [
+        "diodato assisi",
+        "biglietti diodato",
+        "teatro lyrick",
+        "concerti maggio umbria"
+      ],
+      "notes": "Vincitore Sanremo 2020, pubblico adulto, venue suggestivo"
+    },
+    {
+      "rank": 8,
+      "funnel_stage": "BOFU",
+      "article_type": "evento",
+      "title": "Cesare Cremonini - Stadio Renato Curi",
+      "artist": "Cesare Cremonini",
+      "venue": "Stadio Renato Curi",
+      "city": "Perugia",
+      "date": "2026-07-20",
+      "ticketitalia_url": "https://ticketitalia.com/evento/cesare-cremonini-stadio-curi-perugia",
+      "source_urls": [
+        "https://ticketitalia.com/evento/cesare-cremonini-stadio-curi-perugia"
+      ],
+      "category": "concerti",
+      "subcategory": "pop",
+      "seo_potential": "high",
+      "ticket_price": "€50.00",
+      "suggested_slug": "cesare-cremonini-perugia-2026-stadio-curi-biglietti",
+      "suggested_title": "Cesare Cremonini a Perugia 2026: biglietti e info Stadio Renato Curi",
+      "keywords": [
+        "cesare cremonini perugia",
+        "stadio curi concerti",
+        "biglietti cremonini",
+        "luglio 2026"
+      ],
+      "notes": "Stadium show, artista di richiamo nazionale, evento estivo di punta"
+    },
+    {
+      "rank": 9,
+      "funnel_stage": "BOFU",
+      "article_type": "evento",
+      "title": "Coez - Afterlife Live Club",
+      "artist": "Coez",
+      "venue": "Afterlife Live Club",
+      "city": "Perugia",
+      "date": "2026-05-30",
+      "ticketitalia_url": "https://ticketitalia.com/evento/coez-afterlife-live-club-perugia",
+      "source_urls": [
+        "https://ticketitalia.com/evento/coez-afterlife-live-club-perugia"
+      ],
+      "category": "concerti",
+      "subcategory": "indie",
+      "seo_potential": "medium",
+      "ticket_price": "€28.00",
+      "suggested_slug": "coez-perugia-2026-biglietti-afterlife-live-club",
+      "suggested_title": "Coez a Perugia 2026: biglietti e info Afterlife Live Club",
+      "keywords": [
+        "coez perugia",
+        "biglietti coez",
+        "afterlife club",
+        "concerti indie maggio"
+      ],
+      "notes": "Artista indie/rap, pubblico 20-35 anni, venue intima"
+    },
+    {
+      "rank": 10,
+      "funnel_stage": "BOFU",
+      "article_type": "evento",
+      "title": "Emma - Pala Barton",
+      "artist": "Emma",
+      "venue": "Pala Barton",
+      "city": "Perugia",
+      "date": "2026-06-18",
+      "ticketitalia_url": "https://ticketitalia.com/evento/emma-pala-barton-perugia",
+      "source_urls": [
+        "https://ticketitalia.com/evento/emma-pala-barton-perugia"
+      ],
+      "category": "concerti",
+      "subcategory": "pop",
+      "seo_potential": "high",
+      "ticket_price": "€42.00",
+      "suggested_slug": "emma-perugia-2026-biglietti-pala-barton",
+      "suggested_title": "Emma a Perugia 2026: biglietti e info Pala Barton",
+      "keywords": [
+        "emma perugia",
+        "biglietti emma marrone",
+        "pala barton",
+        "concerti giugno 2026"
+      ],
+      "notes": "Artista mainstream, pubblico prevalentemente femminile, forte engagement"
+    },
+    {
+      "rank": 11,
+      "funnel_stage": "MOFU",
+      "article_type": "guida",
+      "title": "Concerti a Perugia Maggio 2026",
+      "artist": null,
+      "venue": null,
+      "city": "Perugia",
+      "date": null,
+      "ticketitalia_url": null,
+      "source_urls": [
+        "https://ticketitalia.com/evento/diodato-teatro-lyrick-assisi",
+        "https://ticketitalia.com/evento/pooh-palaunical-marsciano",
+        "https://ticketitalia.com/evento/mahmood-teatro-morlacchi-perugia",
+        "https://ticketitalia.com/evento/coez-afterlife-live-club-perugia"
+      ],
+      "category": "concerti",
+      "subcategory": null,
+      "seo_potential": "high",
+      "ticket_price": null,
+      "suggested_slug": "concerti-perugia-maggio-2026-date-biglietti",
+      "suggested_title": "Concerti a Perugia Maggio 2026: date e biglietti",
+      "keywords": [
+        "concerti perugia maggio",
+        "eventi maggio 2026 perugia",
+        "live perugia",
+        "cosa fare maggio"
+      ],
+      "notes": "Cluster di 4+ eventi a Perugia e provincia in maggio, generi diversi"
+    },
+    {
+      "rank": 12,
+      "funnel_stage": "MOFU",
+      "article_type": "stagionale",
+      "title": "Concerti Estate Perugia 2026",
+      "artist": null,
+      "venue": null,
+      "city": "Perugia",
+      "date": null,
+      "ticketitalia_url": null,
+      "source_urls": [
+        "https://ticketitalia.com/evento/blanco-pala-evangelisti-perugia",
+        "https://ticketitalia.com/evento/emma-pala-barton-perugia",
+        "https://ticketitalia.com/evento/umbria-jazz-2026-perugia",
+        "https://ticketitalia.com/evento/cesare-cremonini-stadio-curi-perugia"
+      ],
+      "category": "concerti",
+      "subcategory": null,
+      "seo_potential": "high",
+      "ticket_price": null,
+      "suggested_slug": "concerti-estate-perugia-2026-calendario-biglietti",
+      "suggested_title": "Concerti Estate a Perugia 2026: calendario e biglietti",
+      "keywords": [
+        "concerti estate perugia",
+        "eventi giugno luglio perugia",
+        "umbria jazz",
+        "live estate 2026"
+      ],
+      "notes": "Raggruppamento stagionale giugno-agosto, include Umbria Jazz"
+    },
+    {
+      "rank": 13,
+      "funnel_stage": "MOFU",
+      "article_type": "guida",
+      "title": "Concerti Umbria Aprile-Maggio 2026",
+      "artist": null,
+      "venue": null,
+      "city": "Umbria",
+      "date": null,
+      "ticketitalia_url": null,
+      "source_urls": [
+        "https://ticketitalia.com/evento/ermal-meta-afterlife-live-club-perugia",
+        "https://ticketitalia.com/evento/diodato-teatro-lyrick-assisi",
+        "https://ticketitalia.com/evento/pooh-palaunical-marsciano",
+        "https://ticketitalia.com/evento/mahmood-teatro-morlacchi-perugia"
+      ],
+      "category": "concerti",
+      "subcategory": null,
+      "seo_potential": "medium",
+      "ticket_price": null,
+      "suggested_slug": "concerti-umbria-primavera-2026-aprile-maggio",
+      "suggested_title": "Concerti in Umbria Primavera 2026: date e biglietti",
+      "keywords": [
+        "concerti umbria",
+        "eventi primavera umbria",
+        "live aprile maggio",
+        "umbria musica"
+      ],
+      "notes": "Cluster regionale Perugia-Assisi-Marsciano, varietà generi"
+    },
+    {
+      "rank": 14,
+      "funnel_stage": "MOFU",
+      "article_type": "guida",
+      "title": "Weekend Musicale Perugia Maggio 2026",
+      "artist": null,
+      "venue": null,
+      "city": "Perugia",
+      "date": null,
+      "ticketitalia_url": null,
+      "source_urls": [
+        "https://ticketitalia.com/evento/mahmood-teatro-morlacchi-perugia",
+        "https://ticketitalia.com/evento/coez-afterlife-live-club-perugia"
+      ],
+      "category": "concerti",
+      "subcategory": null,
+      "seo_potential": "medium",
+      "ticket_price": null,
+      "suggested_slug": "weekend-concerti-perugia-maggio-2026",
+      "suggested_title": "Weekend di concerti a Perugia Maggio 2026: programma e biglietti",
+      "keywords": [
+        "weekend perugia maggio",
+        "concerti fine settimana",
+        "eventi weekend",
+        "cosa fare perugia"
+      ],
+      "notes": "Due concerti a distanza di 8 giorni, confronto opzioni"
+    },
+    {
+      "rank": 15,
+      "funnel_stage": "TOFU",
+      "article_type": "guida",
+      "title": "Afterlife Live Club Perugia - Guida Completa",
+      "artist": null,
+      "venue": "Afterlife Live Club",
+      "city": "Perugia",
+      "date": null,
+      "ticketitalia_url": null,
+      "source_urls": [
+        "https://ticketitalia.com/evento/ermal-meta-afterlife-live-club-perugia",
+        "https://ticketitalia.com/evento/coez-afterlife-live-club-perugia"
+      ],
+      "category": "guide",
+      "subcategory": null,
+      "seo_potential": "medium",
+      "ticket_price": null,
+      "suggested_slug": "afterlife-live-club-perugia-guida-come-arrivare",
+      "suggested_title": "Afterlife Live Club Perugia: come arrivare e cosa sapere",
+      "keywords": [
+        "afterlife perugia",
+        "live club perugia",
+        "come arrivare afterlife",
+        "venue concerti perugia"
+      ],
+      "notes": "Venue ricorrente nella sitemap, guida pratica evergreen"
+    },
+    {
+      "rank": 16,
+      "funnel_stage": "TOFU",
+      "article_type": "evergreen",
+      "title": "Ermal Meta: Discografia e Tour",
+      "artist": "Ermal Meta",
+      "venue": null,
+      "city": null,
+      "date": null,
+      "ticketitalia_url": null,
+      "source_urls": [
+        "https://ticketitalia.com/evento/ermal-meta-afterlife-live-club-perugia"
+      ],
+      "category": "guide",
+      "subcategory": null,
+      "seo_potential": "high",
+      "ticket_price": null,
+      "suggested_slug": "ermal-meta-discografia-tour-biglietti",
+      "suggested_title": "Ermal Meta: discografia, tour e biglietti concerti",
+      "keywords": [
+        "ermal meta",
+        "discografia ermal meta",
+        "tour ermal meta",
+        "canzoni ermal meta"
+      ],
+      "notes": "Artista di rilevanza nazionale, query informazionale alta"
+    },
+    {
+      "rank": 17,
+      "funnel_stage": "TOFU",
+      "article_type": "guida",
+      "title": "Cosa Fare a Perugia Questo Weekend",
+      "artist": null,
+      "venue": null,
+      "city": "Perugia",
+      "date": null,
+      "ticketitalia_url": null,
+      "source_urls": [
+        "https://ticketitalia.com/evento/ermal-meta-afterlife-live-club-perugia",
+        "https://ticketitalia.com/evento/mahmood-teatro-morlacchi-perugia",
+        "https://ticketitalia.com/evento/blanco-pala-evangelisti-perugia"
+      ],
+      "category": "guide",
+      "subcategory": null,
+      "seo_potential": "medium",
+      "ticket_price": null,
+      "suggested_slug": "cosa-fare-perugia-weekend-eventi-concerti",
+      "suggested_title": "Cosa fare a Perugia questo weekend: eventi e concerti",
+      "keywords": [
+        "cosa fare perugia weekend",
+        "eventi perugia",
+        "weekend perugia",
+        "concerti perugia"
+      ],
+      "notes": "Query locale ad alto volume, sempre aggiornabile con eventi in sitemap"
+    },
+    {
+      "rank": 18,
+      "funnel_stage": "TOFU",
+      "article_type": "evergreen",
+      "title": "Guida Acquisto Biglietti Concerti Online",
+      "artist": null,
+      "venue": null,
+      "city": null,
+      "date": null,
+      "ticketitalia_url": null,
+      "source_urls": [],
+      "category": "guide",
+      "subcategory": null,
+      "seo_potential": "medium",
+      "ticket_price": null,
+      "suggested_slug": "come-comprare-biglietti-concerti-online-guida",
+      "suggested_title": "Come comprare biglietti concerti online: guida completa",
+      "keywords": [
+        "comprare biglietti concerti",
+        "acquisto biglietti online",
+        "biglietteria concerti",
+        "guida biglietti"
+      ],
+      "notes": "Guida pratica evergreen, nessuna scadenza temporale"
+    },
+    {
+      "rank": 19,
+      "funnel_stage": "TOFU",
+      "article_type": "guida",
+      "title": "Teatro Morlacchi Perugia - Info e Programmazione",
+      "artist": null,
+      "venue": "Teatro Morlacchi",
+      "city": "Perugia",
+      "date": null,
+      "ticketitalia_url": null,
+      "source_urls": [
+        "https://ticketitalia.com/evento/mahmood-teatro-morlacchi-perugia"
+      ],
+      "category": "guide",
+      "subcategory": null,
+      "seo_potential": "low",
+      "ticket_price": null,
+      "suggested_slug": "teatro-morlacchi-perugia-info-programmazione",
+      "suggested_title": "Teatro Morlacchi Perugia: info, programmazione e biglietti",
+      "keywords": [
+        "teatro morlacchi",
+        "teatro perugia",
+        "programmazione teatro morlacchi"
+      ],
+      "notes": "Venue storico, guida venue per query locali"
+    },
+    {
+      "rank": 20,
+      "funnel_stage": "TOFU",
+      "article_type": "stagionale",
+      "title": "Festival Musicali Umbria Estate 2026",
+      "artist": null,
+      "venue": null,
+      "city": "Umbria",
+      "date": null,
+      "ticketitalia_url": null,
+      "source_urls": [
+        "https://ticketitalia.com/evento/umbria-jazz-2026-perugia"
+      ],
+      "category": "guide",
+      "subcategory": null,
+      "seo_potential": "medium",
+      "ticket_price": null,
+      "suggested_slug": "festival-musicali-umbria-estate-2026",
+      "suggested_title": "Festival musicali in Umbria Estate 2026: calendario e biglietti",
+      "keywords": [
+        "festival umbria",
+        "festival estate 2026",
+        "umbria jazz",
+        "eventi estate umbria"
+      ],
+      "notes": "Query stagionale, include Umbria Jazz come anchor content"
+    }
+  ]
+}
