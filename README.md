@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Ticket Italia Blog
 
 Base frontend moderna per il blog editoriale di **Ticket Italia**, pensata per raccontare eventi live, concerti, festival, teatro, sport, family e nightlife con un taglio magazine premium.
@@ -109,3 +110,6 @@ La guida completa e disponibile in `DESIGN_SYSTEM.md`. I token principali sono d
 ## Repository suggerito
 
 `blog-ticketitalia`
+=======
+# blog-ticketitalia
+>>>>>>> 8d54eea78037148e244f64b7ac34e44e6bbc4300
