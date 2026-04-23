@@ -766,9 +766,9 @@ export const articles: Article[] = [
           { name: "Parcheggi pubblici Via Roma – Bastia Umbra", distanceOnFoot: "15 min a piedi", type: "gratuito", notes: "Parcheggi lungo strada nel centro di Bastia Umbra", mapsUrl: "https://maps.google.com/?q=Via+Roma+Bastia+Umbra" },
         ],
         nearbyHotels: [
-          { name: "Hotel Santa Lucia", distanceOnFoot: "20 min a piedi", priceRange: "€", bookingUrl: "https://www.google.com/maps/search/Hotel+Santa+Lucia+Bastia+Umbra", images: ["https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=400&q=80"] },
+          { name: "Hotel Santa Lucia", distanceOnFoot: "20 min a piedi", priceRange: "€", bookingUrl: "https://www.google.com/maps/search/Hotel+Santa+Lucia+Bastia+Umbra", images: ["https://www.hotelsantaluciabastia.com/index_html_files/226.jpg", "https://www.hotelsantaluciabastia.com/index_html_files/227.jpg", "https://www.hotelsantaluciabastia.com/index_html_files/228.jpg"] },
           { name: "Hotel La Villa Excelsior", distanceOnFoot: "30 min a piedi", priceRange: "€€", bookingUrl: "https://www.google.com/maps/search/Hotel+La+Villa+Excelsior+Bastia+Umbra", images: ["https://images.unsplash.com/photo-1551882547-ff40c63fe2e2?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=400&q=80"] },
-          { name: "Relais Madonna di Campagna", distanceOnFoot: "25 min in auto", priceRange: "€€", bookingUrl: "https://www.google.com/maps/search/Relais+Madonna+di+Campagna+Bastia+Umbra", images: ["https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=400&q=80"] },
+          { name: "Relais Madonna di Campagna", distanceOnFoot: "25 min in auto", priceRange: "€€", bookingUrl: "https://www.google.com/maps/search/Relais+Madonna+di+Campagna+Bastia+Umbra", images: ["https://www.relaismadonnadicampagna.it/wp-content/uploads/2021/04/DJI_0007-scaled.jpg", "https://www.relaismadonnadicampagna.it/wp-content/uploads/2021/04/IMG_0133-scaled.jpg", "https://www.relaismadonnadicampagna.it/wp-content/uploads/2021/04/1-1.jpg"] },
         ],
       },
       faq: [
@@ -876,9 +876,9 @@ export const articles: Article[] = [
           { name: "Parcheggio Pian di Boccio", distanceOnFoot: "20 min a piedi", type: "gratuito", notes: "Parcheggio gratuito nel weekend, collegato al centro storico", mapsUrl: "https://maps.google.com/?q=Pian+di+Boccio+Spoleto+parcheggio" },
         ],
         nearbyHotels: [
-          { name: "Hotel San Luca", distanceOnFoot: "10 min a piedi", priceRange: "€€", bookingUrl: "https://www.hotelsanluca.com/", images: ["https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=400&q=80"] },
-          { name: "Hotel dei Duchi", distanceOnFoot: "8 min a piedi", priceRange: "€€", bookingUrl: "https://www.hoteldeiduchi.com/", images: ["https://images.unsplash.com/photo-1551882547-ff40c63fe2e2?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=400&q=80"] },
-          { name: "Boutique Hotel Aurora & Private Spa", distanceOnFoot: "5 min a piedi", priceRange: "€€", bookingUrl: "https://www.hotelauroraspoleto.it/", images: ["https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=400&q=80"] },
+          { name: "Hotel San Luca", distanceOnFoot: "10 min a piedi", priceRange: "€€", bookingUrl: "https://www.hotelsanluca.com/", images: ["https://cdn.blastness.biz/media/1007/top/thumbs/full/1600-drone2.jpg", "https://cdn.blastness.biz/media/1007/gallery/thumbs/full/1024_Cortile-2.jpg", "https://cdn.blastness.biz/media/1007/Gallery-Camere/thumbs/full/1024_CAMERA_01.jpg"] },
+          { name: "Hotel dei Duchi", distanceOnFoot: "8 min a piedi", priceRange: "€€", bookingUrl: "https://www.hoteldeiduchi.com/", images: ["https://cdn.blastness.biz/media/617/top/thumbs/full/1600-hall2.jpg", "https://cdn.blastness.biz/media/617/gallery/thumbs/full/1024-suite4.jpg", "https://cdn.blastness.biz/media/617/thumbs/full/01_Giardino.jpg"] },
+          { name: "Boutique Hotel Aurora & Private Spa", distanceOnFoot: "5 min a piedi", priceRange: "€€", bookingUrl: "https://www.hotelauroraspoleto.it/", images: ["https://hotelaurora.etruriacollection.com/wp-content/uploads/2026/03/Suite_HOTEL-AURORA-56.jpg", "https://hotelaurora.etruriacollection.com/wp-content/uploads/2026/03/JuniorSuite_HOTEL-AURORA-88.jpg", "https://hotelaurora.etruriacollection.com/wp-content/uploads/2026/03/Superior_HOTEL-AURORA-61.jpg"] },
         ],
       },
       liveExperience: {
@@ -998,9 +998,9 @@ export const articles: Article[] = [
           { name: "Parcheggio Mercato Coperto (Via del Mercato)", distanceOnFoot: "8 min a piedi", type: "a pagamento", notes: "Parcheggio con ascensore, posizione comoda per raggiungere i Giardini del Frontone", mapsUrl: "https://maps.google.com/?q=Parcheggio+Mercato+Coperto+Perugia" },
         ],
         nearbyHotels: [
-          { name: "Sina Brufani", distanceOnFoot: "5 min a piedi", priceRange: "€€€", bookingUrl: "https://www.sinahotels.com/it/h/brufani-palace-perugia/", images: ["https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=400&q=80"] },
-          { name: "Sangallo Palace Hotel", distanceOnFoot: "5 min a piedi", priceRange: "€€", bookingUrl: "https://www.sangallopalace.it/", images: ["https://images.unsplash.com/photo-1551882547-ff40c63fe2e2?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=400&q=80"] },
-          { name: "Chocohotel", distanceOnFoot: "20 min a piedi", priceRange: "€", bookingUrl: "https://www.chocohotel.it/", images: ["https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=400&q=80"] },
+          { name: "Sina Brufani", distanceOnFoot: "5 min a piedi", priceRange: "€€€", bookingUrl: "https://www.sinahotels.com/it/h/brufani-palace-perugia/", images: ["https://www.sinahotels.com/assets/uploads/Immagini-Definitive/Brufani/HOME-HOTEL/Stairs-Brufani-Perugia.jpg", "https://www.sinahotels.com/assets/uploads/hotels/brufani/Lobby-Brufani-Palace-Hotel-Perugia-Italy.jpg", "https://www.sinahotels.com/assets/uploads/Immagini-Definitive/Brufani/M-Barro/Sina-Brufani-Facciata.jpg"] },
+          { name: "Sangallo Palace Hotel", distanceOnFoot: "5 min a piedi", priceRange: "€€", bookingUrl: "https://www.sangallopalace.it/", images: ["https://www.sangallo.it/images/hotel-perugia-01.jpg", "https://www.sangallo.it/images/superior-rooms-01.jpg", "https://www.sangallo.it/images/pool.jpg"] },
+          { name: "Chocohotel", distanceOnFoot: "20 min a piedi", priceRange: "€", bookingUrl: "https://www.chocohotel.it/", images: ["https://www.chocohotel.it/source/index-1.jpg", "https://www.chocohotel.it/source/index-2.jpg", "https://www.chocohotel.it/source/index-chocostore.jpg"] },
         ],
       },
       liveExperience: {
@@ -1133,9 +1133,9 @@ export const articles: Article[] = [
           { name: "Parcheggio Via della Gomma (strada pubblica)", distanceOnFoot: "2 min a piedi", type: "gratuito", notes: "Posti lungo la strada nella zona industriale, disponibili la sera", mapsUrl: "https://maps.google.com/?q=Via+della+Gomma+Balanzano+Perugia" },
         ],
         nearbyHotels: [
-          { name: "Perugia Park Hotel", distanceOnFoot: "20 min in auto", priceRange: "€€", bookingUrl: "https://www.perugiapark.it/", images: ["https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=400&q=80"] },
+          { name: "Perugia Park Hotel", distanceOnFoot: "20 min in auto", priceRange: "€€", bookingUrl: "https://www.perugiapark.it/", images: ["https://static.perugiaparkhotel.com/static/3a81ffbfc24f07ae8d8d9e7be493f175/204db/3237360b-a91e-4c5d-b0cc-25b0a472ecac.jpg", "https://static.perugiaparkhotel.com/static/b58184a53bad9ab3f0d05b8da455f076/23109/1561ae31-c2da-44b9-8323-7fe1582ebec4.jpg", "https://static.perugiaparkhotel.com/static/747a8de09ca61de0daed25544978d6cf/23109/85f87246-8d04-457b-8a35-ec4c2682f6e8.jpg"] },
           { name: "Posta Donini 1579 – UNA Esperienze", distanceOnFoot: "15 min in auto", priceRange: "€€€", bookingUrl: "https://www.unahotels.it/hotel/una-esperienze-posta-donini-1579/", images: ["https://images.unsplash.com/photo-1551882547-ff40c63fe2e2?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=400&q=80"] },
-          { name: "Chocohotel Perugia", distanceOnFoot: "20 min in auto", priceRange: "€€", bookingUrl: "https://www.chocohotel.it/", images: ["https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=400&q=80"] },
+          { name: "Chocohotel Perugia", distanceOnFoot: "20 min in auto", priceRange: "€€", bookingUrl: "https://www.chocohotel.it/", images: ["https://www.chocohotel.it/source/index-1.jpg", "https://www.chocohotel.it/source/index-2.jpg", "https://www.chocohotel.it/source/index-chocostore.jpg"] },
         ],
       },
 
@@ -1353,9 +1353,9 @@ export const articles: Article[] = [
             priceRange: "€",
             bookingUrl: "https://www.google.com/maps/search/Agriturismo+Il+Poggio+Marsciano",
             images: [
-              "https://images.unsplash.com/photo-1551882547-ff40c63fe2e2?auto=format&fit=crop&w=400&q=80",
-              "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=400&q=80",
-              "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=400&q=80",
+              "https://agriturismopoggiolo.com/wp-content/uploads/2025/02/Poggiolo-Villa-1.webp",
+              "https://agriturismopoggiolo.com/wp-content/uploads/2026/02/a312a040-dd7d-4d39-84ac-7ec99f5fcd6e.jpeg",
+              "https://agriturismopoggiolo.com/wp-content/uploads/2025/02/Poggiolo-Villa-1.webp",
             ],
           },
           {
@@ -1364,9 +1364,9 @@ export const articles: Article[] = [
             priceRange: "€€",
             bookingUrl: "https://www.google.com/maps/search/Relais+La+Fattoria+Perugia",
             images: [
-              "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=400&q=80",
-              "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=400&q=80",
-              "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=400&q=80",
+              "https://www.relaislafattoria.com/images/benvenuto-01.jpg",
+              "https://www.relaislafattoria.com/images/benvenuto-02.jpg",
+              "https://www.relaislafattoria.com/images/benvenuto-03.jpg",
             ],
           },
         ],
@@ -1586,9 +1586,9 @@ export const articles: Article[] = [
             priceRange: "€€€",
             bookingUrl: "https://www.sinahotels.com/it/h/brufani-palace-perugia/",
             images: [
-              "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80",
-              "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=400&q=80",
-              "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=400&q=80",
+              "https://www.sinahotels.com/assets/uploads/Immagini-Definitive/Brufani/HOME-HOTEL/Stairs-Brufani-Perugia.jpg",
+              "https://www.sinahotels.com/assets/uploads/hotels/brufani/Lobby-Brufani-Palace-Hotel-Perugia-Italy.jpg",
+              "https://www.sinahotels.com/assets/uploads/Immagini-Definitive/Brufani/M-Barro/Sina-Brufani-Facciata.jpg",
             ],
           },
           {
@@ -1597,9 +1597,9 @@ export const articles: Article[] = [
             priceRange: "€",
             bookingUrl: "https://www.google.com/maps/search/Hotel+Rosalba+Perugia",
             images: [
-              "https://images.unsplash.com/photo-1551882547-ff40c63fe2e2?auto=format&fit=crop&w=400&q=80",
-              "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=400&q=80",
-              "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=400&q=80",
+              "https://www.hotelrosalba.com/hotel-images-bk/h-1678729/hotel-rosalba-image-1.jpg",
+              "https://www.hotelrosalba.com/hotel-images-bk/h-1678729/hotel-rosalba-image-2.jpg",
+              "https://www.hotelrosalba.com/hotel-images-bk/h-1678729/hotel-rosalba-image-3.jpg",
             ],
           },
           {
@@ -1608,9 +1608,9 @@ export const articles: Article[] = [
             priceRange: "€€",
             bookingUrl: "https://www.sangallopalace.it/",
             images: [
-              "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=400&q=80",
-              "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=400&q=80",
-              "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=400&q=80",
+              "https://www.sangallo.it/images/hotel-perugia-01.jpg",
+              "https://www.sangallo.it/images/superior-rooms-01.jpg",
+              "https://www.sangallo.it/images/pool.jpg",
             ],
           },
         ],
@@ -1823,9 +1823,9 @@ export const articles: Article[] = [
             priceRange: "€€€",
             bookingUrl: "https://www.sinahotels.com/it/h/brufani-palace-perugia/",
             images: [
-              "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80",
-              "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=400&q=80",
-              "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=400&q=80",
+              "https://www.sinahotels.com/assets/uploads/Immagini-Definitive/Brufani/HOME-HOTEL/Stairs-Brufani-Perugia.jpg",
+              "https://www.sinahotels.com/assets/uploads/hotels/brufani/Lobby-Brufani-Palace-Hotel-Perugia-Italy.jpg",
+              "https://www.sinahotels.com/assets/uploads/Immagini-Definitive/Brufani/M-Barro/Sina-Brufani-Facciata.jpg",
             ],
           },
           {
@@ -1834,9 +1834,9 @@ export const articles: Article[] = [
             priceRange: "€€",
             bookingUrl: "https://www.google.com/maps/search/Hotel+Fortuna+Perugia",
             images: [
-              "https://images.unsplash.com/photo-1551882547-ff40c63fe2e2?auto=format&fit=crop&w=400&q=80",
-              "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=400&q=80",
-              "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=400&q=80",
+              "https://www.hotelfortunaperugia.com/wp-content/uploads/2021/11/Esterno-Hotel-Fortuna.jpg",
+              "https://www.hotelfortunaperugia.com/wp-content/uploads/2021/11/Terrazza-Panoramica-Hotel-Fortuna-Perugia.jpg",
+              "https://www.hotelfortunaperugia.com/wp-content/uploads/2021/11/Camera-Executive-Hotel-Fortuna-Perugia.jpg",
             ],
           },
           {
