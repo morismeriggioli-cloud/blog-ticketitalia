@@ -141,7 +141,7 @@ export const motion = {
 export const componentStyles = {
   button: {
     base: "inline-flex min-h-12 items-center justify-center gap-2 rounded-md px-5 font-black transition duration-240 ease-event",
-    primary: "bg-primary-500 text-neutral-950 hover:bg-primary-600 hover:-translate-y-0.5 hover:shadow-glow",
+    primary: "bg-primary-500 text-white hover:bg-primary-600 hover:-translate-y-0.5 hover:shadow-glow",
     secondary: "border border-line bg-surface text-ink hover:border-ink hover:-translate-y-0.5 hover:shadow-lift",
     ghost: "border border-transparent bg-transparent text-current hover:border-current hover:bg-white/10",
   },

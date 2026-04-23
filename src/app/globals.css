@@ -198,7 +198,7 @@ input:focus-visible {
 
 .btn-primary {
   background: var(--primary-500);
-  color: #071014;
+  color: #ffffff;
 }
 
 .btn-primary:hover {
