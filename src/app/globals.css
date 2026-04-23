@@ -203,7 +203,7 @@ input:focus-visible {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  background: var(--accent-festival);
+  background: var(--primary-600);
   box-shadow: var(--shadow-glow);
 }
 
@@ -289,6 +289,11 @@ input:focus-visible {
   margin-block: 1.25rem;
   color: #353b44;
   line-height: 1.85;
+}
+
+.article-content .article-cta p,
+.article-content .article-cta h2 {
+  color: #ffffff;
 }
 
 .article-content h2 {

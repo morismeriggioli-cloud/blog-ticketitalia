@@ -13,6 +13,11 @@ export const metadata: Metadata = {
     "Guide, ispirazioni e novita per vivere concerti, festival, teatro, sport e nightlife con Ticket Italia.",
   keywords: ["Ticket Italia", "blog eventi", "concerti", "festival", "teatro"],
   authors: [{ name: "Ticket Italia" }],
+  icons: {
+    icon: [{ url: "/logo%20ticket%20italia%20(3).png", type: "image/png" }],
+    shortcut: ["/logo%20ticket%20italia%20(3).png"],
+    apple: [{ url: "/logo%20ticket%20italia%20(3).png", type: "image/png" }],
+  },
   openGraph: {
     title: "Ticket Italia Blog",
     description:

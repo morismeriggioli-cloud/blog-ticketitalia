@@ -1,12 +1,12 @@
 /**
  * Scheduler cron per la pipeline agenti.
- * Esegue ogni lunedì alle 08:00.
+ * Esegue ogni lunedì e venerdì alle 08:00 (Europe/Rome).
  *
  * Uso: tsx agents/cron.ts
  */
 
 import cron from "node-cron";
-import { runPipeline } from "./orchestrator.js";
+import { runAutoPublishPipeline } from "./orchestrator.js";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -22,21 +22,20 @@ function log(msg: string) {
   fs.appendFileSync(path.join(LOG_DIR, "cron.log"), line);
 }
 
-// Ogni lunedì alle 08:00
-const SCHEDULE = "0 8 * * 1";
+const SCHEDULE_MON = "0 8 * * 1";
+const SCHEDULE_FRI = "0 8 * * 5";
 
-log(`Scheduler avviato. Pipeline programmata: ${SCHEDULE} (lunedì ore 08:00)`);
+log("Scheduler avviato. Pipeline: lunedì e venerdì ore 08:00 (Europe/Rome)");
 
-cron.schedule(
-  SCHEDULE,
-  async () => {
-    log("Pipeline avviata dallo scheduler");
-    try {
-      await runPipeline();
-      log("Pipeline completata con successo");
-    } catch (err) {
-      log(`Errore pipeline: ${String(err)}`);
-    }
-  },
-  { timezone: "Europe/Rome" }
-);
+async function runAndLog() {
+  log("Pipeline auto-publish avviata dallo scheduler");
+  try {
+    await runAutoPublishPipeline();
+    log("Pipeline completata con successo");
+  } catch (err) {
+    log(`Errore pipeline: ${String(err)}`);
+  }
+}
+
+cron.schedule(SCHEDULE_MON, runAndLog, { timezone: "Europe/Rome" });
+cron.schedule(SCHEDULE_FRI, runAndLog, { timezone: "Europe/Rome" });

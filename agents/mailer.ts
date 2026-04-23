@@ -16,6 +16,17 @@ export interface ArticleNotification {
   rawContent?: string;
 }
 
+export interface PublishedNotification {
+  slug: string;
+  title: string;
+  excerpt: string;
+  keyword: string;
+  funnelStage: string;
+  articleUrl: string;
+  publishedAt: string;
+  seoScore?: Record<string, string>;
+}
+
 // ---------------------------------------------------------------------------
 // Parser leggero del file .ts generato da Claude
 // Estrae i campi body come stringhe/array senza dipendenze esterne.
@@ -525,4 +536,92 @@ export async function sendArticleNotification(
   });
 
   console.log(`[mailer] Notifica inviata a ${to}`);
+}
+
+export async function sendPublishedNotification(
+  article: PublishedNotification
+): Promise<void> {
+  const to = process.env.NOTIFY_EMAIL;
+  if (!to) {
+    console.warn("[mailer] NOTIFY_EMAIL non impostata — notifica pubblicazione saltata");
+    return;
+  }
+
+  const transport = createTransport();
+  const seoRows = article.seoScore
+    ? Object.entries(article.seoScore)
+        .map(
+          ([key, value]) => `
+        <tr>
+          <td style="padding:6px 10px;font-size:13px;color:${C.muted};border-bottom:1px solid ${C.border}">${esc(key)}</td>
+          <td style="padding:6px 10px;font-size:14px;border-bottom:1px solid ${C.border};text-align:center">${scoreIcon(value)}</td>
+        </tr>`
+        )
+        .join("")
+    : "";
+
+  await transport.sendMail({
+    from: `"Ticket Italia Blog" <${process.env.SMTP_USER}>`,
+    to,
+    subject: `[Pubblicato ${article.funnelStage}] ${article.title}`,
+    html: `<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>${esc(article.title)}</title>
+</head>
+<body style="margin:0;padding:0;background:${C.bg};font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:${C.text}">
+  <div style="max-width:600px;margin:0 auto;padding:24px 16px">
+    <div style="background:${C.success};border-radius:12px;padding:28px 24px;margin-bottom:20px">
+      <p style="color:rgba(255,255,255,0.78);font-size:12px;margin:0 0 6px;text-transform:uppercase;letter-spacing:1px">
+        Ticket Italia Blog · Articolo pubblicato
+      </p>
+      <h1 style="color:#fff;font-size:22px;font-weight:800;margin:0 0 12px;line-height:1.3">
+        ${esc(article.title)}
+      </h1>
+      <span style="display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;background:rgba(255,255,255,0.2);color:#fff">
+        ${esc(article.funnelStage)} · ${esc(article.publishedAt)}
+      </span>
+    </div>
+
+    ${card(`
+      <p style="font-size:15px;color:#333;line-height:1.7;margin:0 0 14px;font-style:italic">${esc(article.excerpt)}</p>
+      <table style="width:100%;border-collapse:collapse;font-size:13px">
+        <tr>
+          <td style="padding:5px 0;color:${C.muted};width:130px">Slug</td>
+          <td style="padding:5px 0"><code style="background:${C.bg};padding:2px 6px;border-radius:4px;font-size:12px">${esc(article.slug)}</code></td>
+        </tr>
+        <tr>
+          <td style="padding:5px 0;color:${C.muted}">Keyword</td>
+          <td style="padding:5px 0;font-weight:600">${esc(article.keyword)}</td>
+        </tr>
+        <tr>
+          <td style="padding:5px 0;color:${C.muted}">URL</td>
+          <td style="padding:5px 0"><a href="${article.articleUrl}" style="color:${C.primary};font-weight:700">${esc(article.articleUrl)}</a></td>
+        </tr>
+      </table>
+    `)}
+
+    ${
+      seoRows
+        ? card(`
+      <h2 style="font-size:15px;font-weight:700;color:${C.text};margin:0 0 12px">Score SEO</h2>
+      <table style="width:100%;border-collapse:collapse">
+        ${seoRows}
+      </table>
+    `)
+        : ""
+    }
+
+    <a href="${article.articleUrl}"
+       style="display:block;text-align:center;padding:14px 20px;background:${C.primary};color:#fff;text-decoration:none;border-radius:8px;font-size:15px;font-weight:700">
+      Apri articolo
+    </a>
+  </div>
+</body>
+</html>`,
+  });
+
+  console.log(`[mailer] Notifica pubblicazione inviata a ${to}`);
 }

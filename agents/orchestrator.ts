@@ -13,7 +13,8 @@ import Anthropic from "@anthropic-ai/sdk";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-import { sendArticleNotification } from "./mailer.js";
+import simpleGit from "simple-git";
+import { sendArticleNotification, sendPublishedNotification } from "./mailer.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -353,6 +354,177 @@ export async function runPipeline(): Promise<void> {
       funnelStage: seoResult.funnelStage,
       seoScore: seoResult.seoScore,
       rawContent: seoResult.rawContent,
+    });
+
+    log.status = "success";
+  } catch (err) {
+    console.error("[orchestrator] Errore:", err);
+    log.status = "error";
+    log.error = String(err);
+  } finally {
+    log.durationMs = Date.now() - startTime;
+    log.completedAt = new Date().toISOString();
+    saveLog(log);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// autoPublish — pubblica un draft in blog.ts, committa e pusha
+// ---------------------------------------------------------------------------
+
+function extractArticleObject(fileContent: string): string {
+  const marker = "export const article: Article = ";
+  const markerIdx = fileContent.indexOf(marker);
+  if (markerIdx === -1) throw new Error("Marker 'export const article' non trovato");
+
+  const objStart = fileContent.indexOf("{", markerIdx + marker.length);
+  if (objStart === -1) throw new Error("Apertura oggetto '{' non trovata");
+
+  let depth = 0;
+  let inStr = false;
+  let escape = false;
+
+  for (let i = objStart; i < fileContent.length; i++) {
+    const ch = fileContent[i];
+    if (escape) { escape = false; continue; }
+    if (ch === "\\") { escape = true; continue; }
+    if (ch === '"') { inStr = !inStr; continue; }
+    if (inStr) continue;
+    if (ch === "{") depth++;
+    else if (ch === "}") {
+      depth--;
+      if (depth === 0) return fileContent.slice(objStart, i + 1);
+    }
+  }
+  throw new Error("Oggetto articolo non bilanciato");
+}
+
+export async function autoPublish(slug: string, title: string): Promise<string> {
+  const draftPath = path.join(ROOT, "output", "articles", `${slug}.ts`);
+  const blogPath = path.join(ROOT, "src", "data", "blog.ts");
+  const pubDate = today();
+
+  if (!fs.existsSync(draftPath)) {
+    throw new Error(`[autoPublish] Draft non trovato: ${draftPath}`);
+  }
+
+  // Aggiorna status + publishedAt nel draft
+  let draftContent = fs.readFileSync(draftPath, "utf-8");
+  draftContent = draftContent.replace(/status:\s*"draft"/, `status: "published"`);
+  if (/publishedAt:\s*"[^"]*"/.test(draftContent)) {
+    draftContent = draftContent.replace(/publishedAt:\s*"[^"]*"/, `publishedAt: "${pubDate}"`);
+  } else {
+    draftContent = draftContent.replace(
+      /status:\s*"published"/,
+      `status: "published",\n  publishedAt: "${pubDate}"`
+    );
+  }
+  fs.writeFileSync(draftPath, draftContent, "utf-8");
+
+  // Controlla duplicati in blog.ts
+  let blogContent = fs.readFileSync(blogPath, "utf-8");
+  if (new RegExp(`slug:\\s*["']${slug}["']`).test(blogContent)) {
+    console.warn(`[autoPublish] Slug "${slug}" già presente in blog.ts — skip`);
+    return pubDate;
+  }
+
+  // Inserisce l'oggetto articolo nell'array articles[]
+  const rawObj = extractArticleObject(draftContent);
+  const indented = rawObj.split("\n").map((l) => `  ${l}`).join("\n");
+  const insertionMarker = "\n];\n\nexport const publishedArticles";
+  const idx = blogContent.indexOf(insertionMarker);
+  if (idx === -1) throw new Error("[autoPublish] Marker di inserimento non trovato in blog.ts");
+
+  blogContent = blogContent.slice(0, idx) + `\n  ${indented},` + blogContent.slice(idx);
+  fs.writeFileSync(blogPath, blogContent, "utf-8");
+  console.log(`[autoPublish] Articolo inserito in blog.ts: ${slug}`);
+
+  // Git commit + push
+  const git = simpleGit(ROOT);
+  await git.add(blogPath);
+  await git.commit(`Auto-publish: ${title} ${pubDate}`);
+  await git.push("origin", "main");
+  console.log(`[autoPublish] Commit e push completati: "${title}"`);
+
+  return pubDate;
+}
+
+// ---------------------------------------------------------------------------
+// Pipeline auto-publish: Scout → Redattore → SEO → autoPublish + email
+// ---------------------------------------------------------------------------
+
+export async function runAutoPublishPipeline(): Promise<void> {
+  const startTime = Date.now();
+  const log: Record<string, unknown> = {
+    startedAt: new Date().toISOString(),
+    model: MODEL,
+    mode: "auto-publish",
+    steps: {},
+  };
+
+  const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+  const siteUrl = process.env.SITE_URL ?? "https://blog.ticketitalia.com";
+
+  try {
+    // 1. Scout
+    console.log("\n=== STEP 1: SCOUT ===");
+    const { reportPath, opportunities } = await runScout(client);
+    log.steps = { ...(log.steps as object), scout: { reportPath, found: opportunities.length } };
+
+    // Seleziona la migliore opportunità BOFU non ancora pubblicata
+    const blogPath = path.join(ROOT, "src", "data", "blog.ts");
+    const blogContent = fs.readFileSync(blogPath, "utf-8");
+
+    const bestBofu = (opportunities as Record<string, unknown>[]).find((o) => {
+      if (o.funnel_stage !== "BOFU" || o.seo_potential !== "high") return false;
+      const slug = o.suggested_slug as string | undefined;
+      if (!slug) return false;
+      return !new RegExp(`slug:\\s*["']${slug}["']`).test(blogContent);
+    }) ?? (opportunities as Record<string, unknown>[]).find((o) => {
+      const slug = o.suggested_slug as string | undefined;
+      if (!slug) return false;
+      return !new RegExp(`slug:\\s*["']${slug}["']`).test(blogContent);
+    });
+
+    if (!bestBofu) {
+      console.log("[orchestrator] Nessuna opportunità nuova da pubblicare — pipeline terminata");
+      log.status = "skipped";
+      log.reason = "No new opportunities";
+      return;
+    }
+    console.log(`[orchestrator] Opportunità selezionata: ${bestBofu.title}`);
+
+    // 2. Redattore
+    console.log("\n=== STEP 2: REDATTORE ===");
+    const { articlePath, slug } = await runRedattore(client, bestBofu);
+    log.steps = { ...(log.steps as object), redattore: { articlePath, slug } };
+
+    // 3. SEO
+    console.log("\n=== STEP 3: SEO ===");
+    const keywords = (bestBofu.keywords as string[] | undefined) ?? [];
+    const seoResult = await runSeo(client, articlePath, keywords);
+    log.steps = {
+      ...(log.steps as object),
+      seo: { articlePath: seoResult.articlePath, reportPath: seoResult.reportPath, seoScore: seoResult.seoScore },
+    };
+
+    // 4. Auto-publish
+    console.log("\n=== STEP 4: AUTO-PUBLISH ===");
+    const pubDate = await autoPublish(slug, seoResult.title);
+    const articleUrl = `${siteUrl}/articoli/${slug}`;
+    log.steps = { ...(log.steps as object), autoPublish: { slug, pubDate, articleUrl } };
+
+    // 5. Email di notifica (articolo già pubblicato)
+    console.log("\n=== STEP 5: NOTIFICA EMAIL ===");
+    await sendPublishedNotification({
+      slug,
+      title: seoResult.title,
+      excerpt: seoResult.excerpt,
+      keyword: seoResult.keyword,
+      funnelStage: seoResult.funnelStage,
+      articleUrl,
+      publishedAt: pubDate,
+      seoScore: seoResult.seoScore,
     });
 
     log.status = "success";

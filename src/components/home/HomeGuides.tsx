@@ -30,7 +30,7 @@ export function HomeGuides() {
                 href={guide.href}
                 className="group grid gap-5 rounded-md border border-white/12 bg-white/8 p-5 transition duration-300 ease-event hover:-translate-y-1 hover:bg-white hover:text-ink sm:grid-cols-[72px_1fr_auto] sm:items-center sm:p-6"
               >
-                <span className="grid size-14 place-items-center rounded-md bg-primary-500 text-neutral-950 transition group-hover:bg-accent-festival">
+                <span className="grid size-14 place-items-center rounded-md bg-primary-500 text-neutral-950 transition group-hover:bg-primary-600">
                   <guide.icon className="size-7" aria-hidden="true" />
                 </span>
                 <span>
