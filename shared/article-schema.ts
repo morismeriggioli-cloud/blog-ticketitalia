@@ -68,6 +68,45 @@ export const TOFU_REQUIRED_BODY_FIELDS = [
 export type TofuRequiredBodyField = (typeof TOFU_REQUIRED_BODY_FIELDS)[number];
 
 /**
+ * Campi obbligatori per la sezione location (validi per TUTTI i funnel stage).
+ * I campi nearbyParking, nearbyHotels e locationImage sono OBBLIGATORI nei nuovi
+ * articoli generati dagli agenti, anche se opzionali nel tipo base per retrocompatibilità.
+ */
+export const LOCATION_REQUIRED_FIELDS = [
+  "title",
+  "venueType",
+  "experience",
+  "suitability",
+  "atmosphere",
+  "paragraphs",
+  "locationImage",
+  "nearbyParking",
+  "nearbyHotels",
+] as const;
+
+export type LocationRequiredField = (typeof LOCATION_REQUIRED_FIELDS)[number];
+
+/**
+ * Struttura obbligatoria per ogni voce nearbyParking.
+ */
+export type NearbyParking = {
+  name: string;
+  distanceOnFoot: string;
+  type: "gratuito" | "a pagamento";
+  notes?: string;
+};
+
+/**
+ * Struttura obbligatoria per ogni voce nearbyHotels.
+ */
+export type NearbyHotel = {
+  name: string;
+  distanceOnFoot: string;
+  priceRange: string;
+  bookingUrl?: string;
+};
+
+/**
  * Categorie e slug validi nel progetto.
  */
 export const VALID_CATEGORIES = [

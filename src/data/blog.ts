@@ -68,6 +68,19 @@ export type Article = {
       atmosphere: string;
       paragraphs: string[];
       bullets?: string[];
+      locationImage?: string;
+      nearbyParking?: Array<{
+        name: string;
+        distanceOnFoot: string;
+        type: "gratuito" | "a pagamento";
+        notes?: string;
+      }>;
+      nearbyHotels?: Array<{
+        name: string;
+        distanceOnFoot: string;
+        priceRange: string;
+        bookingUrl?: string;
+      }>;
     };
     liveExperience?: {
       title: string;
@@ -728,6 +741,34 @@ export const articles: Article[] = [
           ],
         },
       ],
+      location: {
+        title: "Umbriafiere: il quartiere fieristico nel cuore dell'Umbria",
+        venueType: "Quartiere fieristico polifunzionale, sede espositiva e convegnistica",
+        experience: "Umbriafiere è il principale polo fieristico dell'Umbria, situato a Bastia Umbra in una posizione strategica tra Perugia e Assisi. Con i suoi padiglioni moderni, gli spazi espositivi e le aree esterne, ospita ogni anno manifestazioni di rilievo nazionale come Agriumbria. La struttura è pensata per eventi ad alto afflusso, con ingressi separati, aree di sosta ampie e percorsi interni ben organizzati.",
+        suitability: "Ideale per fiere, mostre mercato e manifestazioni di settore. La configurazione modulare dei padiglioni permette di accogliere espositori di diverse dimensioni, dalle grandi aziende agli artigiani locali. Gli spazi esterni sono usati per le mostre zootecniche e le aree dimostrative, garantendo ampiezza e versatilità.",
+        atmosphere: "L'atmosfera durante Agriumbria è quella tipica delle grandi fiere di settore: operativa, concreta, ricca di incontri professionali ma accessibile anche alle famiglie. Il weekend concentra il massimo afflusso di pubblico generalista, mentre i giorni feriali sono dedicati soprattutto agli operatori.",
+        paragraphs: [
+          "Umbriafiere si trova in Piazza Moncada, 1 a Bastia Umbra (PG), ben collegata alla SS75 e alla E45. La sua posizione centrale nel cuore dell'Umbria la rende raggiungibile facilmente da Perugia (circa 15 km), Assisi (circa 8 km) e dall'aeroporto regionale di Sant'Egidio.",
+          "Durante Agriumbria i piazzali interni ed esterni del quartiere fieristico si trasformano in aree parcheggio, con una capienza complessiva che supera le 700 auto. Un servizio navetta gratuito collega i parcheggi periferici all'ingresso principale durante i giorni di apertura.",
+        ],
+        bullets: [
+          "Indirizzo: Piazza Moncada, 1 – Bastia Umbra (PG)",
+          "Accesso: SS75 uscita Assisi/Santa Maria degli Angeli Nord",
+          "Parcheggio interno: oltre 700 posti auto nei piazzali del quartiere fieristico",
+          "Navetta gratuita attiva durante Agriumbria (ven-dom, 8:30-19:30)",
+        ],
+        locationImage: "https://ticketitalia.com/image/cache/wp/gp/Luoghi%20banner/Progetto%20senza%20titolo%20(59)-1400x300.webp",
+        nearbyParking: [
+          { name: "Parcheggi fieristici Umbriafiere (Largo America, Oceania, Asia)", distanceOnFoot: "0 min a piedi", type: "gratuito", notes: "Parcheggi gratuiti segnalati, attivi durante le fiere con navetta inclusa" },
+          { name: "Parcheggio di fronte alle Poste – Bastia Umbra", distanceOnFoot: "10 min a piedi", type: "gratuito", notes: "50 posti, con servizio camper. Vicino al centro di Bastia Umbra" },
+          { name: "Parcheggi pubblici Via Roma – Bastia Umbra", distanceOnFoot: "15 min a piedi", type: "gratuito", notes: "Parcheggi lungo strada nel centro di Bastia Umbra" },
+        ],
+        nearbyHotels: [
+          { name: "Hotel Santa Lucia", distanceOnFoot: "20 min a piedi", priceRange: "€", bookingUrl: "https://www.hotelsantaluciabastia.com/" },
+          { name: "Hotel La Villa Excelsior", distanceOnFoot: "30 min a piedi", priceRange: "€€", bookingUrl: "https://la-villa-excelsior.umbriahotelsweb.com/en/" },
+          { name: "Relais Madonna di Campagna", distanceOnFoot: "25 min in auto", priceRange: "€€", bookingUrl: "https://www.relaismadonnadicampagna.it/en/" },
+        ],
+      },
       faq: [
         {
           question: "Dove si svolge Agriumbria?",
@@ -825,7 +866,18 @@ export const articles: Article[] = [
           "Capacità: circa 800 posti, dimensione ideale per concerti intimi",
           "Architettura: tradizionale ferro di cavallo, visuale ottimale da ogni settore",
           "Posizione: centro storico di Spoleto, facilmente raggiungibile a piedi"
-        ]
+        ],
+        locationImage: "https://ticketitalia.com/image/cache/wp/gj/Luoghi%20banner/344506502072015142421_galleriamedia1-1400x300.webp",
+        nearbyParking: [
+          { name: "Parcheggio della Posterna", distanceOnFoot: "10 min a piedi", type: "a pagamento", notes: "454 posti, €1,20/ora. Tapis roulant sotterraneo con uscita nei pressi del Teatro Nuovo" },
+          { name: "Parcheggio Spoletosfera", distanceOnFoot: "15 min a piedi", type: "a pagamento", notes: "414 posti coperti, aperto 24h su 24. Raggiungibile da Viale dei Cappuccini" },
+          { name: "Parcheggio Pian di Boccio", distanceOnFoot: "20 min a piedi", type: "gratuito", notes: "Parcheggio gratuito nel weekend, collegato al centro storico" },
+        ],
+        nearbyHotels: [
+          { name: "Hotel San Luca", distanceOnFoot: "10 min a piedi", priceRange: "€€", bookingUrl: "https://www.hotelsanluca.com/en/index" },
+          { name: "Hotel dei Duchi", distanceOnFoot: "8 min a piedi", priceRange: "€€", bookingUrl: "https://www.hoteldeiduchi.com/en/index" },
+          { name: "Boutique Hotel Aurora & Private Spa", distanceOnFoot: "5 min a piedi", priceRange: "€€", bookingUrl: "https://www.boutiquehotelaurora.it/" },
+        ],
       },
       liveExperience: {
         title: "Cosa aspettarsi dal concerto",
@@ -936,7 +988,18 @@ export const articles: Article[] = [
           "Capacità: circa 15.000 persone, dimensione ideale per festival energici",
           "Posizione: centro storico di Perugia, facilmente raggiungibile a piedi",
           "Atmosfera: informale, partecipativa, tipica dei festival estivi italiani"
-        ]
+        ],
+        locationImage: "https://ticketitalia.com/image/cache/wp/gj/Luoghi%20banner/Giardini%20del%20Frontone%20Perugia%20(1)-1400x300.webp",
+        nearbyParking: [
+          { name: "Parcheggio Piazza Partigiani", distanceOnFoot: "10 min a piedi", type: "a pagamento", notes: "Parcheggio custodito con scale mobili verso il centro storico" },
+          { name: "Parcheggio Piazzale Europa", distanceOnFoot: "12 min a piedi", type: "a pagamento", notes: "Parcheggio custodito con scale mobili, vicino agli accessi principali al centro" },
+          { name: "Parcheggio Mercato Coperto (Via del Mercato)", distanceOnFoot: "8 min a piedi", type: "a pagamento", notes: "Parcheggio con ascensore, posizione comoda per raggiungere i Giardini del Frontone" },
+        ],
+        nearbyHotels: [
+          { name: "Sina Brufani", distanceOnFoot: "5 min a piedi", priceRange: "€€€", bookingUrl: "https://www.sinahotels.com/en/h/sina-brufani-perugia/" },
+          { name: "Sangallo Palace Hotel", distanceOnFoot: "5 min a piedi", priceRange: "€€", bookingUrl: "https://www.booking.com/hotel/it/sangallopalace.html" },
+          { name: "Chocohotel", distanceOnFoot: "20 min a piedi", priceRange: "€", bookingUrl: "https://www.chocohotel.it/en/" },
+        ],
       },
       liveExperience: {
         title: "Cosa aspettarsi dal concerto",
@@ -1060,6 +1123,17 @@ export const articles: Article[] = [
           "Corte esterna: disponibile per ritrovo pre/post concerto",
           "Accessibilità: vicino al raccordo autostradale di Perugia, ampio parcheggio",
           "Indirizzo: Balanzano, Perugia (PG)",
+        ],
+        locationImage: "https://www.umbriafilmcommission.com/wp-content/uploads/2021/10/6171274fb2039-640x400.jpg",
+        nearbyParking: [
+          { name: "Parcheggio zona industriale Balanzano (area esterna venue)", distanceOnFoot: "0 min a piedi", type: "gratuito", notes: "Ampio parcheggio privato annesso al locale, capienza elevata" },
+          { name: "Parcheggio P+R Ponte San Giovanni", distanceOnFoot: "15 min a piedi", type: "gratuito", notes: "Parcheggio di interscambio vicino alla stazione, con navetta per il centro" },
+          { name: "Parcheggio Via della Gomma (strada pubblica)", distanceOnFoot: "2 min a piedi", type: "gratuito", notes: "Posti lungo la strada nella zona industriale, disponibili la sera" },
+        ],
+        nearbyHotels: [
+          { name: "Perugia Park Hotel", distanceOnFoot: "20 min in auto", priceRange: "€€", bookingUrl: "https://www.perugiaparkhotel.com/" },
+          { name: "Posta Donini 1579 – UNA Esperienze", distanceOnFoot: "15 min in auto", priceRange: "€€€", bookingUrl: "https://www.booking.com/hotel/it/postadonini.html" },
+          { name: "Chocohotel Perugia", distanceOnFoot: "20 min in auto", priceRange: "€€", bookingUrl: "https://www.chocohotel.it/en/" },
         ],
       },
 

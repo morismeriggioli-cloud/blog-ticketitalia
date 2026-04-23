@@ -3,7 +3,14 @@
     "allow": [
       "WebFetch(domain:ticketitalia.com)",
       "Bash(npx tsc *)",
-      "Bash(npm install *)"
+      "Bash(npm install *)",
+      "WebSearch",
+      "WebFetch(domain:www.tripadvisor.com)",
+      "WebFetch(domain:www.agriumbria.eu)",
+      "WebFetch(domain:www.tripadvisor.it)",
+      "WebFetch(domain:www.afterlifeclub.it)",
+      "WebFetch(domain:www.umbriafilmcommission.com)",
+      "WebFetch(domain:xceed.me)"
     ]
   }
 }

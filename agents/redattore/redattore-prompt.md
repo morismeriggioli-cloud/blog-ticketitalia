@@ -28,16 +28,20 @@ Scrivi articoli completi per il blog di Ticket Italia a partire dalle opportunit
 **Processo**:
 1. Leggi la pagina evento su ticketitalia.com: titolo esatto, date, venue, settori, prezzi, descrizione
 2. Ricerca la venue: tipo, capienza, storia, caratteristiche acustiche/architettoniche
-3. Ricerca l'artista/evento: storia, rilevanza, tour precedenti, stile, pubblico
-4. Redigi l'articolo seguendo la struttura obbligatoria evento (vedi sotto)
-5. Salva in `output/articles/[slug].ts`
+3. **Raccogli dati location POI** (vedi sezione dedicata):
+   - `locationImage`: og:image dalla pagina venue su ticketitalia.com
+   - `nearbyParking`: 2-3 parcheggi reali vicini (Google Maps)
+   - `nearbyHotels`: 3 hotel reali vicini (Google Maps / booking.com)
+4. Ricerca l'artista/evento: storia, rilevanza, tour precedenti, stile, pubblico
+5. Redigi l'articolo seguendo la struttura obbligatoria evento (vedi sotto)
+6. Salva in `output/articles/[slug].ts`
 
 **Campi body obbligatori** (tutti):
 - `intro` — 1-2 frasi SEO che nominano artista + venue + data
 - `quickInfo` — sintesi con bullets (artista, location, data, prezzo, atmosfera)
 - `tickets` — guida ai settori e prezzi con bullets dettagliati
 - `artistContext` — background artista: storia, Sanremo, album, tour precedenti
-- `location` — sezione venue valorizzata (obbligatoria, vedi ARTICLE_STRUCTURE_GUIDE.md)
+- `location` — sezione venue valorizzata con `locationImage`, `nearbyParking`, `nearbyHotels` (vedi sezione Location)
 - `liveExperience` — cosa aspettarsi dal live in questo specifico contesto
 - `practicalInfo` — info logistiche (accesso, trasporti, orari, regole)
 - `internalLinks` — 3-4 link a articoli correlati esistenti in `src/data/blog.ts`
@@ -72,6 +76,7 @@ articleType: "evento",
 - `intro` — 1-2 frasi che nominano la query target ("Concerti a Perugia in estate 2026…")
 - `quickInfo` — riepilogo rapido con bullets (quanti eventi, fascia date, range prezzi)
 - `sections` — sezione per ogni evento/tappa (heading = nome evento + data), con bullets pratici (prezzo, venue, link)
+- `location` — sezione venue principale dell'articolo con `locationImage`, `nearbyParking`, `nearbyHotels` (vedi sezione Location)
 - `internalLinks` — link agli articoli BOFU corrispondenti per ogni evento citato (priorità alta)
 - `cta` — CTA verso la pagina categoria su ticketitalia.com (es. concerti a Perugia)
 
@@ -111,6 +116,7 @@ articleType: "guida",   // oppure "stagionale" se legato a una stagione ricorren
 **Campi body obbligatori**:
 - `intro` — 1-2 frasi che rispondono direttamente alla query informazionale
 - `quickInfo` — punti chiave in bullets (es. per guida venue: indirizzo, capienza, tipo eventi, come arrivare)
+- `location` — sezione venue con `locationImage`, `nearbyParking`, `nearbyHotels` (vedi sezione Location)
 - `sections` — almeno 3 sezioni di approfondimento tematiche
 - `faq` — 5-6 domande: fondamentale per TOFU, ottimizza i featured snippet di Google
 
@@ -131,6 +137,87 @@ articleType: "guida",      // o "evergreen" se non ha scadenza temporale
 - La CTA è presente ma non dominante: l'utente deve sentirsi informato, non venduto
 - Per articoli evergreen: evitare riferimenti temporali che invecchiano ("quest'anno", "questo mese")
 - FAQ obbligatorie: almeno 5, scritte come domande reali degli utenti (usa "come", "dove", "quanto", "quando")
+
+---
+
+## Sezione Location — Regole e Struttura Obbligatoria
+
+La sezione `location` è **obbligatoria per tutti i tipi di articolo** (BOFU, MOFU, TOFU).
+
+### Struttura completa obbligatoria
+
+```typescript
+location: {
+  // Campi descrittivi (già esistenti)
+  title: "Titolo evocativo della venue",
+  venueType: "Tipo specifico (es. Teatro storico, Arena indoor, Giardini pubblici)",
+  experience: "Cosa si prova fisicamente lì",
+  suitability: "Perché è adatta a questo artista/evento",
+  atmosphere: "Che energia e emozioni aspettarsi",
+  paragraphs: ["testo descrittivo approfondito e originale"],
+  bullets: ["dettagli pratici: acustica, visuale, servizi"],
+
+  // NUOVI CAMPI OBBLIGATORI
+  locationImage: "https://ticketitalia.com/.../immagine-venue.jpg",
+  nearbyParking: [
+    {
+      name: "Parcheggio Piazza Garibaldi",
+      distanceOnFoot: "3 min a piedi",
+      type: "a pagamento",
+      notes: "€1,50/h, aperto fino alle 24:00"
+    },
+    {
+      name: "Parcheggio Viale Europa",
+      distanceOnFoot: "7 min a piedi",
+      type: "gratuito"
+    }
+    // minimo 2-3 voci reali
+  ],
+  nearbyHotels: [
+    {
+      name: "Hotel Centrale",
+      distanceOnFoot: "5 min a piedi",
+      priceRange: "€€",
+      bookingUrl: "https://www.booking.com/hotel/..."
+    },
+    {
+      name: "B&B Corso Italia",
+      distanceOnFoot: "8 min a piedi",
+      priceRange: "€"
+    },
+    {
+      name: "Grand Hotel Perugia",
+      distanceOnFoot: "12 min a piedi",
+      priceRange: "€€€",
+      bookingUrl: "https://www.booking.com/hotel/..."
+    }
+    // minimo 3 voci reali
+  ]
+}
+```
+
+### Come raccogliere i dati
+
+**1. locationImage**
+- Apri la pagina venue su ticketitalia.com
+- Ispeziona il meta tag `og:image` (view-source oppure DevTools → Elements → cerca `og:image`)
+- Usa quell'URL direttamente
+- Fallback: prima immagine visibile nella pagina
+
+**2. nearbyParking** (minimo 2-3 risultati)
+- Cerca su Google Maps: `parcheggi vicino [Nome Venue] [Città]`
+- Per ogni parcheggio: copia nome esatto, calcola distanza a piedi, verifica se gratuito o a pagamento
+- Aggiungi note su orari o tariffe se disponibili
+- Se non trovato con certezza: `notes: "verificare disponibilità prima dell'evento"`
+
+**3. nearbyHotels** (minimo 3 risultati)
+- Cerca su Google Maps o booking.com: `hotel vicino [Nome Venue] [Città]`
+- Per ogni hotel: copia nome esatto, calcola distanza a piedi, identifica fascia di prezzo
+- Aggiungi bookingUrl se disponibile (pagina specifica su booking.com)
+- Fasce di prezzo: `€` = fino a €80/notte · `€€` = €80–150/notte · `€€€` = oltre €150/notte
+
+### Regola anti-invenzione
+Non inventare mai nomi di parcheggi o hotel. Se i dati non sono verificabili, usa `notes: "dati da verificare"` ma includi comunque le voci con le informazioni parziali disponibili.
 
 ---
 
@@ -222,17 +309,22 @@ export const article: Article = {
 
 **BOFU**:
 - [ ] Tutti i campi obbligatori evento presenti (intro, quickInfo, tickets, artistContext, location, liveExperience, practicalInfo, sections, faq, cta)
-- [ ] `location` con tutti i sotto-campi compilati
+- [ ] `location` con tutti i sotto-campi compilati inclusi `locationImage`, `nearbyParking` (≥2), `nearbyHotels` (≥3)
+- [ ] `locationImage` è URL reale (non placeholder)
+- [ ] `nearbyParking`: tutti i nomi reali, distanze a piedi, tipo gratuito/pagamento
+- [ ] `nearbyHotels`: tutti i nomi reali, distanze a piedi, fascia di prezzo
 - [ ] `cta.href` punta all'URL reale di ticketitalia.com
-- [ ] Nessun dato inventato (date, prezzi, settori)
+- [ ] Nessun dato inventato (date, prezzi, settori, venue, parcheggi, hotel)
 
 **MOFU**:
 - [ ] Tutti gli eventi citati hanno data, venue e prezzo verificato
+- [ ] `location` presente con `locationImage`, `nearbyParking`, `nearbyHotels` reali
 - [ ] `internalLinks` punta agli articoli BOFU corrispondenti
 - [ ] `cta.href` punta a una pagina categoria/evento reale di ticketitalia.com
 
 **TOFU**:
 - [ ] `faq` presente con almeno 5 domande realistiche
+- [ ] `location` presente con `locationImage`, `nearbyParking`, `nearbyHotels` reali
 - [ ] CTA morbida — non forzare l'acquisto
 - [ ] Per evergreen: nessun riferimento temporale che invecchia
 
@@ -240,3 +332,4 @@ export const article: Article = {
 - [ ] `funnelStage` e `articleType` impostati correttamente
 - [ ] `status: "draft"` impostato
 - [ ] Tono editoriale coerente
+- [ ] Sezione `location` presente e completa in ogni articolo
