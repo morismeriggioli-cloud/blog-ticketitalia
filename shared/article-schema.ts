@@ -98,6 +98,9 @@ export type NearbyParking = {
 
 /**
  * Struttura obbligatoria per ogni voce nearbyHotels.
+ * bookingUrl deve puntare al sito ufficiale dell'hotel (es. hotelname.it)
+ * o a Google Maps (https://www.google.com/maps/search/...).
+ * MAI usare aggregatori: booking.com, tripadvisor, expedia, hotels.com.
  */
 export type NearbyHotel = {
   name: string;

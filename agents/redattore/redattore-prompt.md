@@ -31,7 +31,7 @@ Scrivi articoli completi per il blog di Ticket Italia a partire dalle opportunit
 3. **Raccogli dati location POI** (vedi sezione dedicata):
    - `locationImage`: og:image dalla pagina venue su ticketitalia.com
    - `nearbyParking`: 2-3 parcheggi reali vicini (Google Maps)
-   - `nearbyHotels`: 3 hotel reali vicini (Google Maps / booking.com)
+   - `nearbyHotels`: 3 hotel reali vicini (sito ufficiale o Google Maps — mai aggregatori)
 4. Ricerca l'artista/evento: storia, rilevanza, tour precedenti, stile, pubblico
 5. Redigi l'articolo seguendo la struttura obbligatoria evento (vedi sotto)
 6. Salva in `output/articles/[slug].ts`
@@ -178,18 +178,19 @@ location: {
       name: "Hotel Centrale",
       distanceOnFoot: "5 min a piedi",
       priceRange: "€€",
-      bookingUrl: "https://www.booking.com/hotel/..."
+      bookingUrl: "https://www.hotelcentrale.it/"  // sito ufficiale
     },
     {
       name: "B&B Corso Italia",
       distanceOnFoot: "8 min a piedi",
       priceRange: "€"
+      // nessun sito ufficiale → ometti bookingUrl o usa Google Maps
     },
     {
       name: "Grand Hotel Perugia",
       distanceOnFoot: "12 min a piedi",
       priceRange: "€€€",
-      bookingUrl: "https://www.booking.com/hotel/..."
+      bookingUrl: "https://www.google.com/maps/search/Grand+Hotel+Perugia"  // fallback Maps
     }
     // minimo 3 voci reali
   ]
@@ -211,9 +212,12 @@ location: {
 - Se non trovato con certezza: `notes: "verificare disponibilità prima dell'evento"`
 
 **3. nearbyHotels** (minimo 3 risultati)
-- Cerca su Google Maps o booking.com: `hotel vicino [Nome Venue] [Città]`
+- Cerca su Google Maps: `hotel vicino [Nome Venue] [Città]`
 - Per ogni hotel: copia nome esatto, calcola distanza a piedi, identifica fascia di prezzo
-- Aggiungi bookingUrl se disponibile (pagina specifica su booking.com)
+- **`bookingUrl`**: cerca il sito ufficiale dell'hotel (es. `hotelname.it`)
+  - Se trovato → usa quello
+  - Se non trovato → usa `https://www.google.com/maps/search/[Nome+Hotel+Città]`
+  - **MAI** usare booking.com, tripadvisor, expedia o altri aggregatori
 - Fasce di prezzo: `€` = fino a €80/notte · `€€` = €80–150/notte · `€€€` = oltre €150/notte
 
 ### Regola anti-invenzione

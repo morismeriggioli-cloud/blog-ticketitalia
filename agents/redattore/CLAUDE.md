@@ -101,9 +101,19 @@ location: {
 
 1. **locationImage**: estrai `og:image` dalla pagina venue su ticketitalia.com (o la prima immagine disponibile)
 2. **nearbyParking**: cerca su Google Maps "parcheggi vicino [nome venue]" — minimo 2-3 risultati reali con nome, distanza a piedi, gratuito/pagamento
-3. **nearbyHotels**: cerca su Google Maps o booking.com "hotel vicino [nome venue]" — minimo 3 risultati reali con nome, distanza, fascia di prezzo (€ = budget, €€ = medio, €€€ = premium)
+3. **nearbyHotels**: cerca su Google Maps "hotel vicino [nome venue]" — minimo 3 risultati reali con nome, distanza, fascia di prezzo (€ = budget, €€ = medio, €€€ = premium)
 
-**Regola**: dati REALI sempre. Se non riesci a trovare dati certi per un parcheggio o hotel, indicalo con `notes: "verificare disponibilità"` ma non inventare.
+**Regola `bookingUrl`**:
+- Cerca prima il **sito ufficiale** dell'hotel (es. `hotelname.it`, `hotelname.com`)
+- Se il sito ufficiale non esiste o non è verificabile: usa `https://www.google.com/maps/search/[Nome+Hotel+Città]`
+- **MAI** usare booking.com, tripadvisor, expedia, hotels.com o altri aggregatori
+
+**Regola immagini hotel**:
+- Usa l'immagine dal sito ufficiale dell'hotel se disponibile
+- Fallback: immagine da Google Maps / Google My Business della struttura
+- Non inventare URL di immagini
+
+**Regola dati**: REALI sempre. Se non trovi dati certi indicalo con `notes: "verificare disponibilità"` ma non inventare.
 
 **Vietato scrivere**: "location suggestiva", "atmosfera magica", "esperienza unica e indimenticabile", "venue perfetta".
 
