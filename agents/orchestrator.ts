@@ -13,7 +13,6 @@ import Anthropic from "@anthropic-ai/sdk";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-import simpleGit from "simple-git";
 import { sendArticleNotification, sendPublishedNotification } from "./mailer.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -440,6 +439,7 @@ export async function autoPublish(slug: string, title: string): Promise<string> 
   console.log(`[autoPublish] Articolo inserito in blog.ts: ${slug}`);
 
   // Git commit + push
+  const { default: simpleGit } = await import("simple-git");
   const git = simpleGit(ROOT);
   await git.add(blogPath);
   await git.commit(`Auto-publish: ${title} ${pubDate}`);
