@@ -10,7 +10,8 @@
       "WebFetch(domain:www.tripadvisor.it)",
       "WebFetch(domain:www.afterlifeclub.it)",
       "WebFetch(domain:www.umbriafilmcommission.com)",
-      "WebFetch(domain:xceed.me)"
+      "WebFetch(domain:xceed.me)",
+      "Bash(git add *)"
     ]
   }
 }

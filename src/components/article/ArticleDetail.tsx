@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactElement } from "react";
-import { ArrowRight, CalendarDays, CheckCircle2, Clock, HelpCircle, UserRound } from "lucide-react";
+import { ArrowRight, Building2, CalendarDays, Car, CheckCircle2, Clock, HelpCircle, MapPin, UserRound } from "lucide-react";
 import type { Article } from "@/data/blog";
 import { getCategoryPath, publishedArticles } from "@/data/blog";
 import { Badge } from "@/components/ui/Badge";
@@ -114,6 +114,23 @@ export function ArticleDetail({ article }: ArticleDetailProps) {
                 </aside>
               ) : null}
 
+              {article.body.quickInfo ? (
+                <aside className="my-8 rounded-lg border border-primary-500/30 bg-primary-50 p-5">
+                  <div className="mb-3 flex items-center gap-2">
+                    <CheckCircle2 className="size-5 text-primary-700" aria-hidden="true" />
+                    <h2 className="m-0 text-xl font-black tracking-normal text-ink">
+                      {article.body.quickInfo.title}
+                    </h2>
+                  </div>
+                  <p>{renderInlineLinks(article.body.quickInfo.text)}</p>
+                  <ul>
+                    {article.body.quickInfo.bullets.map((bullet) => (
+                      <li key={bullet}>{bullet}</li>
+                    ))}
+                  </ul>
+                </aside>
+              ) : null}
+
               {article.body.internalLinks ? (
                 <aside className="my-8 rounded-lg border border-line bg-background p-5">
                   <p className="mb-3 text-sm font-black uppercase tracking-normal text-coral">
@@ -128,6 +145,167 @@ export function ArticleDetail({ article }: ArticleDetailProps) {
                     ))}
                   </div>
                 </aside>
+              ) : null}
+
+              {article.body.tickets ? (
+                <section>
+                  <h2>{article.body.tickets.title}</h2>
+                  <p>{renderInlineLinks(article.body.tickets.text)}</p>
+                  <ul>
+                    {article.body.tickets.bullets.map((bullet) => (
+                      <li key={bullet}>{bullet}</li>
+                    ))}
+                  </ul>
+                </section>
+              ) : null}
+
+              {article.body.artistContext ? (
+                <section>
+                  <h2>{article.body.artistContext.title}</h2>
+                  {article.body.artistContext.paragraphs.map((paragraph) => (
+                    <p key={paragraph}>{renderInlineLinks(paragraph)}</p>
+                  ))}
+                  {article.body.artistContext.bullets ? (
+                    <ul>
+                      {article.body.artistContext.bullets.map((bullet) => (
+                        <li key={bullet}>{bullet}</li>
+                      ))}
+                    </ul>
+                  ) : null}
+                </section>
+              ) : null}
+
+              {article.body.location ? (
+                <section>
+                  {article.body.location.locationImage ? (
+                    <div className="not-prose relative mb-6 aspect-[21/8] overflow-hidden rounded-lg">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={article.body.location.locationImage}
+                        alt={article.body.location.title}
+                        className="size-full object-cover"
+                      />
+                    </div>
+                  ) : null}
+
+                  <h2>{article.body.location.title}</h2>
+                  <p className="font-semibold text-muted">{article.body.location.venueType}</p>
+                  <p>{article.body.location.experience}</p>
+                  <p>{article.body.location.suitability}</p>
+                  <p>{article.body.location.atmosphere}</p>
+                  {article.body.location.paragraphs.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                  {article.body.location.bullets ? (
+                    <ul>
+                      {article.body.location.bullets.map((bullet) => (
+                        <li key={bullet}>{bullet}</li>
+                      ))}
+                    </ul>
+                  ) : null}
+
+                  {article.body.location.nearbyParking?.length ? (
+                    <div className="not-prose my-6 rounded-lg border border-line bg-background p-5">
+                      <div className="mb-4 flex items-center gap-2">
+                        <Car className="size-5 text-primary-700" aria-hidden="true" />
+                        <h3 className="text-base font-black text-ink">Parcheggi vicini</h3>
+                      </div>
+                      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                        {article.body.location.nearbyParking.map((parking) => (
+                          <div key={parking.name} className="rounded-md bg-white p-4 ring-1 ring-line">
+                            <p className="font-bold text-ink">{parking.name}</p>
+                            <div className="mt-1 flex flex-wrap items-center gap-2">
+                              <span className="flex items-center gap-1 text-sm text-muted">
+                                <MapPin className="size-3.5" aria-hidden="true" />
+                                {parking.distanceOnFoot}
+                              </span>
+                              <span
+                                className={`rounded px-2 py-0.5 text-xs font-bold ${
+                                  parking.type === "gratuito"
+                                    ? "bg-green-50 text-green-700"
+                                    : "bg-orange-50 text-orange-700"
+                                }`}
+                              >
+                                {parking.type}
+                              </span>
+                            </div>
+                            {parking.notes ? (
+                              <p className="mt-1 text-sm text-muted">{parking.notes}</p>
+                            ) : null}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ) : null}
+
+                  {article.body.location.nearbyHotels?.length ? (
+                    <div className="not-prose my-6 rounded-lg border border-line bg-background p-5">
+                      <div className="mb-4 flex items-center gap-2">
+                        <Building2 className="size-5 text-primary-700" aria-hidden="true" />
+                        <h3 className="text-base font-black text-ink">Hotel vicini</h3>
+                      </div>
+                      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                        {article.body.location.nearbyHotels.map((hotel) => (
+                          <div key={hotel.name} className="flex flex-col rounded-md bg-white p-4 ring-1 ring-line">
+                            <p className="font-bold text-ink">{hotel.name}</p>
+                            <div className="mt-1 flex flex-wrap items-center gap-2">
+                              <span className="flex items-center gap-1 text-sm text-muted">
+                                <MapPin className="size-3.5" aria-hidden="true" />
+                                {hotel.distanceOnFoot}
+                              </span>
+                              <span className="rounded bg-ink/5 px-2 py-0.5 text-xs font-bold text-ink">
+                                {hotel.priceRange}
+                              </span>
+                            </div>
+                            {hotel.bookingUrl ? (
+                              <a
+                                href={hotel.bookingUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mt-3 inline-flex items-center gap-1 text-sm font-bold text-primary-700 hover:text-ink"
+                              >
+                                Prenota
+                                <ArrowRight className="size-3.5" aria-hidden="true" />
+                              </a>
+                            ) : null}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ) : null}
+                </section>
+              ) : null}
+
+              {article.body.liveExperience ? (
+                <section>
+                  <h2>{article.body.liveExperience.title}</h2>
+                  {article.body.liveExperience.paragraphs.map((paragraph) => (
+                    <p key={paragraph}>{renderInlineLinks(paragraph)}</p>
+                  ))}
+                  {article.body.liveExperience.bullets ? (
+                    <ul>
+                      {article.body.liveExperience.bullets.map((bullet) => (
+                        <li key={bullet}>{bullet}</li>
+                      ))}
+                    </ul>
+                  ) : null}
+                </section>
+              ) : null}
+
+              {article.body.practicalInfo ? (
+                <section>
+                  <h2>{article.body.practicalInfo.title}</h2>
+                  {article.body.practicalInfo.paragraphs.map((paragraph) => (
+                    <p key={paragraph}>{renderInlineLinks(paragraph)}</p>
+                  ))}
+                  {article.body.practicalInfo.bullets ? (
+                    <ul>
+                      {article.body.practicalInfo.bullets.map((bullet) => (
+                        <li key={bullet}>{bullet}</li>
+                      ))}
+                    </ul>
+                  ) : null}
+                </section>
               ) : null}
 
               {article.body.sections.map((section) => (
