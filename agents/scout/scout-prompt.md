@@ -72,7 +72,8 @@ Criteri di selezione TOFU:
 4. **Identifica opportunità TOFU**: artisti, venue e destinazioni che compaiono frequentemente o che generano query informazionali alte; considera stagionalità e guide evergreen
 5. **Valuta la potenzialità SEO** per ogni opportunità: volume di ricerca stimato, competitività, intento di ricerca
 6. **Assegna `funnel_stage`** e **`article_type`** a ciascuna opportunità
-7. **Produci il report** nel formato definito sotto
+7. **Verifica la distribuzione per categoria** (vedi sezione dedicata sotto): assicurati che tutte le categorie siano rappresentate prima di finalizzare
+8. **Produci il report** nel formato definito sotto
 
 ---
 
@@ -95,6 +96,36 @@ Criteri di selezione TOFU:
 
 ---
 
+## Distribuzione per Categoria
+
+Il blog ha **5 categorie editoriali** da coprire con eventi e contenuti:
+
+| Categoria | Slug | Contenuti tipici |
+|-----------|------|-----------------|
+| Concerti | `concerti` | Tour, live, arena, club |
+| Teatro & Spettacoli | `teatro-spettacoli` | Prosa, musical, danza, comedy, cabaret |
+| Eventi & Festival | `eventi-festival` | Festival musicali, fiere, eventi culturali, sagre |
+| Sport | `sport` | Calcio, basket, motori, eventi sportivi |
+| Nightlife & Experience | `nightlife-experience` | DJ set, club, format immersivi |
+
+### Regole di distribuzione obbligatorie
+
+1. **Almeno 1 opportunità per categoria**: ogni report deve coprire tutte e 5 le categorie editoriali
+2. **Massimo 2 opportunità per categoria**: non concentrare più di 2 slot sulla stessa categoria
+3. **Categoria assente dalla sitemap**: se la sitemap non ha eventi per una categoria, proponi un articolo TOFU/MOFU evergreen (es. "I migliori spettacoli teatrali in Umbria 2026", "Guida agli eventi sportivi in Italia 2026") e segnala la lacuna nel campo `notes`
+4. **Campo `category_distribution`**: il JSON output deve includere il conteggio delle opportunità per categoria
+5. **Verifica finale**: prima di scrivere il JSON, conta le opportunità per categoria e correggi se una è assente o supera quota 2
+
+### Mappatura eventi → categorie
+
+- Concerti di artisti musicali → `concerti`
+- Teatro, prosa, musical, danza, stand-up comedy, cabaret → `teatro-spettacoli`
+- Festival (Umbria Jazz, sagre, fiere come Agriumbria) → `eventi-festival`
+- Partite, gare, eventi sportivi → `sport`
+- Serate in club, DJ set, rave, format notturni → `nightlife-experience`
+
+---
+
 ## Output
 
 Produci un file JSON in `output/articles/scout-report-[YYYY-MM-DD].json`:
@@ -103,6 +134,13 @@ Produci un file JSON in `output/articles/scout-report-[YYYY-MM-DD].json`:
 {
   "generatedAt": "ISO date",
   "totalFound": 0,
+  "category_distribution": {
+    "concerti": 0,
+    "teatro-spettacoli": 0,
+    "eventi-festival": 0,
+    "sport": 0,
+    "nightlife-experience": 0
+  },
   "opportunities": [
     {
       "rank": 1,
@@ -115,8 +153,8 @@ Produci un file JSON in `output/articles/scout-report-[YYYY-MM-DD].json`:
       "date": "YYYY-MM-DD (per eventi specifici) | null (per guide/evergreen)",
       "ticketitalia_url": "https://... (URL evento per BOFU) | null (per MOFU/TOFU senza evento singolo)",
       "source_urls": ["https://...", "https://..."],
-      "category": "concerti|teatro-spettacoli|sport|famiglia|fiere-eventi|guide",
-      "subcategory": "pop|rock|urban|musical|...",
+      "category": "concerti|teatro-spettacoli|eventi-festival|sport|nightlife-experience",
+      "subcategory": "pop|rock|urban|musical|calcio|club|festival-musicali|...",
       "seo_potential": "high|medium|low",
       "ticket_price": "€XX.XX (solo per BOFU) | null",
       "suggested_slug": "slug-articolo-proposto",
@@ -165,3 +203,6 @@ Adatta la distribuzione in base a quanto è ricca la sitemap analizzata: se ci s
 - `article_type: "guida"` per MOFU/TOFU con intento informativo specifico
 - Ordina per `seo_potential` decrescente, poi per `funnel_stage` (BOFU → MOFU → TOFU), poi per data ascendente
 - Massimo 20 opportunità per report
+- **`category`** deve essere uno dei 5 slug validi: `concerti`, `teatro-spettacoli`, `eventi-festival`, `sport`, `nightlife-experience`
+- **Verifica distribuzione**: prima di produrre il JSON finale, conta quante opportunità hai per categoria. Se una categoria ha 0 opportunità, aggiungi un articolo TOFU/evergreen per quella categoria. Se una categoria supera 2, rimpiazza l'eccesso con una categoria scoperta
+- **`category_distribution`** deve riflettere i conteggi reali delle opportunità nel report

@@ -166,10 +166,26 @@ export async function runRedattore(
     console.warn("[redattore] Immagine evento non trovata — verrà usato il fallback");
   }
 
+  const categorySlug = (opportunity.category as string | undefined) ?? "concerti";
+  const categoryNameMap: Record<string, string> = {
+    "concerti": "Concerti",
+    "teatro-spettacoli": "Teatro & Spettacoli",
+    "eventi-festival": "Eventi & Festival",
+    "sport": "Sport",
+    "nightlife-experience": "Nightlife & Experience",
+    "guide": "Guide & Consigli",
+  };
+  const categoryName = categoryNameMap[categorySlug] ?? "Concerti";
+
   const userMessage = `Scrivi l'articolo per la seguente opportunità identificata dallo Scout.
 
 OPPORTUNITÀ:
 ${JSON.stringify(opportunity, null, 2)}
+
+CATEGORIA ASSEGNATA DALLO SCOUT:
+- category: "${categoryName}"
+- categorySlug: "${categorySlug}"
+Usa ESATTAMENTE questi valori nei campi category e categorySlug dell'articolo.
 
 IMMAGINE EVENTO:
 ${eventImage || "(non disponibile — usa il fallback /images/[slug]-hero.jpg)"}
