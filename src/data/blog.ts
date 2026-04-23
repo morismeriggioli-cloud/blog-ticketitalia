@@ -74,12 +74,14 @@ export type Article = {
         distanceOnFoot: string;
         type: "gratuito" | "a pagamento";
         notes?: string;
+        mapsUrl?: string;
       }>;
       nearbyHotels?: Array<{
         name: string;
         distanceOnFoot: string;
         priceRange: string;
         bookingUrl?: string;
+        images?: string[];
       }>;
     };
     liveExperience?: {
@@ -759,14 +761,14 @@ export const articles: Article[] = [
         ],
         locationImage: "https://ticketitalia.com/image/cache/wp/gp/Luoghi%20banner/Progetto%20senza%20titolo%20(59)-1400x300.webp",
         nearbyParking: [
-          { name: "Parcheggi fieristici Umbriafiere (Largo America, Oceania, Asia)", distanceOnFoot: "0 min a piedi", type: "gratuito", notes: "Parcheggi gratuiti segnalati, attivi durante le fiere con navetta inclusa" },
-          { name: "Parcheggio di fronte alle Poste – Bastia Umbra", distanceOnFoot: "10 min a piedi", type: "gratuito", notes: "50 posti, con servizio camper. Vicino al centro di Bastia Umbra" },
-          { name: "Parcheggi pubblici Via Roma – Bastia Umbra", distanceOnFoot: "15 min a piedi", type: "gratuito", notes: "Parcheggi lungo strada nel centro di Bastia Umbra" },
+          { name: "Parcheggi fieristici Umbriafiere (Largo America, Oceania, Asia)", distanceOnFoot: "0 min a piedi", type: "gratuito", notes: "Parcheggi gratuiti segnalati, attivi durante le fiere con navetta inclusa", mapsUrl: "https://maps.google.com/?q=Umbriafiere+Piazza+Moncada+Bastia+Umbra" },
+          { name: "Parcheggio di fronte alle Poste – Bastia Umbra", distanceOnFoot: "10 min a piedi", type: "gratuito", notes: "50 posti, con servizio camper. Vicino al centro di Bastia Umbra", mapsUrl: "https://maps.google.com/?q=Poste+Italiane+Bastia+Umbra" },
+          { name: "Parcheggi pubblici Via Roma – Bastia Umbra", distanceOnFoot: "15 min a piedi", type: "gratuito", notes: "Parcheggi lungo strada nel centro di Bastia Umbra", mapsUrl: "https://maps.google.com/?q=Via+Roma+Bastia+Umbra" },
         ],
         nearbyHotels: [
-          { name: "Hotel Santa Lucia", distanceOnFoot: "20 min a piedi", priceRange: "€", bookingUrl: "https://www.hotelsantaluciabastia.com/" },
-          { name: "Hotel La Villa Excelsior", distanceOnFoot: "30 min a piedi", priceRange: "€€", bookingUrl: "https://la-villa-excelsior.umbriahotelsweb.com/en/" },
-          { name: "Relais Madonna di Campagna", distanceOnFoot: "25 min in auto", priceRange: "€€", bookingUrl: "https://www.relaismadonnadicampagna.it/en/" },
+          { name: "Hotel Santa Lucia", distanceOnFoot: "20 min a piedi", priceRange: "€", bookingUrl: "https://www.booking.com/hotel/it/santa-lucia-bastia-umbra.html", images: ["https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=400&q=80"] },
+          { name: "Hotel La Villa Excelsior", distanceOnFoot: "30 min a piedi", priceRange: "€€", bookingUrl: "https://www.booking.com/hotel/it/la-villa-excelsior-bastia-umbra.html", images: ["https://images.unsplash.com/photo-1551882547-ff40c63fe2e2?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=400&q=80"] },
+          { name: "Relais Madonna di Campagna", distanceOnFoot: "25 min in auto", priceRange: "€€", bookingUrl: "https://www.booking.com/hotel/it/relais-madonna-di-campagna.html", images: ["https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=400&q=80"] },
         ],
       },
       faq: [
@@ -869,14 +871,14 @@ export const articles: Article[] = [
         ],
         locationImage: "https://ticketitalia.com/image/cache/wp/gj/Luoghi%20banner/344506502072015142421_galleriamedia1-1400x300.webp",
         nearbyParking: [
-          { name: "Parcheggio della Posterna", distanceOnFoot: "10 min a piedi", type: "a pagamento", notes: "454 posti, €1,20/ora. Tapis roulant sotterraneo con uscita nei pressi del Teatro Nuovo" },
-          { name: "Parcheggio Spoletosfera", distanceOnFoot: "15 min a piedi", type: "a pagamento", notes: "414 posti coperti, aperto 24h su 24. Raggiungibile da Viale dei Cappuccini" },
-          { name: "Parcheggio Pian di Boccio", distanceOnFoot: "20 min a piedi", type: "gratuito", notes: "Parcheggio gratuito nel weekend, collegato al centro storico" },
+          { name: "Parcheggio della Posterna", distanceOnFoot: "10 min a piedi", type: "a pagamento", notes: "454 posti, €1,20/ora. Tapis roulant sotterraneo con uscita nei pressi del Teatro Nuovo", mapsUrl: "https://maps.google.com/?q=Parcheggio+Posterna+Spoleto" },
+          { name: "Parcheggio Spoletosfera", distanceOnFoot: "15 min a piedi", type: "a pagamento", notes: "414 posti coperti, aperto 24h su 24. Raggiungibile da Viale dei Cappuccini", mapsUrl: "https://maps.google.com/?q=Parcheggio+Spoletosfera+Spoleto" },
+          { name: "Parcheggio Pian di Boccio", distanceOnFoot: "20 min a piedi", type: "gratuito", notes: "Parcheggio gratuito nel weekend, collegato al centro storico", mapsUrl: "https://maps.google.com/?q=Pian+di+Boccio+Spoleto+parcheggio" },
         ],
         nearbyHotels: [
-          { name: "Hotel San Luca", distanceOnFoot: "10 min a piedi", priceRange: "€€", bookingUrl: "https://www.hotelsanluca.com/en/index" },
-          { name: "Hotel dei Duchi", distanceOnFoot: "8 min a piedi", priceRange: "€€", bookingUrl: "https://www.hoteldeiduchi.com/en/index" },
-          { name: "Boutique Hotel Aurora & Private Spa", distanceOnFoot: "5 min a piedi", priceRange: "€€", bookingUrl: "https://www.boutiquehotelaurora.it/" },
+          { name: "Hotel San Luca", distanceOnFoot: "10 min a piedi", priceRange: "€€", bookingUrl: "https://www.booking.com/hotel/it/san-luca-spoleto.html", images: ["https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=400&q=80"] },
+          { name: "Hotel dei Duchi", distanceOnFoot: "8 min a piedi", priceRange: "€€", bookingUrl: "https://www.booking.com/hotel/it/dei-duchi-spoleto.html", images: ["https://images.unsplash.com/photo-1551882547-ff40c63fe2e2?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=400&q=80"] },
+          { name: "Boutique Hotel Aurora & Private Spa", distanceOnFoot: "5 min a piedi", priceRange: "€€", bookingUrl: "https://www.booking.com/hotel/it/aurora-spoleto.html", images: ["https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=400&q=80"] },
         ],
       },
       liveExperience: {
@@ -991,14 +993,14 @@ export const articles: Article[] = [
         ],
         locationImage: "https://ticketitalia.com/image/cache/wp/gj/Luoghi%20banner/Giardini%20del%20Frontone%20Perugia%20(1)-1400x300.webp",
         nearbyParking: [
-          { name: "Parcheggio Piazza Partigiani", distanceOnFoot: "10 min a piedi", type: "a pagamento", notes: "Parcheggio custodito con scale mobili verso il centro storico" },
-          { name: "Parcheggio Piazzale Europa", distanceOnFoot: "12 min a piedi", type: "a pagamento", notes: "Parcheggio custodito con scale mobili, vicino agli accessi principali al centro" },
-          { name: "Parcheggio Mercato Coperto (Via del Mercato)", distanceOnFoot: "8 min a piedi", type: "a pagamento", notes: "Parcheggio con ascensore, posizione comoda per raggiungere i Giardini del Frontone" },
+          { name: "Parcheggio Piazza Partigiani", distanceOnFoot: "10 min a piedi", type: "a pagamento", notes: "Parcheggio custodito con scale mobili verso il centro storico", mapsUrl: "https://maps.google.com/?q=Parcheggio+Piazza+Partigiani+Perugia" },
+          { name: "Parcheggio Piazzale Europa", distanceOnFoot: "12 min a piedi", type: "a pagamento", notes: "Parcheggio custodito con scale mobili, vicino agli accessi principali al centro", mapsUrl: "https://maps.google.com/?q=Parcheggio+Piazzale+Europa+Perugia" },
+          { name: "Parcheggio Mercato Coperto (Via del Mercato)", distanceOnFoot: "8 min a piedi", type: "a pagamento", notes: "Parcheggio con ascensore, posizione comoda per raggiungere i Giardini del Frontone", mapsUrl: "https://maps.google.com/?q=Parcheggio+Mercato+Coperto+Perugia" },
         ],
         nearbyHotels: [
-          { name: "Sina Brufani", distanceOnFoot: "5 min a piedi", priceRange: "€€€", bookingUrl: "https://www.sinahotels.com/en/h/sina-brufani-perugia/" },
-          { name: "Sangallo Palace Hotel", distanceOnFoot: "5 min a piedi", priceRange: "€€", bookingUrl: "https://www.booking.com/hotel/it/sangallopalace.html" },
-          { name: "Chocohotel", distanceOnFoot: "20 min a piedi", priceRange: "€", bookingUrl: "https://www.chocohotel.it/en/" },
+          { name: "Sina Brufani", distanceOnFoot: "5 min a piedi", priceRange: "€€€", bookingUrl: "https://www.booking.com/hotel/it/sina-brufani-perugia.html", images: ["https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=400&q=80"] },
+          { name: "Sangallo Palace Hotel", distanceOnFoot: "5 min a piedi", priceRange: "€€", bookingUrl: "https://www.booking.com/hotel/it/sangallopalace.html", images: ["https://images.unsplash.com/photo-1551882547-ff40c63fe2e2?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=400&q=80"] },
+          { name: "Chocohotel", distanceOnFoot: "20 min a piedi", priceRange: "€", bookingUrl: "https://www.booking.com/hotel/it/chocohotel-perugia.html", images: ["https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=400&q=80"] },
         ],
       },
       liveExperience: {
@@ -1126,14 +1128,14 @@ export const articles: Article[] = [
         ],
         locationImage: "https://www.umbriafilmcommission.com/wp-content/uploads/2021/10/6171274fb2039-640x400.jpg",
         nearbyParking: [
-          { name: "Parcheggio zona industriale Balanzano (area esterna venue)", distanceOnFoot: "0 min a piedi", type: "gratuito", notes: "Ampio parcheggio privato annesso al locale, capienza elevata" },
-          { name: "Parcheggio P+R Ponte San Giovanni", distanceOnFoot: "15 min a piedi", type: "gratuito", notes: "Parcheggio di interscambio vicino alla stazione, con navetta per il centro" },
-          { name: "Parcheggio Via della Gomma (strada pubblica)", distanceOnFoot: "2 min a piedi", type: "gratuito", notes: "Posti lungo la strada nella zona industriale, disponibili la sera" },
+          { name: "Parcheggio zona industriale Balanzano (area esterna venue)", distanceOnFoot: "0 min a piedi", type: "gratuito", notes: "Ampio parcheggio privato annesso al locale, capienza elevata", mapsUrl: "https://maps.google.com/?q=Afterlife+Live+Club+Balanzano+Perugia" },
+          { name: "Parcheggio P+R Ponte San Giovanni", distanceOnFoot: "15 min a piedi", type: "gratuito", notes: "Parcheggio di interscambio vicino alla stazione, con navetta per il centro", mapsUrl: "https://maps.google.com/?q=Parcheggio+Ponte+San+Giovanni+Perugia" },
+          { name: "Parcheggio Via della Gomma (strada pubblica)", distanceOnFoot: "2 min a piedi", type: "gratuito", notes: "Posti lungo la strada nella zona industriale, disponibili la sera", mapsUrl: "https://maps.google.com/?q=Via+della+Gomma+Balanzano+Perugia" },
         ],
         nearbyHotels: [
-          { name: "Perugia Park Hotel", distanceOnFoot: "20 min in auto", priceRange: "€€", bookingUrl: "https://www.perugiaparkhotel.com/" },
-          { name: "Posta Donini 1579 – UNA Esperienze", distanceOnFoot: "15 min in auto", priceRange: "€€€", bookingUrl: "https://www.booking.com/hotel/it/postadonini.html" },
-          { name: "Chocohotel Perugia", distanceOnFoot: "20 min in auto", priceRange: "€€", bookingUrl: "https://www.chocohotel.it/en/" },
+          { name: "Perugia Park Hotel", distanceOnFoot: "20 min in auto", priceRange: "€€", bookingUrl: "https://www.booking.com/hotel/it/perugia-park.html", images: ["https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=400&q=80"] },
+          { name: "Posta Donini 1579 – UNA Esperienze", distanceOnFoot: "15 min in auto", priceRange: "€€€", bookingUrl: "https://www.booking.com/hotel/it/postadonini.html", images: ["https://images.unsplash.com/photo-1551882547-ff40c63fe2e2?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=400&q=80"] },
+          { name: "Chocohotel Perugia", distanceOnFoot: "20 min in auto", priceRange: "€€", bookingUrl: "https://www.booking.com/hotel/it/chocohotel-perugia.html", images: ["https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=400&q=80", "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=400&q=80"] },
         ],
       },
 
@@ -1225,6 +1227,732 @@ export const articles: Article[] = [
         text: "I posti all'Afterlife Live Club sono limitati dalla capienza della venue. Acquista il biglietto ora su Ticket Italia e assicurati il tuo posto per una delle serate live più intense dell'aprile 2026.",
         label: "Acquista su Ticket Italia",
         href: "https://ticketitalia.com/ermal-meta-afterlife-live-club-perugia-29-aprile-2026",
+      },
+    },
+  },
+  {
+    slug: "pooh-marsciano-2026-biglietti-palaunical",
+    title: "Pooh a Marsciano 2026: biglietti e info PalaUnical",
+    excerpt:
+      "I Pooh tornano in concerto a Marsciano il 15 maggio 2026 al PalaUnical. Una serata di reunion imperdibile per i fan della band iconica italiana: tutto su biglietti, prezzi e come arrivare.",
+    category: "Concerti",
+    categorySlug: "concerti",
+    subcategory: "Pop",
+    subcategorySlug: "pop",
+    type: "evento",
+    status: "published",
+    funnelStage: "BOFU",
+    articleType: "evento",
+    tags: ["pooh marsciano", "biglietti pooh", "palaunical", "concerti umbria maggio 2026", "pooh reunion"],
+    date: "2026-04-23",
+    readTime: "8 min",
+    author: "Redazione Ticket Italia",
+    image: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=1400&q=80",
+    body: {
+      intro:
+        "I Pooh arrivano a Marsciano il 15 maggio 2026: il PalaUnical ospita uno degli eventi più attesi dell'anno in Umbria, una serata di reunion con la band che ha segnato decenni di musica italiana. Biglietti a partire da €45,00 — acquisto anticipato fortemente consigliato.",
+      quickInfo: {
+        title: "Informazioni rapide",
+        text:
+          "I Pooh in concerto al PalaUnical di Marsciano: una data unica umbra con la band più amata del pop italiano. Alta domanda prevista, disponibilità limitata.",
+        bullets: [
+          "Artista: Pooh — la band iconica della musica italiana",
+          "Location: PalaUnical, Via del Lavoro, Marsciano (PG)",
+          "Data: venerdì 15 maggio 2026",
+          "Biglietto: a partire da €45,00",
+          "Organizzatore: Ticket Italia",
+        ],
+      },
+      tickets: {
+        title: "Biglietti Pooh Marsciano — prezzi e come acquistare",
+        text:
+          "I biglietti per il concerto dei Pooh al PalaUnical partono da €45,00. L'alta domanda prevista per questo evento di reunion consiglia l'acquisto immediato. I biglietti sono in formato elettronico e vengono consegnati via email dopo l'acquisto.",
+        bullets: [
+          "Prezzo base: €45,00",
+          "Formato: biglietto elettronico PDF consegnato via email",
+          "Accesso: QR code da smartphone",
+          "Acquisto: su Ticket Italia all'indirizzo indicato nel CTA",
+          "Alta domanda attesa: acquisto anticipato consigliato",
+        ],
+      },
+      artistContext: {
+        title: "I Pooh: cinquant'anni di musica italiana",
+        paragraphs: [
+          "I Pooh sono la band italiana più longeva e amata della storia del pop nazionale. Nati nel 1966 a Bologna, hanno attraversato sei decenni di musica con una coerenza artistica e una capacità di rinnovarsi che li ha resi un punto di riferimento generazionale. Roby Facchinetti, Red Canzian, Dodi Battaglia e Stefano D'Orazio (scomparso nel 2020) hanno costruito un catalogo immenso.",
+          "La reunion del 2025-2026 ha riportato i Pooh sui palchi di tutta Italia con uno show che celebra il meglio di cinquant'anni di carriera. La scaletta attinge ai grandi classici — 'Uomini soli', 'Tanta voglia di lei', 'Parsifal', 'Chi fermerà la musica' — ma include anche brani meno noti che conquistano i fan più appassionati. A Marsciano arriva una delle poche date umbre dell'intero tour.",
+          "Assistere ai Pooh dal vivo nel 2026 è qualcosa di raro: la band non ha mai avuto un ritmo concertistico serrato, e ogni tour diventa un evento. Il PalaUnical di Marsciano offre una dimensione raccolta e intima rispetto alle arene, una scelta che trasforma il concerto in qualcosa di ancora più speciale.",
+        ],
+        bullets: [
+          "Fondati nel 1966 a Bologna, oltre cinquant'anni di carriera",
+          "Roby Facchinetti (voce e tastiere), Red Canzian (basso e voce), Dodi Battaglia (chitarra e voce)",
+          "Successi: 'Uomini soli', 'Tanta voglia di lei', 'Chi fermerà la musica', 'Parsifal'",
+          "Tour reunion 2025-2026: poche date in tutta Italia, alta domanda",
+          "Data umbra: una delle poche nel centro Italia",
+        ],
+      },
+      location: {
+        title: "PalaUnical di Marsciano: il palazzetto dello sport nel cuore dell'Umbria",
+        venueType: "Palazzetto dello sport polifunzionale adibito a eventi live",
+        experience:
+          "Il PalaUnical è il principale spazio per eventi al coperto di Marsciano, un comune in provincia di Perugia nel cuore dell'Umbria. La struttura è adatta a concerti di medie dimensioni, con una capienza che garantisce una buona visibilità da tutti i settori. Per un evento come i Pooh, la dimensione raccolta diventa un valore aggiunto: la distanza dal palco è contenuta e l'atmosfera è quella delle grandi serate live di provincia.",
+        suitability:
+          "Ideale per concerti, eventi sportivi e spettacoli al coperto. La configurazione con platea centrale e tribune laterali permette di scegliere il tipo di esperienza: chi vuole cantare sotto il palco può farlo, chi preferisce una visuale d'insieme trova la sua posizione ideale. Accessibile anche da sedie a rotelle previo contatto con l'organizzatore.",
+        atmosphere:
+          "Per un concerto dei Pooh il PalaUnical si trasforma in un luogo carico di emozione collettiva. La musica della band tocca generazioni diverse, e la presenza di un pubblico multigenerazionale crea un'atmosfera unica — famiglie intere, giovani che hanno scoperto i classici, fan storici che conoscono ogni testo a memoria.",
+        paragraphs: [
+          "Il PalaUnical si trova in Via del Lavoro a Marsciano (PG), raggiungibile in circa 30 minuti da Perugia tramite la SS220 o la strada regionale. Marsciano è un comune collinare in posizione centrale rispetto a molte aree dell'Umbria, comodo da raggiungere sia da Perugia che da Todi e dal Trasimeno.",
+          "Il parcheggio nelle vicinanze del PalaUnical è generalmente disponibile nelle strade adiacenti e nei piazzali circostanti. In occasione di eventi di richiamo come i Pooh, si consiglia di arrivare con anticipo per trovare parcheggio comodo e accedere alla venue prima dell'apertura delle porte.",
+        ],
+        bullets: [
+          "Indirizzo: Via del Lavoro, Marsciano (PG)",
+          "Da Perugia: circa 30 minuti via SS220",
+          "Da Todi: circa 20 minuti",
+          "Parcheggio: disponibile nelle aree circostanti",
+          "Accessibilità: contattare l'organizzatore per posti riservati",
+        ],
+        locationImage:
+          "https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&w=1400&q=80",
+        nearbyParking: [
+          {
+            name: "Parcheggio Via del Lavoro (adiacente al PalaUnical)",
+            distanceOnFoot: "0 min a piedi",
+            type: "gratuito",
+            notes: "Area di sosta lungo la strada, attiva anche in orario serale",
+            mapsUrl: "https://maps.google.com/?q=PalaUnical+Via+del+Lavoro+Marsciano+PG",
+          },
+          {
+            name: "Piazza del Comune – Marsciano centro",
+            distanceOnFoot: "10 min a piedi",
+            type: "gratuito",
+            notes: "Parcheggio pubblico nel centro storico di Marsciano, disponibile in serata",
+            mapsUrl: "https://maps.google.com/?q=Piazza+del+Comune+Marsciano+PG",
+          },
+          {
+            name: "Parcheggio Via Roma – Marsciano",
+            distanceOnFoot: "8 min a piedi",
+            type: "gratuito",
+            notes: "Posti lungo strada nella viabilità principale del centro",
+            mapsUrl: "https://maps.google.com/?q=Via+Roma+Marsciano+PG",
+          },
+        ],
+        nearbyHotels: [
+          {
+            name: "Hotel Posta Donini 1579",
+            distanceOnFoot: "15 min in auto",
+            priceRange: "€€€",
+            bookingUrl: "https://www.booking.com/hotel/it/postadonini.html",
+            images: [
+              "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80",
+              "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=400&q=80",
+              "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=400&q=80",
+            ],
+          },
+          {
+            name: "Agriturismo Il Poggio – Marsciano",
+            distanceOnFoot: "10 min in auto",
+            priceRange: "€",
+            bookingUrl: "https://www.booking.com/searchresults.html?ss=Marsciano",
+            images: [
+              "https://images.unsplash.com/photo-1551882547-ff40c63fe2e2?auto=format&fit=crop&w=400&q=80",
+              "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=400&q=80",
+              "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=400&q=80",
+            ],
+          },
+          {
+            name: "Relais La Fattoria – Perugia area",
+            distanceOnFoot: "20 min in auto",
+            priceRange: "€€",
+            bookingUrl: "https://www.booking.com/searchresults.html?ss=Marsciano+hotel",
+            images: [
+              "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=400&q=80",
+              "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=400&q=80",
+              "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=400&q=80",
+            ],
+          },
+        ],
+      },
+      liveExperience: {
+        title: "Cosa aspettarsi dalla serata con i Pooh",
+        paragraphs: [
+          "Un concerto dei Pooh nel 2026 è un evento generazionale. La scaletta copre decenni di storia musicale italiana: dai successi degli anni Settanta come 'Parsifal' e 'Tanta voglia di lei' ai grandi hit degli anni Novanta come 'Uomini soli'. Il pubblico canta ogni testo a memoria — è una delle caratteristiche più belle delle serate Pooh.",
+          "La produzione è professionale e curata: luci, video, suono di alta qualità. Il PalaUnical, pur non essendo un'arena, offre una qualità sonora adatta a questo tipo di show. La dimensione raccolta fa sì che ogni momento sia vissuto in modo intimo, quasi personale.",
+        ],
+        bullets: [
+          "Scaletta: successi da oltre cinquant'anni di carriera",
+          "Atmosfera: multigenerazionale, partecipata, carica di emozione",
+          "Produzione: luci, video e audio professionali",
+          "Durata attesa: circa 100-120 minuti di live",
+          "Canti collettivi: quasi inevitabili su ogni brano",
+        ],
+      },
+      practicalInfo: {
+        title: "Come arrivare e informazioni pratiche",
+        paragraphs: [
+          "Il PalaUnical è a Marsciano, raggiungibile da Perugia in circa 30 minuti percorrendo la SS220 in direzione Marsciano. Da Roma è accessibile via A1 uscita Orte, poi SS205 e SS220. L'auto è il mezzo più comodo; i servizi di trasporto pubblico tra Perugia e Marsciano sono limitati la sera.",
+          "I biglietti sono in formato elettronico: ricevi il PDF via email dopo l'acquisto e mostri il QR code all'ingresso. Le porte aprono generalmente 60-90 minuti prima dell'inizio del concerto. Per posti riservati a persone con disabilità contattare l'organizzatore con anticipo.",
+        ],
+        bullets: [
+          "Da Perugia: SS220 direzione Marsciano, circa 30 min",
+          "Da Roma: A1 uscita Orte, poi SS205 e SS220",
+          "Parcheggio: nelle aree adiacenti al PalaUnical",
+          "Biglietti: formato elettronico PDF, QR code da smartphone",
+          "Porte: circa 60-90 min prima del concerto",
+        ],
+      },
+      internalLinks: [
+        {
+          label: "Francesco Renga a Spoleto 2026",
+          href: "/articoli/francesco-renga-spoleto-2026-biglietti-teatro-nuovo",
+          description: "Un altro grande nome del pop italiano in Umbria: concerto al Teatro Nuovo di Spoleto.",
+        },
+        {
+          label: "Mahmood a Perugia 2026 – Teatro Morlacchi",
+          href: "/articoli/mahmood-perugia-2026-biglietti-teatro-morlacchi",
+          description: "Il vincitore di Sanremo in concerto a Perugia: biglietti e info Teatro Morlacchi.",
+        },
+        {
+          label: "Salmo a Perugia 2026 – Umbria Che Spacca",
+          href: "/articoli/salmo-perugia-2026-umbria-che-spacca-biglietti",
+          description: "La scena urban umbra si anima con il live di Salmo: tutto sui biglietti.",
+        },
+      ],
+      sections: [
+        {
+          heading: "Perché la data di Marsciano è speciale",
+          paragraphs: [
+            "Il tour dei Pooh 2025-2026 conta pochissime date nel centro Italia, e quella di Marsciano è una delle rare occasioni per vedere la band in Umbria senza dover affrontare i lunghi trasferimenti verso le grandi arene di Roma o Milano. Il PalaUnical offre una dimensione raccolta che le arene non possono replicare: la distanza dal palco è minima, la visibilità ottima da tutti i settori.",
+            "Per i fan umbri è anche l'occasione per condividere la serata con amici e familiari senza notti fuori casa: Marsciano è raggiungibile facilmente da Perugia, Todi, Orvieto, Città della Pieve e dal Trasimeno. Una serata in musica nel cuore dell'Umbria.",
+          ],
+        },
+        {
+          heading: "Come preparare la serata: consigli pratici",
+          paragraphs: [
+            "Per godersi al massimo il concerto dei Pooh al PalaUnical è utile pianificare con anticipo. Arrivare almeno 45 minuti prima dell'inizio permette di trovare parcheggio comodo, fare i controlli all'ingresso senza fretta e scegliere una buona posizione all'interno della venue.",
+            "Porta il biglietto sul telefono già scaricato, così non dipendi dalla connessione dati in una venue affollata. Se vieni con bambini, verifica le politiche di ingresso per i minori. La serata è adatta a tutte le età: i Pooh hanno un pubblico che spazia dai cinquantenni cresciuti con i loro dischi ai ragazzi che li hanno scoperti attraverso genitori e nonni.",
+          ],
+          bullets: [
+            "Arriva almeno 45 minuti prima per trovare parcheggio",
+            "Scarica il biglietto PDF prima di uscire di casa",
+            "Porta una giacca leggera: i palazzetti serali possono essere freschi",
+            "Controlla orari di apertura porte sulla pagina evento",
+          ],
+        },
+      ],
+      faq: [
+        {
+          question: "Dove si trova il PalaUnical di Marsciano?",
+          answer:
+            "Il PalaUnical è in Via del Lavoro a Marsciano (PG), a circa 30 minuti da Perugia percorrendo la SS220.",
+        },
+        {
+          question: "Quanto costano i biglietti per i Pooh a Marsciano?",
+          answer:
+            "I biglietti partono da €45,00. Per prezzi aggiornati e disponibilità dei settori consulta la pagina evento su Ticket Italia.",
+        },
+        {
+          question: "Come acquisto i biglietti per i Pooh al PalaUnical?",
+          answer:
+            "I biglietti sono disponibili su Ticket Italia. Acquista online, ricevi il PDF via email e mostra il QR code all'ingresso.",
+        },
+        {
+          question: "C'è parcheggio vicino al PalaUnical?",
+          answer:
+            "Sì, ci sono parcheggi gratuiti nelle strade adiacenti alla struttura e nel centro di Marsciano. Si consiglia di arrivare con anticipo.",
+        },
+        {
+          question: "Quali canzoni suonerà i Pooh?",
+          answer:
+            "La scaletta non è ancora confermata ufficialmente, ma il tour include i grandi classici come 'Uomini soli', 'Tanta voglia di lei', 'Chi fermerà la musica' e 'Parsifal', oltre a brani più recenti.",
+        },
+      ],
+      cta: {
+        title: "Acquista i biglietti per i Pooh a Marsciano",
+        text:
+          "Alta domanda attesa per questo evento di reunion. Acquista subito il tuo biglietto su Ticket Italia e assicurati il posto per una serata indimenticabile con la band più amata d'Italia.",
+        label: "Acquista su Ticket Italia",
+        href: "https://ticketitalia.com/evento/pooh-palaunical-marsciano",
+      },
+    },
+  },
+  {
+    slug: "mahmood-perugia-2026-biglietti-teatro-morlacchi",
+    title: "Mahmood a Perugia 2026: biglietti e info Teatro Morlacchi",
+    excerpt:
+      "Mahmood in concerto a Perugia il 22 maggio 2026 al Teatro Morlacchi. Il vincitore di Sanremo porta la sua musica urban in uno dei teatri storici più prestigiosi dell'Umbria: biglietti da €35,00.",
+    category: "Concerti",
+    categorySlug: "concerti",
+    subcategory: "Urban",
+    subcategorySlug: "urban",
+    type: "evento",
+    status: "published",
+    funnelStage: "BOFU",
+    articleType: "evento",
+    tags: ["mahmood perugia", "biglietti mahmood", "teatro morlacchi", "concerti maggio 2026", "mahmood 2026"],
+    date: "2026-04-23",
+    readTime: "8 min",
+    author: "Redazione Ticket Italia",
+    image: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1400&q=80",
+    body: {
+      intro:
+        "Mahmood porta la sua musica a Perugia il 22 maggio 2026: il Teatro Morlacchi, uno dei palcoscenici più eleganti dell'Umbria, ospita una delle voci più distintive della scena italiana contemporanea. Biglietti da €35,00 — una serata che unisce la qualità acustica di un teatro storico all'energia urbana di Mahmood.",
+      quickInfo: {
+        title: "Informazioni rapide",
+        text:
+          "Mahmood live al Teatro Morlacchi di Perugia: un concerto in un venue d'eccezione per uno degli artisti più apprezzati della nuova musica italiana.",
+        bullets: [
+          "Artista: Mahmood, vincitore di Sanremo 2019 e 2022",
+          "Location: Teatro Morlacchi, Piazza Morlacchi, Perugia",
+          "Data: venerdì 22 maggio 2026",
+          "Biglietto: a partire da €35,00",
+          "Venue: teatro storico con capienza limitata",
+        ],
+      },
+      tickets: {
+        title: "Biglietti Mahmood Perugia — prezzi e come acquistare",
+        text:
+          "I biglietti per Mahmood al Teatro Morlacchi partono da €35,00. La capienza del teatro è limitata rispetto alle arene: i settori si esauriscono rapidamente per gli artisti con la notorietà di Mahmood. Acquisto anticipato fortemente consigliato.",
+        bullets: [
+          "Prezzo base: €35,00",
+          "Formato: biglietto elettronico PDF consegnato via email",
+          "Accesso: QR code da smartphone all'ingresso",
+          "Settori: platea, palchi e galleria (verifica disponibilità su Ticket Italia)",
+          "Capienza limitata: teatro storico, disponibilità ridotta",
+        ],
+      },
+      artistContext: {
+        title: "Mahmood: la voce che ha ridefinito il pop urbano italiano",
+        paragraphs: [
+          "Alessandro Mahmoud, in arte Mahmood, è nato nel 1992 a Milano da padre egiziano e madre sarda. Il suo nome è diventato sinonimo di un suono nuovo nel panorama italiano: pop arabeggiante, influenze R&B e urban, testi che parlano di identità complessa, radici, amore e dolore con una lucidità inusuale per la musica mainstream.",
+          "Due vittorie a Sanremo — 2019 con 'Soldi' e 2022 con 'Brividi' in duetto con Blanco — hanno portato Mahmood a un livello di notorietà internazionale. 'Soldi' è diventata la canzone italiana più ascoltata su Spotify nel 2019, con oltre 100 milioni di stream. La partecipazione all'Eurovision Song Contest ha consolidato la sua presenza a livello europeo.",
+          "I suoi concerti sono eventi curati nei minimi dettagli: la messa in scena riflette l'estetica dei suoi video, con visual forti, luci progettate per esaltare l'emotività dei brani e un rapporto col pubblico diretto e personale. Portarlo in un teatro come il Morlacchi crea un contrasto produttivo — l'energia urban di Mahmood nello spazio elegante del teatro storico perugino.",
+        ],
+        bullets: [
+          "Nato nel 1992 a Milano, origini egiziane e sarde",
+          "Sanremo 2019: vincitore con 'Soldi' (100M+ stream su Spotify)",
+          "Sanremo 2022: vincitore con Blanco, brano 'Brividi'",
+          "Eurovision 2019: 2° posto rappresentando l'Italia",
+          "Stile: pop urbano con influenze arabeggianti e R&B",
+        ],
+      },
+      location: {
+        title: "Teatro Morlacchi: il cuore teatrale di Perugia",
+        venueType: "Teatro storico neoclassico, venue culturale di primo piano in Umbria",
+        experience:
+          "Il Teatro Morlacchi è il teatro cittadino di Perugia, uno spazio neoclassico di straordinaria bellezza che combina storia, acustica naturale e un'atmosfera unica. Costruito nel 1781, è da oltre due secoli il centro della vita teatrale umbra. Per un concerto come quello di Mahmood, la struttura a ferro di cavallo del teatro trasforma ogni nota in un'esperienza avvolgente: la distanza massima dal palco è contenuta, e l'acustica del legno e degli stucchi storici crea una qualità sonora che gli spazi moderni faticano a replicare.",
+        suitability:
+          "Ideale per concerti che puntano all'intensità emotiva piuttosto che all'impatto visivo di massa. La struttura su più livelli (platea, palchi su tre ordini, galleria) permette di vivere il concerto da prospettive molto diverse. Un teatro come il Morlacchi valorizza la voce e la presenza scenica degli artisti.",
+        atmosphere:
+          "Il mix tra pubblico giovane portato da Mahmood e il contesto teatrale storico crea un'atmosfera particolare: c'è rispetto per lo spazio ma anche energia giovanile che scuote le balconate. Una serata che si ricorda.",
+        paragraphs: [
+          "Il Teatro Morlacchi si trova in Piazza Morlacchi nel centro storico di Perugia, raggiungibile a piedi dalla Fontana Maggiore e dal centro pedonale. L'accesso è facilitato dagli ascensori Minimetrò e dalle scale mobili che collegano i parcheggi del centro alla zona alta della città.",
+          "Il centro storico di Perugia è prevalentemente pedonale: l'auto si lascia nei parcheggi di Piazza Partigiani o di Pian di Massiano, con collegamento tramite Minimetrò o autobus. Chi vuole evitare questo passaggio può parcheggiare al coperto in struttura più vicino al centro.",
+        ],
+        bullets: [
+          "Indirizzo: Piazza Morlacchi, Perugia (PG)",
+          "Centro storico: zona pedonale, accesso a piedi dal Minimetrò",
+          "Parcheggio principale: Piazza Partigiani (Minimetrò fino al centro)",
+          "Anno di costruzione: 1781",
+          "Capienza: circa 900 posti su platea e ordini di palchi",
+        ],
+        locationImage:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Perugia_teatro_morlacchi_esterno.jpg/1200px-Perugia_teatro_morlacchi_esterno.jpg",
+        nearbyParking: [
+          {
+            name: "Parcheggio Piazza Partigiani (Minimetrò)",
+            distanceOnFoot: "15 min a piedi (o 5 min Minimetrò)",
+            type: "a pagamento",
+            notes: "Il principale parcheggio coperto del centro di Perugia, collegato al centro storico con il Minimetrò",
+            mapsUrl: "https://maps.google.com/?q=Parcheggio+Piazza+Partigiani+Perugia",
+          },
+          {
+            name: "Parcheggio Pian di Massiano",
+            distanceOnFoot: "20 min (Minimetrò + breve camminata)",
+            type: "a pagamento",
+            notes: "Grande parcheggio di interscambio, collegato al centro con Minimetrò",
+            mapsUrl: "https://maps.google.com/?q=Parcheggio+Pian+di+Massiano+Perugia",
+          },
+          {
+            name: "Parcheggio via dei Priori / Sopramuro",
+            distanceOnFoot: "8 min a piedi",
+            type: "a pagamento",
+            notes: "Parcheggio coperto nel centro storico, vicino alla piazza del teatro",
+            mapsUrl: "https://maps.google.com/?q=Parcheggio+Sopramuro+Perugia",
+          },
+        ],
+        nearbyHotels: [
+          {
+            name: "Brufani Palace Hotel",
+            distanceOnFoot: "8 min a piedi",
+            priceRange: "€€€",
+            bookingUrl: "https://www.booking.com/hotel/it/sina-brufani.html",
+            images: [
+              "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80",
+              "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=400&q=80",
+              "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=400&q=80",
+            ],
+          },
+          {
+            name: "Hotel Rosalba",
+            distanceOnFoot: "10 min a piedi",
+            priceRange: "€",
+            bookingUrl: "https://www.booking.com/hotel/it/rosalba-perugia.html",
+            images: [
+              "https://images.unsplash.com/photo-1551882547-ff40c63fe2e2?auto=format&fit=crop&w=400&q=80",
+              "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=400&q=80",
+              "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=400&q=80",
+            ],
+          },
+          {
+            name: "Hotel Sangallo Palace",
+            distanceOnFoot: "12 min a piedi",
+            priceRange: "€€",
+            bookingUrl: "https://www.booking.com/hotel/it/sangallopalace.html",
+            images: [
+              "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=400&q=80",
+              "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=400&q=80",
+              "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=400&q=80",
+            ],
+          },
+        ],
+      },
+      liveExperience: {
+        title: "Cosa aspettarsi dalla serata con Mahmood",
+        paragraphs: [
+          "Mahmood in concerto è un'esperienza visiva e sonora curata. I suoi show combinano la potenza vocale con una scenografia pensata per amplificare l'emotività dei brani: visual, luci calibrate e un set che si evolve tra momenti intensi e passaggi più raccolti. La scaletta include certamente 'Soldi', 'Brividi', 'Rapide', 'Inuyasha' e altri pezzi del catalogo — brani che il pubblico giovane conosce a memoria.",
+          "In un teatro come il Morlacchi, la produzione si adatta allo spazio: meno pyrotecnica, più centrata sulla voce e sull'interpretazione. Il risultato è un concerto che valorizza la qualità artistica di Mahmood in modo diverso rispetto a quello che si vive nelle arene o nei club.",
+        ],
+        bullets: [
+          "Scaletta: successi da 'Soldi' a 'Brividi' e brani dal catalogo recente",
+          "Produzione: visual e luci curati, adattati al contesto teatrale",
+          "Atmosfera: pubblico giovane, energico, che conosce ogni testo",
+          "Durata attesa: circa 80-100 minuti di concerto",
+        ],
+      },
+      practicalInfo: {
+        title: "Come arrivare e informazioni pratiche",
+        paragraphs: [
+          "Il Teatro Morlacchi è nel centro storico di Perugia, zona pedonale. Il modo migliore per arrivarci è lasciare l'auto ai parcheggi di Piazza Partigiani o Pian di Massiano e prendere il Minimetrò fino a Pincetto, poi breve camminata. Chi viene da fuori città in treno può prendere il Minibus da Piazza Italia.",
+          "I biglietti sono in formato elettronico: dopo l'acquisto ricevi un PDF via email con il QR code da mostrare all'ingresso. Le porte del Teatro Morlacchi aprono solitamente 45-60 minuti prima dell'inizio del concerto.",
+        ],
+        bullets: [
+          "Indirizzo: Piazza Morlacchi, Perugia — zona pedonale",
+          "Parcheggio: Piazza Partigiani o Pian di Massiano + Minimetrò",
+          "In treno: stazione FS Perugia, poi Minibus per il centro",
+          "Biglietti: PDF elettronico, QR code da smartphone",
+          "Porte: circa 45-60 min prima del concerto",
+        ],
+      },
+      internalLinks: [
+        {
+          label: "Francesco Renga a Spoleto 2026",
+          href: "/articoli/francesco-renga-spoleto-2026-biglietti-teatro-nuovo",
+          description: "Un altro grande concerto in teatro in Umbria: Francesco Renga al Teatro Nuovo di Spoleto.",
+        },
+        {
+          label: "Salmo a Perugia 2026 – Umbria Che Spacca",
+          href: "/articoli/salmo-perugia-2026-umbria-che-spacca-biglietti",
+          description: "La scena urban a Perugia continua: biglietti e info per il live di Salmo.",
+        },
+        {
+          label: "Pooh a Marsciano 2026 – PalaUnical",
+          href: "/articoli/pooh-marsciano-2026-biglietti-palaunical",
+          description: "Un'altra grande serata pop in Umbria a maggio 2026: i Pooh al PalaUnical.",
+        },
+      ],
+      sections: [
+        {
+          heading: "Perché il Teatro Morlacchi è la venue giusta per Mahmood",
+          paragraphs: [
+            "Il Teatro Morlacchi non è la scelta ovvia per un artista della scena urban italiana. Mahmood avrebbe potuto scegliere un club, un teatro più grande, una venue moderna. Invece il Morlacchi: uno spazio del 1781, con stucchi dorati e palchi su tre ordini. La scelta dice qualcosa di preciso sull'artista.",
+            "Mahmood ha sempre curato la dimensione estetica e drammatica della sua musica. Portarla in un teatro storico significa accettare la sfida di uno spazio che amplifica ogni imperfezione ma esalta ogni intensità. Per chi ha già visto Mahmood in formati più grandi, questa è l'occasione di ascoltarlo in una dimensione diversa — più vicina, più diretta.",
+          ],
+        },
+        {
+          heading: "Perugia e la scena dei concerti in teatro nel 2026",
+          paragraphs: [
+            "Il Teatro Morlacchi si è confermato negli ultimi anni come uno dei principali venue per i concerti di qualità in Umbria. La scelta di artisti come Mahmood conferma una tendenza: i teatri storici delle città di medie dimensioni stanno diventando luoghi appetibili per i tour che cercano un'alternativa alle grandi arene.",
+            "Perugia, con il Morlacchi e altri spazi culturali del centro storico, ha costruito una reputazione come piazza interessante per gli artisti che vogliono un pubblico attento e selezionato. Andare a un concerto al Morlacchi è diverso dall'andare a un palasport: si entra con un'aspettativa diversa, e raramente si rimane delusi.",
+          ],
+        },
+      ],
+      faq: [
+        {
+          question: "Dove si trova il Teatro Morlacchi di Perugia?",
+          answer:
+            "Il Teatro Morlacchi si trova in Piazza Morlacchi nel centro storico di Perugia, zona pedonale raggiungibile via Minimetrò dal parcheggio di Piazza Partigiani.",
+        },
+        {
+          question: "Quanto costano i biglietti per Mahmood a Perugia?",
+          answer:
+            "I biglietti partono da €35,00. Per la disponibilità aggiornata dei settori e i prezzi completi consulta la pagina evento su Ticket Italia.",
+        },
+        {
+          question: "Come si arriva al Teatro Morlacchi in auto?",
+          answer:
+            "Il centro storico di Perugia è pedonale: lascia l'auto al parcheggio di Piazza Partigiani o a Pian di Massiano e prendi il Minimetrò fino a Pincetto. Dal parcheggio a piedi ci vogliono circa 8-10 minuti.",
+        },
+        {
+          question: "Quali canzoni suonerà Mahmood?",
+          answer:
+            "La scaletta include certamente i grandi successi come 'Soldi', 'Brividi', 'Rapide' e 'Inuyasha'. La scaletta completa non è ancora stata confermata ufficialmente.",
+        },
+        {
+          question: "Il Teatro Morlacchi ha posti riservati per disabili?",
+          answer:
+            "Il Teatro Morlacchi dispone di accessi dedicati e posti riservati. Per informazioni specifiche sull'accessibilità contatta l'organizzatore con anticipo.",
+        },
+      ],
+      cta: {
+        title: "Acquista i biglietti per Mahmood a Perugia",
+        text:
+          "La capienza del Teatro Morlacchi è limitata e la domanda per Mahmood è sempre alta. Acquista subito su Ticket Italia e assicurati il posto per una serata unica nel teatro storico di Perugia.",
+        label: "Acquista su Ticket Italia",
+        href: "https://ticketitalia.com/evento/mahmood-teatro-morlacchi-perugia",
+      },
+    },
+  },
+  {
+    slug: "umbria-jazz-2026-biglietti-perugia-arena-santa-giuliana",
+    title: "Umbria Jazz 2026 a Perugia: biglietti e info Arena Santa Giuliana",
+    excerpt:
+      "Umbria Jazz 2026 torna a Perugia il 10 luglio 2026 all'Arena Santa Giuliana. Il festival internazionale di jazz più famoso d'Italia: tutto su biglietti, artisti, venue e come organizzare il weekend.",
+    category: "Eventi & Festival",
+    categorySlug: "eventi-festival",
+    subcategory: "Festival musicali",
+    subcategorySlug: "festival-musicali",
+    type: "evento",
+    status: "published",
+    funnelStage: "BOFU",
+    articleType: "evento",
+    tags: ["umbria jazz 2026", "biglietti umbria jazz", "festival perugia", "jazz luglio 2026", "arena santa giuliana"],
+    date: "2026-04-23",
+    readTime: "9 min",
+    author: "Redazione Ticket Italia",
+    image: "https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?auto=format&fit=crop&w=1400&q=80",
+    body: {
+      intro:
+        "Umbria Jazz 2026 porta Perugia al centro del mondo con il festival internazionale di jazz più amato d'Italia. Il 10 luglio 2026 l'Arena Santa Giuliana apre le porte per una delle serate più iconiche dell'estate umbra: biglietti da €40,00 per vivere il jazz sotto le stelle nella cornice incomparabile di Perugia.",
+      quickInfo: {
+        title: "Informazioni rapide",
+        text:
+          "Umbria Jazz 2026 all'Arena Santa Giuliana di Perugia: il festival internazionale che trasforma la città in capitale mondiale del jazz ogni estate.",
+        bullets: [
+          "Festival: Umbria Jazz 2026 — edizione estiva",
+          "Location: Arena Santa Giuliana, Viale N. Paganini, Perugia",
+          "Data: venerdì 10 luglio 2026",
+          "Biglietto: a partire da €40,00",
+          "Formato: festival internazionale, richiamo turistico globale",
+        ],
+      },
+      tickets: {
+        title: "Biglietti Umbria Jazz 2026 — prezzi e come acquistare",
+        text:
+          "I biglietti per gli eventi all'Arena Santa Giuliana di Umbria Jazz 2026 partono da €40,00. L'acquisto anticipato è essenziale: Umbria Jazz registra sold out per le serate principali con settimane di anticipo. I biglietti sono in formato elettronico.",
+        bullets: [
+          "Prezzo base: €40,00 per gli eventi all'Arena Santa Giuliana",
+          "Formato: biglietto elettronico PDF consegnato via email",
+          "Accesso: QR code da smartphone all'ingresso",
+          "Sold out frequenti: acquisto anticipato indispensabile",
+          "Programma completo: consulta Ticket Italia per tutti gli eventi del festival",
+        ],
+      },
+      artistContext: {
+        title: "Umbria Jazz: il festival che porta il mondo a Perugia",
+        paragraphs: [
+          "Umbria Jazz nasce nel 1973 come esperimento culturale nel cuore dell'Umbria. Oggi, oltre cinquant'anni dopo, è diventato uno dei festival jazz più importanti al mondo, un appuntamento fisso per i più grandi nomi della musica jazz internazionale e un punto di riferimento per i fan del genere da ogni continente. Il festival trasforma Perugia in una capitale temporanea del jazz per circa dieci giorni ogni luglio.",
+          "Nel corso degli anni Umbria Jazz ha ospitato praticamente tutti i grandi: Miles Davis, Dizzy Gillespie, Pat Metheny, Herbie Hancock, Chick Corea, Wynton Marsalis. Ma il festival non è solo jazz: la programmazione ha sempre incluso incursioni nel soul, nel blues, nel funk e nella musica di confine, con artisti pop e rock di primo piano che interpretano il jazz a modo loro. Questa apertura è uno dei segreti della sua longevità.",
+          "L'Arena Santa Giuliana è il cuore pulsante del festival: il grande palco all'aperto sotto le stelle umbre, capace di ospitare migliaia di spettatori per i concerti principali. Ma il festival si estende in tutta la città: il Giardino Carducci, le piazze storiche, i cortili, i locali — Perugia diventa un unico grande palcoscenico per dieci giorni.",
+        ],
+        bullets: [
+          "Fondato nel 1973, oltre cinquant'anni di storia",
+          "Venue principali: Arena Santa Giuliana e Giardino Carducci",
+          "Artisti storici: Miles Davis, Dizzy Gillespie, Herbie Hancock, Pat Metheny",
+          "Durata: circa 10 giorni ogni luglio",
+          "Richiamo: oltre 200.000 presenze nelle edizioni recenti",
+        ],
+      },
+      location: {
+        title: "Arena Santa Giuliana: il grande palco all'aperto di Perugia",
+        venueType: "Arena all'aperto, venue principale del festival Umbria Jazz",
+        experience:
+          "L'Arena Santa Giuliana è uno spazio iconico: un'arena a cielo aperto che durante il festival diventa il cuore di tutto. Capienza di diverse migliaia di spettatori, palco professionale, impianto audio e luci di livello internazionale, e soprattutto l'atmosfera unica di un concerto estivo all'aperto a Perugia. Vedere il jazz sotto le stelle con la skyline umbra come sfondo è un'esperienza difficile da descrivere e facile da ricordare.",
+        suitability:
+          "Ideale per grandi eventi musicali all'aperto. La configurazione dell'arena permette di stare sotto il palco o scegliere posizioni più distaccate con una visuale d'insieme. La vastità dello spazio rende il festival accessibile a tutti — famiglie, appassionati, turisti, professionisti del settore.",
+        atmosphere:
+          "Durante Umbria Jazz l'arena si carica di un'energia internazionale unica. Il pubblico viene da tutto il mondo: americani, giapponesi, europei del nord, turisti italiani e umbri di ritorno. Il jazz unisce in un modo che pochi generi musicali riescono a fare — e l'Arena Santa Giuliana a luglio ne è la prova.",
+        paragraphs: [
+          "L'Arena Santa Giuliana si trova in Viale N. Paganini, in una posizione accessibile dal centro di Perugia e dalle zone di parcheggio principali. Durante il festival il traffico nel centro cittadino aumenta sensibilmente: pianificare l'arrivo con anticipo e una buona strategia di trasporto è essenziale.",
+          "Il festival organizza servizi di navetta e percorsi dedicati per i giorni principali. La città di Perugia nel suo complesso si trasforma durante Umbria Jazz: i locali restano aperti fino a notte fonda, le piazze ospitano concerti gratuiti, le strade si animano con musicisti di strada. Andare ad Umbria Jazz non è solo andare a un concerto — è vivere una città in un momento straordinario.",
+        ],
+        bullets: [
+          "Indirizzo: Viale N. Paganini, Perugia (PG)",
+          "Dal centro storico: circa 15 min a piedi o 5 min in auto",
+          "Servizi navetta: attivi durante il festival dai principali parcheggi",
+          "Capienza: diverse migliaia di spettatori per i grandi eventi",
+          "Struttura: arena all'aperto, porta gli ombrelli — il meteo di luglio è solitamente ottimo ma verificare",
+        ],
+        locationImage:
+          "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=1400&q=80",
+        nearbyParking: [
+          {
+            name: "Parcheggio Pian di Massiano (Minimetrò)",
+            distanceOnFoot: "20 min a piedi (o navetta festival)",
+            type: "a pagamento",
+            notes: "Grande parcheggio di interscambio con navetta Minimetrò verso il centro durante il festival",
+            mapsUrl: "https://maps.google.com/?q=Parcheggio+Pian+di+Massiano+Perugia",
+          },
+          {
+            name: "Parcheggio Piazza Partigiani",
+            distanceOnFoot: "15 min a piedi",
+            type: "a pagamento",
+            notes: "Parcheggio coperto centrale, punto di partenza del Minimetrò verso il centro storico",
+            mapsUrl: "https://maps.google.com/?q=Parcheggio+Piazza+Partigiani+Perugia",
+          },
+          {
+            name: "Parcheggio Via Campo di Marte / zona sportiva",
+            distanceOnFoot: "10 min a piedi",
+            type: "gratuito",
+            notes: "Area parcheggio nella zona sportiva di Perugia, più vicina all'Arena Santa Giuliana",
+            mapsUrl: "https://maps.google.com/?q=Via+Campo+di+Marte+Perugia",
+          },
+        ],
+        nearbyHotels: [
+          {
+            name: "Brufani Palace Hotel",
+            distanceOnFoot: "20 min a piedi",
+            priceRange: "€€€",
+            bookingUrl: "https://www.booking.com/hotel/it/sina-brufani.html",
+            images: [
+              "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80",
+              "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=400&q=80",
+              "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=400&q=80",
+            ],
+          },
+          {
+            name: "Hotel Fortuna Perugia",
+            distanceOnFoot: "18 min a piedi",
+            priceRange: "€€",
+            bookingUrl: "https://www.booking.com/hotel/it/fortuna-perugia.html",
+            images: [
+              "https://images.unsplash.com/photo-1551882547-ff40c63fe2e2?auto=format&fit=crop&w=400&q=80",
+              "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=400&q=80",
+              "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=400&q=80",
+            ],
+          },
+          {
+            name: "Hotel La Rosetta Perugia",
+            distanceOnFoot: "15 min a piedi",
+            priceRange: "€€",
+            bookingUrl: "https://www.booking.com/hotel/it/la-rosetta-perugia.html",
+            images: [
+              "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=400&q=80",
+              "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=400&q=80",
+              "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=400&q=80",
+            ],
+          },
+        ],
+      },
+      liveExperience: {
+        title: "Cosa aspettarsi da una serata all'Arena Santa Giuliana",
+        paragraphs: [
+          "Una serata ad Umbria Jazz all'Arena Santa Giuliana inizia molto prima del concerto. La città è già in fermento: i locali del centro propongono musica dal pomeriggio, le piazze ospitano side events, e il pubblico internazionale crea un'atmosfera cosmopolita che Perugia non vive in nessun altro momento dell'anno.",
+          "L'arena stessa ha un'acustica sorprendente per uno spazio all'aperto. Il palco principale accoglie nomi di livello mondiale, con produzioni professionali e una qualità sonora che rivaleggia con i migliori festival europei. Portarsi uno strato in più per la sera è consigliato — le notti umbre di luglio si rinfrescano — ma l'atmosfera ripaga ogni scomodità.",
+        ],
+        bullets: [
+          "Concerti principali all'Arena Santa Giuliana la sera",
+          "Side events nelle piazze e nei locali del centro (molti gratuiti)",
+          "Pubblico internazionale: americani, giapponesi, europei",
+          "Durata serate: concerti spesso fino a mezzanotte e oltre",
+          "Porta uno strato per la sera: le notti umbre di luglio si rinfrescano",
+        ],
+      },
+      practicalInfo: {
+        title: "Come organizzare il weekend ad Umbria Jazz",
+        paragraphs: [
+          "Umbria Jazz richiama turisti da tutto il mondo e Perugia si riempie durante il festival. Prenotare hotel con anticipo è fondamentale: le strutture nel raggio di 20 km da Perugia si esauriscono rapidamente per le date principali. Se arrivi in auto, pianifica il parcheggio usando i parcheggi di interscambio con Minimetrò per evitare il caos nel centro storico.",
+          "Il programma completo del festival include eventi a pagamento (Arena Santa Giuliana, Giardino Carducci) e moltissimi eventi gratuiti nelle piazze. Comprare solo un biglietto per l'arena e integrare con i concerti free è una strategia intelligente per vivere il festival senza spendere troppo.",
+        ],
+        bullets: [
+          "Hotel: prenota con mesi di anticipo per le date del festival",
+          "Auto: usa i parcheggi di interscambio con Minimetrò",
+          "Programma: mix di eventi a pagamento e gratuiti",
+          "Meteo: luglio a Perugia è caldo, porta acqua e cappello per il giorno",
+          "Biglietti: acquisto anticipato essenziale per l'Arena Santa Giuliana",
+        ],
+      },
+      internalLinks: [
+        {
+          label: "Agriumbria — eventi e cultura in Umbria",
+          href: "/articoli/agriumbria-evento-biglietti-guida",
+          description: "Un altro grande evento umbro: guida completa ad Agriumbria a Bastia Umbra.",
+        },
+        {
+          label: "Mahmood a Perugia 2026 – Teatro Morlacchi",
+          href: "/articoli/mahmood-perugia-2026-biglietti-teatro-morlacchi",
+          description: "Un altro concerto di livello a Perugia nella primavera 2026: Mahmood al Morlacchi.",
+        },
+        {
+          label: "Francesco Renga a Spoleto 2026",
+          href: "/articoli/francesco-renga-spoleto-2026-biglietti-teatro-nuovo",
+          description: "Estate di concerti in Umbria: Francesco Renga al Teatro Nuovo di Spoleto.",
+        },
+      ],
+      sections: [
+        {
+          heading: "La storia di Umbria Jazz: oltre cinquant'anni di musica",
+          paragraphs: [
+            "Umbria Jazz nasce nel 1973 da un'intuizione coraggiosa: portare il jazz americano nel cuore dell'Italia centrale, in una regione lontana dai grandi circuiti musicali del tempo. I fondatori — in primis Carlo Pagnotta, che ha guidato il festival per decenni — immaginarono qualcosa che non esisteva ancora in Europa: un festival jazz di livello internazionale in un contesto di straordinaria bellezza paesaggistica.",
+            "Nei primi anni il festival si tenne in diversi comuni umbri, poi si stabilì definitivamente a Perugia. L'Arena Santa Giuliana diventò il palco principale, ma la caratteristica distintiva di Umbria Jazz è sempre rimasta la sua capacità di trasformare l'intera città in un festival: le piazze, i chiostri, i cortili storici diventano palcoscenici per concerti gratuiti che completano la programmazione a pagamento.",
+          ],
+        },
+        {
+          heading: "Perché andare a Umbria Jazz 2026: cinque motivi",
+          paragraphs: [
+            "Non serve essere appassionati di jazz per goderselo: Umbria Jazz è prima di tutto un'esperienza urbana, una festa collettiva che trasforma Perugia in qualcosa di irripetibile. Il jazz di alto livello è la colonna sonora, ma l'esperienza è fatta di cene nei vicoli del centro storico, incontri con persone da tutto il mondo, concerti gratuiti inaspettati negli angoli più belli della città.",
+            "La qualità artistica è garantita da oltre cinquant'anni di storia: chi sale sul palco dell'Arena Santa Giuliana è sempre all'altezza delle aspettative. E il format del festival — alcune serate a pagamento, moltissime occasioni free — lo rende accessibile a qualsiasi budget.",
+          ],
+          bullets: [
+            "Qualità artistica garantita: solo grandi nomi sul palco principale",
+            "Atmosfera internazionale unica: pubblico da tutto il mondo",
+            "Concerti gratuiti: il festival si vive anche senza biglietto a pagamento",
+            "Perugia in luglio: una delle città più belle d'Italia nella sua stagione migliore",
+            "Gastronomia: ristoranti, street food e vino umbro durante il festival",
+          ],
+        },
+      ],
+      faq: [
+        {
+          question: "Dove si trova l'Arena Santa Giuliana?",
+          answer:
+            "L'Arena Santa Giuliana si trova in Viale N. Paganini a Perugia, a circa 15 minuti a piedi dal centro storico. Raggiungibile anche con le navette del festival dai principali parcheggi.",
+        },
+        {
+          question: "Quanto costano i biglietti per Umbria Jazz 2026?",
+          answer:
+            "I biglietti per gli eventi all'Arena Santa Giuliana partono da €40,00. Il programma completo include anche molti eventi gratuiti nelle piazze e nei luoghi storici di Perugia.",
+        },
+        {
+          question: "Quando si svolge Umbria Jazz 2026?",
+          answer:
+            "Il festival si svolge a luglio 2026 per circa 10 giorni. La data segnalata del 10 luglio 2026 è per un evento specifico all'Arena Santa Giuliana. Consulta il programma completo su Ticket Italia.",
+        },
+        {
+          question: "Come si parcheggia durante Umbria Jazz?",
+          answer:
+            "I parcheggi principali sono Pian di Massiano e Piazza Partigiani, entrambi collegati al centro con il Minimetrò. Durante il festival sono attive navette aggiuntive. Il centro storico è pedonale: l'auto si lascia sempre fuori.",
+        },
+        {
+          question: "Umbria Jazz è adatto alle famiglie?",
+          answer:
+            "Assolutamente sì. Il festival include eventi per tutte le età, i concerti gratuiti nelle piazze sono ideali per le famiglie, e l'atmosfera del festival è accogliente e internazionale. I bambini sono i benvenuti.",
+        },
+      ],
+      cta: {
+        title: "Acquista i biglietti per Umbria Jazz 2026",
+        text:
+          "I biglietti per i concerti principali all'Arena Santa Giuliana si esauriscono settimane prima del festival. Acquista subito su Ticket Italia e assicurati il posto per vivere il jazz più bello d'Italia.",
+        label: "Acquista su Ticket Italia",
+        href: "https://ticketitalia.com/evento/umbria-jazz-2026-perugia",
       },
     },
   },

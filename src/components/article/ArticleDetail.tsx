@@ -211,29 +211,43 @@ export function ArticleDetail({ article }: ArticleDetailProps) {
                         <h3 className="text-base font-black text-ink">Parcheggi vicini</h3>
                       </div>
                       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                        {article.body.location.nearbyParking.map((parking) => (
-                          <div key={parking.name} className="rounded-md bg-white p-4 ring-1 ring-line">
-                            <p className="font-bold text-ink">{parking.name}</p>
-                            <div className="mt-1 flex flex-wrap items-center gap-2">
-                              <span className="flex items-center gap-1 text-sm text-muted">
-                                <MapPin className="size-3.5" aria-hidden="true" />
-                                {parking.distanceOnFoot}
-                              </span>
-                              <span
-                                className={`rounded px-2 py-0.5 text-xs font-bold ${
-                                  parking.type === "gratuito"
-                                    ? "bg-green-50 text-green-700"
-                                    : "bg-orange-50 text-orange-700"
-                                }`}
+                        {article.body.location.nearbyParking.map((parking) => {
+                          const mapsHref =
+                            parking.mapsUrl ??
+                            `https://maps.google.com/?q=${encodeURIComponent(parking.name)}`;
+                          return (
+                            <div key={parking.name} className="flex flex-col rounded-md bg-white p-4 ring-1 ring-line">
+                              <p className="font-bold text-ink">{parking.name}</p>
+                              <div className="mt-1 flex flex-wrap items-center gap-2">
+                                <span className="flex items-center gap-1 text-sm text-muted">
+                                  <MapPin className="size-3.5" aria-hidden="true" />
+                                  {parking.distanceOnFoot}
+                                </span>
+                                <span
+                                  className={`rounded px-2 py-0.5 text-xs font-bold ${
+                                    parking.type === "gratuito"
+                                      ? "bg-green-50 text-green-700"
+                                      : "bg-orange-50 text-orange-700"
+                                  }`}
+                                >
+                                  {parking.type}
+                                </span>
+                              </div>
+                              {parking.notes ? (
+                                <p className="mt-1 text-sm text-muted">{parking.notes}</p>
+                              ) : null}
+                              <a
+                                href={mapsHref}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mt-3 inline-flex items-center gap-1 text-sm font-bold text-primary-700 hover:text-ink"
                               >
-                                {parking.type}
-                              </span>
+                                Vai al parcheggio
+                                <ArrowRight className="size-3.5" aria-hidden="true" />
+                              </a>
                             </div>
-                            {parking.notes ? (
-                              <p className="mt-1 text-sm text-muted">{parking.notes}</p>
-                            ) : null}
-                          </div>
-                        ))}
+                          );
+                        })}
                       </div>
                     </div>
                   ) : null}
@@ -246,28 +260,43 @@ export function ArticleDetail({ article }: ArticleDetailProps) {
                       </div>
                       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                         {article.body.location.nearbyHotels.map((hotel) => (
-                          <div key={hotel.name} className="flex flex-col rounded-md bg-white p-4 ring-1 ring-line">
-                            <p className="font-bold text-ink">{hotel.name}</p>
-                            <div className="mt-1 flex flex-wrap items-center gap-2">
-                              <span className="flex items-center gap-1 text-sm text-muted">
-                                <MapPin className="size-3.5" aria-hidden="true" />
-                                {hotel.distanceOnFoot}
-                              </span>
-                              <span className="rounded bg-ink/5 px-2 py-0.5 text-xs font-bold text-ink">
-                                {hotel.priceRange}
-                              </span>
-                            </div>
-                            {hotel.bookingUrl ? (
-                              <a
-                                href={hotel.bookingUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="mt-3 inline-flex items-center gap-1 text-sm font-bold text-primary-700 hover:text-ink"
-                              >
-                                Prenota
-                                <ArrowRight className="size-3.5" aria-hidden="true" />
-                              </a>
+                          <div key={hotel.name} className="flex flex-col overflow-hidden rounded-md bg-white ring-1 ring-line">
+                            {hotel.images?.length ? (
+                              <div className="grid grid-cols-3 gap-px">
+                                {hotel.images.slice(0, 3).map((src, i) => (
+                                  // eslint-disable-next-line @next/next/no-img-element
+                                  <img
+                                    key={i}
+                                    src={src}
+                                    alt=""
+                                    className="aspect-[4/3] w-full object-cover"
+                                  />
+                                ))}
+                              </div>
                             ) : null}
+                            <div className="flex flex-1 flex-col p-4">
+                              <p className="font-bold text-ink">{hotel.name}</p>
+                              <div className="mt-1 flex flex-wrap items-center gap-2">
+                                <span className="flex items-center gap-1 text-sm text-muted">
+                                  <MapPin className="size-3.5" aria-hidden="true" />
+                                  {hotel.distanceOnFoot}
+                                </span>
+                                <span className="rounded bg-ink/5 px-2 py-0.5 text-xs font-bold text-ink">
+                                  {hotel.priceRange}
+                                </span>
+                              </div>
+                              {hotel.bookingUrl ? (
+                                <a
+                                  href={hotel.bookingUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="mt-3 inline-flex items-center gap-1 text-sm font-bold text-primary-700 hover:text-ink"
+                                >
+                                  Prenota hotel
+                                  <ArrowRight className="size-3.5" aria-hidden="true" />
+                                </a>
+                              ) : null}
+                            </div>
                           </div>
                         ))}
                       </div>
@@ -357,9 +386,9 @@ export function ArticleDetail({ article }: ArticleDetailProps) {
               ) : null}
 
               {article.body.cta ? (
-                <aside className="mt-10 rounded-lg bg-ink p-6 text-white">
+                <aside className="article-cta mt-10 rounded-lg bg-ink p-6 text-white">
                   <h2 className="m-0 text-2xl font-black tracking-normal text-white">{article.body.cta.title}</h2>
-                  <p className="text-white/70">{article.body.cta.text}</p>
+                  <p>{article.body.cta.text}</p>
                   <a href={article.body.cta.href} className="btn-primary mt-4">
                     {article.body.cta.label}
                     <ArrowRight className="size-5" aria-hidden="true" />
