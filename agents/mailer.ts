@@ -1,4 +1,4 @@
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
 // ---------------------------------------------------------------------------
 // Tipi
@@ -498,19 +498,27 @@ function buildHtml(article: ArticleNotification): string {
 }
 
 // ---------------------------------------------------------------------------
-// Transport
+// Resend client
 // ---------------------------------------------------------------------------
 
-function createTransport() {
-  return nodemailer.createTransport({
-    host: process.env.SMTP_HOST!,
-    port: Number(process.env.SMTP_PORT ?? 587),
-    secure: Number(process.env.SMTP_PORT) === 465,
-    auth: {
-      user: process.env.SMTP_USER!,
-      pass: process.env.SMTP_PASS!,
-    },
-  });
+function getResendClient(): Resend | null {
+  const key = process.env.RESEND_API_KEY;
+  if (!key) {
+    console.warn("[mailer] RESEND_API_KEY non impostata — invio email disabilitato");
+    return null;
+  }
+  return new Resend(key);
+}
+
+function getFromAddress(): string {
+  const from = process.env.RESEND_FROM_EMAIL;
+  if (!from) {
+    throw new Error(
+      "[mailer] RESEND_FROM_EMAIL non impostata: deve essere un mittente verificato su Resend"
+    );
+  }
+  // Se l'utente non ha specificato un display name, lo aggiungiamo noi
+  return from.includes("<") ? from : `Ticket Italia Blog <${from}>`;
 }
 
 // ---------------------------------------------------------------------------
@@ -526,14 +534,20 @@ export async function sendArticleNotification(
     return;
   }
 
-  const transport = createTransport();
+  const resend = getResendClient();
+  if (!resend) return;
 
-  await transport.sendMail({
-    from: `"Ticket Italia Blog" <${process.env.SMTP_USER}>`,
+  const { error } = await resend.emails.send({
+    from: getFromAddress(),
     to,
     subject: `[Draft ${article.funnelStage}] ${article.title}`,
     html: buildHtml(article),
   });
+
+  if (error) {
+    console.error("[mailer] Errore invio notifica:", error);
+    return;
+  }
 
   console.log(`[mailer] Notifica inviata a ${to}`);
 }
@@ -547,7 +561,9 @@ export async function sendPublishedNotification(
     return;
   }
 
-  const transport = createTransport();
+  const resend = getResendClient();
+  if (!resend) return;
+
   const seoRows = article.seoScore
     ? Object.entries(article.seoScore)
         .map(
@@ -560,8 +576,8 @@ export async function sendPublishedNotification(
         .join("")
     : "";
 
-  await transport.sendMail({
-    from: `"Ticket Italia Blog" <${process.env.SMTP_USER}>`,
+  const { error } = await resend.emails.send({
+    from: getFromAddress(),
     to,
     subject: `[Pubblicato ${article.funnelStage}] ${article.title}`,
     html: `<!DOCTYPE html>
@@ -622,6 +638,11 @@ export async function sendPublishedNotification(
 </body>
 </html>`,
   });
+
+  if (error) {
+    console.error("[mailer] Errore invio notifica pubblicazione:", error);
+    return;
+  }
 
   console.log(`[mailer] Notifica pubblicazione inviata a ${to}`);
 }

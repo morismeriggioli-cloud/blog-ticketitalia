@@ -58,7 +58,8 @@
       "WebFetch(domain:www.facebook.com)",
       "WebFetch(domain:en.wikipedia.org)",
       "WebFetch(domain:www.umbrialeft.org)",
-      "Bash(grep -n -E \"^\\\\];$\" src/data/blog.ts)"
+      "Bash(grep -n -E \"^\\\\];$\" src/data/blog.ts)",
+      "Bash(npm uninstall *)"
     ]
   }
 }
