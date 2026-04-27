@@ -1231,10 +1231,10 @@ export const articles: Article[] = [
     },
   },
   {
-    slug: "pooh-marsciano-2026-biglietti-palaunical",
-    title: "Pooh a Marsciano 2026: biglietti e info PalaUnical",
+    slug: "pooh-stadio-checcarini-marsciano-2026",
+    title: "Pooh a Marsciano 2026: biglietti e info Stadio Checcarini",
     excerpt:
-      "I Pooh tornano in concerto a Marsciano il 15 maggio 2026 al PalaUnical. Una serata di reunion imperdibile per i fan della band iconica italiana: tutto su biglietti, prezzi e come arrivare.",
+      "I Pooh il 10 luglio 2026 allo Stadio Alberto Checcarini di Marsciano (PG): data zero del tour estivo \"60 - La nostra storia\". Biglietti da €70, info venue, parcheggi e hotel.",
     category: "Concerti",
     categorySlug: "concerti",
     subcategory: "Pop",
@@ -1243,160 +1243,140 @@ export const articles: Article[] = [
     status: "published",
     funnelStage: "BOFU",
     articleType: "evento",
-    tags: ["pooh marsciano", "biglietti pooh", "palaunical", "concerti umbria maggio 2026", "pooh reunion"],
+    tags: ["pooh marsciano", "biglietti pooh", "stadio checcarini", "concerti umbria luglio 2026", "pooh 60 la nostra storia", "musica per i borghi"],
     date: "2026-04-23",
     readTime: "8 min",
     author: "Redazione Ticket Italia",
-    image: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=1400&q=80",
+    image: "https://ticketitalia.com/image/cache/wp/ge/EliteAgency/pooh%202026-1500x1500.webp",
     body: {
       intro:
-        "I Pooh arrivano a Marsciano il 15 maggio 2026: il PalaUnical ospita uno degli eventi più attesi dell'anno in Umbria, una serata di reunion con la band che ha segnato decenni di musica italiana. Biglietti a partire da €45,00 — acquisto anticipato fortemente consigliato.",
+        "I Pooh il 10 luglio 2026 allo Stadio Alberto Checcarini di Marsciano (PG): è la data zero del tour estivo \"60 - La nostra storia\", parte della rassegna Musica per i Borghi. Biglietti da €70,00 — alta domanda, acquisto anticipato consigliato.",
       quickInfo: {
         title: "Informazioni rapide",
         text:
-          "I Pooh in concerto al PalaUnical di Marsciano: una data unica umbra con la band più amata del pop italiano. Alta domanda prevista, disponibilità limitata.",
+          "Pooh in concerto allo Stadio Alberto Checcarini di Marsciano per la data zero del tour estivo 2026. Stadio comunale a cielo aperto, capienza concerti circa 3.500 posti tra parterre e tribune.",
         bullets: [
-          "Artista: Pooh — la band iconica della musica italiana",
-          "Location: PalaUnical, Via del Lavoro, Marsciano (PG)",
-          "Data: venerdì 15 maggio 2026",
-          "Biglietto: a partire da €45,00",
-          "Organizzatore: Ticket Italia",
+          "Artista: Pooh — tour \"60 - La nostra storia - Estate\" (data zero)",
+          "Location: Stadio Alberto Checcarini, Via Salita Biscarini, Marsciano (PG)",
+          "Data: venerdì 10 luglio 2026",
+          "Biglietto: a partire da €70,00 (totale biglietto, prevendita inclusa)",
+          "Rassegna: Musica per i Borghi",
         ],
       },
       tickets: {
         title: "Biglietti Pooh Marsciano — prezzi e come acquistare",
         text:
-          "I biglietti per il concerto dei Pooh al PalaUnical partono da €45,00. L'alta domanda prevista per questo evento di reunion consiglia l'acquisto immediato. I biglietti sono in formato elettronico e vengono consegnati via email dopo l'acquisto.",
+          "I biglietti per il concerto dei Pooh allo Stadio Checcarini di Marsciano partono da €70,00 (totale biglietto, prevendita inclusa) e arrivano fino a €95,00 per i settori migliori. Le commissioni di servizio si aggiungono alla cassa. I biglietti sono in formato elettronico e vengono consegnati via email dopo l'acquisto.",
         bullets: [
-          "Prezzo base: €45,00",
+          "Prezzo totale biglietto: da €70,00 a €95,00 (prevendita inclusa)",
+          "Costo finale al checkout: da €74,90 a €101,65 (commissioni di servizio incluse)",
           "Formato: biglietto elettronico PDF consegnato via email",
-          "Accesso: QR code da smartphone",
-          "Acquisto: su Ticket Italia all'indirizzo indicato nel CTA",
-          "Alta domanda attesa: acquisto anticipato consigliato",
+          "Accesso: QR code da smartphone all'ingresso",
+          "Acquisto: su Ticket Italia tramite il link nel CTA in fondo all'articolo",
         ],
       },
       artistContext: {
-        title: "I Pooh: cinquant'anni di musica italiana",
+        title: "I Pooh: sessant'anni di musica italiana",
         paragraphs: [
-          "I Pooh sono la band italiana più longeva e amata della storia del pop nazionale. Nati nel 1966 a Bologna, hanno attraversato sei decenni di musica con una coerenza artistica e una capacità di rinnovarsi che li ha resi un punto di riferimento generazionale. Roby Facchinetti, Red Canzian, Dodi Battaglia e Stefano D'Orazio (scomparso nel 2020) hanno costruito un catalogo immenso.",
-          "La reunion del 2025-2026 ha riportato i Pooh sui palchi di tutta Italia con uno show che celebra il meglio di cinquant'anni di carriera. La scaletta attinge ai grandi classici — 'Uomini soli', 'Tanta voglia di lei', 'Parsifal', 'Chi fermerà la musica' — ma include anche brani meno noti che conquistano i fan più appassionati. A Marsciano arriva una delle poche date umbre dell'intero tour.",
-          "Assistere ai Pooh dal vivo nel 2026 è qualcosa di raro: la band non ha mai avuto un ritmo concertistico serrato, e ogni tour diventa un evento. Il PalaUnical di Marsciano offre una dimensione raccolta e intima rispetto alle arene, una scelta che trasforma il concerto in qualcosa di ancora più speciale.",
+          "I Pooh sono la band italiana più longeva e identitaria della storia del pop nazionale. Nati nel 1966 a Bologna, hanno attraversato sei decenni di musica con una continuità rara: Roby Facchinetti, Red Canzian, Dodi Battaglia e Stefano D'Orazio (scomparso nel 2020) hanno costruito un catalogo che pochi possono vantare in Italia.",
+          "Il tour estivo 2026 \"60 - La nostra storia\" celebra i sessant'anni della band. La scaletta attinge ai grandi classici — 'Uomini soli', 'Tanta voglia di lei', 'Parsifal', 'Chi fermerà la musica' — ma include anche pagine meno frequentate del repertorio. Marsciano ospita la data zero: la prima serata pubblica del tour estivo, con il pubblico delle anteprime e tutto il valore aggiunto di un debutto.",
+          "Vedere i Pooh in uno stadio comunale di provincia, sotto il cielo umbro di luglio, è un'esperienza diversa rispetto alle arene metropolitane: dimensioni umane, distanza dal palco contenuta, il rituale del concerto open-air estivo come si faceva un tempo.",
         ],
         bullets: [
-          "Fondati nel 1966 a Bologna, oltre cinquant'anni di carriera",
+          "Fondati nel 1966 a Bologna, sessant'anni di carriera",
           "Roby Facchinetti (voce e tastiere), Red Canzian (basso e voce), Dodi Battaglia (chitarra e voce)",
           "Successi: 'Uomini soli', 'Tanta voglia di lei', 'Chi fermerà la musica', 'Parsifal'",
-          "Tour reunion 2025-2026: poche date in tutta Italia, alta domanda",
-          "Data umbra: una delle poche nel centro Italia",
+          "Tour estivo 2026 \"60 - La nostra storia\": data zero a Marsciano",
+          "Festival ospitante: Musica per i Borghi (rassegna estiva umbra)",
         ],
       },
       location: {
-        title: "PalaUnical di Marsciano: il palazzetto dello sport nel cuore dell'Umbria",
-        venueType: "Palazzetto dello sport polifunzionale adibito a eventi live",
+        title: "Stadio Alberto Checcarini: lo stadio comunale di Marsciano",
+        venueType: "Stadio comunale di calcio a cielo aperto, configurabile per concerti",
         experience:
-          "Il PalaUnical è il principale spazio per eventi al coperto di Marsciano, un comune in provincia di Perugia nel cuore dell'Umbria. La struttura è adatta a concerti di medie dimensioni, con una capienza che garantisce una buona visibilità da tutti i settori. Per un evento come i Pooh, la dimensione raccolta diventa un valore aggiunto: la distanza dal palco è contenuta e l'atmosfera è quella delle grandi serate live di provincia.",
+          "Lo Stadio Alberto Checcarini è lo stadio comunale di Marsciano, struttura a cielo aperto con manto erboso naturale e pista atletica. È sede della Nestor Calcio 1904 e ogni estate viene riconfigurato per ospitare i grandi concerti della rassegna Musica per i Borghi: il prato si trasforma in parterre con palco a un'estremità, le tribune storiche si aggiungono alla capienza complessiva. Negli ultimi anni ha ospitato Il Volo, Elisa, Venditti & De Gregori e Alessandra Amoroso.",
         suitability:
-          "Ideale per concerti, eventi sportivi e spettacoli al coperto. La configurazione con platea centrale e tribune laterali permette di scegliere il tipo di esperienza: chi vuole cantare sotto il palco può farlo, chi preferisce una visuale d'insieme trova la sua posizione ideale. Accessibile anche da sedie a rotelle previo contatto con l'organizzatore.",
+          "La configurazione concertistica porta la capienza intorno ai 3.500 posti tra parterre e tribune, una dimensione raccolta rispetto alle grandi arene ma sufficiente a sostenere una produzione importante come quella dei Pooh. Per la data zero del tour 2026 questo significa atmosfera intima e visibilità ottima da tutti i settori.",
         atmosphere:
-          "Per un concerto dei Pooh il PalaUnical si trasforma in un luogo carico di emozione collettiva. La musica della band tocca generazioni diverse, e la presenza di un pubblico multigenerazionale crea un'atmosfera unica — famiglie intere, giovani che hanno scoperto i classici, fan storici che conoscono ogni testo a memoria.",
+          "Concerto in stadio comunale di provincia in piena estate: cielo aperto, temperatura piacevole della sera umbra, pubblico multigenerazionale che canta ogni testo a memoria. Per i Pooh è il contesto più adatto a una scaletta che attraversa sessant'anni di musica italiana — una serata che si vive insieme, non solo si guarda.",
         paragraphs: [
-          "Il PalaUnical si trova in Via del Lavoro a Marsciano (PG), raggiungibile in circa 30 minuti da Perugia tramite la SS220 o la strada regionale. Marsciano è un comune collinare in posizione centrale rispetto a molte aree dell'Umbria, comodo da raggiungere sia da Perugia che da Todi e dal Trasimeno.",
-          "Il parcheggio nelle vicinanze del PalaUnical è generalmente disponibile nelle strade adiacenti e nei piazzali circostanti. In occasione di eventi di richiamo come i Pooh, si consiglia di arrivare con anticipo per trovare parcheggio comodo e accedere alla venue prima dell'apertura delle porte.",
+          "Lo Stadio Alberto Checcarini si trova in Via Salita Biscarini, nel centro di Marsciano (PG). Marsciano è un comune collinare in posizione centrale rispetto alla provincia di Perugia, raggiungibile da Perugia in circa 30 minuti tramite la SS3bis E45 (uscita Marsciano Nord) oppure tramite la SS220 Pievaiola. Da Todi sono circa 20 minuti in auto.",
+          "Lo stadio è intitolato ad Alberto Checcarini, presidente della Nestor Calcio 1904 dal 1990 al 2001. La struttura, di proprietà del Comune di Marsciano, viene utilizzata principalmente per il calcio durante l'anno e ogni estate diventa il palco principale di Musica per i Borghi, la rassegna che porta in Umbria grandi artisti italiani con un'attenzione particolare ai borghi di provincia.",
         ],
         bullets: [
-          "Indirizzo: Via del Lavoro, Marsciano (PG)",
-          "Da Perugia: circa 30 minuti via SS220",
-          "Da Todi: circa 20 minuti",
-          "Parcheggio: disponibile nelle aree circostanti",
-          "Accessibilità: contattare l'organizzatore per posti riservati",
+          "Indirizzo: Via Salita Biscarini, 06055 Marsciano (PG)",
+          "Tipo: stadio comunale di calcio con tribune e pista atletica",
+          "Capienza concerti: circa 3.500 posti tra parterre e tribune",
+          "Da Perugia: ~30 min via E45 (uscita Marsciano Nord) o SS220",
+          "Da Todi: ~20 min in auto",
+          "Gestione: Comune di Marsciano",
         ],
         locationImage:
-          "https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&w=1400&q=80",
+          "https://ticketitalia.com/image/cache/wp/gj/Luoghi%20banner/244452504_6867501549942582_193726995694896856_n-1400x300.webp",
         nearbyParking: [
           {
-            name: "Parcheggio Via del Lavoro (adiacente al PalaUnical)",
+            name: "Largo Vittime Innocenti delle Mafie (antistante l'ingresso stadio)",
             distanceOnFoot: "0 min a piedi",
             type: "gratuito",
-            notes: "Area di sosta lungo la strada, attiva anche in orario serale",
-            mapsUrl: "https://maps.google.com/?q=PalaUnical+Via+del+Lavoro+Marsciano+PG",
+            notes: "Area antistante l'ingresso stadio. Il Comune riserva una quota di posti per persone con disabilità durante i concerti — verificare l'ordinanza viabilità sul sito del Comune di Marsciano nei giorni precedenti l'evento.",
+            mapsUrl: "https://www.google.com/maps/search/Largo+Vittime+Innocenti+delle+Mafie+Marsciano",
           },
           {
-            name: "Piazza del Comune – Marsciano centro",
-            distanceOnFoot: "10 min a piedi",
+            name: "Parcheggi area Via Salita Biscarini / Via XXIV Maggio",
+            distanceOnFoot: "5 min a piedi",
             type: "gratuito",
-            notes: "Parcheggio pubblico nel centro storico di Marsciano, disponibile in serata",
-            mapsUrl: "https://maps.google.com/?q=Piazza+del+Comune+Marsciano+PG",
-          },
-          {
-            name: "Parcheggio Via Roma – Marsciano",
-            distanceOnFoot: "8 min a piedi",
-            type: "gratuito",
-            notes: "Posti lungo strada nella viabilità principale del centro",
-            mapsUrl: "https://maps.google.com/?q=Via+Roma+Marsciano+PG",
+            notes: "Posti su strada nelle vie circostanti lo stadio, abitualmente utilizzati per i concerti di Musica per i Borghi. Capienza limitata: nelle sere di concerto si riempiono presto, conviene arrivare con anticipo.",
+            mapsUrl: "https://www.google.com/maps/search/Stadio+Checcarini+Marsciano+parcheggio",
           },
         ],
         nearbyHotels: [
           {
-            name: "Hotel Posta Donini 1579",
-            distanceOnFoot: "15 min in auto",
-            priceRange: "€€€",
-            bookingUrl: "https://www.unahotels.it/hotel/una-esperienze-posta-donini-1579/",
-            images: [
-              "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80",
-              "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=400&q=80",
-              "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=400&q=80",
-            ],
-          },
-          {
-            name: "Agriturismo Il Poggio – Marsciano",
-            distanceOnFoot: "10 min in auto",
-            priceRange: "€",
-            bookingUrl: "https://www.google.com/maps/search/Agriturismo+Il+Poggio+Marsciano",
-            images: [
-              "https://agriturismopoggiolo.com/wp-content/uploads/2025/02/Poggiolo-Villa-1.webp",
-              "https://agriturismopoggiolo.com/wp-content/uploads/2026/02/a312a040-dd7d-4d39-84ac-7ec99f5fcd6e.jpeg",
-              "https://agriturismopoggiolo.com/wp-content/uploads/2025/02/Poggiolo-Villa-1.webp",
-            ],
-          },
-          {
-            name: "Relais La Fattoria – Perugia area",
-            distanceOnFoot: "20 min in auto",
+            name: "Oasi Villaggio – Marsciano",
+            distanceOnFoot: "5 min in auto",
             priceRange: "€€",
-            bookingUrl: "https://www.google.com/maps/search/Relais+La+Fattoria+Perugia",
-            images: [
-              "https://www.relaislafattoria.com/images/benvenuto-01.jpg",
-              "https://www.relaislafattoria.com/images/benvenuto-02.jpg",
-              "https://www.relaislafattoria.com/images/benvenuto-03.jpg",
-            ],
+            bookingUrl: "https://www.oasivillaggio.com/",
+          },
+          {
+            name: "Agriturismo Pieve del Castello – Castello delle Forme (Marsciano)",
+            distanceOnFoot: "12 min in auto",
+            priceRange: "€€",
+            bookingUrl: "https://www.pievedelcastello.com/",
+          },
+          {
+            name: "Torre Colombaia – Bio Agriturismo (San Biagio della Valle)",
+            distanceOnFoot: "15 min in auto",
+            priceRange: "€€",
+            bookingUrl: "https://www.torrecolombaia.it/",
           },
         ],
       },
       liveExperience: {
         title: "Cosa aspettarsi dalla serata con i Pooh",
         paragraphs: [
-          "Un concerto dei Pooh nel 2026 è un evento generazionale. La scaletta copre decenni di storia musicale italiana: dai successi degli anni Settanta come 'Parsifal' e 'Tanta voglia di lei' ai grandi hit degli anni Novanta come 'Uomini soli'. Il pubblico canta ogni testo a memoria — è una delle caratteristiche più belle delle serate Pooh.",
-          "La produzione è professionale e curata: luci, video, suono di alta qualità. Il PalaUnical, pur non essendo un'arena, offre una qualità sonora adatta a questo tipo di show. La dimensione raccolta fa sì che ogni momento sia vissuto in modo intimo, quasi personale.",
+          "La data zero di un tour porta sempre con sé un'energia particolare: la band suona davanti al pubblico la prima volta dopo le prove, l'arrangiamento e la scaletta possono ancora cambiare nelle date successive, e per chi è in stadio è l'occasione di vedere il debutto reale dello show estivo. Per i Pooh, che a Marsciano aprono il tour \"60 - La nostra storia - Estate\", questo significa un concerto carico di senso simbolico oltre che musicale.",
+          "La scaletta attesa attraversa decenni di storia italiana: i grandi classici degli anni Settanta e Ottanta, gli hit degli anni Novanta come 'Uomini soli', le pagine più recenti del repertorio. Lo stadio aperto, sotto il cielo umbro di luglio, amplifica il rituale collettivo del cantare insieme — uno degli aspetti più riconoscibili dei live Pooh.",
         ],
         bullets: [
-          "Scaletta: successi da oltre cinquant'anni di carriera",
-          "Atmosfera: multigenerazionale, partecipata, carica di emozione",
-          "Produzione: luci, video e audio professionali",
-          "Durata attesa: circa 100-120 minuti di live",
-          "Canti collettivi: quasi inevitabili su ogni brano",
+          "Data zero del tour estivo 2026: prima serata pubblica del giro",
+          "Scaletta: classici e brani meno frequentati di sessant'anni di carriera",
+          "Atmosfera: open-air estivo, pubblico multigenerazionale, canti collettivi",
+          "Produzione: luci, video e audio professionali in configurazione stadio",
+          "Inizio concerto previsto: ore 21:30",
         ],
       },
       practicalInfo: {
         title: "Come arrivare e informazioni pratiche",
         paragraphs: [
-          "Il PalaUnical è a Marsciano, raggiungibile da Perugia in circa 30 minuti percorrendo la SS220 in direzione Marsciano. Da Roma è accessibile via A1 uscita Orte, poi SS205 e SS220. L'auto è il mezzo più comodo; i servizi di trasporto pubblico tra Perugia e Marsciano sono limitati la sera.",
-          "I biglietti sono in formato elettronico: ricevi il PDF via email dopo l'acquisto e mostri il QR code all'ingresso. Le porte aprono generalmente 60-90 minuti prima dell'inizio del concerto. Per posti riservati a persone con disabilità contattare l'organizzatore con anticipo.",
+          "Lo Stadio Checcarini è a Marsciano, raggiungibile da Perugia in circa 30 minuti via E45 (SS3bis) con uscita Marsciano Nord, oppure via SS220 Pievaiola. Da Todi sono circa 20 minuti, da Roma via A1 uscita Orte, poi SS205 e raccordo Perugia-Bettolle. L'auto è il mezzo più comodo: i collegamenti pubblici serali tra Perugia e Marsciano sono limitati.",
+          "I biglietti sono in formato elettronico: ricevi il PDF via email dopo l'acquisto e mostri il QR code all'ingresso. Le porte aprono generalmente 60-90 minuti prima dell'inizio del concerto. Per posti riservati a persone con disabilità contatta l'organizzatore con anticipo: il Comune di Marsciano emana un'ordinanza viabilità dedicata nei giorni precedenti il concerto, con la lista dei parcheggi temporanei e dei posti riservati.",
         ],
         bullets: [
-          "Da Perugia: SS220 direzione Marsciano, circa 30 min",
-          "Da Roma: A1 uscita Orte, poi SS205 e SS220",
-          "Parcheggio: nelle aree adiacenti al PalaUnical",
+          "Da Perugia: E45 uscita Marsciano Nord, ~30 min",
+          "Da Roma: A1 uscita Orte, SS205, raccordo Perugia-Bettolle",
+          "Parcheggi: nelle vie circostanti lo stadio (capienza limitata, arrivare con anticipo)",
           "Biglietti: formato elettronico PDF, QR code da smartphone",
-          "Porte: circa 60-90 min prima del concerto",
+          "Apertura porte: ~60-90 min prima dell'inizio concerto",
+          "Inizio: ore 21:30",
         ],
       },
       internalLinks: [
@@ -1410,302 +1390,68 @@ export const articles: Article[] = [
           href: "/articoli/salmo-perugia-2026-umbria-che-spacca-biglietti",
           description: "La scena urban umbra si anima con il live di Salmo: tutto sui biglietti.",
         },
+        {
+          label: "Ermal Meta a Perugia 2026 – Afterlife Live Club",
+          href: "/articoli/ermal-meta-perugia-2026-biglietti-afterlife-live-club",
+          description: "Un'altra data umbra di un grande del pop italiano, in un format raccolto da live club.",
+        },
       ],
       sections: [
         {
-          heading: "Perché la data di Marsciano è speciale",
+          heading: "Perché la data zero a Marsciano è speciale",
           paragraphs: [
-            "Il tour dei Pooh 2025-2026 conta pochissime date nel centro Italia, e quella di Marsciano è una delle rare occasioni per vedere la band in Umbria senza dover affrontare i lunghi trasferimenti verso le grandi arene di Roma o Milano. Il PalaUnical offre una dimensione raccolta che le arene non possono replicare: la distanza dal palco è minima, la visibilità ottima da tutti i settori.",
-            "Per i fan umbri è anche l'occasione per condividere la serata con amici e familiari senza notti fuori casa: Marsciano è raggiungibile facilmente da Perugia, Todi, Orvieto, Città della Pieve e dal Trasimeno. Una serata in musica nel cuore dell'Umbria.",
+            "Il tour \"60 - La nostra storia - Estate\" parte da Marsciano: significa che il pubblico dello Stadio Checcarini è il primo a vedere lo show pubblico dopo le prove della band. Le data zero hanno una loro magia — la scaletta è ancora in assestamento, l'energia è quella del debutto, la produzione cerca il proprio equilibrio davanti al pubblico vero per la prima volta.",
+            "Marsciano si conferma capitale estiva della musica italiana di provincia grazie alla rassegna Musica per i Borghi, che negli ultimi anni ha portato sul prato del Checcarini Il Volo, Elisa, Venditti & De Gregori, Alessandra Amoroso. La scelta dei Pooh come data zero del tour estivo 2026 è un riconoscimento del valore costruito dal festival in pochi anni.",
           ],
         },
         {
           heading: "Come preparare la serata: consigli pratici",
           paragraphs: [
-            "Per godersi al massimo il concerto dei Pooh al PalaUnical è utile pianificare con anticipo. Arrivare almeno 45 minuti prima dell'inizio permette di trovare parcheggio comodo, fare i controlli all'ingresso senza fretta e scegliere una buona posizione all'interno della venue.",
-            "Porta il biglietto sul telefono già scaricato, così non dipendi dalla connessione dati in una venue affollata. Se vieni con bambini, verifica le politiche di ingresso per i minori. La serata è adatta a tutte le età: i Pooh hanno un pubblico che spazia dai cinquantenni cresciuti con i loro dischi ai ragazzi che li hanno scoperti attraverso genitori e nonni.",
+            "Per godersi al massimo il concerto allo Stadio Checcarini è utile pianificare con anticipo. Arrivare almeno 60 minuti prima dell'inizio permette di trovare parcheggio nelle vie limitrofe (la capienza è limitata e nelle sere di concerto si riempie presto), fare i controlli all'ingresso senza fretta e scegliere una buona posizione sul prato.",
+            "Porta il biglietto sul telefono già scaricato per non dipendere dalla connessione dati in zona stadio. Lo show è all'aperto: in caso di previsioni incerte, controlla la pagina evento su Ticket Italia e i canali del festival per eventuali avvisi. Per le ordinanze parcheggi e viabilità, fai riferimento al sito del Comune di Marsciano nei giorni precedenti.",
           ],
           bullets: [
-            "Arriva almeno 45 minuti prima per trovare parcheggio",
+            "Arriva almeno 60 minuti prima per trovare parcheggio",
             "Scarica il biglietto PDF prima di uscire di casa",
-            "Porta una giacca leggera: i palazzetti serali possono essere freschi",
-            "Controlla orari di apertura porte sulla pagina evento",
+            "Concerto open-air: porta una giacca leggera per la sera",
+            "Controlla l'ordinanza viabilità sul sito del Comune di Marsciano",
+            "Inizio concerto: ore 21:30",
           ],
         },
       ],
       faq: [
         {
-          question: "Dove si trova il PalaUnical di Marsciano?",
+          question: "Dove si trova lo Stadio Alberto Checcarini di Marsciano?",
           answer:
-            "Il PalaUnical è in Via del Lavoro a Marsciano (PG), a circa 30 minuti da Perugia percorrendo la SS220.",
+            "Lo Stadio Alberto Checcarini è in Via Salita Biscarini a Marsciano (PG), a circa 30 minuti da Perugia tramite E45 (uscita Marsciano Nord) o SS220 Pievaiola.",
         },
         {
           question: "Quanto costano i biglietti per i Pooh a Marsciano?",
           answer:
-            "I biglietti partono da €45,00. Per prezzi aggiornati e disponibilità dei settori consulta la pagina evento su Ticket Italia.",
+            "I biglietti partono da €70,00 (totale biglietto, prevendita inclusa) e arrivano fino a €95,00 per i settori migliori. Le commissioni di servizio si aggiungono alla cassa: il costo finale va da €74,90 a €101,65. Per disponibilità aggiornata dei settori consulta la pagina evento su Ticket Italia.",
         },
         {
-          question: "Come acquisto i biglietti per i Pooh al PalaUnical?",
+          question: "Come acquisto i biglietti per i Pooh allo Stadio Checcarini?",
           answer:
-            "I biglietti sono disponibili su Ticket Italia. Acquista online, ricevi il PDF via email e mostra il QR code all'ingresso.",
+            "I biglietti sono disponibili su Ticket Italia. Acquista online, ricevi il PDF via email e mostra il QR code all'ingresso dello stadio.",
         },
         {
-          question: "C'è parcheggio vicino al PalaUnical?",
+          question: "C'è parcheggio vicino allo Stadio Checcarini?",
           answer:
-            "Sì, ci sono parcheggi gratuiti nelle strade adiacenti alla struttura e nel centro di Marsciano. Si consiglia di arrivare con anticipo.",
+            "Sì, nelle vie attorno allo stadio (Via Salita Biscarini, Largo Vittime Innocenti delle Mafie, Via XXIV Maggio) ci sono posti gratuiti su strada. La capienza è limitata: si consiglia di arrivare almeno 60 minuti prima. Il Comune di Marsciano pubblica un'ordinanza viabilità dedicata nei giorni precedenti il concerto.",
         },
         {
-          question: "Quali canzoni suonerà i Pooh?",
+          question: "A che ora inizia il concerto dei Pooh a Marsciano?",
           answer:
-            "La scaletta non è ancora confermata ufficialmente, ma il tour include i grandi classici come 'Uomini soli', 'Tanta voglia di lei', 'Chi fermerà la musica' e 'Parsifal', oltre a brani più recenti.",
+            "L'inizio è previsto per le 21:30 di venerdì 10 luglio 2026. Le porte dello stadio aprono generalmente 60-90 minuti prima.",
         },
       ],
       cta: {
         title: "Acquista i biglietti per i Pooh a Marsciano",
         text:
-          "Alta domanda attesa per questo evento di reunion. Acquista subito il tuo biglietto su Ticket Italia e assicurati il posto per una serata indimenticabile con la band più amata d'Italia.",
+          "Data zero del tour estivo \"60 - La nostra storia\": alta domanda attesa. Acquista subito su Ticket Italia per assicurarti il posto allo Stadio Checcarini il 10 luglio 2026.",
         label: "Acquista su Ticket Italia",
         href: "https://ticketitalia.com/pooh-stadio-comunale-checcarini-marsciano-pg-10-luglio-2026",
-      },
-    },
-  },
-  {
-    slug: "umbria-jazz-2026-biglietti-perugia-arena-santa-giuliana",
-    title: "Umbria Jazz 2026 a Perugia: biglietti e info Arena Santa Giuliana",
-    excerpt:
-      "Umbria Jazz 2026 torna a Perugia il 10 luglio 2026 all'Arena Santa Giuliana. Il festival internazionale di jazz più famoso d'Italia: tutto su biglietti, artisti, venue e come organizzare il weekend.",
-    category: "Eventi & Festival",
-    categorySlug: "eventi-festival",
-    subcategory: "Festival musicali",
-    subcategorySlug: "festival-musicali",
-    type: "evento",
-    status: "published",
-    funnelStage: "BOFU",
-    articleType: "evento",
-    tags: ["umbria jazz 2026", "biglietti umbria jazz", "festival perugia", "jazz luglio 2026", "arena santa giuliana"],
-    date: "2026-04-23",
-    readTime: "9 min",
-    author: "Redazione Ticket Italia",
-    image: "https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?auto=format&fit=crop&w=1400&q=80",
-    body: {
-      intro:
-        "Umbria Jazz 2026 porta Perugia al centro del mondo con il festival internazionale di jazz più amato d'Italia. Il 10 luglio 2026 l'Arena Santa Giuliana apre le porte per una delle serate più iconiche dell'estate umbra: biglietti da €40,00 per vivere il jazz sotto le stelle nella cornice incomparabile di Perugia.",
-      quickInfo: {
-        title: "Informazioni rapide",
-        text:
-          "Umbria Jazz 2026 all'Arena Santa Giuliana di Perugia: il festival internazionale che trasforma la città in capitale mondiale del jazz ogni estate.",
-        bullets: [
-          "Festival: Umbria Jazz 2026 — edizione estiva",
-          "Location: Arena Santa Giuliana, Viale N. Paganini, Perugia",
-          "Data: venerdì 10 luglio 2026",
-          "Biglietto: a partire da €40,00",
-          "Formato: festival internazionale, richiamo turistico globale",
-        ],
-      },
-      tickets: {
-        title: "Biglietti Umbria Jazz 2026 — prezzi e come acquistare",
-        text:
-          "I biglietti per gli eventi all'Arena Santa Giuliana di Umbria Jazz 2026 partono da €40,00. L'acquisto anticipato è essenziale: Umbria Jazz registra sold out per le serate principali con settimane di anticipo. I biglietti sono in formato elettronico.",
-        bullets: [
-          "Prezzo base: €40,00 per gli eventi all'Arena Santa Giuliana",
-          "Formato: biglietto elettronico PDF consegnato via email",
-          "Accesso: QR code da smartphone all'ingresso",
-          "Sold out frequenti: acquisto anticipato indispensabile",
-          "Programma completo: consulta Ticket Italia per tutti gli eventi del festival",
-        ],
-      },
-      artistContext: {
-        title: "Umbria Jazz: il festival che porta il mondo a Perugia",
-        paragraphs: [
-          "Umbria Jazz nasce nel 1973 come esperimento culturale nel cuore dell'Umbria. Oggi, oltre cinquant'anni dopo, è diventato uno dei festival jazz più importanti al mondo, un appuntamento fisso per i più grandi nomi della musica jazz internazionale e un punto di riferimento per i fan del genere da ogni continente. Il festival trasforma Perugia in una capitale temporanea del jazz per circa dieci giorni ogni luglio.",
-          "Nel corso degli anni Umbria Jazz ha ospitato praticamente tutti i grandi: Miles Davis, Dizzy Gillespie, Pat Metheny, Herbie Hancock, Chick Corea, Wynton Marsalis. Ma il festival non è solo jazz: la programmazione ha sempre incluso incursioni nel soul, nel blues, nel funk e nella musica di confine, con artisti pop e rock di primo piano che interpretano il jazz a modo loro. Questa apertura è uno dei segreti della sua longevità.",
-          "L'Arena Santa Giuliana è il cuore pulsante del festival: il grande palco all'aperto sotto le stelle umbre, capace di ospitare migliaia di spettatori per i concerti principali. Ma il festival si estende in tutta la città: il Giardino Carducci, le piazze storiche, i cortili, i locali — Perugia diventa un unico grande palcoscenico per dieci giorni.",
-        ],
-        bullets: [
-          "Fondato nel 1973, oltre cinquant'anni di storia",
-          "Venue principali: Arena Santa Giuliana e Giardino Carducci",
-          "Artisti storici: Miles Davis, Dizzy Gillespie, Herbie Hancock, Pat Metheny",
-          "Durata: circa 10 giorni ogni luglio",
-          "Richiamo: oltre 200.000 presenze nelle edizioni recenti",
-        ],
-      },
-      location: {
-        title: "Arena Santa Giuliana: il grande palco all'aperto di Perugia",
-        venueType: "Arena all'aperto, venue principale del festival Umbria Jazz",
-        experience:
-          "L'Arena Santa Giuliana è uno spazio iconico: un'arena a cielo aperto che durante il festival diventa il cuore di tutto. Capienza di diverse migliaia di spettatori, palco professionale, impianto audio e luci di livello internazionale, e soprattutto l'atmosfera unica di un concerto estivo all'aperto a Perugia. Vedere il jazz sotto le stelle con la skyline umbra come sfondo è un'esperienza difficile da descrivere e facile da ricordare.",
-        suitability:
-          "Ideale per grandi eventi musicali all'aperto. La configurazione dell'arena permette di stare sotto il palco o scegliere posizioni più distaccate con una visuale d'insieme. La vastità dello spazio rende il festival accessibile a tutti — famiglie, appassionati, turisti, professionisti del settore.",
-        atmosphere:
-          "Durante Umbria Jazz l'arena si carica di un'energia internazionale unica. Il pubblico viene da tutto il mondo: americani, giapponesi, europei del nord, turisti italiani e umbri di ritorno. Il jazz unisce in un modo che pochi generi musicali riescono a fare — e l'Arena Santa Giuliana a luglio ne è la prova.",
-        paragraphs: [
-          "L'Arena Santa Giuliana si trova in Viale N. Paganini, in una posizione accessibile dal centro di Perugia e dalle zone di parcheggio principali. Durante il festival il traffico nel centro cittadino aumenta sensibilmente: pianificare l'arrivo con anticipo e una buona strategia di trasporto è essenziale.",
-          "Il festival organizza servizi di navetta e percorsi dedicati per i giorni principali. La città di Perugia nel suo complesso si trasforma durante Umbria Jazz: i locali restano aperti fino a notte fonda, le piazze ospitano concerti gratuiti, le strade si animano con musicisti di strada. Andare ad Umbria Jazz non è solo andare a un concerto — è vivere una città in un momento straordinario.",
-        ],
-        bullets: [
-          "Indirizzo: Viale N. Paganini, Perugia (PG)",
-          "Dal centro storico: circa 15 min a piedi o 5 min in auto",
-          "Servizi navetta: attivi durante il festival dai principali parcheggi",
-          "Capienza: diverse migliaia di spettatori per i grandi eventi",
-          "Struttura: arena all'aperto, porta gli ombrelli — il meteo di luglio è solitamente ottimo ma verificare",
-        ],
-        locationImage:
-          "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=1400&q=80",
-        nearbyParking: [
-          {
-            name: "Parcheggio Pian di Massiano (Minimetrò)",
-            distanceOnFoot: "20 min a piedi (o navetta festival)",
-            type: "a pagamento",
-            notes: "Grande parcheggio di interscambio con navetta Minimetrò verso il centro durante il festival",
-            mapsUrl: "https://maps.google.com/?q=Parcheggio+Pian+di+Massiano+Perugia",
-          },
-          {
-            name: "Parcheggio Piazza Partigiani",
-            distanceOnFoot: "15 min a piedi",
-            type: "a pagamento",
-            notes: "Parcheggio coperto centrale, punto di partenza del Minimetrò verso il centro storico",
-            mapsUrl: "https://maps.google.com/?q=Parcheggio+Piazza+Partigiani+Perugia",
-          },
-          {
-            name: "Parcheggio Via Campo di Marte / zona sportiva",
-            distanceOnFoot: "10 min a piedi",
-            type: "gratuito",
-            notes: "Area parcheggio nella zona sportiva di Perugia, più vicina all'Arena Santa Giuliana",
-            mapsUrl: "https://maps.google.com/?q=Via+Campo+di+Marte+Perugia",
-          },
-        ],
-        nearbyHotels: [
-          {
-            name: "Brufani Palace Hotel",
-            distanceOnFoot: "20 min a piedi",
-            priceRange: "€€€",
-            bookingUrl: "https://www.sinahotels.com/it/h/brufani-palace-perugia/",
-            images: [
-              "https://www.sinahotels.com/assets/uploads/Immagini-Definitive/Brufani/HOME-HOTEL/Stairs-Brufani-Perugia.jpg",
-              "https://www.sinahotels.com/assets/uploads/hotels/brufani/Lobby-Brufani-Palace-Hotel-Perugia-Italy.jpg",
-              "https://www.sinahotels.com/assets/uploads/Immagini-Definitive/Brufani/M-Barro/Sina-Brufani-Facciata.jpg",
-            ],
-          },
-          {
-            name: "Hotel Fortuna Perugia",
-            distanceOnFoot: "18 min a piedi",
-            priceRange: "€€",
-            bookingUrl: "https://www.google.com/maps/search/Hotel+Fortuna+Perugia",
-            images: [
-              "https://www.hotelfortunaperugia.com/wp-content/uploads/2021/11/Esterno-Hotel-Fortuna.jpg",
-              "https://www.hotelfortunaperugia.com/wp-content/uploads/2021/11/Terrazza-Panoramica-Hotel-Fortuna-Perugia.jpg",
-              "https://www.hotelfortunaperugia.com/wp-content/uploads/2021/11/Camera-Executive-Hotel-Fortuna-Perugia.jpg",
-            ],
-          },
-          {
-            name: "Hotel La Rosetta Perugia",
-            distanceOnFoot: "15 min a piedi",
-            priceRange: "€€",
-            bookingUrl: "https://www.google.com/maps/search/Hotel+La+Rosetta+Perugia",
-            images: [
-              "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=400&q=80",
-              "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=400&q=80",
-              "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=400&q=80",
-            ],
-          },
-        ],
-      },
-      liveExperience: {
-        title: "Cosa aspettarsi da una serata all'Arena Santa Giuliana",
-        paragraphs: [
-          "Una serata ad Umbria Jazz all'Arena Santa Giuliana inizia molto prima del concerto. La città è già in fermento: i locali del centro propongono musica dal pomeriggio, le piazze ospitano side events, e il pubblico internazionale crea un'atmosfera cosmopolita che Perugia non vive in nessun altro momento dell'anno.",
-          "L'arena stessa ha un'acustica sorprendente per uno spazio all'aperto. Il palco principale accoglie nomi di livello mondiale, con produzioni professionali e una qualità sonora che rivaleggia con i migliori festival europei. Portarsi uno strato in più per la sera è consigliato — le notti umbre di luglio si rinfrescano — ma l'atmosfera ripaga ogni scomodità.",
-        ],
-        bullets: [
-          "Concerti principali all'Arena Santa Giuliana la sera",
-          "Side events nelle piazze e nei locali del centro (molti gratuiti)",
-          "Pubblico internazionale: americani, giapponesi, europei",
-          "Durata serate: concerti spesso fino a mezzanotte e oltre",
-          "Porta uno strato per la sera: le notti umbre di luglio si rinfrescano",
-        ],
-      },
-      practicalInfo: {
-        title: "Come organizzare il weekend ad Umbria Jazz",
-        paragraphs: [
-          "Umbria Jazz richiama turisti da tutto il mondo e Perugia si riempie durante il festival. Prenotare hotel con anticipo è fondamentale: le strutture nel raggio di 20 km da Perugia si esauriscono rapidamente per le date principali. Se arrivi in auto, pianifica il parcheggio usando i parcheggi di interscambio con Minimetrò per evitare il caos nel centro storico.",
-          "Il programma completo del festival include eventi a pagamento (Arena Santa Giuliana, Giardino Carducci) e moltissimi eventi gratuiti nelle piazze. Comprare solo un biglietto per l'arena e integrare con i concerti free è una strategia intelligente per vivere il festival senza spendere troppo.",
-        ],
-        bullets: [
-          "Hotel: prenota con mesi di anticipo per le date del festival",
-          "Auto: usa i parcheggi di interscambio con Minimetrò",
-          "Programma: mix di eventi a pagamento e gratuiti",
-          "Meteo: luglio a Perugia è caldo, porta acqua e cappello per il giorno",
-          "Biglietti: acquisto anticipato essenziale per l'Arena Santa Giuliana",
-        ],
-      },
-      internalLinks: [
-        {
-          label: "Agriumbria — eventi e cultura in Umbria",
-          href: "/articoli/agriumbria-evento-biglietti-guida",
-          description: "Un altro grande evento umbro: guida completa ad Agriumbria a Bastia Umbra.",
-        },
-        {
-          label: "Francesco Renga a Spoleto 2026",
-          href: "/articoli/francesco-renga-spoleto-2026-biglietti-teatro-nuovo",
-          description: "Estate di concerti in Umbria: Francesco Renga al Teatro Nuovo di Spoleto.",
-        },
-      ],
-      sections: [
-        {
-          heading: "La storia di Umbria Jazz: oltre cinquant'anni di musica",
-          paragraphs: [
-            "Umbria Jazz nasce nel 1973 da un'intuizione coraggiosa: portare il jazz americano nel cuore dell'Italia centrale, in una regione lontana dai grandi circuiti musicali del tempo. I fondatori — in primis Carlo Pagnotta, che ha guidato il festival per decenni — immaginarono qualcosa che non esisteva ancora in Europa: un festival jazz di livello internazionale in un contesto di straordinaria bellezza paesaggistica.",
-            "Nei primi anni il festival si tenne in diversi comuni umbri, poi si stabilì definitivamente a Perugia. L'Arena Santa Giuliana diventò il palco principale, ma la caratteristica distintiva di Umbria Jazz è sempre rimasta la sua capacità di trasformare l'intera città in un festival: le piazze, i chiostri, i cortili storici diventano palcoscenici per concerti gratuiti che completano la programmazione a pagamento.",
-          ],
-        },
-        {
-          heading: "Perché andare a Umbria Jazz 2026: cinque motivi",
-          paragraphs: [
-            "Non serve essere appassionati di jazz per goderselo: Umbria Jazz è prima di tutto un'esperienza urbana, una festa collettiva che trasforma Perugia in qualcosa di irripetibile. Il jazz di alto livello è la colonna sonora, ma l'esperienza è fatta di cene nei vicoli del centro storico, incontri con persone da tutto il mondo, concerti gratuiti inaspettati negli angoli più belli della città.",
-            "La qualità artistica è garantita da oltre cinquant'anni di storia: chi sale sul palco dell'Arena Santa Giuliana è sempre all'altezza delle aspettative. E il format del festival — alcune serate a pagamento, moltissime occasioni free — lo rende accessibile a qualsiasi budget.",
-          ],
-          bullets: [
-            "Qualità artistica garantita: solo grandi nomi sul palco principale",
-            "Atmosfera internazionale unica: pubblico da tutto il mondo",
-            "Concerti gratuiti: il festival si vive anche senza biglietto a pagamento",
-            "Perugia in luglio: una delle città più belle d'Italia nella sua stagione migliore",
-            "Gastronomia: ristoranti, street food e vino umbro durante il festival",
-          ],
-        },
-      ],
-      faq: [
-        {
-          question: "Dove si trova l'Arena Santa Giuliana?",
-          answer:
-            "L'Arena Santa Giuliana si trova in Viale N. Paganini a Perugia, a circa 15 minuti a piedi dal centro storico. Raggiungibile anche con le navette del festival dai principali parcheggi.",
-        },
-        {
-          question: "Quanto costano i biglietti per Umbria Jazz 2026?",
-          answer:
-            "I biglietti per gli eventi all'Arena Santa Giuliana partono da €40,00. Il programma completo include anche molti eventi gratuiti nelle piazze e nei luoghi storici di Perugia.",
-        },
-        {
-          question: "Quando si svolge Umbria Jazz 2026?",
-          answer:
-            "Il festival si svolge a luglio 2026 per circa 10 giorni. La data segnalata del 10 luglio 2026 è per un evento specifico all'Arena Santa Giuliana. Consulta il programma completo su Ticket Italia.",
-        },
-        {
-          question: "Come si parcheggia durante Umbria Jazz?",
-          answer:
-            "I parcheggi principali sono Pian di Massiano e Piazza Partigiani, entrambi collegati al centro con il Minimetrò. Durante il festival sono attive navette aggiuntive. Il centro storico è pedonale: l'auto si lascia sempre fuori.",
-        },
-        {
-          question: "Umbria Jazz è adatto alle famiglie?",
-          answer:
-            "Assolutamente sì. Il festival include eventi per tutte le età, i concerti gratuiti nelle piazze sono ideali per le famiglie, e l'atmosfera del festival è accogliente e internazionale. I bambini sono i benvenuti.",
-        },
-      ],
-      cta: {
-        title: "Acquista i biglietti per Umbria Jazz 2026",
-        text:
-          "I biglietti per i concerti principali all'Arena Santa Giuliana si esauriscono settimane prima del festival. Acquista subito su Ticket Italia e assicurati il posto per vivere il jazz più bello d'Italia.",
-        label: "Acquista su Ticket Italia",
-        href: "https://www.ticketitalia.com",
       },
     },
   },

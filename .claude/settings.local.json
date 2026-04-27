@@ -35,7 +35,23 @@
       "WebFetch(domain:www.relaislafattoria.com)",
       "WebFetch(domain:www.hotelrosalbaperugia.it)",
       "WebFetch(domain:www.relaismadonnadicampagna.it)",
-      "WebFetch(domain:static.perugiaparkhotel.com)"
+      "WebFetch(domain:static.perugiaparkhotel.com)",
+      "Bash(grep -n -E \"^    \\\\{$|^      slug:\" src/data/blog.ts)",
+      "Bash(grep -n -E \"^    \\\\{$|^      slug:|^    \\\\},$\" src/data/blog.ts)",
+      "Bash(curl -s -A \"Mozilla/5.0\" -L --max-time 20 \"https://ticketitalia.com/pooh-stadio-comunale-checcarini-marsciano-pg-10-luglio-2026\" -o /tmp/pooh.html)",
+      "Bash(grep -oE '€[^<]{0,30}|euro[^<]{0,30}|EUR[^<]{0,30}|[0-9]+\\\\.[0-9]{2}\\\\s*€|Posto[^<]{0,50}|Settore[^<]{0,50}|biglietto[^<]{0,80}' /tmp/pooh.html)",
+      "Bash(grep -oE '<h[1-6][^>]*>[^<]{3,80}</h[1-6]>|<td[^>]*>[^<]{3,80}</td>' /tmp/pooh.html)",
+      "WebFetch(domain:www.europlan-online.de)",
+      "WebFetch(domain:www.comune.marsciano.pg.it)",
+      "WebFetch(domain:www.oasivillaggio.com)",
+      "WebFetch(domain:www.lanazione.it)",
+      "WebFetch(domain:www.teatro.it)",
+      "WebFetch(domain:www.torrecolombaia.it)",
+      "WebFetch(domain:www.pievedelcastello.com)",
+      "WebFetch(domain:www.umbriasocial.it)",
+      "WebFetch(domain:corrieredellumbria.it)",
+      "WebFetch(domain:www.iltamtam.it)",
+      "Bash(curl *)"
     ]
   }
 }
