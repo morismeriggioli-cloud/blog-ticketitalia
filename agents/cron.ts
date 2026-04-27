@@ -31,3 +31,7 @@ async function runAndLog() {
 
 cron.schedule(SCHEDULE_MON, runAndLog, { timezone: "Europe/Rome" });
 cron.schedule(SCHEDULE_FRI, runAndLog, { timezone: "Europe/Rome" });
+
+// TEST temporaneo — rimuovere dopo la verifica
+cron.schedule("24 18 * * *", runAndLog, { timezone: "Europe/Rome" });
+console.log("TEST CRON aggiunto — partirà alle 18:24 Europe/Rome");
