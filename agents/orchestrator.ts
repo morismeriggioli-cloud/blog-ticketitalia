@@ -414,20 +414,36 @@ export async function runAutoPublishPipeline(): Promise<void> {
     console.log("\n=== STEP 1: SCOUT ===");
     const { opportunities } = await runScout();
 
-    // Legge blog.ts per filtrare opportunità già pubblicate
+    // Legge blog.ts ed estrae tutti gli slug e titoli già pubblicati
     const blogPath = path.join(ROOT, "src", "data", "blog.ts");
     const blogContent = fs.readFileSync(blogPath, "utf-8");
 
-    const bestBofu = (opportunities as Record<string, unknown>[]).find((o) => {
-      if (o.funnel_stage !== "BOFU" || o.seo_potential !== "high") return false;
-      const slug = o.suggested_slug as string | undefined;
-      if (!slug) return false;
-      return !new RegExp(`slug:\\s*["']${slug}["']`).test(blogContent);
-    }) ?? (opportunities as Record<string, unknown>[]).find((o) => {
-      const slug = o.suggested_slug as string | undefined;
-      if (!slug) return false;
-      return !new RegExp(`slug:\\s*["']${slug}["']`).test(blogContent);
+    const existingSlugs = new Set<string>();
+    const existingTitles = new Set<string>();
+    const slugRegex = /slug:\s*["']([^"']+)["']/g;
+    const titleRegex = /title:\s*["']([^"']+)["']/g;
+    let m: RegExpExecArray | null;
+    while ((m = slugRegex.exec(blogContent)) !== null) {
+      existingSlugs.add(m[1].toLowerCase().trim());
+    }
+    while ((m = titleRegex.exec(blogContent)) !== null) {
+      existingTitles.add(m[1].toLowerCase().trim());
+    }
+
+    const opportunitiesArr = opportunities as Record<string, unknown>[];
+    const filtered = opportunitiesArr.filter((o) => {
+      const slug = (o.suggested_slug as string | undefined)?.toLowerCase().trim();
+      const title = (o.title as string | undefined)?.toLowerCase().trim();
+      if (slug && existingSlugs.has(slug)) return false;
+      if (title && existingTitles.has(title)) return false;
+      return true;
     });
+
+    console.log(
+      `[orchestrator] Articoli esistenti: ${existingSlugs.size} — opportunità filtrate: ${filtered.length}`
+    );
+
+    const bestBofu = filtered[0];
 
     if (!bestBofu) {
       console.log("[orchestrator] Nessuna opportunità nuova da pubblicare — pipeline terminata");
