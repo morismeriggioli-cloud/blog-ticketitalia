@@ -12,6 +12,8 @@ param(
 
   [string]$LocalPath = "out",
 
+  [string[]]$DeleteRemotePaths = @(),
+
   [switch]$EnableSsl
 )
 
@@ -48,6 +50,73 @@ function New-FtpRequest {
   $request.KeepAlive = $false
   $request.EnableSsl = [bool]$EnableSsl
   return $request
+}
+
+function Get-FtpEntries {
+  param([string]$DirectoryPath)
+
+  $uri = "ftp://$HostName$DirectoryPath"
+  $request = New-FtpRequest -Uri $uri -Method ([System.Net.WebRequestMethods+Ftp]::ListDirectory)
+
+  try {
+    $response = $request.GetResponse()
+    $reader = New-Object System.IO.StreamReader($response.GetResponseStream())
+    $content = $reader.ReadToEnd()
+    $reader.Close()
+    $response.Close()
+
+    return $content -split "`r?`n" | Where-Object { -not [string]::IsNullOrWhiteSpace($_) }
+  } catch [System.Net.WebException] {
+    if ($_.Exception.Response) {
+      $_.Exception.Response.Close()
+    }
+    return @()
+  }
+}
+
+function Remove-FtpPathRecursive {
+  param([string]$RemoteTargetPath)
+
+  $normalizedPath = if ($RemoteTargetPath.StartsWith("/")) { $RemoteTargetPath } else { "/$RemoteTargetPath" }
+  $entries = Get-FtpEntries -DirectoryPath $normalizedPath
+
+  if ($entries.Count -gt 0) {
+    foreach ($entry in $entries) {
+      $childPath = Join-FtpPath -Base $normalizedPath -Child $entry
+      Remove-FtpPathRecursive -RemoteTargetPath $childPath
+    }
+
+    $dirRequest = New-FtpRequest -Uri ("ftp://$HostName$normalizedPath") -Method ([System.Net.WebRequestMethods+Ftp]::RemoveDirectory)
+    try {
+      $dirResponse = $dirRequest.GetResponse()
+      $dirResponse.Close()
+      return
+    } catch [System.Net.WebException] {
+      if ($_.Exception.Response) {
+        $_.Exception.Response.Close()
+      }
+    }
+  }
+
+  $fileRequest = New-FtpRequest -Uri ("ftp://$HostName$normalizedPath") -Method ([System.Net.WebRequestMethods+Ftp]::DeleteFile)
+  try {
+    $fileResponse = $fileRequest.GetResponse()
+    $fileResponse.Close()
+  } catch [System.Net.WebException] {
+    if ($_.Exception.Response) {
+      $_.Exception.Response.Close()
+    }
+
+    $dirRequest = New-FtpRequest -Uri ("ftp://$HostName$normalizedPath") -Method ([System.Net.WebRequestMethods+Ftp]::RemoveDirectory)
+    try {
+      $dirResponse = $dirRequest.GetResponse()
+      $dirResponse.Close()
+    } catch [System.Net.WebException] {
+      if ($_.Exception.Response) {
+        $_.Exception.Response.Close()
+      }
+    }
+  }
 }
 
 function Ensure-FtpDirectory {
@@ -98,6 +167,12 @@ function Upload-File {
 $resolvedLocalPath = Resolve-Path -LiteralPath $LocalPath
 $root = $resolvedLocalPath.Path.TrimEnd("\")
 $baseRemote = if ($RemotePath.StartsWith("/")) { $RemotePath } else { "/$RemotePath" }
+
+foreach ($remoteToDelete in $DeleteRemotePaths) {
+  $targetPath = Join-FtpPath -Base $baseRemote -Child $remoteToDelete
+  Write-Host "Deleting remote path $targetPath"
+  Remove-FtpPathRecursive -RemoteTargetPath $targetPath
+}
 
 if (-not (Test-Path -LiteralPath (Join-Path $root "index.html"))) {
   throw "index.html non trovato in '$root'. Esegui prima: npm run build:static"

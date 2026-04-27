@@ -42,12 +42,15 @@ function today(): string {
 // ---------------------------------------------------------------------------
 
 async function callClaude(
-  client: Anthropic,
   systemPrompt: string,
   userMessage: string,
   label: string
 ): Promise<string> {
   console.log(`[${label}] Chiamata a Claude (${MODEL})…`);
+
+  const client = new Anthropic({
+    apiKey: process.env.ANTHROPIC_API_KEY ?? "",
+  });
 
   const response = await client.messages.create({
     model: MODEL,
@@ -77,9 +80,7 @@ async function callClaude(
 // Agente Scout
 // ---------------------------------------------------------------------------
 
-export async function runScout(
-  client: Anthropic
-): Promise<{ opportunities: unknown[] }> {
+export async function runScout(): Promise<{ opportunities: unknown[] }> {
   const systemPrompt = readPrompt("scout", "scout-prompt.md");
 
   const userMessage = `Analizza la sitemap di Ticket Italia e produci il report opportunità.
@@ -90,7 +91,7 @@ Data di oggi: ${today()}
 Rispondi SOLO con il JSON puro del report (nessun markdown, nessun testo aggiuntivo).
 Il JSON deve rispettare esattamente il formato definito nel tuo system prompt.`;
 
-  const raw = await callClaude(client, systemPrompt, userMessage, "scout");
+  const raw = await callClaude(systemPrompt, userMessage, "scout");
 
   const jsonMatch = raw.match(/\{[\s\S]*\}/);
   if (!jsonMatch) throw new Error("[scout] Risposta non contiene JSON valido");
@@ -133,7 +134,6 @@ async function fetchEventImage(eventUrl: string): Promise<string> {
 // ---------------------------------------------------------------------------
 
 export async function runRedattore(
-  client: Anthropic,
   opportunity: Record<string, unknown>
 ): Promise<{ slug: string; rawContent: string }> {
   const systemPrompt = readPrompt("redattore", "redattore-prompt.md");
@@ -177,7 +177,6 @@ Istruzioni di output:
 - Usa l'IMMAGINE EVENTO fornita sopra come valore del campo image (se disponibile)`;
 
   const raw = await callClaude(
-    client,
     systemPrompt,
     userMessage,
     "redattore"
@@ -212,7 +211,6 @@ export interface SeoResult {
 }
 
 export async function runSeo(
-  client: Anthropic,
   slug: string,
   articleContent: string,
   keywords: string[]
@@ -234,7 +232,7 @@ BLOCCO 1: articolo TypeScript ottimizzato (solo codice, senza markdown fences)
 ---SEO-REPORT---
 BLOCCO 2: report SEO in formato markdown`;
 
-  const raw = await callClaude(client, systemPrompt, userMessage, "seo");
+  const raw = await callClaude(systemPrompt, userMessage, "seo");
 
   const separator = "---SEO-REPORT---";
   const parts = raw.split(separator);
@@ -282,11 +280,9 @@ export async function runPipeline(): Promise<void> {
   const startTime = Date.now();
   console.log(`[orchestrator] Pipeline avviata: ${new Date().toISOString()}`);
 
-  const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-
   try {
     console.log("\n=== STEP 1: SCOUT ===");
-    const { opportunities } = await runScout(client);
+    const { opportunities } = await runScout();
 
     const bestBofu = (opportunities as Record<string, unknown>[]).find(
       (o) => o.funnel_stage === "BOFU" && o.seo_potential === "high"
@@ -296,11 +292,11 @@ export async function runPipeline(): Promise<void> {
     console.log(`[orchestrator] Opportunità selezionata: ${bestBofu.title}`);
 
     console.log("\n=== STEP 2: REDATTORE ===");
-    const { slug, rawContent } = await runRedattore(client, bestBofu);
+    const { slug, rawContent } = await runRedattore(bestBofu);
 
     console.log("\n=== STEP 3: SEO ===");
     const keywords = (bestBofu.keywords as string[] | undefined) ?? [];
-    const seoResult = await runSeo(client, slug, rawContent, keywords);
+    const seoResult = await runSeo(slug, rawContent, keywords);
 
     console.log("\n=== STEP 4: NOTIFICA EMAIL ===");
     await sendArticleNotification({
@@ -409,12 +405,11 @@ export async function runAutoPublishPipeline(): Promise<void> {
   const startTime = Date.now();
   console.log(`[orchestrator] Auto-publish pipeline avviata: ${new Date().toISOString()}`);
 
-  const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
   const siteUrl = process.env.SITE_URL ?? "https://blog.ticketitalia.com";
 
   try {
     console.log("\n=== STEP 1: SCOUT ===");
-    const { opportunities } = await runScout(client);
+    const { opportunities } = await runScout();
 
     // Legge blog.ts per filtrare opportunità già pubblicate
     const blogPath = path.join(ROOT, "src", "data", "blog.ts");
@@ -438,11 +433,11 @@ export async function runAutoPublishPipeline(): Promise<void> {
     console.log(`[orchestrator] Opportunità selezionata: ${bestBofu.title}`);
 
     console.log("\n=== STEP 2: REDATTORE ===");
-    const { slug, rawContent } = await runRedattore(client, bestBofu);
+    const { slug, rawContent } = await runRedattore(bestBofu);
 
     console.log("\n=== STEP 3: SEO ===");
     const keywords = (bestBofu.keywords as string[] | undefined) ?? [];
-    const seoResult = await runSeo(client, slug, rawContent, keywords);
+    const seoResult = await runSeo(slug, rawContent, keywords);
 
     console.log("\n=== STEP 4: AUTO-PUBLISH ===");
     const pubDate = await autoPublish(slug, seoResult.title, seoResult.rawContent);
@@ -475,8 +470,7 @@ const args = process.argv.slice(2);
 const isScoutOnly = args.includes("--scout");
 
 if (isScoutOnly) {
-  const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-  runScout(client)
+  runScout()
     .then(({ opportunities }) => {
       console.log(JSON.stringify({ opportunities }, null, 2));
     })
