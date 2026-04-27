@@ -6,6 +6,12 @@
  *   tsx agents/orchestrator.ts --scout    # solo Scout
  */
 
+console.log("ENV CHECK:", {
+  hasKey: !!process.env.ANTHROPIC_API_KEY,
+  keyStart: process.env.ANTHROPIC_API_KEY?.slice(0, 10),
+  allEnvKeys: Object.keys(process.env).filter(k => k.includes("ANTHROPIC"))
+});
+
 import Anthropic from "@anthropic-ai/sdk";
 import fs from "fs";
 import path from "path";
