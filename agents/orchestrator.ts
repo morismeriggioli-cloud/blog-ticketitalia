@@ -497,18 +497,20 @@ export async function runAutoPublishPipeline(): Promise<void> {
 }
 
 // ---------------------------------------------------------------------------
-// Entrypoint
+// Entrypoint — esegue solo se invocato direttamente (non quando importato)
 // ---------------------------------------------------------------------------
 
 const args = process.argv.slice(2);
-const isScoutOnly = args.includes("--scout");
+const isDirectRun = import.meta.url === `file://${process.argv[1].replace(/\\/g, '/')}`;
 
-if (isScoutOnly) {
-  runScout()
-    .then(({ opportunities }) => {
-      console.log(JSON.stringify({ opportunities }, null, 2));
-    })
-    .catch(console.error);
-} else {
-  runPipeline().catch(console.error);
+if (isDirectRun) {
+  if (args.includes("--scout")) {
+    runScout()
+      .then(({ opportunities }) => {
+        console.log(JSON.stringify({ opportunities }, null, 2));
+      })
+      .catch(console.error);
+  } else {
+    runPipeline().catch(console.error);
+  }
 }
