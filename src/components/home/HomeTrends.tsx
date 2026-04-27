@@ -18,14 +18,14 @@ export function HomeTrends({ articles }: HomeTrendsProps) {
         <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-3xl">
             <p className="mb-3 text-sm font-black uppercase tracking-normal text-secondary-500">
-              Trend / Ultime news
+              Cosa bolle adesso
             </p>
             <h2 className="text-3xl font-black leading-tight tracking-normal text-ink sm:text-5xl">
-              Segnali freschi per decidere cosa mettere in agenda.
+              Le date che stanno facendo parlare tutti.
             </h2>
           </div>
           <Link href="/articoli" className="inline-flex items-center gap-2 font-black text-secondary-500 transition hover:text-ink">
-            Tutti gli aggiornamenti
+            Le ultime news
             <ArrowRight className="size-5" aria-hidden="true" />
           </Link>
         </div>

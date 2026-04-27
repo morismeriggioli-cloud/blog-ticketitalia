@@ -17,14 +17,14 @@ export function HomeFeaturedArticles({ lead, articles }: HomeFeaturedArticlesPro
         <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-3xl">
             <p className="mb-3 text-sm font-black uppercase tracking-normal text-secondary-500">
-              In copertina
+              Storie scelte con cura
             </p>
             <h2 className="text-3xl font-black leading-tight tracking-normal text-ink sm:text-5xl">
-              Storie con gerarchia da magazine, non una lista da archivio.
+              Dietro ogni biglietto, una serata da raccontare.
             </h2>
           </div>
           <Link href="/articoli" className="inline-flex items-center gap-2 font-black text-secondary-500 transition hover:text-ink">
-            Apri il magazine
+            Tutti gli articoli
             <ArrowUpRight className="size-5" aria-hidden="true" />
           </Link>
         </div>

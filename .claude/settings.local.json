@@ -51,7 +51,13 @@
       "WebFetch(domain:www.umbriasocial.it)",
       "WebFetch(domain:corrieredellumbria.it)",
       "WebFetch(domain:www.iltamtam.it)",
-      "Bash(curl *)"
+      "Bash(curl *)",
+      "Bash(grep -oE '<title>[^<]+|<img[^>]*src=\"[^\"]*Luoghi[^\"]*\"|<p[^>]*>[^<]{20,300}</p>')",
+      "WebFetch(domain:maps.app.goo.gl)",
+      "WebFetch(domain:www.google.com)",
+      "WebFetch(domain:www.facebook.com)",
+      "WebFetch(domain:en.wikipedia.org)",
+      "WebFetch(domain:www.umbrialeft.org)"
     ]
   }
 }

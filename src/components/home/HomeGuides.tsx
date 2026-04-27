@@ -12,10 +12,10 @@ export function HomeGuides() {
               Guide & consigli
             </p>
             <h2 className="max-w-2xl text-3xl font-black leading-tight tracking-normal sm:text-5xl">
-              Le scelte migliori nascono prima del checkout.
+              Sapere prima, godere di più.
             </h2>
             <p className="mt-5 max-w-xl text-lg leading-8 text-white/68">
-              Contenuti pratici, scritti come una redazione: meno ansia da sold out, piu sicurezza quando scegli data, settore e compagnia.
+              Bonus, prevendite, settori, posti veri: tutto quello che vorresti sapesse un amico esperto, raccontato senza giri di parole.
             </p>
             <Link href="/categorie/guide" className="mt-7 inline-flex items-center gap-2 font-black text-primary-400 transition hover:text-white">
               Tutte le guide

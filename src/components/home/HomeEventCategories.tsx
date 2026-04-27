@@ -10,14 +10,14 @@ export function HomeEventCategories() {
         <div className="mb-8 grid gap-4 lg:grid-cols-[0.78fr_1fr] lg:items-end">
           <div>
             <p className="mb-3 text-sm font-black uppercase tracking-normal text-secondary-500">
-              Categorie live
+              Le nostre tribù
             </p>
             <h2 className="text-3xl font-black leading-tight tracking-normal text-ink sm:text-5xl">
-              Entra dal mood giusto.
+              Trova la tua gente.
             </h2>
           </div>
           <p className="max-w-2xl text-lg leading-8 text-muted lg:justify-self-end">
-            Ogni area editoriale ha un colore, un ritmo e una promessa precisa: meno rumore, piu eventi da vivere.
+            Cinque mondi, una sola passione: vivere ciò che ti fa stare bene. Scegli da dove cominciare stasera.
           </p>
         </div>
 
