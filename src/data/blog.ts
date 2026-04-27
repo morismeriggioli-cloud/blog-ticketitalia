@@ -1455,6 +1455,235 @@ export const articles: Article[] = [
       },
     },
   },
+  {
+    slug: "nicolo-filippucci-arena-54-corciano-2026-biglietti",
+    title: "Nicolò Filippucci a Corciano 2026: biglietti e info Arena 54",
+    excerpt:
+      "Nicolò Filippucci il 20 giugno 2026 all'Arena 54 di Corciano (PG): il vincitore di Sanremo Giovani 2025-2026 torna a casa, dove è cresciuto. Biglietti da €24,50, info venue, parcheggi e hotel.",
+    category: "Concerti",
+    categorySlug: "concerti",
+    subcategory: "Pop",
+    subcategorySlug: "pop",
+    type: "evento",
+    status: "published",
+    funnelStage: "BOFU",
+    articleType: "evento",
+    tags: ["nicolò filippucci", "filippucci corciano", "arena 54", "concerti perugia giugno 2026", "sanremo 2026 nuove proposte", "amici 24"],
+    date: "2026-04-27",
+    readTime: "7 min",
+    author: "Redazione Ticket Italia",
+    image: "https://ticketitalia.com/image/cache/wp/gj/Miste/NICOLOFILIPPUCCI%20quadrata-1500x1500.webp",
+    body: {
+      intro:
+        "Nicolò Filippucci torna a Corciano sabato 20 giugno 2026, all'Arena 54: una serata speciale per il giovane cantautore umbro fresco vincitore delle Nuove Proposte di Sanremo 2026 con \"Laguna\". Concerto a casa sua, dove è cresciuto. Biglietti da €24,50 — alta domanda, acquisto anticipato consigliato.",
+      quickInfo: {
+        title: "Informazioni rapide",
+        text:
+          "Nicolò Filippucci all'Arena 54 di Corciano per una data live nella sua terra. Inizio concerto ore 21:30, formato raccolto in spazio open-air.",
+        bullets: [
+          "Artista: Nicolò Filippucci — vincitore Nuove Proposte Sanremo 2026, ex Amici 24",
+          "Location: Arena 54 (Cafè 54), Via Parco 12, Corciano (PG)",
+          "Data: sabato 20 giugno 2026",
+          "Inizio: ore 21:30",
+          "Biglietto: €24,50 (totale, prevendita inclusa)",
+        ],
+      },
+      tickets: {
+        title: "Biglietti Filippucci Corciano — prezzo e come acquistare",
+        text:
+          "I biglietti per il concerto di Nicolò Filippucci all'Arena 54 hanno prezzo unico: €24,50 totale (€23,00 prezzo + €1,50 prevendita). Le commissioni di servizio si aggiungono al checkout, portando il costo finale a €26,22. Acquisto online su Ticket Italia, biglietto in formato elettronico via email.",
+        bullets: [
+          "Prezzo totale biglietto: €24,50 (prevendita inclusa)",
+          "Costo finale al checkout: €26,22 (commissioni di servizio incluse)",
+          "Formato: biglietto elettronico PDF consegnato via email",
+          "Accesso: QR code da smartphone all'ingresso",
+          "Acquisto: su Ticket Italia tramite il link nel CTA in fondo all'articolo",
+        ],
+      },
+      artistContext: {
+        title: "Chi è Nicolò Filippucci: dal liceo a Sanremo passando per Amici",
+        paragraphs: [
+          "Nicolò Filippucci è nato il 30 maggio 2006 a Castiglione del Lago ed è cresciuto a Corciano, in provincia di Perugia. Quando il 20 giugno sale sul palco dell'Arena 54 non è il classico cantautore in tour: è quello del liceo lì vicino, quello che ha cantato per anni nei locali della zona prima di farsi notare dal grande pubblico. Per chi è di queste parti, è una serata che pesa.",
+          "Il suo percorso pubblico parte nell'autunno 2024, quando entra nella ventiquattresima edizione di Amici di Maria De Filippi. Va al serale con il sostegno di Anna Pettinelli e Deborah Lettieri, viene eliminato in semifinale ma esce dal programma con una fanbase compatta. La svolta arriva pochi mesi dopo: vince le Nuove Proposte di Sanremo Giovani 2025 con \"Laguna\", brano che lo porta in gara al Festival 2026 dove conquista anche lì la categoria Nuove Proposte.",
+          "Il 27 marzo 2026 esce il singolo \"Tutte le ragazze vogliono canzoni d'amore\", che anticipa il primo album \"Un posto dove andare\" pubblicato il 10 aprile 2026 per Warner Records Italy. Il live di Corciano è una delle prime occasioni di sentire dal vivo l'intero progetto, in formato raccolto e in casa.",
+        ],
+        bullets: [
+          "Cantautore italiano, classe 2006 — cresciuto a Corciano (PG)",
+          "Amici 24 (2024-25): serale, eliminato in semifinale",
+          "Sanremo Giovani 2025: vince con \"Laguna\"",
+          "Sanremo 2026: vince le Nuove Proposte",
+          "Album d'esordio: \"Un posto dove andare\" (Warner Records Italy, 10 aprile 2026)",
+          "Etichetta: Warner Records Italy",
+        ],
+      },
+      location: {
+        title: "Arena 54 di Corciano: lo spazio live di Cafè 54",
+        venueType: "Arena open-air, spazio eventi del Cafè 54 di Corciano",
+        experience:
+          "L'Arena 54 è lo spazio outdoor del Cafè 54, locale storico di Corciano in zona Taverne / San Mariano. Nelle stagioni calde l'area esterna del locale si trasforma in un'arena raccolta per concerti acustici e serate live di musica italiana. Per un cantautore come Filippucci — che a Corciano ha cantato nei locali per anni prima di arrivare al grande pubblico — il ritorno qui ha un valore particolare: dimensione intima, distanza zero dal palco, pubblico in larga parte di gente che lo conosce davvero.",
+        suitability:
+          "Perfetto per concerti in formato cantautorale: capienza limitata, atmosfera diretta, qualità sonora curata per la voce e per la dimensione acustica della proposta. Non aspettarti una grande arena: aspettati una serata che assomiglia più a un live di paese che a un grande show, e proprio per questo difficile da trovare altrove nel tour.",
+        atmosphere:
+          "La serata è una di quelle date che mescolano pubblico nazionale (chi ha seguito Filippucci da Amici e da Sanremo) e pubblico locale (chi lo segue da quando suonava nei bar). L'atmosfera è quella delle prime date in casa: emozione condivisa, voglia di esserci, tanta gente che canta i pezzi a memoria insieme all'artista. Concerto in giugno, all'aperto, sera umbra: mix difficile da battere.",
+        paragraphs: [
+          "L'Arena 54 si trova in Via Parco 12, a Corciano (PG), nella zona di Taverne / San Mariano — frazioni della città metropolitana di Perugia. È raggiungibile in circa 10-12 minuti dal centro storico di Perugia in auto, e si trova vicino al Quasar Village, principale polo commerciale dell'area.",
+          "Lo spazio è quello del Cafè 54, locale che durante l'anno funziona come bar/ristorante e che nella stagione estiva apre l'area esterna agli eventi musicali. La dimensione raccolta significa qualità d'ascolto e contatto diretto con il palco: una scelta coerente con la natura cantautorale della proposta di Filippucci e con il suo legame personale con Corciano.",
+        ],
+        bullets: [
+          "Indirizzo: Via Parco 12, 06073 Corciano (PG)",
+          "Frazione: Taverne / San Mariano (zona ovest di Perugia)",
+          "Tipo: arena open-air dello spazio Cafè 54",
+          "Da Perugia centro: ~10-12 min in auto",
+          "Vicino al Quasar Village (centro commerciale Corciano)",
+          "Dimensione: spazio raccolto, capienza limitata",
+        ],
+        nearbyParking: [
+          {
+            name: "Parcheggio Cafè 54 / Via Parco",
+            distanceOnFoot: "0 min a piedi",
+            type: "gratuito",
+            notes: "Area di sosta lungo Via Parco e nei piazzali adiacenti al locale. Capienza limitata: nelle sere di concerto si riempie presto, conviene arrivare con anticipo.",
+            mapsUrl: "https://maps.app.goo.gl/hCAxrVtHxEYcZooYA",
+          },
+          {
+            name: "Parcheggi Quasar Village (Corciano)",
+            distanceOnFoot: "10-15 min a piedi",
+            type: "gratuito",
+            notes: "Grande parcheggio del centro commerciale Quasar Village a Corciano, a poca distanza in auto dall'Arena 54. Verifica gli orari di apertura del centro: in caso di chiusura serale il parcheggio potrebbe essere ad accesso limitato.",
+            mapsUrl: "https://www.google.com/maps/search/Quasar+Village+Corciano",
+          },
+        ],
+        nearbyHotels: [
+          {
+            name: "Sangallo Palace Hotel – Perugia centro",
+            distanceOnFoot: "15 min in auto",
+            priceRange: "€€€",
+            bookingUrl: "https://www.sangallo.it/",
+          },
+          {
+            name: "Chocohotel – Perugia",
+            distanceOnFoot: "12 min in auto",
+            priceRange: "€€",
+            bookingUrl: "https://www.chocohotel.it/",
+          },
+          {
+            name: "Hotel Giò Wine and Jazz Area – Perugia",
+            distanceOnFoot: "12 min in auto",
+            priceRange: "€€",
+            bookingUrl: "https://www.hotelgio.it/",
+          },
+        ],
+      },
+      liveExperience: {
+        title: "Cosa aspettarsi dalla serata",
+        paragraphs: [
+          "Il concerto di Corciano è uno dei live più attesi della prima estate di Filippucci con un album da portare in giro. La scaletta attinge a \"Un posto dove andare\" — disco d'esordio uscito ad aprile 2026 — e include i brani più conosciuti dal grande pubblico: \"Laguna\" (il pezzo Sanremo 2026), \"Tutte le ragazze vogliono canzoni d'amore\" (singolo di lancio), e i brani che lo hanno fatto scoprire ad Amici 24.",
+          "La dimensione raccolta dell'Arena 54 fa sì che il live abbia un sapore diverso da quello che si vede nei grandi festival estivi: meno produzione di palcoscenico, più contatto. Per una serata in casa propria — con amici, famiglia e fan locali — è la scelta giusta.",
+        ],
+        bullets: [
+          "Scaletta attesa: brani da \"Un posto dove andare\" + Laguna + classici da Amici",
+          "Formato: cantautorale, dimensione raccolta",
+          "Atmosfera: data \"in casa\" — pubblico locale e nazionale",
+          "Durata attesa: circa 80-100 minuti",
+          "Inizio: ore 21:30",
+        ],
+      },
+      practicalInfo: {
+        title: "Come arrivare e informazioni pratiche",
+        paragraphs: [
+          "L'Arena 54 (Cafè 54) si raggiunge da Perugia centro storico in circa 10-12 minuti in auto, percorrendo la SS75bis in direzione Corciano e uscendo a San Mariano / Taverne. Da Roma è accessibile via A1 uscita Orte, poi raccordo Perugia-Bettolle e SS75bis. Da Firenze: A1 uscita Valdichiana, poi raccordo Bettolle-Perugia.",
+          "I biglietti sono in formato elettronico: ricevi il PDF via email dopo l'acquisto e mostri il QR code all'ingresso. Per posti riservati a persone con disabilità è opportuno contattare l'organizzatore con anticipo. Il concerto è all'aperto: in caso di previsioni meteo incerte, controlla la pagina evento su Ticket Italia per eventuali avvisi.",
+        ],
+        bullets: [
+          "Da Perugia centro: SS75bis direzione Corciano, ~10-12 min",
+          "Da Roma: A1 uscita Orte, raccordo Perugia-Bettolle",
+          "Da Firenze: A1 uscita Valdichiana, raccordo Bettolle-Perugia",
+          "Parcheggio: nelle vie circostanti il locale (capienza limitata)",
+          "Biglietti: formato elettronico PDF, QR code da smartphone",
+          "Inizio: ore 21:30 — porte aperte ~60 min prima",
+        ],
+      },
+      internalLinks: [
+        {
+          label: "Ermal Meta a Perugia 2026 – Afterlife Live Club",
+          href: "/articoli/ermal-meta-perugia-2026-biglietti-afterlife-live-club",
+          description: "Un altro live umbro in formato raccolto: Ermal Meta a Balanzano, Perugia.",
+        },
+        {
+          label: "Salmo a Perugia 2026 – Umbria Che Spacca",
+          href: "/articoli/salmo-perugia-2026-umbria-che-spacca-biglietti",
+          description: "L'estate live perugina continua con Salmo ai Giardini del Frontone.",
+        },
+        {
+          label: "Pooh a Marsciano 2026 – Stadio Checcarini",
+          href: "/articoli/pooh-stadio-checcarini-marsciano-2026",
+          description: "Data zero del tour estivo dei Pooh nello stadio di Marsciano, in Umbria.",
+        },
+      ],
+      sections: [
+        {
+          heading: "Perché questa data a Corciano è speciale",
+          paragraphs: [
+            "Filippucci a Corciano non è una tappa qualsiasi del tour: è la data in casa. È cresciuto qui, ha cantato per anni nei locali di Perugia e dintorni, conosce i nomi dei posti perché li ha frequentati da ragazzo. Per un giovane artista che in due anni è passato da concorrente di Amici a vincitore delle Nuove Proposte di Sanremo 2026, tornare in un'arena del proprio paese di origine è uno di quei passaggi che lasciano il segno — sul palco e in chi guarda.",
+            "Per chi non è umbro, è l'occasione di vedere un cantautore in formato raccolto prima che la sua estate diventi affollata di palchi più grandi. Per chi è umbro, è una di quelle serate da raccontare anni dopo: \"c'ero io, all'Arena 54 di Corciano, quando Filippucci tornò a casa\".",
+          ],
+        },
+        {
+          heading: "Come preparare la serata: consigli pratici",
+          paragraphs: [
+            "Capienza limitata, posto unico, biglietti che difficilmente saranno disponibili sotto data: il primo consiglio è l'acquisto anticipato. Il prezzo è contenuto (€24,50 totale) ma la domanda — tra fan locali, fan da Amici e fan da Sanremo — supererà la disponibilità.",
+            "Arriva all'Arena 54 con almeno 45-60 minuti di anticipo: il parcheggio nelle vie circostanti si riempie presto e in giugno la sera umbra può rinfrescarsi. Una giacca leggera, il telefono carico per il QR code, e magari una playlist veloce dell'album per arrivare già caldi: il resto lo fa la serata.",
+          ],
+          bullets: [
+            "Acquista in anticipo: capienza limitata, alta domanda",
+            "Arriva 45-60 min prima per parcheggio e ingresso",
+            "Concerto open-air: porta una giacca leggera",
+            "Telefono carico: il QR code si mostra all'ingresso",
+            "Inizio concerto: 21:30",
+          ],
+        },
+      ],
+      faq: [
+        {
+          question: "Dove si trova l'Arena 54 di Corciano?",
+          answer:
+            "L'Arena 54 è lo spazio outdoor del Cafè 54, in Via Parco 12 a Corciano (PG), zona Taverne / San Mariano — circa 10-12 minuti in auto dal centro storico di Perugia.",
+        },
+        {
+          question: "Quanto costa il biglietto per Filippucci a Corciano?",
+          answer:
+            "Il biglietto ha prezzo unico: €24,50 totale (prevendita inclusa). Le commissioni di servizio al checkout portano il costo finale a €26,22.",
+        },
+        {
+          question: "Come acquisto i biglietti per Filippucci all'Arena 54?",
+          answer:
+            "I biglietti sono disponibili su Ticket Italia. Acquista online, ricevi il PDF via email e mostra il QR code all'ingresso del locale.",
+        },
+        {
+          question: "A che ora inizia il concerto?",
+          answer:
+            "L'inizio è previsto per le 21:30 di sabato 20 giugno 2026. Le porte aprono generalmente circa 60 minuti prima.",
+        },
+        {
+          question: "C'è parcheggio vicino all'Arena 54?",
+          answer:
+            "Sì, ci sono posti gratuiti lungo Via Parco e nelle strade limitrofe, oltre al parcheggio del Quasar Village a poca distanza in auto. Capienza limitata: arriva con anticipo.",
+        },
+        {
+          question: "Perché è una data speciale per Filippucci?",
+          answer:
+            "Nicolò Filippucci è cresciuto a Corciano. Il concerto all'Arena 54 è una delle prime date \"in casa\" dopo la vittoria delle Nuove Proposte di Sanremo 2026 e l'uscita dell'album d'esordio.",
+        },
+      ],
+      cta: {
+        title: "Acquista i biglietti per Filippucci a Corciano",
+        text:
+          "Capienza limitata, prezzo unico €24,50: la data in casa di Filippucci all'Arena 54 si esaurirà rapidamente. Acquista subito su Ticket Italia per assicurarti il posto sabato 20 giugno 2026.",
+        label: "Acquista su Ticket Italia",
+        href: "https://ticketitalia.com/nicolo-filippucci-arena-54-perugia-20-giugno-2026",
+      },
+    },
+  },
 ];
 
 export const publishedArticles = articles

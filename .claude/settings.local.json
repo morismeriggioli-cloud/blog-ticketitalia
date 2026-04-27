@@ -57,7 +57,8 @@
       "WebFetch(domain:www.google.com)",
       "WebFetch(domain:www.facebook.com)",
       "WebFetch(domain:en.wikipedia.org)",
-      "WebFetch(domain:www.umbrialeft.org)"
+      "WebFetch(domain:www.umbrialeft.org)",
+      "Bash(grep -n -E \"^\\\\];$\" src/data/blog.ts)"
     ]
   }
 }
