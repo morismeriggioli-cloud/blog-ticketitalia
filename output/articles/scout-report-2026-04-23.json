@@ -1,0 +1,553 @@
+{
+  "generatedAt": "2026-04-23T10:00:00Z",
+  "totalFound": 20,
+  "opportunities": [
+    {
+      "rank": 1,
+      "funnel_stage": "BOFU",
+      "article_type": "evento",
+      "title": "Ermal Meta - Afterlife Live Club Perugia",
+      "artist": "Ermal Meta",
+      "venue": "Afterlife Live Club",
+      "city": "Perugia",
+      "date": "2026-04-29",
+      "ticketitalia_url": "https://ticketitalia.com/ermal-meta-afterlife-perugia",
+      "source_urls": [
+        "https://ticketitalia.com/ermal-meta-afterlife-perugia"
+      ],
+      "category": "concerti",
+      "subcategory": "pop",
+      "seo_potential": "high",
+      "ticket_price": "€35.00",
+      "suggested_slug": "ermal-meta-perugia-2026-biglietti-afterlife-live-club",
+      "suggested_title": "Ermal Meta a Perugia 2026: biglietti e info Afterlife Live Club",
+      "keywords": [
+        "ermal meta perugia",
+        "biglietti ermal meta",
+        "afterlife live club",
+        "concerti perugia aprile 2026"
+      ],
+      "notes": "Evento imminente (6 giorni), artista ad alta notorietà, venue iconico della scena live umbra"
+    },
+    {
+      "rank": 2,
+      "funnel_stage": "BOFU",
+      "article_type": "evento",
+      "title": "I Pooh - Arena Santa Giuliana Perugia",
+      "artist": "I Pooh",
+      "venue": "Arena Santa Giuliana",
+      "city": "Perugia",
+      "date": "2026-07-15",
+      "ticketitalia_url": "https://ticketitalia.com/i-pooh-arena-santa-giuliana-perugia",
+      "source_urls": [
+        "https://ticketitalia.com/i-pooh-arena-santa-giuliana-perugia"
+      ],
+      "category": "concerti",
+      "subcategory": "pop",
+      "seo_potential": "high",
+      "ticket_price": "€55.00",
+      "suggested_slug": "i-pooh-perugia-2026-biglietti-arena-santa-giuliana",
+      "suggested_title": "I Pooh a Perugia 2026: biglietti e info Arena Santa Giuliana",
+      "keywords": [
+        "i pooh perugia",
+        "biglietti i pooh 2026",
+        "arena santa giuliana",
+        "concerti estate perugia"
+      ],
+      "notes": "Grande evento estate, band storica italiana, venue outdoor capiente"
+    },
+    {
+      "rank": 3,
+      "funnel_stage": "BOFU",
+      "article_type": "evento",
+      "title": "Ultimo - Stadio Renato Curi Perugia",
+      "artist": "Ultimo",
+      "venue": "Stadio Renato Curi",
+      "city": "Perugia",
+      "date": "2026-06-20",
+      "ticketitalia_url": "https://ticketitalia.com/ultimo-stadio-curi-perugia",
+      "source_urls": [
+        "https://ticketitalia.com/ultimo-stadio-curi-perugia"
+      ],
+      "category": "concerti",
+      "subcategory": "pop",
+      "seo_potential": "high",
+      "ticket_price": "€45.00",
+      "suggested_slug": "ultimo-perugia-2026-biglietti-stadio-renato-curi",
+      "suggested_title": "Ultimo a Perugia 2026: biglietti e info Stadio Renato Curi",
+      "keywords": [
+        "ultimo perugia",
+        "biglietti ultimo 2026",
+        "stadio curi",
+        "concerti giugno perugia"
+      ],
+      "notes": "Artista con fanbase giovane molto attiva, stadio sold-out atteso"
+    },
+    {
+      "rank": 4,
+      "funnel_stage": "BOFU",
+      "article_type": "evento",
+      "title": "Fabrizio Moro - Teatro Morlacchi Perugia",
+      "artist": "Fabrizio Moro",
+      "venue": "Teatro Morlacchi",
+      "city": "Perugia",
+      "date": "2026-05-10",
+      "ticketitalia_url": "https://ticketitalia.com/fabrizio-moro-teatro-morlacchi-perugia",
+      "source_urls": [
+        "https://ticketitalia.com/fabrizio-moro-teatro-morlacchi-perugia"
+      ],
+      "category": "concerti",
+      "subcategory": "cantautori",
+      "seo_potential": "high",
+      "ticket_price": "€42.00",
+      "suggested_slug": "fabrizio-moro-perugia-2026-biglietti-teatro-morlacchi",
+      "suggested_title": "Fabrizio Moro a Perugia 2026: biglietti e info Teatro Morlacchi",
+      "keywords": [
+        "fabrizio moro perugia",
+        "biglietti fabrizio moro",
+        "teatro morlacchi",
+        "concerti maggio perugia"
+      ],
+      "notes": "Cantautore di successo, teatro storico, evento intimo"
+    },
+    {
+      "rank": 5,
+      "funnel_stage": "BOFU",
+      "article_type": "evento",
+      "title": "Nek - PalaSport Terni",
+      "artist": "Nek",
+      "venue": "PalaSport",
+      "city": "Terni",
+      "date": "2026-05-28",
+      "ticketitalia_url": "https://ticketitalia.com/nek-palasport-terni",
+      "source_urls": [
+        "https://ticketitalia.com/nek-palasport-terni"
+      ],
+      "category": "concerti",
+      "subcategory": "pop",
+      "seo_potential": "high",
+      "ticket_price": "€38.00",
+      "suggested_slug": "nek-terni-2026-biglietti-palasport",
+      "suggested_title": "Nek a Terni 2026: biglietti e info PalaSport",
+      "keywords": [
+        "nek terni",
+        "biglietti nek 2026",
+        "palasport terni",
+        "concerti umbria maggio"
+      ],
+      "notes": "Artista pop mainstream, buona capienza venue"
+    },
+    {
+      "rank": 6,
+      "funnel_stage": "BOFU",
+      "article_type": "evento",
+      "title": "Alessandra Amoroso - Umbria Jazz Arena Perugia",
+      "artist": "Alessandra Amoroso",
+      "venue": "Umbria Jazz Arena",
+      "city": "Perugia",
+      "date": "2026-07-12",
+      "ticketitalia_url": "https://ticketitalia.com/alessandra-amoroso-umbria-jazz-arena",
+      "source_urls": [
+        "https://ticketitalia.com/alessandra-amoroso-umbria-jazz-arena"
+      ],
+      "category": "concerti",
+      "subcategory": "pop",
+      "seo_potential": "high",
+      "ticket_price": "€48.00",
+      "suggested_slug": "alessandra-amoroso-perugia-2026-biglietti-umbria-jazz",
+      "suggested_title": "Alessandra Amoroso a Perugia 2026: biglietti e info Umbria Jazz Arena",
+      "keywords": [
+        "alessandra amoroso perugia",
+        "biglietti amoroso 2026",
+        "umbria jazz arena",
+        "concerti luglio perugia"
+      ],
+      "notes": "Grande pubblico femminile, location prestigiosa Umbria Jazz"
+    },
+    {
+      "rank": 7,
+      "funnel_stage": "BOFU",
+      "article_type": "evento",
+      "title": "Max Pezzali - Stadio Libero Liberati Terni",
+      "artist": "Max Pezzali",
+      "venue": "Stadio Libero Liberati",
+      "city": "Terni",
+      "date": "2026-06-05",
+      "ticketitalia_url": "https://ticketitalia.com/max-pezzali-stadio-liberati-terni",
+      "source_urls": [
+        "https://ticketitalia.com/max-pezzali-stadio-liberati-terni"
+      ],
+      "category": "concerti",
+      "subcategory": "pop",
+      "seo_potential": "high",
+      "ticket_price": "€52.00",
+      "suggested_slug": "max-pezzali-terni-2026-biglietti-stadio-liberati",
+      "suggested_title": "Max Pezzali a Terni 2026: biglietti e info Stadio Libero Liberati",
+      "keywords": [
+        "max pezzali terni",
+        "biglietti max pezzali 2026",
+        "stadio liberati",
+        "concerti giugno terni"
+      ],
+      "notes": "Nostalgia anni 90, pubblico transgenerazionale, stadio"
+    },
+    {
+      "rank": 8,
+      "funnel_stage": "BOFU",
+      "article_type": "evento",
+      "title": "Umbria Jazz Festival 2026 - Perugia",
+      "artist": null,
+      "venue": "Varie location Perugia",
+      "city": "Perugia",
+      "date": "2026-07-08",
+      "ticketitalia_url": "https://ticketitalia.com/umbria-jazz-2026-perugia",
+      "source_urls": [
+        "https://ticketitalia.com/umbria-jazz-2026-perugia"
+      ],
+      "category": "concerti",
+      "subcategory": "jazz",
+      "seo_potential": "high",
+      "ticket_price": "€65.00",
+      "suggested_slug": "umbria-jazz-2026-perugia-biglietti-programma",
+      "suggested_title": "Umbria Jazz 2026 a Perugia: biglietti e info festival",
+      "keywords": [
+        "umbria jazz 2026",
+        "biglietti umbria jazz",
+        "festival perugia luglio",
+        "programma umbria jazz"
+      ],
+      "notes": "Festival internazionale di grande richiamo, abbonamenti e singole date"
+    },
+    {
+      "rank": 9,
+      "funnel_stage": "BOFU",
+      "article_type": "evento",
+      "title": "Elisa - Teatro della Lirica Spoleto",
+      "artist": "Elisa",
+      "venue": "Teatro della Lirica",
+      "city": "Spoleto",
+      "date": "2026-05-22",
+      "ticketitalia_url": "https://ticketitalia.com/elisa-teatro-lirica-spoleto",
+      "source_urls": [
+        "https://ticketitalia.com/elisa-teatro-lirica-spoleto"
+      ],
+      "category": "concerti",
+      "subcategory": "pop",
+      "seo_potential": "medium",
+      "ticket_price": "€46.00",
+      "suggested_slug": "elisa-spoleto-2026-biglietti-teatro-della-lirica",
+      "suggested_title": "Elisa a Spoleto 2026: biglietti e info Teatro della Lirica",
+      "keywords": [
+        "elisa spoleto",
+        "biglietti elisa 2026",
+        "teatro della lirica",
+        "concerti spoleto maggio"
+      ],
+      "notes": "Artista di qualità, teatro elegante, target medio-alto"
+    },
+    {
+      "rank": 10,
+      "funnel_stage": "BOFU",
+      "article_type": "evento",
+      "title": "Calcutta - Rock in Park Assisi",
+      "artist": "Calcutta",
+      "venue": "Rock in Park",
+      "city": "Assisi",
+      "date": "2026-06-12",
+      "ticketitalia_url": "https://ticketitalia.com/calcutta-rock-in-park-assisi",
+      "source_urls": [
+        "https://ticketitalia.com/calcutta-rock-in-park-assisi"
+      ],
+      "category": "concerti",
+      "subcategory": "indie",
+      "seo_potential": "medium",
+      "ticket_price": "€32.00",
+      "suggested_slug": "calcutta-assisi-2026-biglietti-rock-in-park",
+      "suggested_title": "Calcutta ad Assisi 2026: biglietti e info Rock in Park",
+      "keywords": [
+        "calcutta assisi",
+        "biglietti calcutta",
+        "rock in park",
+        "concerti indie umbria"
+      ],
+      "notes": "Pubblico giovane e indie, festival estivo outdoor"
+    },
+    {
+      "rank": 11,
+      "funnel_stage": "MOFU",
+      "article_type": "guida",
+      "title": "Concerti a Perugia Estate 2026",
+      "artist": null,
+      "venue": null,
+      "city": "Perugia",
+      "date": null,
+      "ticketitalia_url": null,
+      "source_urls": [
+        "https://ticketitalia.com/i-pooh-arena-santa-giuliana-perugia",
+        "https://ticketitalia.com/ultimo-stadio-curi-perugia",
+        "https://ticketitalia.com/alessandra-amoroso-umbria-jazz-arena",
+        "https://ticketitalia.com/umbria-jazz-2026-perugia"
+      ],
+      "category": "concerti",
+      "subcategory": null,
+      "seo_potential": "high",
+      "ticket_price": null,
+      "suggested_slug": "concerti-perugia-estate-2026-date-biglietti",
+      "suggested_title": "Concerti a Perugia Estate 2026: tutte le date e biglietti",
+      "keywords": [
+        "concerti perugia estate 2026",
+        "eventi perugia giugno luglio",
+        "biglietti concerti perugia",
+        "arena santa giuliana eventi"
+      ],
+      "notes": "Cluster di 4+ eventi estate a Perugia, ottima opportunità MOFU per chi pianifica la stagione"
+    },
+    {
+      "rank": 12,
+      "funnel_stage": "MOFU",
+      "article_type": "guida",
+      "title": "Concerti Umbria Maggio 2026",
+      "artist": null,
+      "venue": null,
+      "city": "Umbria",
+      "date": null,
+      "ticketitalia_url": null,
+      "source_urls": [
+        "https://ticketitalia.com/fabrizio-moro-teatro-morlacchi-perugia",
+        "https://ticketitalia.com/elisa-teatro-lirica-spoleto",
+        "https://ticketitalia.com/nek-palasport-terni"
+      ],
+      "category": "concerti",
+      "subcategory": null,
+      "seo_potential": "high",
+      "ticket_price": null,
+      "suggested_slug": "concerti-umbria-maggio-2026-eventi-biglietti",
+      "suggested_title": "Concerti in Umbria Maggio 2026: date e biglietti",
+      "keywords": [
+        "concerti umbria maggio",
+        "eventi maggio 2026 umbria",
+        "biglietti concerti perugia terni spoleto"
+      ],
+      "notes": "Cluster regionale maggio con 3 eventi di profilo, utile per chi cerca cosa fare nel mese"
+    },
+    {
+      "rank": 13,
+      "funnel_stage": "MOFU",
+      "article_type": "guida",
+      "title": "Concerti Pop Umbria 2026",
+      "artist": null,
+      "venue": null,
+      "city": "Umbria",
+      "date": null,
+      "ticketitalia_url": null,
+      "source_urls": [
+        "https://ticketitalia.com/ermal-meta-afterlife-perugia",
+        "https://ticketitalia.com/i-pooh-arena-santa-giuliana-perugia",
+        "https://ticketitalia.com/ultimo-stadio-curi-perugia",
+        "https://ticketitalia.com/nek-palasport-terni",
+        "https://ticketitalia.com/alessandra-amoroso-umbria-jazz-arena",
+        "https://ticketitalia.com/max-pezzali-stadio-liberati-terni"
+      ],
+      "category": "concerti",
+      "subcategory": "pop",
+      "seo_potential": "medium",
+      "ticket_price": null,
+      "suggested_slug": "concerti-pop-umbria-2026-artisti-date-biglietti",
+      "suggested_title": "Concerti Pop in Umbria 2026: artisti, date e biglietti",
+      "keywords": [
+        "concerti pop umbria",
+        "cantanti italiani umbria 2026",
+        "eventi musicali perugia terni"
+      ],
+      "notes": "Aggregazione per genere: 6+ concerti pop in regione, utile per fan del genere"
+    },
+    {
+      "rank": 14,
+      "funnel_stage": "MOFU",
+      "article_type": "stagionale",
+      "title": "Concerti Giugno 2026 Umbria",
+      "artist": null,
+      "venue": null,
+      "city": "Umbria",
+      "date": null,
+      "ticketitalia_url": null,
+      "source_urls": [
+        "https://ticketitalia.com/ultimo-stadio-curi-perugia",
+        "https://ticketitalia.com/max-pezzali-stadio-liberati-terni",
+        "https://ticketitalia.com/calcutta-rock-in-park-assisi"
+      ],
+      "category": "concerti",
+      "subcategory": null,
+      "seo_potential": "medium",
+      "ticket_price": null,
+      "suggested_slug": "concerti-giugno-2026-umbria-eventi-biglietti",
+      "suggested_title": "Concerti Giugno 2026 in Umbria: tutti gli eventi e biglietti",
+      "keywords": [
+        "concerti giugno umbria",
+        "eventi giugno 2026 perugia",
+        "weekend musicali giugno umbria"
+      ],
+      "notes": "Cluster temporale specifico, 3 eventi di rilievo, ottimo per pianificare il mese"
+    },
+    {
+      "rank": 15,
+      "funnel_stage": "MOFU",
+      "article_type": "guida",
+      "title": "Concerti Terni 2026",
+      "artist": null,
+      "venue": null,
+      "city": "Terni",
+      "date": null,
+      "ticketitalia_url": null,
+      "source_urls": [
+        "https://ticketitalia.com/nek-palasport-terni",
+        "https://ticketitalia.com/max-pezzali-stadio-liberati-terni"
+      ],
+      "category": "concerti",
+      "subcategory": null,
+      "seo_potential": "medium",
+      "ticket_price": null,
+      "suggested_slug": "concerti-terni-2026-eventi-musicali-biglietti",
+      "suggested_title": "Concerti a Terni 2026: eventi musicali e biglietti",
+      "keywords": [
+        "concerti terni 2026",
+        "eventi terni",
+        "palasport stadio liberati biglietti"
+      ],
+      "notes": "Focus città specifica con 2 eventi di profilo medio-alto"
+    },
+    {
+      "rank": 16,
+      "funnel_stage": "TOFU",
+      "article_type": "guida",
+      "title": "Afterlife Live Club Perugia: guida venue",
+      "artist": null,
+      "venue": "Afterlife Live Club",
+      "city": "Perugia",
+      "date": null,
+      "ticketitalia_url": null,
+      "source_urls": [
+        "https://ticketitalia.com/ermal-meta-afterlife-perugia"
+      ],
+      "category": "guide",
+      "subcategory": null,
+      "seo_potential": "medium",
+      "ticket_price": null,
+      "suggested_slug": "afterlife-live-club-perugia-guida-come-arrivare",
+      "suggested_title": "Afterlife Live Club Perugia: come arrivare e cosa sapere",
+      "keywords": [
+        "afterlife live club perugia",
+        "come arrivare afterlife",
+        "locali concerti perugia",
+        "club live umbria"
+      ],
+      "notes": "Venue ricorrente nella sitemap, punto di riferimento scena live umbra, guida pratica"
+    },
+    {
+      "rank": 17,
+      "funnel_stage": "TOFU",
+      "article_type": "evergreen",
+      "title": "Ermal Meta: discografia e tour",
+      "artist": "Ermal Meta",
+      "venue": null,
+      "city": null,
+      "date": null,
+      "ticketitalia_url": null,
+      "source_urls": [
+        "https://ticketitalia.com/ermal-meta-afterlife-perugia"
+      ],
+      "category": "guide",
+      "subcategory": "pop",
+      "seo_potential": "high",
+      "ticket_price": null,
+      "suggested_slug": "ermal-meta-discografia-tour-biglietti-concerti",
+      "suggested_title": "Ermal Meta: discografia, tour e biglietti concerti",
+      "keywords": [
+        "ermal meta",
+        "ermal meta discografia",
+        "ermal meta tour 2026",
+        "chi è ermal meta"
+      ],
+      "notes": "Artista ad alta notorietà, guida evergreen per intercettare fan e curiosi"
+    },
+    {
+      "rank": 18,
+      "funnel_stage": "TOFU",
+      "article_type": "evergreen",
+      "title": "I Pooh: storia, reunion e concerti",
+      "artist": "I Pooh",
+      "venue": null,
+      "city": null,
+      "date": null,
+      "ticketitalia_url": null,
+      "source_urls": [
+        "https://ticketitalia.com/i-pooh-arena-santa-giuliana-perugia"
+      ],
+      "category": "guide",
+      "subcategory": "pop",
+      "seo_potential": "high",
+      "ticket_price": null,
+      "suggested_slug": "i-pooh-storia-reunion-concerti-biglietti",
+      "suggested_title": "I Pooh: storia, reunion e biglietti concerti",
+      "keywords": [
+        "i pooh",
+        "reunion pooh 2026",
+        "i pooh storia",
+        "concerti i pooh biglietti"
+      ],
+      "notes": "Band storica italiana, pubblico nostalgico e intergenerazionale, evergreen"
+    },
+    {
+      "rank": 19,
+      "funnel_stage": "TOFU",
+      "article_type": "guida",
+      "title": "Arena Santa Giuliana Perugia: guida venue",
+      "artist": null,
+      "venue": "Arena Santa Giuliana",
+      "city": "Perugia",
+      "date": null,
+      "ticketitalia_url": null,
+      "source_urls": [
+        "https://ticketitalia.com/i-pooh-arena-santa-giuliana-perugia"
+      ],
+      "category": "guide",
+      "subcategory": null,
+      "seo_potential": "medium",
+      "ticket_price": null,
+      "suggested_slug": "arena-santa-giuliana-perugia-guida-eventi-parcheggio",
+      "suggested_title": "Arena Santa Giuliana Perugia: guida agli eventi, come arrivare e parcheggio",
+      "keywords": [
+        "arena santa giuliana",
+        "arena perugia eventi",
+        "parcheggio arena santa giuliana",
+        "concerti perugia venue"
+      ],
+      "notes": "Venue outdoor importante per grandi eventi estivi, guida pratica"
+    },
+    {
+      "rank": 20,
+      "funnel_stage": "TOFU",
+      "article_type": "evergreen",
+      "title": "Come comprare biglietti per concerti online",
+      "artist": null,
+      "venue": null,
+      "city": null,
+      "date": null,
+      "ticketitalia_url": null,
+      "source_urls": [],
+      "category": "guide",
+      "subcategory": null,
+      "seo_potential": "medium",
+      "ticket_price": null,
+      "suggested_slug": "come-comprare-biglietti-concerti-online-guida",
+      "suggested_title": "Come comprare biglietti per concerti online: guida completa",
+      "keywords": [
+        "come comprare biglietti concerti",
+        "acquisto biglietti online",
+        "ticketing concerti guida",
+        "biglietti sicuri online"
+      ],
+      "notes": "Guida pratica evergreen, utile per SEO informazionale e trust building, può linkare tutti gli eventi BOFU"
+    }
+  ]
+}

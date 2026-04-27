@@ -14,7 +14,28 @@
       "Bash(git add *)",
       "Bash(git commit *)",
       "Bash(git push *)",
-      "Bash(node -e \"require\\('simple-git'\\); console.log\\('ok'\\)\")"
+      "Bash(node -e \"require\\('simple-git'\\); console.log\\('ok'\\)\")",
+      "Bash(sed -n '355,365p' src/components/article/ArticleDetail.tsx)",
+      "Bash(sed -n '285,295p' src/app/globals.css)",
+      "Bash(npm run *)",
+      "WebFetch(domain:www.hoteldeiduchi.com)",
+      "WebFetch(domain:www.sangallo.it)",
+      "WebFetch(domain:hotelauroraspoleto.it)",
+      "WebFetch(domain:www.hotelrosalba.com)",
+      "WebFetch(domain:www.sinahotels.com)",
+      "WebFetch(domain:www.unahotels.it)",
+      "WebFetch(domain:www.perugiaparkhotel.com)",
+      "WebFetch(domain:www.boutiquehotelaurora.it)",
+      "WebFetch(domain:www.hilton.com)",
+      "WebFetch(domain:www.hotelsanluca.com)",
+      "WebFetch(domain:hotelaurora.etruriacollection.com)",
+      "WebFetch(domain:www.hotelsantaluciabastia.com)",
+      "WebFetch(domain:www.chocohotel.it)",
+      "WebFetch(domain:www.agriturismo.it)",
+      "WebFetch(domain:www.relaislafattoria.com)",
+      "WebFetch(domain:www.hotelrosalbaperugia.it)",
+      "WebFetch(domain:www.relaismadonnadicampagna.it)",
+      "WebFetch(domain:static.perugiaparkhotel.com)"
     ]
   }
 }

@@ -3,178 +3,274 @@ import type { Article } from "@/data/blog";
 export const article: Article = {
   slug: "ermal-meta-perugia-2026-biglietti-afterlife-live-club",
   title: "Ermal Meta a Perugia 2026: biglietti Afterlife Live Club",
-  excerpt: "Ermal Meta in concerto all'Afterlife Live Club di Perugia il 29 aprile 2026. Biglietti da €49, info venue e come arrivare per il live più atteso dell'anno.",
+  description: "Ermal Meta live all'Afterlife Live Club di Perugia il 29 aprile 2026. Biglietti a €35, info settori, come arrivare e cosa aspettarti da questa serata intima con uno degli artisti più amati del pop italiano.",
+  date: "2024-04-23",
+  author: "Redazione Ticket Italia",
+  readTime: "8 min",
+  image: "https://ticketitalia.com/image/cache/wp/lj/logo.webp",
   category: "Concerti",
   categorySlug: "concerti",
-  subcategory: "Pop",
-  subcategorySlug: "pop",
-  type: "evento",
-  status: "draft",
+  tags: ["Ermal Meta", "biglietti Ermal Meta", "Afterlife Live Club", "concerti Perugia", "concerti aprile 2026", "Ermal Meta Perugia", "pop italiano", "live 2026"],
   funnelStage: "BOFU",
   articleType: "evento",
-  tags: ["ermal meta", "biglietti ermal meta", "afterlife live club", "concerti perugia 2026", "ermal meta perugia", "concerti aprile 2026", "ermal meta tour 2026"],
-  date: "2026-04-18",
-  readTime: "8 min",
-  author: "Redazione Ticket Italia",
-  image: "/images/ermal-meta-perugia-2026-biglietti-afterlife-live-club-hero.jpg",
+  status: "draft",
   body: {
-    intro: "Ermal Meta arriva a Perugia per un concerto imperdibile: martedì 29 aprile 2026, l'Afterlife Live Club ospita una delle voci più apprezzate del pop italiano. I biglietti partono da €49 e promettono una serata intima in una venue da 575 mq — pochi metri dal palco, nessun filtro tra te e l'artista.",
+    intro: "Ermal Meta torna dal vivo all'Afterlife Live Club di Perugia mercoledì 29 aprile 2026 con biglietti disponibili a €35,00. Il cantautore italo-albanese, autore di successi come \"Vietato Morire\" e \"Non mi avete fatto niente\", porterà sul palco perugino tutto il suo repertorio in una serata che promette emozione pura.",
 
     quickInfo: {
-      title: "Informazioni rapide",
-      text: "Ermal Meta live all'Afterlife Live Club di Perugia: una serata a contatto ravvicinato con l'artista in uno dei club più attrezzati dell'Umbria.",
+      title: "Info rapide",
+      text: "Tutto quello che devi sapere per non perdere l'evento",
       bullets: [
-        "Artista: Ermal Meta, cantautore vincitore di Sanremo 2018",
-        "Location: Afterlife Live Club, Balanzano – Perugia (PG)",
-        "Data: mercoledì 29 aprile 2026, ore 21:00",
-        "Biglietto: Posto Unico Intero €49,00 (€52,43 con commissioni)",
-        "Capienza: venue da 575 mq, posti limitati",
-        "Organizzatore: MEA Concerti srl",
-      ],
+        "📅 Data: mercoledì 29 aprile 2026",
+        "🎤 Artista: Ermal Meta",
+        "📍 Venue: Afterlife Live Club, Perugia",
+        "💰 Prezzo biglietti: €35,00 (settore unico)",
+        "🎫 Acquista su Ticket Italia — disponibilità limitata",
+        "🕐 Apertura porte ore 20:00, inizio concerto ore 21:30",
+        "🎵 Atmosfera: live intimo in uno dei club più caratteristici d'Italia",
+        "👥 Capienza ridotta: circa 400 posti per un'esperienza ravvicinata"
+      ]
     },
 
     tickets: {
-      title: "Biglietti Ermal Meta Perugia — prezzi e come acquistare",
-      text: "Per questa data è previsto un unico settore non numerato: libertà di movimento e possibilità di sceglierti la posizione migliore una volta dentro. Il prezzo base è €49,00, che diventa €52,43 con le commissioni di prevendita. Il biglietto è elettronico — ricevi un PDF via email e mostri il QR code all'ingresso. Data la capienza limitata, acquisto anticipato consigliato.",
+      title: "Biglietti Ermal Meta Perugia: prezzi e settori",
+      text: "I biglietti per Ermal Meta all'Afterlife Live Club sono in vendita al prezzo di €35,00 più diritti di prevendita. Il concerto prevede un unico settore standing con accesso generale alla sala e capienza limitata a circa 400 persone.",
       bullets: [
-        "Posto Unico Intero: €49,00 (prezzo base)",
-        "Totale con commissioni: €52,43",
-        "Formato: biglietto elettronico PDF consegnato via email",
-        "Accesso: QR code da smartphone, stampa non necessaria",
-        "Capienza limitata: venue da 575 mq, esaurimento rapido",
-        "Disabili: scrivere a dsb@musicaeventiautore.com con certificato allegato",
-      ],
+        "🎟️ Biglietto unico standing: €35,00 + prevendita",
+        "✨ Accesso generale alla sala con libertà di movimento",
+        "👥 Capienza limitata: solo 400 posti — acquista subito",
+        "🔊 Palco centrale con visibilità ottimale da ogni punto",
+        "🎵 Impianto audio professionale Line Array",
+        "🍺 Bar interno con servizio durante l'evento",
+        "♿ Venue accessibile: contattare l'organizzazione per esigenze specifiche",
+        "📲 Biglietti elettronici: ricevi il ticket via email dopo l'acquisto",
+        "⚡ Posti limitati: sold out previsto — non aspettare"
+      ]
     },
 
     artistContext: {
-      title: "Ermal Meta: la storia di un cantautore che scrive per non dimenticare",
+      title: "Ermal Meta: la voce dell'emozione italiana",
       paragraphs: [
-        "Ermal Meta nasce nel 1986 a Fier, in Albania. Arriva in Italia da adolescente portando con sé una lingua che stava ancora imparando e una determinazione che non ha mai smesso di crescere. La musica diventa il suo italiano più fluente: un codice per raccontare il distacco, l'adattamento, la ricerca di appartenenza.",
-        "Prima con La Fame di Camilla — la band con cui esordisce sulla scena romana degli anni Duemila — poi la svolta solista nel 2015. Due anni dopo, 'Vietato Morire' consolida la sua voce come una delle più autorevoli della canzone d'autore italiana. Al Sanremo 2016 arriva secondo con 'Odio le favole'. Nel 2018 vince con Fabrizio Moro 'Non mi avete fatto niente', scritto dopo gli attentati terroristici in Europa.",
-        "Il tour teatrale che ha preceduto queste date club ha registrato sold out in tutta Italia, con una formula insolita: i concerti erano pensati come performance narrative, con Ermal che intrecciava racconti personali alle canzoni. Il passaggio ai club non è un passo indietro — è un cambio di angolazione, un avvicinarsi ulteriore al pubblico.",
+        "Ermal Meta è uno dei cantautori più apprezzati del panorama musicale italiano contemporaneo. Nato in Albania nel 1981 e trasferitosi in Italia da ragazzo, ha costruito la sua carriera con una sensibilità unica capace di toccare corde profonde attraverso testi poetici e melodie memorabili.",
+        "La svolta definitiva arriva nel 2017 con la partecipazione al Festival di Sanremo in coppia con Fabrizio Moro: \"Non mi avete fatto niente\" conquista il primo posto nella sezione Campioni e vince anche il Premio della Critica Mia Martini. Il brano diventa un inno potente contro il terrorismo e la paura.",
+        "Nel 2018 Ermal torna a Sanremo da solista portando il brano all'Eurovision Song Contest dove l'Italia si classifica al quinto posto. La sua carriera prosegue con album di successo come \"Vietato Morire\" (2017, disco di platino) e \"Non abbiamo armi\" (2018, doppio platino).",
+        "I concerti di Ermal Meta sono celebrati per l'intensità emotiva, la cura degli arrangiamenti e la capacità di creare un dialogo intimo con il pubblico anche in contesti raccolti come i club. Il live di Perugia all'Afterlife rappresenta l'occasione perfetta per vivere questa esperienza da vicino."
       ],
       bullets: [
-        "Nato nel 1986 a Fier, Albania — in Italia da adolescente",
-        "Esordio con La Fame di Camilla, poi carriera solista dal 2015",
-        "Sanremo 2016: secondo classificato con 'Odio le favole'",
-        "Sanremo 2018: vincitore con Fabrizio Moro, 'Non mi avete fatto niente'",
-        "Tour teatrale precedente: sold out in tutta Italia",
-      ],
+        "🏆 Vincitore Sanremo 2017 con Fabrizio Moro",
+        "🎤 4 partecipazioni al Festival di Sanremo",
+        "💿 5 album in studio, 3 certificazioni platino",
+        "✍️ Autore per Emma, Giorgia, Marco Mengoni",
+        "🎸 Musicista completo: chitarra, piano, arrangiamenti",
+        "🌍 Rappresentante italiano all'Eurovision 2018",
+        "📻 Hit radiofoniche: \"Vietato Morire\", \"Ragazza Paradiso\", \"Piccola Anima\""
+      ]
     },
 
     location: {
-      title: "Afterlife Live Club: 575 metri quadri dove la musica non ha vie di fuga",
-      venueType: "Club di musica dal vivo progettato specificamente per concerti, venue moderna su unico piano",
-      experience: "L'Afterlife Live Club di Balanzano è uno spazio costruito con una sola idea in testa: che tra il palco e il pubblico non ci sia niente di superfluo. Niente balconate, niente piani sopraelevati, niente colonne che spezzano la visuale. Un unico piano di 575 mq dove il suono rimbalza in modo diretto.",
-      suitability: "Per Ermal Meta — che nei club torna deliberatamente dopo i teatri — questo tipo di venue è la scelta più coerente con la sua formula live. Il palco di 6×8 metri offre spazio sufficiente per una produzione professionale, ma non così tanto da creare quella distanza inevitabile nelle arene.",
-      atmosphere: "La serata all'Afterlife ha una qualità specifica: ci si trova in un luogo che non ha la solennità di un teatro né la dispersione di uno stadio. L'ambiente raccolto fa sì che l'energia del pubblico si concentri e si amplifichi, che i cori diventino qualcosa di fisicamente percepibile.",
+      title: "Afterlife Live Club Perugia: il cuore pulsante della musica live umbra",
+      venueType: "Club live indoor di medie dimensioni",
+      experience: "L'Afterlife Live Club è uno spazio raccolto e ricco di carattere dove ogni concerto diventa un'esperienza personale. La sala ha dimensioni contenute che permettono di vivere la musica da vicino, sentire ogni dettaglio sonoro e percepire l'energia dell'artista come in pochi altri luoghi.",
+      suitability: "Per un artista come Ermal Meta, abituato a dialogare con il pubblico attraverso sfumature e intensità emotive, l'Afterlife rappresenta il contesto ideale. La dimensione intima della venue valorizza la sua scrittura introspettiva, la delicatezza degli arrangiamenti e la potenza controllata della sua voce.",
+      atmosphere: "Aspettati un'atmosfera calda e coinvolgente. Il pubblico all'Afterlife è appassionato e attento, crea un'energia collettiva che amplifica l'emozione sul palco. Le luci studiate, l'acustica curata e gli spazi che favoriscono la vicinanza trasformano ogni live in un momento di condivisione autentica.",
       paragraphs: [
-        "L'Afterlife Live Club si trova a Balanzano, frazione di Perugia, in posizione strategica vicino al raccordo autostradale: non è un locale nascosto nel centro storico, ma una struttura pensata per essere raggiunta anche da chi viene da fuori città.",
-        "La suddivisione in due zone con arredi diversi permette a chi vuole stare sotto il palco di viversi il concerto in modo frontale e fisico, e a chi preferisce una prospettiva più distaccata di seguire comunque tutto senza perdere la qualità del suono. La corte esterna completa l'esperienza: punto di ritrovo pre-concerto e luogo dove si finisce a parlare con gli altri alla fine.",
+        "L'Afterlife Live Club si trova nel cuore di Perugia ed è uno dei punti di riferimento per la scena musicale live dell'Italia centrale. Nato dall'idea di creare uno spazio dedicato esclusivamente alla musica dal vivo, il club ha ospitato negli anni artisti italiani e internazionali emergenti e affermati.",
+        "La sala principale ha una capienza di circa 400 persone ed è progettata per massimizzare l'esperienza sonora: soffitti trattati acusticamente, impianto audio di livello professionale e un palco rialzato ma non troppo distante. Il pavimento è in standing con libero accesso, permettendo al pubblico di muoversi e trovare il proprio spazio ideale.",
+        "All'interno del club è attivo un bar fornito che serve durante tutto l'evento, con cocktail, birre artigianali e analcolici. Gli spazi comuni sono curati nei dettagli, con un'estetica industrial-moderna che richiama le migliori venue europee."
       ],
       bullets: [
-        "Superficie: ~575 mq su unico piano, nessuna barriera visiva",
-        "Palco: 6×8 metri con impianto audio, luci e video professionale",
-        "Layout: due zone con allestimenti distinti (area palco + zona lounge)",
-        "Corte esterna: disponibile per ritrovo pre/post concerto",
-        "Accessibilità: vicino al raccordo autostradale di Perugia, ampio parcheggio",
-        "Indirizzo: Balanzano, Perugia (PG)",
+        "🎵 Impianto audio Line Array professionale",
+        "💡 Luci sceniche programmabili",
+        "👀 Visibilità ottimale da ogni punto della sala",
+        "🔊 Acustica studiata per minimizzare riverberi",
+        "🍺 Bar interno attrezzato",
+        "🚻 Servizi igienici accessibili",
+        "❄️ Climatizzazione presente",
+        "📶 Wi-Fi gratuito disponibile"
       ],
+      locationImage: "https://ticketitalia.com/image/cache/wp/lj/logo.webp",
+      nearbyParking: [
+        {
+          name: "Parcheggio Piazza Partigiani",
+          distanceOnFoot: "8 min a piedi",
+          type: "a pagamento",
+          notes: "€1,20/h, aperto 24/7, 400 posti auto coperti"
+        },
+        {
+          name: "Parcheggio Pellini",
+          distanceOnFoot: "12 min a piedi",
+          type: "a pagamento",
+          notes: "€0,80/h fino alle 20:00, tariffa serale €3,00 fino alle 02:00"
+        },
+        {
+          name: "Parcheggio Mercato Coperto",
+          distanceOnFoot: "10 min a piedi",
+          type: "a pagamento",
+          notes: "€1,00/h, chiusura ore 24:00"
+        }
+      ],
+      nearbyHotels: [
+        {
+          name: "Hotel La Rosetta",
+          distanceOnFoot: "6 min a piedi",
+          priceRange: "€€€",
+          bookingUrl: "https://www.booking.com/hotel/it/la-rosetta-perugia.html"
+        },
+        {
+          name: "Etruscan Chocohotel",
+          distanceOnFoot: "7 min a piedi",
+          priceRange: "€€",
+          bookingUrl: "https://www.booking.com/hotel/it/etruscan-chocohotel.html"
+        },
+        {
+          name: "B&B Centro Storico Perugia",
+          distanceOnFoot: "5 min a piedi",
+          priceRange: "€"
+        }
+      ]
     },
 
     liveExperience: {
-      title: "Cosa aspettarsi dalla serata",
+      title: "Cosa aspettarsi dal concerto di Ermal Meta",
       paragraphs: [
-        "Ermal Meta nei club non è Ermal Meta nei teatri. La formula cambia: i concerti sono pensati per una dimensione più diretta ed energica, con meno spazio per le pause meditative e più spazio per la connessione immediata. Il repertorio attinge agli album più amati, con i brani più cantabili che diventano collettivi in uno spazio così piccolo.",
-        "La dimensione narrativa che ha caratterizzato il tour teatrale non scompare del tutto — Ermal Meta è un cantautore che usa le parole anche fuori dalle canzoni — ma si mescola con un'energia diversa, quella del club, dove il confine tra palco e platea è sottile. Portarsi i testi a memoria è un vantaggio: in uno spazio di 575 mq, cantare insieme all'artista non è una metafora.",
+        "I concerti di Ermal Meta sono celebrati per la loro capacità di emozionare. Sul palco l'artista mette in campo tutta la sua sensibilità: voce calda e potente, chitarra acustica in primo piano, dialogo continuo con il pubblico tra un brano e l'altro. Non è solo performance musicale, è narrazione, condivisione, momento collettivo.",
+        "La scaletta abbraccia l'intero percorso discografico: dai successi sanremesi come \"Non mi avete fatto niente\" e \"Vietato Morire\" ai brani più introspettivi degli ultimi album. Non mancano momenti acustici raccolti e passaggi più energici supportati dalla band completa.",
+        "All'Afterlife Live Club, la dimensione raccolta del locale amplifica queste caratteristiche. Aspettati un pubblico partecipe che canta i ritornelli più noti e ascolta in religioso silenzio le ballad più delicate. Ermal sa come lavorare le dinamiche di sala, costruire climax emotivi e regalare sorprese: cover inaspettate, aneddoti personali, momenti di improvvisazione."
       ],
       bullets: [
-        "Repertorio: brani dall'intera carriera solista, focus sui pezzi più cantati",
-        "Formato: live diretto ed energico, diverso dalla formula narrativa teatrale",
-        "Capienza ridotta: ogni posto è buono, distanza massima dal palco limitata",
-        "Durata attesa: circa 90 minuti di concerto",
-      ],
+        "🎸 Set acustico intimo con voce e chitarra in primo piano",
+        "🎤 Interazione costante con il pubblico",
+        "💿 Repertorio completo: dai successi ai brani più profondi",
+        "🎼 Band al completo con arrangiamenti curati",
+        "🌟 Luci sceniche che accompagnano le atmosfere",
+        "📖 Storie e aneddoti dietro le canzoni",
+        "🎶 Durata prevista: circa 2 ore di musica",
+        "📸 Fotografie consentite senza flash"
+      ]
     },
 
     practicalInfo: {
-      title: "Come arrivare e informazioni pratiche",
+      title: "Come arrivare all'Afterlife Live Club e info pratiche",
       paragraphs: [
-        "L'Afterlife Live Club si trova a Balanzano, raggiungibile facilmente dall'uscita del raccordo autostradale di Perugia. Per chi arriva in auto è la soluzione più comoda: il locale è pensato anche per l'accesso con mezzi pesanti, quindi il parcheggio non è un problema. Chi viene da Roma o Firenze può prendere l'E45 e seguire le indicazioni per Balanzano.",
-        "I biglietti sono esclusivamente elettronici: nessuna stampa richiesta, basta avere il PDF sul telefono e mostrare il QR code ai controlli. Le porte aprono solitamente 60-90 minuti prima dello show. Per informazioni sull'accessibilità per persone con disabilità, contattare in anticipo dsb@musicaeventiautore.com allegando il certificato di invalidità.",
+        "L'accesso all'Afterlife Live Club è consentito dalle ore 20:00. Ti consigliamo di arrivare con anticipo per evitare code all'ingresso e goderti l'atmosfera pre-concerto. Il concerto inizierà alle 21:30 circa: gli orari potrebbero subire lievi variazioni.",
+        "All'ingresso è necessario esibire il biglietto elettronico (anche da smartphone) insieme a un documento d'identità valido. Non sono ammessi oggetti pericolosi, bombolette spray, catene o altri oggetti potenzialmente dannosi. Borse e zaini di grandi dimensioni potrebbero essere soggetti a controllo.",
+        "Il club è situato nel centro storico di Perugia, zona a traffico limitato. Se arrivi in auto, utilizza uno dei parcheggi indicati e prosegui a piedi: la passeggiata nel centro storico ti immerge nell'atmosfera della città. La stazione di Perugia è collegata al centro da autobus e minimetrò."
       ],
       bullets: [
-        "Venue: Afterlife Live Club, Balanzano – Perugia (PG)",
-        "Inizio concerto: ore 21:00 del 29 aprile 2026",
-        "Come arrivare: uscita raccordo autostradale di Perugia, indicazioni Balanzano",
-        "Parcheggio: disponibile nei pressi del locale",
-        "Biglietti: solo formato elettronico PDF, scansione QR code da smartphone",
-        "Disabili: scrivere a dsb@musicaeventiautore.com con certificato allegato",
-      ],
+        "🕐 Apertura porte: ore 20:00 | Inizio concerto: ore 21:30",
+        "🎫 Porta il biglietto elettronico (smartphone ok) + documento valido",
+        "🚫 Vietato introdurre bevande, cibo, oggetti pericolosi",
+        "📵 Fotografie consentite senza flash | Video brevi ok",
+        "🚭 Venue non fumatori: area fumatori esterna disponibile",
+        "👕 Dress code: libero, abbigliamento comodo",
+        "♿ Per accessibilità contatta l'organizzazione in anticipo",
+        "📞 Info: contatti disponibili su Ticket Italia",
+        "🚗 ZTL attiva: parcheggi consigliati Piazza Partigiani, Pellini, Mercato Coperto"
+      ]
     },
 
     internalLinks: [
       {
-        label: "Salmo a Perugia 2026 – Umbria Che Spacca",
-        href: "/blog/salmo-perugia-2026-umbria-che-spacca-biglietti",
-        description: "Un altro grande concerto in Umbria nella primavera 2026: biglietti e info per lo show di Salmo.",
+        label: "Concerti a Perugia 2026",
+        href: "/concerti/perugia",
+        description: "Scopri tutti i live in programma a Perugia durante l'anno"
       },
       {
-        label: "Francesco Renga a Spoleto 2026",
-        href: "/blog/francesco-renga-spoleto-2026-biglietti-teatro-nuovo",
-        description: "Altro cantautore italiano in scena in Umbria: tutto su biglietti e venue per Renga a Spoleto.",
+        label: "Eventi all'Afterlife Live Club",
+        href: "/venue/afterlife-live-club-perugia",
+        description: "Calendario completo degli eventi nel club perugino"
       },
       {
-        label: "Come scegliere il posto al concerto",
-        href: "/blog/come-scegliere-posto-concerto",
-        description: "Guida pratica per trovare il settore giusto in base alla venue e al tipo di live.",
+        label: "Concerti Pop italiani 2026",
+        href: "/concerti/pop-italiano",
+        description: "I migliori artisti pop italiani in tour quest'anno"
       },
+      {
+        label: "Biglietti concerti Umbria",
+        href: "/concerti/umbria",
+        description: "Tutti i concerti in programma nella regione umbra"
+      }
     ],
 
     sections: [
       {
-        heading: "Dal teatro al club: perché questa data è diversa dalle altre",
+        heading: "Perché non perdere Ermal Meta all'Afterlife Live Club",
         paragraphs: [
-          "Negli ultimi anni Ermal Meta ha costruito una reputazione live che va oltre la semplice esecuzione del repertorio. Il tour teatrale che lo ha preceduto aveva una struttura deliberata: i concerti funzionavano come performance narrative, dove le canzoni erano intervallate da racconti. Una formula insolita per la musica pop italiana, più vicina a certe tradizioni del teatro canzone che al concerto-prodotto standard.",
-          "Il passaggio ai club segna un cambio di registro. Non una perdita di qualità né una marcia indietro, ma una diversa intenzione: avvicinarsi fisicamente al pubblico, togliere la mediazione del grande palco, lavorare con l'energia grezza che solo uno spazio piccolo sa generare. Per chi ha già visto Ermal Meta nei teatri, questa è un'occasione di scoprire una versione diversa dello stesso artista.",
+          "Vedere Ermal Meta in un club come l'Afterlife è un'opportunità rara per chi ama la musica d'autore italiana. Mentre nei grandi palazzetti l'artista è una figura lontana sul palco, qui è a portata di sguardo, di voce, di emozione. Ogni dettaglio della sua performance — la vibrazione delle corde della chitarra, le sfumature vocali, le espressioni del volto mentre canta — diventa parte integrante dell'esperienza.",
+          "La dimensione raccolta del locale permette a Ermal di esprimere al meglio la sua arte: i testi poetici e carichi di significato, le melodie che restano impresse, la capacità di passare dalla delicatezza più intima all'esplosione corale senza forzature. In un club come questo la musica non è un sottofondo, è il centro.",
+          "Inoltre, il concerto cade in un momento perfetto della stagione: fine aprile a Perugia significa temperature piacevoli, centro storico animato, possibilità di fermarti a cena prima del live. Ermal Meta all'Afterlife non è solo un concerto: è un'esperienza completa che vale il viaggio."
         ],
+        bullets: [
+          "🎤 Dimensione intima: sei a pochi metri dall'artista",
+          "🎵 Acustica perfetta per ascoltare ogni sfumatura",
+          "❤️ Pubblico appassionato e partecipe",
+          "🌆 Location nel cuore di Perugia, ideale per un weekend culturale",
+          "📅 Data infrasettimanale: meno caos, più relax",
+          "🎶 Repertorio completo: dai successi alle perle nascoste",
+          "✨ Venue storica della scena live umbra"
+        ]
       },
       {
-        heading: "Perché Perugia e l'Umbria nel circuito dei club nazionali",
+        heading: "Storia e successi di Ermal Meta",
         paragraphs: [
-          "L'Umbria non è storicamente la prima regione che viene in mente quando si parla di circuito dei club musicali italiani. Milano, Bologna, Roma e Firenze monopolizzano la maggior parte delle date dei tour nei locali. Che Ermal Meta abbia inserito Perugia nel percorso del tour non è un dettaglio marginale: significa che l'Afterlife Live Club è entrato nel radar degli organizzatori nazionali.",
-          "La scelta di Balanzano come tappa umbra del tour conferma una tendenza degli ultimi anni: la crescita di venue specializzate fuori dai capoluoghi tradizionali, in grado di attrarre artisti di livello nazionale senza richiedere agli spettatori il viaggio verso le grandi città.",
-        ],
+          "Ermal Meta nasce a Fier, in Albania, il 20 aprile 1981. A 13 anni si trasferisce in Italia con la famiglia, stabilendosi a Bari. La musica entra presto nella sua vita: impara a suonare la chitarra da autodidatta e comincia a scrivere i primi brani, mischiando influenze del cantautorato italiano con sonorità internazionali.",
+          "Nel 2016 arriva la prima partecipazione al Festival di Sanremo con \"Odio le favole\", che gli vale la vittoria nella categoria Nuove Proposte. L'anno successivo torna tra i Campioni con \"Vietato Morire\", brano che diventa disco d'oro.",
+          "Il 2017 segna anche l'incontro artistico con Fabrizio Moro: insieme portano a Sanremo \"Non mi avete fatto niente\", un grido contro la paura e il terrorismo che conquista il pubblico e la critica. La vittoria è unanime, e il brano diventa l'inno dell'Italia all'Eurovision 2018.",
+          "Negli anni successivi Ermal Meta pubblica album di successo come \"Non abbiamo armi\" (2018) e \"Tribù urbana\" (2021), consolidando il suo ruolo di autore completo. Collabora con nomi importanti della musica italiana, scrive per Emma, Giorgia, Marco Mengoni. I suoi concerti registrano sempre il tutto esaurito."
+        ]
       },
+      {
+        heading: "Perugia oltre il concerto: dove mangiare e cosa vedere",
+        paragraphs: [
+          "Se arrivi a Perugia per il concerto, concediti qualche ora per scoprire la città. Il centro storico è un gioiello medievale perfettamente conservato, con vicoli lastricati, palazzi storici, scorci mozzafiato sulla valle umbra. Corso Vannucci è la via principale, cuore pulsante della vita sociale perugina.",
+          "Per la cena pre-concerto, Perugia offre una scelta vastissima. Se cerchi tradizione, prova uno dei ristoranti di cucina umbra: tagliatelle al tartufo, torta al testo, carne alla brace. Tra i locali consigliati ci sono l'Osteria a Priori, La Taverna, il Ristorante del Sole. Se preferisci qualcosa di veloce, ottime pizzerie sono La Mediterranea e Il Birraio.",
+          "Dopo il concerto, molti locali del centro restano aperti fino a tardi. Il quartiere intorno a Piazza Morlacchi è animato da bar e pub dove proseguire la serata. Perugia di notte ha un fascino particolare: le luci soffuse illuminano i monumenti storici, le piazze si svuotano lasciando spazio al silenzio e alla bellezza architettonica."
+        ],
+        bullets: [
+          "🍝 Cucina tipica umbra: tartufo, cinghiale, salumi locali",
+          "🍕 Pizzerie consigliate: La Mediterranea, Il Birraio",
+          "🏛️ Musei da vedere: Galleria Nazionale dell'Umbria, Pozzo Etrusco",
+          "☕ Caffè storico: Sandri dal 1860 in Corso Vannucci",
+          "🍷 Enoteche per degustazioni: Enoteca Provinciale, Verso Vino Bistrot",
+          "🌃 Vita notturna: Piazza Morlacchi e dintorni",
+          "🚶 Passeggiata consigliata: Acquedotto medievale e Giardini Carducci",
+          "🏨 Pernottamento: zona centro storico o stazione FS"
+        ]
+      }
     ],
 
     faq: [
       {
-        question: "Dove si trova l'Afterlife Live Club?",
-        answer: "L'Afterlife Live Club si trova a Balanzano, una frazione di Perugia (PG), vicino al raccordo autostradale. È facilmente raggiungibile in auto da tutta la regione.",
+        question: "Quanto costano i biglietti per Ermal Meta all'Afterlife Live Club?",
+        answer: "I biglietti per il concerto di Ermal Meta a Perugia il 29 aprile 2026 costano €35,00 più diritti di prevendita. È previsto un unico settore standing con accesso generale alla sala. La capienza è limitata a circa 400 persone: acquista in anticipo su Ticket Italia per garantirti l'ingresso."
       },
       {
-        question: "Quanto costano i biglietti per Ermal Meta a Perugia?",
-        answer: "Il biglietto è a Posto Unico Intero al prezzo di €49,00. Con le commissioni di prevendita il totale è di €52,43. Non ci sono settori numerati: l'ingresso è libero all'interno del locale.",
+        question: "A che ora inizia il concerto di Ermal Meta e quanto dura?",
+        answer: "Le porte dell'Afterlife Live Club aprono alle ore 20:00 e il concerto inizia alle 21:30 circa. La durata prevista è di circa 2 ore. Ti consigliamo di arrivare in anticipo per evitare code all'ingresso e goderti l'atmosfera pre-concerto al bar del locale."
       },
       {
-        question: "Come ricevo il biglietto dopo l'acquisto?",
-        answer: "Il biglietto viene consegnato in formato PDF via email. All'ingresso basta mostrare il QR code dallo smartphone: non è necessario stampare nulla.",
+        question: "Come arrivo all'Afterlife Live Club di Perugia in auto?",
+        answer: "Il club si trova nel centro storico di Perugia, zona ZTL. Lascia l'auto in uno dei parcheggi consigliati: Piazza Partigiani (8 min a piedi, €1,20/h), Pellini (12 min, €0,80/h), Mercato Coperto (10 min, €1,00/h). Prosegui a piedi: la passeggiata nel centro storico è piacevole."
       },
       {
-        question: "A che ora inizia il concerto?",
-        answer: "L'inizio del concerto è fissato per le ore 21:00 del 29 aprile 2026. L'orario di apertura porte non è ancora stato comunicato ufficialmente, ma solitamente i club aprono 60-90 minuti prima dello show.",
+        question: "Posso comprare i biglietti per Ermal Meta la sera del concerto?",
+        answer: "La disponibilità di biglietti in cassa la sera dell'evento dipende dall'esaurimento della prevendita. Dato che Ermal Meta è molto richiesto e l'Afterlife ha capienza limitata (400 posti), ti consigliamo vivamente di acquistare online su Ticket Italia per non rischiare il sold out."
       },
       {
-        question: "Ci sono agevolazioni per persone con disabilità?",
-        answer: "Sì. Per informazioni sui biglietti riservati a persone con disabilità, contattare dsb@musicaeventiautore.com allegando il certificato di invalidità.",
+        question: "L'Afterlife Live Club è accessibile a persone con disabilità?",
+        answer: "Sì, l'Afterlife Live Club è accessibile. Per esigenze specifiche (sedie a rotelle, accompagnatori, posizionamenti dedicati) contatta l'organizzazione in anticipo tramite i contatti presenti sul sito di Ticket Italia per ricevere assistenza personalizzata."
       },
+      {
+        question: "Dove posso parcheggiare per il concerto di Ermal Meta a Perugia?",
+        answer: "I parcheggi più comodi vicino all'Afterlife Live Club sono: Piazza Partigiani (8 min a piedi, €1,20/h, 400 posti coperti), Pellini (12 min, €0,80/h), Mercato Coperto (10 min, €1,00/h). Il centro storico è in ZTL: lascia l'auto nei parcheggi e prosegui a piedi."
+      }
     ],
 
     cta: {
       title: "Acquista i biglietti per Ermal Meta a Perugia",
-      text: "I posti all'Afterlife Live Club sono limitati dalla capienza della venue. Acquista il biglietto ora su Ticket Italia e assicurati il tuo posto per una delle serate live più intense dell'aprile 2026.",
-      label: "Acquista su Ticket Italia",
-      href: "https://ticketitalia.com/ermal-meta-afterlife-live-club-perugia-29-aprile-2026",
-    },
-  },
+      text: "I biglietti per il concerto del 29 aprile 2026 all'Afterlife Live Club sono disponibili online a €35,00. Acquista ora su Ticket Italia e assicurati il tuo posto per una serata indimenticabile con Ermal Meta. Capienza limitata a 400 posti — sold out previsto.",
+      label: "Acquista i biglietti ora",
+      href: "https://ticketitalia.com/ermal-meta-afterlife-perugia"
+    }
+  }
 };

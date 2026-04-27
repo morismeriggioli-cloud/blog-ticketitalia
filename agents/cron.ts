@@ -7,19 +7,11 @@
 
 import cron from "node-cron";
 import { runAutoPublishPipeline } from "./orchestrator.js";
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const LOG_DIR = path.join(__dirname, "..", "output", "logs");
+console.log("CRON AVVIATO - Railway online -", new Date().toISOString());
 
 function log(msg: string) {
-  const timestamp = new Date().toISOString();
-  const line = `[${timestamp}] ${msg}\n`;
-  console.log(line.trim());
-  fs.mkdirSync(LOG_DIR, { recursive: true });
-  fs.appendFileSync(path.join(LOG_DIR, "cron.log"), line);
+  console.log(`[${new Date().toISOString()}] ${msg}`);
 }
 
 const SCHEDULE_MON = "0 8 * * 1";

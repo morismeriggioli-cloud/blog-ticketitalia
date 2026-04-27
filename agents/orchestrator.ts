@@ -37,18 +37,6 @@ function today(): string {
   return new Date().toISOString().slice(0, 10);
 }
 
-function ensureDir(dir: string) {
-  fs.mkdirSync(dir, { recursive: true });
-}
-
-function saveLog(log: Record<string, unknown>) {
-  const logDir = path.join(ROOT, "output", "logs");
-  ensureDir(logDir);
-  const file = path.join(logDir, `run-${today()}.json`);
-  fs.writeFileSync(file, JSON.stringify(log, null, 2), "utf-8");
-  console.log(`[orchestrator] Log salvato: ${file}`);
-}
-
 // ---------------------------------------------------------------------------
 // Claude call con prompt caching sul system prompt
 // ---------------------------------------------------------------------------
@@ -91,7 +79,7 @@ async function callClaude(
 
 export async function runScout(
   client: Anthropic
-): Promise<{ reportPath: string; opportunities: unknown[] }> {
+): Promise<{ opportunities: unknown[] }> {
   const systemPrompt = readPrompt("scout", "scout-prompt.md");
 
   const userMessage = `Analizza la sitemap di Ticket Italia e produci il report opportunità.
@@ -104,19 +92,14 @@ Il JSON deve rispettare esattamente il formato definito nel tuo system prompt.`;
 
   const raw = await callClaude(client, systemPrompt, userMessage, "scout");
 
-  // Estrai JSON dalla risposta (Claude potrebbe aggiungere fences nonostante le istruzioni)
   const jsonMatch = raw.match(/\{[\s\S]*\}/);
   if (!jsonMatch) throw new Error("[scout] Risposta non contiene JSON valido");
 
   const report = JSON.parse(jsonMatch[0]);
+  const opportunities = report.opportunities ?? [];
+  console.log(`[scout] Report generato: ${opportunities.length} opportunità`);
 
-  const reportDir = path.join(ROOT, "output", "articles");
-  ensureDir(reportDir);
-  const reportPath = path.join(reportDir, `scout-report-${today()}.json`);
-  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), "utf-8");
-  console.log(`[scout] Report salvato: ${reportPath}`);
-
-  return { reportPath, opportunities: report.opportunities ?? [] };
+  return { opportunities };
 }
 
 // ---------------------------------------------------------------------------
@@ -132,12 +115,10 @@ async function fetchEventImage(eventUrl: string): Promise<string> {
     if (!res.ok) return "";
     const html = await res.text();
 
-    // 1. og:image
     const ogMatch = html.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i)
       ?? html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i);
     if (ogMatch?.[1]) return ogMatch[1];
 
-    // 2. Prima <img> con src assoluto che sembri un'immagine evento
     const imgMatch = html.match(/<img[^>]+src=["'](https?:\/\/[^"']+\.(?:jpg|jpeg|png|webp)[^"']*)["']/i);
     if (imgMatch?.[1]) return imgMatch[1];
 
@@ -154,10 +135,9 @@ async function fetchEventImage(eventUrl: string): Promise<string> {
 export async function runRedattore(
   client: Anthropic,
   opportunity: Record<string, unknown>
-): Promise<{ articlePath: string; slug: string; rawContent: string }> {
+): Promise<{ slug: string; rawContent: string }> {
   const systemPrompt = readPrompt("redattore", "redattore-prompt.md");
 
-  // Recupera l'immagine reale dalla pagina evento
   const eventUrl = opportunity.ticketitalia_url as string | undefined;
   const eventImage = eventUrl ? await fetchEventImage(eventUrl) : "";
   if (eventImage) {
@@ -203,7 +183,6 @@ Istruzioni di output:
     "redattore"
   );
 
-  // Estrai il blocco TypeScript se Claude ha aggiunto fences
   const tsMatch =
     raw.match(/```(?:typescript|ts)?\n([\s\S]*?)```/) ??
     raw.match(/(import type[\s\S]*)/);
@@ -212,13 +191,10 @@ Istruzioni di output:
   const slug =
     (opportunity.suggested_slug as string | undefined) ??
     `articolo-${today()}`;
-  const articleDir = path.join(ROOT, "output", "articles");
-  ensureDir(articleDir);
-  const articlePath = path.join(articleDir, `${slug}.ts`);
-  fs.writeFileSync(articlePath, tsContent, "utf-8");
-  console.log(`[redattore] Articolo salvato: ${articlePath}`);
 
-  return { articlePath, slug, rawContent: tsContent };
+  console.log(`[redattore] Articolo generato in memoria: ${slug} (${tsContent.length} chars)`);
+
+  return { slug, rawContent: tsContent };
 }
 
 // ---------------------------------------------------------------------------
@@ -226,24 +202,22 @@ Istruzioni di output:
 // ---------------------------------------------------------------------------
 
 export interface SeoResult {
-  articlePath: string;
-  reportPath: string;
   title: string;
   excerpt: string;
   keyword: string;
   funnelStage: string;
   seoScore: Record<string, string>;
   rawContent: string;
+  seoReport: string;
 }
 
 export async function runSeo(
   client: Anthropic,
-  articlePath: string,
+  slug: string,
+  articleContent: string,
   keywords: string[]
 ): Promise<SeoResult> {
   const systemPrompt = readPrompt("seo", "seo-prompt.md");
-  const articleContent = fs.readFileSync(articlePath, "utf-8");
-  const slug = path.basename(articlePath, ".ts");
 
   const userMessage = `Ottimizza l'articolo seguente per il posizionamento SEO su Google.
 
@@ -266,23 +240,13 @@ BLOCCO 2: report SEO in formato markdown`;
   const parts = raw.split(separator);
 
   let optimizedTs = parts[0]?.trim() ?? articleContent;
-  // Rimuovi eventuali fences
   const tsMatch = optimizedTs.match(/```(?:typescript|ts)?\n([\s\S]*?)```/);
   if (tsMatch?.[1]) optimizedTs = tsMatch[1].trim();
 
   const seoReport = parts[1]?.trim() ?? "Report SEO non generato.";
 
-  fs.writeFileSync(articlePath, optimizedTs, "utf-8");
+  console.log(`[seo] Articolo ottimizzato in memoria (${optimizedTs.length} chars)`);
 
-  const reportPath = path.join(
-    path.dirname(articlePath),
-    `${slug}-seo-report.md`
-  );
-  fs.writeFileSync(reportPath, seoReport, "utf-8");
-  console.log(`[seo] Articolo ottimizzato: ${articlePath}`);
-  console.log(`[seo] Report salvato: ${reportPath}`);
-
-  // Estrai metadati dall'articolo ottimizzato per la notifica email
   const titleMatch = optimizedTs.match(/title:\s*"([^"]+)"/);
   const excerptMatch = optimizedTs.match(/excerpt:\s*"([^"]+)"/);
   const funnelMatch = optimizedTs.match(/funnelStage:\s*"([^"]+)"/);
@@ -290,7 +254,6 @@ BLOCCO 2: report SEO in formato markdown`;
     /Score SEO Stimato[\s\S]*?(?=##|$)/
   );
 
-  // Parsing grezzo del score dal report markdown
   const seoScore: Record<string, string> = {};
   seoScoreMatch?.[0]
     ?.split("\n")
@@ -301,38 +264,30 @@ BLOCCO 2: report SEO in formato markdown`;
     });
 
   return {
-    articlePath,
-    reportPath,
     title: titleMatch?.[1] ?? slug,
     excerpt: excerptMatch?.[1] ?? "",
     keyword: keywords[0] ?? "",
     funnelStage: funnelMatch?.[1] ?? "BOFU",
     seoScore,
     rawContent: optimizedTs,
+    seoReport,
   };
 }
 
 // ---------------------------------------------------------------------------
-// Pipeline completa
+// Pipeline completa (modalità review — senza auto-publish)
 // ---------------------------------------------------------------------------
 
 export async function runPipeline(): Promise<void> {
   const startTime = Date.now();
-  const log: Record<string, unknown> = {
-    startedAt: new Date().toISOString(),
-    model: MODEL,
-    steps: {},
-  };
+  console.log(`[orchestrator] Pipeline avviata: ${new Date().toISOString()}`);
 
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
   try {
-    // 1. Scout
     console.log("\n=== STEP 1: SCOUT ===");
-    const { reportPath, opportunities } = await runScout(client);
-    log.steps = { ...(log.steps as object), scout: { reportPath, found: opportunities.length } };
+    const { opportunities } = await runScout(client);
 
-    // Seleziona la migliore opportunità BOFU
     const bestBofu = (opportunities as Record<string, unknown>[]).find(
       (o) => o.funnel_stage === "BOFU" && o.seo_potential === "high"
     ) ?? (opportunities as Record<string, unknown>[])[0];
@@ -340,51 +295,34 @@ export async function runPipeline(): Promise<void> {
     if (!bestBofu) throw new Error("Nessuna opportunità trovata nello Scout report");
     console.log(`[orchestrator] Opportunità selezionata: ${bestBofu.title}`);
 
-    // 2. Redattore
     console.log("\n=== STEP 2: REDATTORE ===");
-    const { articlePath, slug } = await runRedattore(client, bestBofu);
-    log.steps = { ...(log.steps as object), redattore: { articlePath, slug } };
+    const { slug, rawContent } = await runRedattore(client, bestBofu);
 
-    // 3. SEO
     console.log("\n=== STEP 3: SEO ===");
     const keywords = (bestBofu.keywords as string[] | undefined) ?? [];
-    const seoResult = await runSeo(client, articlePath, keywords);
-    log.steps = {
-      ...(log.steps as object),
-      seo: {
-        articlePath: seoResult.articlePath,
-        reportPath: seoResult.reportPath,
-        seoScore: seoResult.seoScore,
-      },
-    };
+    const seoResult = await runSeo(client, slug, rawContent, keywords);
 
-    // 4. Notifica email
     console.log("\n=== STEP 4: NOTIFICA EMAIL ===");
     await sendArticleNotification({
       slug,
       title: seoResult.title,
       excerpt: seoResult.excerpt,
       keyword: seoResult.keyword,
-      filePath: seoResult.articlePath,
+      filePath: `(in-memory) ${slug}.ts`,
       funnelStage: seoResult.funnelStage,
       seoScore: seoResult.seoScore,
       rawContent: seoResult.rawContent,
     });
 
-    log.status = "success";
+    console.log(`[orchestrator] Pipeline completata in ${Date.now() - startTime}ms`);
   } catch (err) {
     console.error("[orchestrator] Errore:", err);
-    log.status = "error";
-    log.error = String(err);
-  } finally {
-    log.durationMs = Date.now() - startTime;
-    log.completedAt = new Date().toISOString();
-    saveLog(log);
+    throw err;
   }
 }
 
 // ---------------------------------------------------------------------------
-// autoPublish — pubblica un draft in blog.ts, committa e pusha
+// autoPublish — inserisce l'articolo in blog.ts, committa e pusha
 // ---------------------------------------------------------------------------
 
 function extractArticleObject(fileContent: string): string {
@@ -414,17 +352,16 @@ function extractArticleObject(fileContent: string): string {
   throw new Error("Oggetto articolo non bilanciato");
 }
 
-export async function autoPublish(slug: string, title: string): Promise<string> {
-  const draftPath = path.join(ROOT, "output", "articles", `${slug}.ts`);
+export async function autoPublish(
+  slug: string,
+  title: string,
+  rawContent: string
+): Promise<string> {
   const blogPath = path.join(ROOT, "src", "data", "blog.ts");
   const pubDate = today();
 
-  if (!fs.existsSync(draftPath)) {
-    throw new Error(`[autoPublish] Draft non trovato: ${draftPath}`);
-  }
-
-  // Aggiorna status + publishedAt nel draft
-  let draftContent = fs.readFileSync(draftPath, "utf-8");
+  // Aggiorna status + publishedAt nel contenuto in memoria
+  let draftContent = rawContent;
   draftContent = draftContent.replace(/status:\s*"draft"/, `status: "published"`);
   if (/publishedAt:\s*"[^"]*"/.test(draftContent)) {
     draftContent = draftContent.replace(/publishedAt:\s*"[^"]*"/, `publishedAt: "${pubDate}"`);
@@ -434,9 +371,8 @@ export async function autoPublish(slug: string, title: string): Promise<string> 
       `status: "published",\n  publishedAt: "${pubDate}"`
     );
   }
-  fs.writeFileSync(draftPath, draftContent, "utf-8");
 
-  // Controlla duplicati in blog.ts
+  // Legge blog.ts (file presente nel repo) e controlla duplicati
   let blogContent = fs.readFileSync(blogPath, "utf-8");
   if (new RegExp(`slug:\\s*["']${slug}["']`).test(blogContent)) {
     console.warn(`[autoPublish] Slug "${slug}" già presente in blog.ts — skip`);
@@ -454,7 +390,7 @@ export async function autoPublish(slug: string, title: string): Promise<string> 
   fs.writeFileSync(blogPath, blogContent, "utf-8");
   console.log(`[autoPublish] Articolo inserito in blog.ts: ${slug}`);
 
-  // Git commit + push
+  // Git commit + push tramite simple-git
   const { default: simpleGit } = await import("simple-git");
   const git = simpleGit(ROOT);
   await git.add(blogPath);
@@ -471,23 +407,16 @@ export async function autoPublish(slug: string, title: string): Promise<string> 
 
 export async function runAutoPublishPipeline(): Promise<void> {
   const startTime = Date.now();
-  const log: Record<string, unknown> = {
-    startedAt: new Date().toISOString(),
-    model: MODEL,
-    mode: "auto-publish",
-    steps: {},
-  };
+  console.log(`[orchestrator] Auto-publish pipeline avviata: ${new Date().toISOString()}`);
 
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
   const siteUrl = process.env.SITE_URL ?? "https://blog.ticketitalia.com";
 
   try {
-    // 1. Scout
     console.log("\n=== STEP 1: SCOUT ===");
-    const { reportPath, opportunities } = await runScout(client);
-    log.steps = { ...(log.steps as object), scout: { reportPath, found: opportunities.length } };
+    const { opportunities } = await runScout(client);
 
-    // Seleziona la migliore opportunità BOFU non ancora pubblicata
+    // Legge blog.ts per filtrare opportunità già pubblicate
     const blogPath = path.join(ROOT, "src", "data", "blog.ts");
     const blogContent = fs.readFileSync(blogPath, "utf-8");
 
@@ -504,33 +433,21 @@ export async function runAutoPublishPipeline(): Promise<void> {
 
     if (!bestBofu) {
       console.log("[orchestrator] Nessuna opportunità nuova da pubblicare — pipeline terminata");
-      log.status = "skipped";
-      log.reason = "No new opportunities";
       return;
     }
     console.log(`[orchestrator] Opportunità selezionata: ${bestBofu.title}`);
 
-    // 2. Redattore
     console.log("\n=== STEP 2: REDATTORE ===");
-    const { articlePath, slug } = await runRedattore(client, bestBofu);
-    log.steps = { ...(log.steps as object), redattore: { articlePath, slug } };
+    const { slug, rawContent } = await runRedattore(client, bestBofu);
 
-    // 3. SEO
     console.log("\n=== STEP 3: SEO ===");
     const keywords = (bestBofu.keywords as string[] | undefined) ?? [];
-    const seoResult = await runSeo(client, articlePath, keywords);
-    log.steps = {
-      ...(log.steps as object),
-      seo: { articlePath: seoResult.articlePath, reportPath: seoResult.reportPath, seoScore: seoResult.seoScore },
-    };
+    const seoResult = await runSeo(client, slug, rawContent, keywords);
 
-    // 4. Auto-publish
     console.log("\n=== STEP 4: AUTO-PUBLISH ===");
-    const pubDate = await autoPublish(slug, seoResult.title);
+    const pubDate = await autoPublish(slug, seoResult.title, seoResult.rawContent);
     const articleUrl = `${siteUrl}/articoli/${slug}`;
-    log.steps = { ...(log.steps as object), autoPublish: { slug, pubDate, articleUrl } };
 
-    // 5. Email di notifica (articolo già pubblicato)
     console.log("\n=== STEP 5: NOTIFICA EMAIL ===");
     await sendPublishedNotification({
       slug,
@@ -543,15 +460,10 @@ export async function runAutoPublishPipeline(): Promise<void> {
       seoScore: seoResult.seoScore,
     });
 
-    log.status = "success";
+    console.log(`[orchestrator] Auto-publish pipeline completata in ${Date.now() - startTime}ms`);
   } catch (err) {
     console.error("[orchestrator] Errore:", err);
-    log.status = "error";
-    log.error = String(err);
-  } finally {
-    log.durationMs = Date.now() - startTime;
-    log.completedAt = new Date().toISOString();
-    saveLog(log);
+    throw err;
   }
 }
 
@@ -564,7 +476,11 @@ const isScoutOnly = args.includes("--scout");
 
 if (isScoutOnly) {
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-  runScout(client).catch(console.error);
+  runScout(client)
+    .then(({ opportunities }) => {
+      console.log(JSON.stringify({ opportunities }, null, 2));
+    })
+    .catch(console.error);
 } else {
   runPipeline().catch(console.error);
 }
