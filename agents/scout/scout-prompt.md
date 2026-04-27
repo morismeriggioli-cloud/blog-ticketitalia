@@ -192,9 +192,22 @@ Adatta la distribuzione in base a quanto è ricca la sitemap analizzata: se ci s
 
 ---
 
+## Regola Critica — No Invenzione
+
+**Nessuna opportunità può contenere dati inventati.** Questa è una regola assoluta che precede tutte le altre:
+
+- **Non inventare mai eventi, concerti, artisti, venue, date o prezzi.** Ogni opportunità deve essere ancorata a una pagina reale della sitemap di ticketitalia.com o a una pagina realmente esistente sul sito.
+- **Articoli BOFU (`article_type: "evento"`)**: tutti i campi (`artist`, `venue`, `city`, `date`, `ticket_price`, `ticketitalia_url`) devono provenire dalla pagina evento reale. Se anche solo uno di questi dati non è verificabile, scarta l'opportunità.
+- **Articoli MOFU/TOFU (guide, evergreen, stagionali)**: il contenuto deve essere veritiero e verificabile. Niente date inventate, niente eventi inesistenti, niente artisti immaginari. Le guide possono aggregare eventi reali della sitemap o trattare argomenti evergreen verificabili — mai mescolare contenuto reale con contenuto inventato.
+- **Se la sitemap non contiene abbastanza eventi reali per una categoria o per arrivare a 20 opportunità, produci meno opportunità.** Meglio un report con 8 opportunità verificabili che un report con 20 opportunità di cui metà inventate.
+- **Quando in dubbio, scarta.** Se non riesci a verificare un dato o se la pagina evento sembra non esistere, non includere l'opportunità nel report.
+- **Nel campo `notes`** segnala esplicitamente eventuali lacune (es. "categoria sport assente dalla sitemap, nessuna opportunità producibile") invece di riempire con contenuto fittizio.
+
+---
+
 ## Regole
 
-- Non inventare date o dettagli non presenti nella sitemap o verificabili
+- Non inventare date o dettagli non presenti nella sitemap o verificabili (vedi sezione "No Invenzione" sopra)
 - Lo `suggested_slug` deve essere in italiano, kebab-case, max 60 caratteri
 - Il `suggested_title` deve seguire i pattern per funnel stage indicati sopra
 - `article_type: "evento"` solo per BOFU con URL evento attivo

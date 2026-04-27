@@ -798,7 +798,7 @@ export const articles: Article[] = [
         text:
           "Segui Ticket Italia per trovare biglietti, date e informazioni aggiornate su Agriumbria e sugli altri eventi in programma a Bastia Umbra.",
         label: "Scopri eventi su Ticket Italia",
-        href: "https://ticketitalia.com/en/umbria-fiere-bastia-umbra-pg",
+        href: "https://ticketitalia.com/luoghi/umbria-fiere-bastia-umbra-pg",
       },
     },
   },
@@ -1121,7 +1121,7 @@ export const articles: Article[] = [
         bullets: [
           "Superficie: ~575 mq su unico piano, nessuna barriera visiva",
           "Palco: 6×8 metri con impianto audio, luci e video professionale",
-          "Layout: due zone con allestimenti distinti (area palco + zona lounge)",
+          "Disposizione: due zone con allestimenti distinti (area palco + zona lounge)",
           "Corte esterna: disponibile per ritrovo pre/post concerto",
           "Accessibilità: vicino al raccordo autostradale di Perugia, ampio parcheggio",
           "Indirizzo: Balanzano, Perugia (PG)",
@@ -1465,7 +1465,7 @@ export const articles: Article[] = [
         text:
           "Alta domanda attesa per questo evento di reunion. Acquista subito il tuo biglietto su Ticket Italia e assicurati il posto per una serata indimenticabile con la band più amata d'Italia.",
         label: "Acquista su Ticket Italia",
-        href: "https://ticketitalia.com/evento/pooh-palaunical-marsciano",
+        href: "https://ticketitalia.com/pooh-stadio-comunale-checcarini-marsciano-pg-10-luglio-2026",
       },
     },
   },
@@ -1705,7 +1705,7 @@ export const articles: Article[] = [
         text:
           "I biglietti per i concerti principali all'Arena Santa Giuliana si esauriscono settimane prima del festival. Acquista subito su Ticket Italia e assicurati il posto per vivere il jazz più bello d'Italia.",
         label: "Acquista su Ticket Italia",
-        href: "https://ticketitalia.com/evento/umbria-jazz-2026-perugia",
+        href: "https://www.ticketitalia.com",
       },
     },
   },
