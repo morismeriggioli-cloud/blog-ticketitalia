@@ -431,16 +431,31 @@ export async function runAutoPublishPipeline(): Promise<void> {
     }
 
     const opportunitiesArr = opportunities as Record<string, unknown>[];
+    const existingTitlesArr = Array.from(existingTitles);
     const filtered = opportunitiesArr.filter((o) => {
       const slug = (o.suggested_slug as string | undefined)?.toLowerCase().trim();
-      const title = (o.title as string | undefined)?.toLowerCase().trim();
       if (slug && existingSlugs.has(slug)) return false;
+
+      // Match per artista come substring nei titoli esistenti
+      // Esempio: se esiste "Pooh - Stadio Checcarini", scarta qualsiasi opportunità con "Pooh"
+      const artist = (o.artist as string | undefined)?.toLowerCase().trim();
+      if (artist && artist.length >= 3) {
+        if (existingTitlesArr.some((t) => t.includes(artist))) return false;
+      }
+
+      // Match esatto sul titolo dell'opportunità (utile per guide/evergreen senza artist)
+      const title = (o.title as string | undefined)?.toLowerCase().trim();
       if (title && existingTitles.has(title)) return false;
+
       return true;
     });
 
+    const discardedCount = opportunitiesArr.length - filtered.length;
     console.log(
       `[orchestrator] Articoli esistenti: ${existingSlugs.size} — opportunità filtrate: ${filtered.length}`
+    );
+    console.log(
+      `[orchestrator] Opportunità scartate perché già pubblicate: ${discardedCount}`
     );
 
     const bestBofu = filtered[0];
