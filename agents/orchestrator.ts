@@ -448,6 +448,8 @@ async function loadBlocklist(): Promise<string[]> {
   const githubRepo = process.env.GITHUB_REPO;
   const githubToken = process.env.GITHUB_TOKEN;
   const githubBranch = process.env.GITHUB_BRANCH ?? "main";
+  let result: string[] = [];
+  let loaded = false;
 
   if (githubRepo && githubToken) {
     try {
@@ -457,23 +459,26 @@ async function loadBlocklist(): Promise<string[]> {
         BLOCKLIST_REMOTE_PATH,
         githubBranch
       );
-      const list = parseBlocklist(content);
-      console.log(`[blocklist] Caricata da GitHub: ${list.length} voci`);
-      return list;
+      result = parseBlocklist(content);
+      console.log(`[blocklist] Caricata da GitHub: ${result.length} voci`);
+      loaded = true;
     } catch (err) {
       console.warn("[blocklist] Lettura da GitHub fallita, fallback locale:", err);
     }
   }
 
-  try {
-    const raw = fs.readFileSync(BLOCKLIST_LOCAL_PATH, "utf-8");
-    const list = parseBlocklist(raw);
-    console.log(`[blocklist] Caricata da filesystem locale: ${list.length} voci`);
-    return list;
-  } catch (err) {
-    console.warn(`[blocklist] Impossibile leggere ${BLOCKLIST_LOCAL_PATH}:`, err);
-    return [];
+  if (!loaded) {
+    try {
+      const raw = fs.readFileSync(BLOCKLIST_LOCAL_PATH, "utf-8");
+      result = parseBlocklist(raw);
+      console.log(`[blocklist] Caricata da filesystem locale: ${result.length} voci`);
+    } catch (err) {
+      console.warn(`[blocklist] Impossibile leggere ${BLOCKLIST_LOCAL_PATH}:`, err);
+    }
   }
+
+  console.log("[blocklist] Voci caricate:", result);
+  return result;
 }
 
 async function appendArtistToBlocklist(artist: string): Promise<void> {
