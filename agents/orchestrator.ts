@@ -618,6 +618,10 @@ export async function runAutoPublishPipeline(): Promise<void> {
 const args = process.argv.slice(2);
 const isDirectRun = import.meta.url === `file://${process.argv[1].replace(/\\/g, '/')}`;
 
+console.log("isDirectRun:", isDirectRun);
+console.log("import.meta.url:", import.meta.url);
+console.log("process.argv[1]:", process.argv[1]);
+
 if (isDirectRun) {
   if (args.includes("--scout")) {
     runScout()
