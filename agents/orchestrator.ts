@@ -47,6 +47,9 @@ function today(): string {
 // Claude call con prompt caching sul system prompt
 // ---------------------------------------------------------------------------
 
+const CLAUDE_MAX_RETRIES = 3;
+const CLAUDE_RETRY_DELAY_MS = 30_000;
+
 async function callClaude(
   systemPrompt: string,
   userMessage: string,
@@ -58,18 +61,37 @@ async function callClaude(
     apiKey: process.env.ANTHROPIC_API_KEY ?? "",
   });
 
-  const response = await client.messages.create({
+  const request = {
     model: MODEL,
     max_tokens: 8192,
     system: [
       {
-        type: "text",
+        type: "text" as const,
         text: systemPrompt,
-        cache_control: { type: "ephemeral" },
+        cache_control: { type: "ephemeral" as const },
       },
     ],
-    messages: [{ role: "user", content: userMessage }],
-  });
+    messages: [{ role: "user" as const, content: userMessage }],
+  };
+
+  let response: Awaited<ReturnType<typeof client.messages.create>> | undefined;
+  let attempt = 0;
+  while (true) {
+    try {
+      response = await client.messages.create(request);
+      break;
+    } catch (err) {
+      const status = (err as { status?: number; statusCode?: number })?.status
+        ?? (err as { statusCode?: number })?.statusCode;
+      if (status === 529 && attempt < CLAUDE_MAX_RETRIES) {
+        attempt++;
+        console.warn(`[claude] Overloaded, retry ${attempt}/${CLAUDE_MAX_RETRIES} tra 30s...`);
+        await new Promise((r) => setTimeout(r, CLAUDE_RETRY_DELAY_MS));
+        continue;
+      }
+      throw err;
+    }
+  }
 
   const text = response.content
     .filter((b) => b.type === "text")
