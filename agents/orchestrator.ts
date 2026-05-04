@@ -325,30 +325,130 @@ export async function runPipeline(): Promise<void> {
 // ---------------------------------------------------------------------------
 
 function extractArticleObject(fileContent: string): string {
-  const marker = "export const article: Article = ";
+  const marker = "export const article";
   const markerIdx = fileContent.indexOf(marker);
   if (markerIdx === -1) throw new Error("Marker 'export const article' non trovato");
 
   const objStart = fileContent.indexOf("{", markerIdx + marker.length);
   if (objStart === -1) throw new Error("Apertura oggetto '{' non trovata");
 
+  // strMode: 0 = codice, 1 = stringa "..", 2 = stringa '..', 3 = template literal `..`
+  let strMode: 0 | 1 | 2 | 3 = 0;
   let depth = 0;
-  let inStr = false;
+  // Stack delle profondità a cui siamo entrati in interpolazione ${...}
+  // Quando depth ritorna a uno di questi valori, riprende il template literal esterno.
+  const templateStack: number[] = [];
   let escape = false;
 
   for (let i = objStart; i < fileContent.length; i++) {
     const ch = fileContent[i];
+
     if (escape) { escape = false; continue; }
     if (ch === "\\") { escape = true; continue; }
-    if (ch === '"') { inStr = !inStr; continue; }
-    if (inStr) continue;
-    if (ch === "{") depth++;
-    else if (ch === "}") {
-      depth--;
-      if (depth === 0) return fileContent.slice(objStart, i + 1);
+
+    if (strMode === 0) {
+      if (ch === '"') { strMode = 1; continue; }
+      if (ch === "'") { strMode = 2; continue; }
+      if (ch === "`") { strMode = 3; continue; }
+      if (ch === "{") {
+        depth++;
+      } else if (ch === "}") {
+        depth--;
+        if (depth === 0) return fileContent.slice(objStart, i + 1);
+        if (templateStack.length > 0 && depth === templateStack[templateStack.length - 1]) {
+          templateStack.pop();
+          strMode = 3;
+        }
+      }
+    } else if (strMode === 1) {
+      if (ch === '"') strMode = 0;
+    } else if (strMode === 2) {
+      if (ch === "'") strMode = 0;
+    } else if (strMode === 3) {
+      if (ch === "`") {
+        strMode = 0;
+      } else if (ch === "$" && fileContent[i + 1] === "{") {
+        templateStack.push(depth);
+        depth++;
+        strMode = 0;
+        i++;
+      }
     }
   }
-  throw new Error("Oggetto articolo non bilanciato");
+
+  console.error(
+    `[extractArticleObject] Bilanciamento fallito — depth=${depth}, strMode=${strMode}, templateStack=${JSON.stringify(templateStack)}, lunghezza=${fileContent.length}, objStart=${objStart}`
+  );
+  console.error(
+    `[extractArticleObject] Primi 300 caratteri dall'oggetto:\n${fileContent.slice(objStart, objStart + 300)}`
+  );
+  console.error(
+    `[extractArticleObject] Ultimi 300 caratteri del file:\n${fileContent.slice(-300)}`
+  );
+  throw new Error(
+    `Oggetto articolo non bilanciato (depth finale=${depth}, strMode=${strMode}, template stack size=${templateStack.length})`
+  );
+}
+
+// ---------------------------------------------------------------------------
+// GitHub REST API helpers (Railway non ha git installato → niente simple-git)
+// ---------------------------------------------------------------------------
+
+async function githubGetFile(
+  repo: string,
+  token: string,
+  filePath: string,
+  branch: string
+): Promise<{ sha: string; content: string }> {
+  const url = `https://api.github.com/repos/${repo}/contents/${filePath}?ref=${encodeURIComponent(branch)}`;
+  const res = await fetch(url, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      Accept: "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28",
+      "User-Agent": "TicketItaliaBlog-Bot",
+    },
+  });
+  if (!res.ok) {
+    const errBody = await res.text();
+    throw new Error(`[github] GET ${filePath} fallito (${res.status}): ${errBody}`);
+  }
+  const data = (await res.json()) as { sha: string; content: string; encoding: string };
+  const content = Buffer.from(data.content, "base64").toString("utf-8");
+  return { sha: data.sha, content };
+}
+
+async function githubPutFile(
+  repo: string,
+  token: string,
+  filePath: string,
+  newContent: string,
+  sha: string,
+  branch: string,
+  commitMessage: string
+): Promise<void> {
+  const url = `https://api.github.com/repos/${repo}/contents/${filePath}`;
+  const body = {
+    message: commitMessage,
+    content: Buffer.from(newContent, "utf-8").toString("base64"),
+    sha,
+    branch,
+  };
+  const res = await fetch(url, {
+    method: "PUT",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      Accept: "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28",
+      "Content-Type": "application/json",
+      "User-Agent": "TicketItaliaBlog-Bot",
+    },
+    body: JSON.stringify(body),
+  });
+  if (!res.ok) {
+    const errBody = await res.text();
+    throw new Error(`[github] PUT ${filePath} fallito (${res.status}): ${errBody}`);
+  }
 }
 
 export async function autoPublish(
@@ -356,7 +456,12 @@ export async function autoPublish(
   title: string,
   rawContent: string
 ): Promise<string> {
-  const blogPath = path.join(ROOT, "src", "data", "blog.ts");
+  const githubRepo = process.env.GITHUB_REPO;
+  const githubToken = process.env.GITHUB_TOKEN;
+  const githubBranch = process.env.GITHUB_BRANCH ?? "main";
+  if (!githubRepo) throw new Error("[autoPublish] GITHUB_REPO non configurato (formato: owner/repo)");
+  if (!githubToken) throw new Error("[autoPublish] GITHUB_TOKEN non configurato");
+
   const pubDate = today();
 
   // Aggiorna status + publishedAt nel contenuto in memoria
@@ -371,8 +476,13 @@ export async function autoPublish(
     );
   }
 
-  // Legge blog.ts (file presente nel repo) e controlla duplicati
-  let blogContent = fs.readFileSync(blogPath, "utf-8");
+  // Legge blog.ts da GitHub e controlla duplicati
+  const { sha, content: blogContent } = await githubGetFile(
+    githubRepo,
+    githubToken,
+    "src/data/blog.ts",
+    githubBranch
+  );
   if (new RegExp(`slug:\\s*["']${slug}["']`).test(blogContent)) {
     console.warn(`[autoPublish] Slug "${slug}" già presente in blog.ts — skip`);
     return pubDate;
@@ -385,17 +495,19 @@ export async function autoPublish(
   const idx = blogContent.indexOf(insertionMarker);
   if (idx === -1) throw new Error("[autoPublish] Marker di inserimento non trovato in blog.ts");
 
-  blogContent = blogContent.slice(0, idx) + `\n  ${indented},` + blogContent.slice(idx);
-  fs.writeFileSync(blogPath, blogContent, "utf-8");
-  console.log(`[autoPublish] Articolo inserito in blog.ts: ${slug}`);
+  const newBlogContent = blogContent.slice(0, idx) + `\n  ${indented},` + blogContent.slice(idx);
 
-  // Git commit + push tramite simple-git
-  const { default: simpleGit } = await import("simple-git");
-  const git = simpleGit(ROOT);
-  await git.add(blogPath);
-  await git.commit(`Auto-publish: ${title} ${pubDate}`);
-  await git.push("origin", "main");
-  console.log(`[autoPublish] Commit e push completati: "${title}"`);
+  // Commit via GitHub Contents API
+  await githubPutFile(
+    githubRepo,
+    githubToken,
+    "src/data/blog.ts",
+    newBlogContent,
+    sha,
+    githubBranch,
+    `Auto-publish: ${title} ${pubDate}`
+  );
+  console.log(`[autoPublish] Articolo committato su ${githubRepo}@${githubBranch}: ${slug}`);
 
   return pubDate;
 }
