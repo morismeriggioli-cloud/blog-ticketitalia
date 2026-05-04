@@ -546,24 +546,79 @@ export async function runAutoPublishPipeline(): Promise<void> {
     }
 
     const opportunitiesArr = opportunities as Record<string, unknown>[];
-    const existingTitlesArr = Array.from(existingTitles);
-    const filtered = opportunitiesArr.filter((o) => {
-      const slug = (o.suggested_slug as string | undefined)?.toLowerCase().trim();
-      if (slug && existingSlugs.has(slug)) return false;
 
-      // Match per artista come substring nei titoli esistenti
-      // Esempio: se esiste "Pooh - Stadio Checcarini", scarta qualsiasi opportunità con "Pooh"
-      const artist = (o.artist as string | undefined)?.toLowerCase().trim();
-      if (artist && artist.length >= 3) {
-        if (existingTitlesArr.some((t) => t.includes(artist))) return false;
+    // Fingerprint normalizzata: lowercase + strip accenti + rimozione caratteri
+    // speciali + collapse spazi. Rende confronti immuni a formattazione, punteggiatura,
+    // accenti, separatori (es. "Pooh - Stadio Checcarini" e "POOH: stadio checcarini")
+    const normalizeFingerprint = (s: string): string =>
+      s
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/\p{M}/gu, "")
+        .replace(/[^a-z0-9\s]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+
+    // Fingerprint del corpus esistente: titoli + slug
+    const existingFingerprints = Array.from(
+      new Set([
+        ...Array.from(existingTitles).map(normalizeFingerprint),
+        ...Array.from(existingSlugs).map(normalizeFingerprint),
+      ])
+    ).filter((fp) => fp.length > 0);
+
+    console.log("[duplicati] Fingerprint esistenti:");
+    for (const fp of existingFingerprints) console.log(`  • "${fp}"`);
+
+    // Fingerprint delle opportunità: title + artist
+    const opportunitiesWithFp = opportunitiesArr.map((o) => {
+      const title = (o.title as string | undefined) ?? "";
+      const artist = (o.artist as string | undefined) ?? "";
+      return {
+        o,
+        fp: normalizeFingerprint(`${title} ${artist}`),
+        artistFp: normalizeFingerprint(artist),
+      };
+    });
+
+    console.log("[duplicati] Fingerprint opportunità:");
+    for (const { o, fp } of opportunitiesWithFp) {
+      console.log(`  • "${o.title}" → "${fp}"`);
+    }
+
+    const filtered: Record<string, unknown>[] = [];
+    for (const { o, fp, artistFp } of opportunitiesWithFp) {
+      if (!fp) {
+        filtered.push(o);
+        continue;
       }
 
-      // Match esatto sul titolo dell'opportunità (utile per guide/evergreen senza artist)
-      const title = (o.title as string | undefined)?.toLowerCase().trim();
-      if (title && existingTitles.has(title)) return false;
+      // Match bidirezionale: scarta se fp opp è substring di un esistente
+      // o se un esistente è substring del fp opp (gestisce titoli più lunghi/corti)
+      const overlap = existingFingerprints.find(
+        (efp) => efp.includes(fp) || fp.includes(efp)
+      );
+      if (overlap) {
+        console.log(`[duplicati] SCARTATA "${o.title}" — overlap con esistente "${overlap}"`);
+        continue;
+      }
 
-      return true;
-    });
+      // Fallback per dedup per artista: artist come parola intera in qualsiasi fingerprint
+      // esistente (es. opportunità "Pooh tour 2026" vs esistente "pooh stadio checcarini")
+      if (artistFp.length >= 3) {
+        const escapedArtist = artistFp.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const artistRe = new RegExp(`(^|\\s)${escapedArtist}(\\s|$)`);
+        const artistMatch = existingFingerprints.find((efp) => artistRe.test(efp));
+        if (artistMatch) {
+          console.log(
+            `[duplicati] SCARTATA "${o.title}" — artist "${artistFp}" presente in "${artistMatch}"`
+          );
+          continue;
+        }
+      }
+
+      filtered.push(o);
+    }
 
     const discardedCount = opportunitiesArr.length - filtered.length;
     console.log(
