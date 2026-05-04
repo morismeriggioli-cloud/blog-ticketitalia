@@ -394,6 +394,71 @@ function extractArticleObject(fileContent: string): string {
 }
 
 // ---------------------------------------------------------------------------
+// Blocklist artisti/eventi già pubblicati (agents/blocklist.json)
+// ---------------------------------------------------------------------------
+
+const BLOCKLIST_PATH = path.join(__dirname, "blocklist.json");
+
+function loadBlocklist(): string[] {
+  try {
+    const raw = fs.readFileSync(BLOCKLIST_PATH, "utf-8");
+    const parsed = JSON.parse(raw);
+    if (!Array.isArray(parsed)) return [];
+    return parsed.map((s) => String(s).toLowerCase().trim()).filter(Boolean);
+  } catch (err) {
+    console.warn(`[blocklist] Impossibile leggere ${BLOCKLIST_PATH}:`, err);
+    return [];
+  }
+}
+
+async function appendArtistToBlocklist(artist: string): Promise<void> {
+  const normalized = artist.toLowerCase().trim();
+  if (!normalized) return;
+
+  const githubRepo = process.env.GITHUB_REPO;
+  const githubToken = process.env.GITHUB_TOKEN;
+  const githubBranch = process.env.GITHUB_BRANCH ?? "main";
+  if (!githubRepo || !githubToken) {
+    console.warn("[blocklist] GITHUB_REPO/GITHUB_TOKEN mancanti — skip aggiornamento remoto");
+    return;
+  }
+
+  const { sha, content } = await githubGetFile(
+    githubRepo,
+    githubToken,
+    "agents/blocklist.json",
+    githubBranch
+  );
+
+  let list: string[];
+  try {
+    const parsed = JSON.parse(content);
+    list = Array.isArray(parsed) ? parsed.map((s) => String(s)) : [];
+  } catch {
+    list = [];
+  }
+
+  if (list.some((b) => b.toLowerCase().trim() === normalized)) {
+    console.log(`[blocklist] "${normalized}" già presente — nessun update`);
+    return;
+  }
+
+  list.push(normalized);
+  const newContent = JSON.stringify(list, null, 2) + "\n";
+
+  await githubPutFile(
+    githubRepo,
+    githubToken,
+    "agents/blocklist.json",
+    newContent,
+    sha,
+    githubBranch,
+    `Blocklist: aggiunto "${normalized}"`
+  );
+  console.log(`[blocklist] Aggiunto "${normalized}" a agents/blocklist.json`);
+}
+
+// ---------------------------------------------------------------------------
 // GitHub REST API helpers (Railway non ha git installato → niente simple-git)
 // ---------------------------------------------------------------------------
 
@@ -545,7 +610,26 @@ export async function runAutoPublishPipeline(): Promise<void> {
       existingTitles.add(m[1].toLowerCase().trim());
     }
 
-    const opportunitiesArr = opportunities as Record<string, unknown>[];
+    const opportunitiesArr0 = opportunities as Record<string, unknown>[];
+
+    // STEP 1: filtro blocklist (agents/blocklist.json)
+    // Scarta opportunità il cui titolo o artista contiene una voce della blocklist
+    const blocklist = loadBlocklist();
+    console.log(`[blocklist] Caricate ${blocklist.length} voci:`, blocklist);
+
+    const opportunitiesArr = opportunitiesArr0.filter((o) => {
+      const title = ((o.title as string | undefined) ?? "").toLowerCase();
+      const artist = ((o.artist as string | undefined) ?? "").toLowerCase();
+      const hit = blocklist.find((b) => title.includes(b) || artist.includes(b));
+      if (hit) {
+        console.log(`[blocklist] SCARTATA "${o.title}" — match blocklist "${hit}"`);
+        return false;
+      }
+      return true;
+    });
+    console.log(
+      `[blocklist] Opportunità dopo blocklist: ${opportunitiesArr.length}/${opportunitiesArr0.length}`
+    );
 
     // Fingerprint normalizzata: lowercase + strip accenti + rimozione caratteri
     // speciali + collapse spazi. Rende confronti immuni a formattazione, punteggiatura,
@@ -646,6 +730,16 @@ export async function runAutoPublishPipeline(): Promise<void> {
     console.log("\n=== STEP 4: AUTO-PUBLISH ===");
     const pubDate = await autoPublish(slug, seoResult.title, seoResult.rawContent);
     const articleUrl = `${siteUrl}/articoli/${slug}`;
+
+    // Aggiorna blocklist remota con l'artista appena pubblicato
+    const publishedArtist = (bestBofu.artist as string | undefined) ?? "";
+    if (publishedArtist.trim()) {
+      try {
+        await appendArtistToBlocklist(publishedArtist);
+      } catch (err) {
+        console.warn("[blocklist] Update fallito (non bloccante):", err);
+      }
+    }
 
     console.log("\n=== STEP 5: NOTIFICA EMAIL ===");
     await sendPublishedNotification({
