@@ -43,6 +43,19 @@ function today(): string {
   return new Date().toISOString().slice(0, 10);
 }
 
+// Fingerprint normalizzata: lowercase + strip accenti (NFD + combining marks)
+// + rimozione caratteri non alfanumerici + collapse spazi. Rende confronti
+// immuni a formattazione, punteggiatura, accenti, separatori.
+function normalizeFingerprint(s: string): string {
+  return s
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/\p{M}/gu, "")
+    .replace(/[^a-z0-9\s]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 // ---------------------------------------------------------------------------
 // Claude call con prompt caching sul system prompt
 // ---------------------------------------------------------------------------
@@ -669,12 +682,15 @@ export async function runAutoPublishPipeline(): Promise<void> {
     const blocklist = await loadBlocklist();
     console.log(`[blocklist] Voci attive (${blocklist.length}):`, blocklist);
 
-    const opportunitiesArr = opportunitiesArr0.filter((o) => {
-      const title = ((o.title as string | undefined) ?? "").toLowerCase();
-      const artist = ((o.artist as string | undefined) ?? "").toLowerCase();
-      const hit = blocklist.find((b) => title.includes(b) || artist.includes(b));
+    const opportunitiesArr = opportunitiesArr0.filter((opp) => {
+      const normalizedTitle = normalizeFingerprint((opp.title as string | undefined) ?? "");
+      const normalizedArtist = normalizeFingerprint((opp.artist as string | undefined) ?? "");
+      const hit = blocklist.find((b) => {
+        const nb = normalizeFingerprint(b);
+        return normalizedTitle.includes(nb) || normalizedArtist.includes(nb);
+      });
       if (hit) {
-        console.log(`[blocklist] SCARTATA "${o.title}" — match blocklist "${hit}"`);
+        console.log(`[blocklist] SCARTATA "${opp.title}" — match blocklist "${hit}"`);
         return false;
       }
       return true;
@@ -682,18 +698,6 @@ export async function runAutoPublishPipeline(): Promise<void> {
     console.log(
       `[blocklist] Opportunità dopo blocklist: ${opportunitiesArr.length}/${opportunitiesArr0.length}`
     );
-
-    // Fingerprint normalizzata: lowercase + strip accenti + rimozione caratteri
-    // speciali + collapse spazi. Rende confronti immuni a formattazione, punteggiatura,
-    // accenti, separatori (es. "Pooh - Stadio Checcarini" e "POOH: stadio checcarini")
-    const normalizeFingerprint = (s: string): string =>
-      s
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/\p{M}/gu, "")
-        .replace(/[^a-z0-9\s]/g, " ")
-        .replace(/\s+/g, " ")
-        .trim();
 
     // Fingerprint del corpus esistente: titoli + slug
     const existingFingerprints = Array.from(
