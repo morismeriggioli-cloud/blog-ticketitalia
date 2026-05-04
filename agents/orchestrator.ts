@@ -12,6 +12,9 @@ console.log("ENV CHECK:", {
   allEnvKeys: Object.keys(process.env).filter(k => k.includes("ANTHROPIC"))
 });
 
+import { config } from "dotenv";
+config({ override: false });
+
 import Anthropic from "@anthropic-ai/sdk";
 import fs from "fs";
 import path from "path";
