@@ -1684,6 +1684,517 @@ export const articles: Article[] = [
       },
     },
   },
+  {
+    slug: "claudio-baglioni-la-vita-e-adesso-grandtour-piazza-duomo-spoleto-15-luglio-2026",
+    title: "Claudio Baglioni a Spoleto 15 luglio 2026: La Vita è Adesso GrandTour in Piazza Duomo",
+    excerpt:
+      "Claudio Baglioni porta La Vita è Adesso GrandTour in Piazza Duomo a Spoleto il 15 luglio 2026: l'album del 1985 eseguito per intero con 20 musicisti, prezzi da €110.",
+    category: "Concerti",
+    categorySlug: "concerti",
+    subcategory: "Pop",
+    subcategorySlug: "pop",
+    type: "evento",
+    status: "published",
+    publishedAt: "2026-05-04",
+    funnelStage: "BOFU",
+    articleType: "evento",
+    tags: ["Claudio Baglioni", "Concerti Spoleto", "La Vita è Adesso", "Piazza Duomo Spoleto", "Concerti Umbria 2026"],
+    date: "2026-05-04",
+    readTime: "9 min",
+    author: "Redazione Ticket Italia",
+    image: "https://ticketitalia.com/image/cache/wp/gj/EliteAgency/CB_GRANTOUr-1500x1500.webp",
+    body: {
+      intro:
+        "Claudio Baglioni torna a Spoleto il 15 luglio 2026 con La Vita è Adesso GrandTour, la tappa estiva in Piazza Duomo che chiude il ciclo di celebrazioni per i 40 anni dell'album simbolo della sua carriera. L'album del 1985 viene eseguito per intero, accompagnato dai brani più amati del repertorio, con un'orchestra di 20 musicisti e coristi sul palco. Biglietti disponibili su Ticket Italia a partire da €110.",
+      quickInfo: {
+        title: "Informazioni rapide",
+        text:
+          "Una serata unica nella cornice rinascimentale di Piazza Duomo, con l'intero album La Vita è Adesso eseguito dal vivo nell'ordine originale e i grandi successi di Baglioni a chiudere lo show.",
+        bullets: [
+          "Artista: Claudio Baglioni",
+          "Location: Piazza Duomo, Spoleto (PG)",
+          "Data: mercoledì 15 luglio 2026, ore 21:00",
+          "Prezzo: a partire da €110,00",
+          "Atmosfera: concerto evento, intero album live + grandi successi",
+        ],
+      },
+      tickets: {
+        title: "Biglietti e prezzi",
+        text:
+          "I biglietti per Claudio Baglioni in Piazza Duomo a Spoleto sono in vendita su Ticket Italia in formato elettronico (PDF inviato via email). Il prezzo base parte da €110,00; le tariffe variano in base al settore scelto e al posizionamento rispetto al palco. Per chi necessita di assistenza per disabilità, l'organizzazione mette a disposizione l'indirizzo denise@elitegroup.it a cui inviare il certificato di invalidità.",
+        bullets: [
+          "Prezzo a partire da: €110,00",
+          "Formato biglietto: elettronico (PDF via email)",
+          "Acquisto sicuro: pagamento con carta, PayPal o bonifico",
+          "Assistenza disabilità: denise@elitegroup.it (con certificato di invalidità)",
+          "Promotore: Elite Agency",
+        ],
+      },
+      artistContext: {
+        title: "Claudio Baglioni e i 40 anni di La Vita è Adesso",
+        paragraphs: [
+          "La Vita è Adesso esce nel maggio 1985 e diventa l'album italiano più venduto di sempre per la sua epoca, con oltre quattro milioni di copie. È il disco che consegna Claudio Baglioni alla storia del pop italiano, con brani diventati patrimonio collettivo come la title track, Uomini persi, Noi no e Tamburi lontani. La produzione, le orchestrazioni e la cura dei testi segnano un punto di svolta nella canzone d'autore degli anni Ottanta.",
+          "Il GrandTour celebra i quarant'anni del disco riproponendolo per intero dal vivo, nell'ordine originale, con la formazione più ampia mai messa insieme da Baglioni: venti tra musicisti e coristi sul palco. Dopo l'album integrale, lo show prosegue con i grandi classici della carriera, da Questo piccolo grande amore a Strada facendo, fino agli anni più recenti. La tappa di Spoleto è una delle date estive in cornici monumentali italiane.",
+        ],
+        bullets: [
+          "Album celebrato: La Vita è Adesso (1985), 40° anniversario",
+          "Formazione: 20 musicisti e coristi sul palco",
+          "Struttura: album integrale + raccolta dei più grandi successi",
+          "Classifiche storiche: 27 settimane al primo posto in Italia nel 1985",
+        ],
+      },
+      location: {
+        title: "Piazza Duomo: il Rinascimento incontra il pop",
+        venueType: "Piazza monumentale all'aperto nel centro storico",
+        experience:
+          "Pochi luoghi in Italia restituiscono lo stesso effetto di Piazza Duomo a Spoleto al calare del sole: la facciata romanica della Cattedrale di Santa Maria Assunta con il mosaico di Solsterno (1207) si accende delle luci di scena, le scalinate diventano gradinate naturali e la pietra rosata di Spoleto amplifica il suono dell'orchestra.",
+        suitability:
+          "L'acustica della piazza, racchiusa tra il portico rinascimentale del 1491 e il palazzo della Curia, esalta gli arrangiamenti orchestrali del GrandTour: cori, archi e fiati di Baglioni trovano qui una cassa armonica naturale che gli stadi non possono offrire.",
+        atmosphere:
+          "Pubblico seduto, tramonto sui Monti Martani, palcoscenico ai piedi della Cattedrale: l'atmosfera è quella di un grande concerto-evento più che di una data di tour, con la musica che rimbalza tra le pietre del XIII secolo.",
+        paragraphs: [
+          "Piazza Duomo a Spoleto è il salotto monumentale della città, costruito su una scarpata che scende dal Colle Sant'Elia. La facciata della Cattedrale di Santa Maria Assunta domina l'intera piazza con il suo mosaico bizantineggiante del 1207 firmato dal maestro Solsterno: nei concerti serali, il riverbero della pietra calcarea bianca e rosa contribuisce a un suono caldo e avvolgente.",
+          "Il portico rinascimentale aggiunto nel 1491 da Antonio Barocci chiude il lato superiore della piazza e crea uno spazio scenico unico. Le scalinate laterali, che collegano via dell'Arringo a via Saffi, vengono utilizzate come gradinate aggiuntive per gli spettatori. La piazza è regolarmente sede del Festival dei Due Mondi: Baglioni si inserisce in questa tradizione di grandi appuntamenti culturali sotto la cupola del Duomo.",
+        ],
+        bullets: [
+          "Capienza concerto: alcune migliaia di posti tra platea e gradinate",
+          "Visibilità: ottima da quasi ogni punto grazie alla pendenza naturale",
+          "Acustica: piazza chiusa su tre lati, riverbero contenuto e voce in primo piano",
+          "Servizi: bagni pubblici e punto info nelle vicinanze (via dell'Arringo)",
+          "Accesso: pedonale dal centro storico, chiusura totale al traffico",
+        ],
+        locationImage:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Duomo_Spoleto_11_05_2018_02.jpg/1280px-Duomo_Spoleto_11_05_2018_02.jpg",
+        nearbyParking: [
+          {
+            name: "Parcheggio Posterna",
+            distanceOnFoot: "8 min a piedi (con tappeti mobili attivi fino a tarda sera)",
+            type: "a pagamento",
+            notes:
+              "452 posti, collegato al centro tramite percorsi meccanizzati; in estate i tappeti mobili sono attivi fino all'1:00 nei prefestivi",
+            mapsUrl: "https://www.google.com/maps/search/Parcheggio+Posterna+Spoleto",
+          },
+          {
+            name: "Parcheggio Spoletosfera",
+            distanceOnFoot: "12 min a piedi (con scale mobili)",
+            type: "a pagamento",
+            notes: "Parcheggio collegato al centro tramite scale mobili dedicate",
+            mapsUrl: "https://www.google.com/maps/search/Parcheggio+Spoletosfera+Spoleto",
+          },
+          {
+            name: "Parcheggio Ponzianina",
+            distanceOnFoot: "15 min a piedi (con percorso meccanizzato)",
+            type: "a pagamento",
+            notes: "Adiacente a uno dei tre percorsi meccanizzati del centro storico",
+            mapsUrl: "https://www.google.com/maps/search/Parcheggio+Ponzianina+Spoleto",
+          },
+          {
+            name: "Via Nursina (area di sosta)",
+            distanceOnFoot: "10 min a piedi",
+            type: "gratuito",
+            notes: "Solo 20 posti, conviene arrivare con ampio anticipo",
+            mapsUrl: "https://www.google.com/maps/search/Via+Nursina+Spoleto",
+          },
+        ],
+        nearbyHotels: [
+          {
+            name: "Hotel Clitunno",
+            distanceOnFoot: "5 min a piedi dal Duomo",
+            priceRange: "€€",
+            bookingUrl: "https://www.hotelclitunno.com/it/",
+          },
+          {
+            name: "Hotel dei Duchi",
+            distanceOnFoot: "7 min a piedi",
+            priceRange: "€€",
+            bookingUrl: "https://www.hoteldeiduchi.com/",
+          },
+          {
+            name: "Hotel Charleston",
+            distanceOnFoot: "6 min a piedi",
+            priceRange: "€€",
+            bookingUrl: "https://www.hotelcharleston.it/",
+          },
+          {
+            name: "Albergo Ristorante Il Panciolle",
+            distanceOnFoot: "3 min a piedi (a pochi passi da Piazza Duomo)",
+            priceRange: "€€",
+            bookingUrl: "https://www.ilpanciolle.it/",
+          },
+        ],
+      },
+      liveExperience: {
+        title: "Cosa aspettarsi dal vivo",
+        paragraphs: [
+          "Il GrandTour non è un greatest hits tradizionale: la prima parte del concerto è dedicata interamente a La Vita è Adesso eseguito nell'ordine originale dell'album. Significa rivivere la sequenza di Tamburi lontani, Strada facendo (parte II), Notte di Note, fino al finale di La vita è adesso (Reprise) come fu pensato in studio nel 1985.",
+          "Nella seconda parte arrivano i brani che hanno reso Baglioni una delle voci più riconoscibili del pop italiano: Questo piccolo grande amore, Avrai, E tu, Mille giorni di te e di me. L'orchestrazione dal vivo con 20 elementi cambia profondamente la resa rispetto alle versioni in studio: archi più presenti, cori in primo piano, arrangiamenti più estesi.",
+        ],
+        bullets: [
+          "Durata stimata: oltre 2 ore di concerto",
+          "Formazione: orchestra dal vivo con 20 musicisti e coristi",
+          "Struttura: album integrale + grandi successi",
+          "Pubblico: posti a sedere, ideale per famiglie e ascolto attento",
+        ],
+      },
+      practicalInfo: {
+        title: "Informazioni pratiche",
+        paragraphs: [
+          "Il concerto inizia alle 21:00 di mercoledì 15 luglio 2026. Spoleto va raggiunta con largo anticipo: il centro storico è chiuso al traffico e i parcheggi più comodi richiedono almeno 10-15 minuti di percorso meccanizzato per arrivare in piazza. Consigliamo di trovarsi in zona già dalle 19:30 per evitare code agli ingressi e cercare con calma il proprio settore.",
+          "In caso di pioggia il concerto si svolge regolarmente, salvo eventi meteo estremi: la piazza non ha copertura, quindi prevedi un kway leggero. Sono ammessi piccoli zaini e borse, vietate bottiglie di vetro e ombrelli rigidi.",
+        ],
+        bullets: [
+          "Apertura porte: orario non ancora comunicato, indicativamente 19:30",
+          "Inizio concerto: ore 21:00",
+          "Trasporti: stazione FS Spoleto + bus navetta per il centro",
+          "ZTL attiva: l'auto va lasciata nei parcheggi indicati",
+          "Biglietto: PDF stampato o su smartphone, documento d'identità a portata di mano",
+        ],
+      },
+      internalLinks: [
+        {
+          label: "Francesco Renga al Teatro Nuovo di Spoleto 2026",
+          href: "/francesco-renga-spoleto-2026-biglietti-teatro-nuovo",
+          description:
+            "Un'altra grande data spoletina del 2026: orari, settori e consigli pratici per il Teatro Nuovo Gian Carlo Menotti.",
+        },
+        {
+          label: "Concerti in Umbria nel 2026: la guida completa",
+          href: "/pooh-stadio-checcarini-marsciano-2026",
+          description:
+            "Le date più attese in regione: tour, festival e arene per chi pianifica il proprio calendario live.",
+        },
+        {
+          label: "Come usare Carta Cultura per i concerti",
+          href: "/carta-cultura-concerti-come-usarla",
+          description:
+            "Verifica se il tuo bonus può coprire l'acquisto del biglietto e segui i passaggi corretti per non sbagliare il buono.",
+        },
+        {
+          label: "Salmo a Perugia 2026 - Umbria che Spacca",
+          href: "/salmo-perugia-2026-umbria-che-spacca-biglietti",
+          description:
+            "Un'altra grande data umbra del 2026, in chiave urban: lineup, biglietti e info pratiche.",
+        },
+      ],
+      sections: [
+        {
+          heading: "Spoleto come tappa-evento del GrandTour",
+          paragraphs: [
+            "Le date estive del GrandTour sono pensate come eventi singoli, non come repliche di un tour standard. Spoleto, insieme alle altre piazze monumentali italiane scelte da Baglioni, fa parte di un calendario ridotto a poche città: ogni serata ha una sua scenografia adattata al luogo. Significa luci diverse, suono calibrato sulle pareti specifiche della piazza, scaletta calibrata sul tipo di pubblico.",
+            "Per chi segue Baglioni da decenni, la versione spoletina è particolarmente attesa: la piazza, stretta intorno al pubblico e dominata dalla facciata del Duomo, restituisce una resa scenica molto più intima rispetto a uno stadio o a un palasport.",
+          ],
+        },
+        {
+          heading: "Cosa vedere a Spoleto prima del concerto",
+          paragraphs: [
+            "Se arrivi nel pomeriggio, hai il tempo per una passeggiata che parte da Piazza Libertà (vicino al Posterna), sale fino al Teatro Romano e prosegue per via Brignone fino a Piazza del Mercato. Da lì si scende a Piazza Duomo lungo via dell'Arringo: è il modo più scenografico per arrivare alla cattedrale, che si rivela tutta in una volta dalla scalinata superiore.",
+            "Per cena, l'area intorno a Piazza del Mercato e via Saffi offre trattorie storiche con piatti spoletini: strangozzi al tartufo, agnello alla cacciatora, crostini alla norcina. Conviene prenotare con anticipo: nei giorni di concerto la zona si riempie rapidamente.",
+          ],
+          bullets: [
+            "Cattedrale di Santa Maria Assunta: visita libera, mosaico di Solsterno",
+            "Teatro Romano e museo archeologico: 5 min a piedi dal Duomo",
+            "Ponte delle Torri: panorama sulla valle, 15 min dalla piazza",
+            "Festival dei Due Mondi: Spoleto è città-festival da oltre 60 anni",
+          ],
+        },
+        {
+          heading: "Treno o auto: come arrivare",
+          paragraphs: [
+            "La stazione FS di Spoleto è sulla linea Roma-Ancona ed è servita da treni regionali e Frecce. Dalla stazione al centro storico ci sono circa 1,5 km in piano: navetta cittadina o taxi consigliati nelle ore serali. Per chi arriva da Roma, il viaggio in treno è di circa 1h20 con il regionale veloce.",
+            "In auto, da Roma si esce a Orte e si prosegue sulla SS3 Flaminia (circa 1h30 totali). Da Perugia si scende lungo la E45 e si prende la SS3 in direzione Spoleto (circa 50 min). Tutti i parcheggi del centro sono segnalati con cartelli appena entri in città: scegli Posterna se vuoi il percorso più diretto e meccanizzato.",
+          ],
+        },
+      ],
+      faq: [
+        {
+          question: "A che ora inizia il concerto di Claudio Baglioni a Spoleto?",
+          answer:
+            "Il concerto è programmato per mercoledì 15 luglio 2026 alle ore 21:00 in Piazza Duomo. L'orario di apertura porte non è ancora stato comunicato ufficialmente: indicativamente, conviene arrivare in piazza entro le 19:30-20:00.",
+        },
+        {
+          question: "Quanto costano i biglietti?",
+          answer:
+            "I biglietti partono da €110,00. Le tariffe variano in base al settore e alla posizione rispetto al palco; trovi tutti i prezzi e la disponibilità aggiornata direttamente sulla scheda evento di Ticket Italia.",
+        },
+        {
+          question: "Dove parcheggiare per il concerto in Piazza Duomo a Spoleto?",
+          answer:
+            "Il parcheggio più comodo è il Posterna (452 posti, collegato al centro con tappeti mobili). In alternativa Spoletosfera e Ponzianina, entrambi serviti da percorsi meccanizzati. L'area gratuita di via Nursina ha solo 20 posti e si esaurisce rapidamente.",
+        },
+        {
+          question: "Il biglietto è elettronico?",
+          answer:
+            "Sì, il biglietto viene inviato in formato elettronico (PDF) all'indirizzo email indicato in fase d'acquisto. Puoi mostrarlo direttamente da smartphone o stamparlo: porta sempre con te un documento d'identità.",
+        },
+        {
+          question: "Cosa succede in caso di pioggia?",
+          answer:
+            "Il concerto si svolge regolarmente in caso di pioggia leggera o moderata, essendo un evento all'aperto senza copertura. Solo in caso di condizioni meteo estreme l'organizzazione può comunicare rinvii o variazioni: controlla la scheda evento di Ticket Italia nelle ore precedenti.",
+        },
+      ],
+      cta: {
+        title: "Acquista i biglietti per Claudio Baglioni a Spoleto",
+        text:
+          "La data di Spoleto del GrandTour è una serata-evento con capienza limitata. Acquista subito su Ticket Italia per assicurarti il posto in Piazza Duomo il 15 luglio 2026.",
+        label: "Acquista su Ticket Italia",
+        href: "https://ticketitalia.com/claudio-baglioni-la-vita-e-adesso-grandtour-piazza-duomo-spoleto-15-luglio-2026",
+      },
+    },
+  },
+  {
+    slug: "angelina-mango-piazzale-rocca-maggiore-assisi-5-agosto-2026",
+    title: "Angelina Mango ad Assisi 5 agosto 2026: Nina canta nei Teatri d'Estate al Piazzale Rocca Maggiore",
+    excerpt:
+      "Angelina Mango porta il tour Nina canta nei Teatri d'Estate al Piazzale Rocca Maggiore di Assisi il 5 agosto 2026: posto unico €45, biglietti su Ticket Italia.",
+    category: "Concerti",
+    categorySlug: "concerti",
+    subcategory: "Pop",
+    subcategorySlug: "pop",
+    type: "evento",
+    status: "published",
+    publishedAt: "2026-05-04",
+    funnelStage: "BOFU",
+    articleType: "evento",
+    tags: ["Angelina Mango", "Concerti Assisi", "Nina", "Piazzale Rocca Maggiore", "Teatri d'Estate", "Concerti Umbria 2026"],
+    date: "2026-05-04",
+    readTime: "8 min",
+    author: "Redazione Ticket Italia",
+    image: "https://ticketitalia.com/image/cache/wp/gj/Mea%20nuove/Amangonuova-1500x1500.webp",
+    body: {
+      intro:
+        "Angelina Mango fa tappa ad Assisi mercoledì 5 agosto 2026 con Nina canta nei Teatri d'Estate, il tour che porta l'album Nina nelle cornici monumentali italiane. Il palco è al Piazzale Rocca Maggiore, ai piedi della fortezza che domina la città. Posto unico a €45,00 (€51,75 con diritti di prevendita): biglietti elettronici disponibili su Ticket Italia.",
+      quickInfo: {
+        title: "Informazioni rapide",
+        text:
+          "Una serata estiva sotto le stelle, con Angelina Mango che riprende dal vivo i brani di Nina e i pezzi che l'hanno consacrata dopo Sanremo 2024.",
+        bullets: [
+          "Artista: Angelina Mango",
+          "Location: Piazzale Rocca Maggiore, Assisi (PG)",
+          "Data: mercoledì 5 agosto 2026, ore 21:00",
+          "Prezzo: posto unico €45,00 (€51,75 con diritti)",
+          "Atmosfera: concerto all'aperto in cornice medievale, tour estivo",
+        ],
+      },
+      tickets: {
+        title: "Biglietti e prezzi",
+        text:
+          "Per la data di Assisi è prevista un'unica fascia di prezzo, posto unico in piedi. Il biglietto base è €45,00; con i diritti di prevendita di €6,75 il totale arriva a €51,75 a biglietto, più eventuali commissioni di metodo di pagamento. Il formato è elettronico: PDF inviato via email subito dopo l'acquisto.",
+        bullets: [
+          "Posto unico - Intero: €45,00",
+          "Diritti di prevendita: €6,75",
+          "Totale a biglietto: €51,75",
+          "Formato: biglietto elettronico (PDF via email)",
+          "Promotore: AUCMA",
+        ],
+      },
+      artistContext: {
+        title: "Angelina Mango e il tour Nina",
+        paragraphs: [
+          "Angelina Mango si è imposta sulla scena italiana vincendo Sanremo 2024 con La noia, brano che è poi diventato il singolo italiano più ascoltato dell'anno. Subito dopo è arrivato Pokè melodrama, mixtape che ha confermato la sua direzione tra cantautorato urban e radici cantautorali ereditate dal padre Pino Mango.",
+          "Nina è il primo album in studio dell'artista, un disco che ha definito una sua identità più matura e personale. Il tour Nina canta nei Teatri d'Estate è la versione estiva del progetto, pensata per i palchi all'aperto di anfiteatri e piazze storiche italiane: una scaletta che alterna i brani dell'album, i singoli più recenti e i pezzi che l'hanno fatta conoscere al grande pubblico.",
+        ],
+        bullets: [
+          "Vittoria Sanremo: 2024 con La noia",
+          "Album di riferimento: Nina (primo album in studio)",
+          "Tour: Nina canta nei Teatri d'Estate, edizione estiva 2026",
+          "Genere: cantautorato pop con contaminazioni urban e latine",
+        ],
+      },
+      location: {
+        title: "Piazzale Rocca Maggiore: il concerto sotto la fortezza",
+        venueType: "Piazzale all'aperto in cornice medievale, ai piedi della Rocca",
+        experience:
+          "Si arriva al Piazzale Rocca Maggiore salendo per le scalinate del centro storico di Assisi: il palco è schiacciato tra le mura medievali e la fortezza imperiale, con vista aperta sulla valle umbra che si stende fino a Perugia. La temperatura serale di agosto, a 505 metri di altitudine, rende l'esperienza nettamente più fresca rispetto alla pianura.",
+        suitability:
+          "La posizione, in piano e relativamente compatta, si adatta bene al formato del tour estivo di Angelina Mango: pubblico vicino al palco, audio gestibile, niente eco eccessiva grazie alla mancanza di pareti riflettenti su tutti i lati.",
+        atmosphere:
+          "Tramonto sul Subasio, mura del 1316 alle spalle del pubblico, fortezza illuminata sopra il palco: è una delle cornici più scenografiche del calendario concerti estivo umbro.",
+        paragraphs: [
+          "La Rocca Maggiore di Assisi domina la città dal punto più alto del colle, a 505 metri di altezza. La fortezza attuale è frutto della ricostruzione del cardinale Albornoz nel 1367, su una struttura più antica distrutta durante la rivolta cittadina del 1198. Il piazzale antistante è oggi uno spazio aperto, raggiungibile a piedi attraverso le scalinate che salgono da via San Rufino o da Porta Perlici.",
+          "Il piazzale viene utilizzato come spazio concerti durante la stagione estiva: la conformazione naturale del terreno e la presenza delle mura sui due lati creano una sorta di anfiteatro a cielo aperto. Il punto più suggestivo dello show, secondo chi ci è già stato, è il momento in cui la fortezza viene illuminata alle spalle del palco: l'effetto scenografico è quello di un teatro medievale.",
+        ],
+        bullets: [
+          "Capienza: posto unico in piedi, alcune migliaia di posti",
+          "Visibilità: ottima dal centro del piazzale, leggermente compromessa sui lati",
+          "Servizi: punti ristoro temporanei e bagni chimici allestiti per l'evento",
+          "Accesso: solo pedonale, dal centro storico tramite scalinate",
+          "Altitudine: 505 m s.l.m., temperatura serale più fresca della pianura",
+        ],
+        locationImage:
+          "https://ticketitalia.com/image/cache/wp/gj/Luoghi%20banner/RoccamaggiorediAssisi1-1400x300.webp",
+        nearbyParking: [
+          {
+            name: "Parcheggio Porta Nuova",
+            distanceOnFoot: "20 min a piedi (con percorso in salita verso la Rocca)",
+            type: "a pagamento",
+            notes:
+              "Posizione strategica, raggiungibile dal centro in circa 5 minuti a piedi; per la Rocca Maggiore prevedere ulteriore tempo di salita",
+            mapsUrl: "https://www.google.com/maps/search/Parcheggio+Porta+Nuova+Assisi",
+          },
+          {
+            name: "Parcheggio Porta Mojano (Saba)",
+            distanceOnFoot: "25 min a piedi",
+            type: "a pagamento",
+            notes:
+              "Sotterraneo su tre livelli, ideale per visitare il centro; bar e bagni pubblici disponibili",
+            mapsUrl: "https://www.google.com/maps/search/Parcheggio+Porta+Mojano+Assisi",
+          },
+          {
+            name: "Parcheggio Porta San Giacomo",
+            distanceOnFoot: "15 min a piedi (con salita)",
+            type: "gratuito",
+            notes:
+              "L'unico parcheggio gratuito di Assisi, posizionato a metà del fianco collinare della città",
+            mapsUrl: "https://www.google.com/maps/search/Parcheggio+Porta+San+Giacomo+Assisi",
+          },
+          {
+            name: "Piazza Matteotti",
+            distanceOnFoot: "10 min a piedi",
+            type: "a pagamento",
+            notes:
+              "Il parcheggio più vicino alla Rocca Maggiore; nei giorni di evento può chiudere prima del concerto, conviene arrivare presto",
+            mapsUrl: "https://www.google.com/maps/search/Parcheggio+Piazza+Matteotti+Assisi",
+          },
+        ],
+        nearbyHotels: [
+          {
+            name: "Hotel La Rocca",
+            distanceOnFoot: "5 min a piedi dalla Rocca Maggiore",
+            priceRange: "€",
+            bookingUrl: "https://www.hotelarocca.it/",
+          },
+          {
+            name: "Hotel Il Duomo",
+            distanceOnFoot: "8 min a piedi",
+            priceRange: "€€",
+            bookingUrl: "https://hotelilduomo.it/",
+          },
+          {
+            name: "Giotto Hotel & Spa",
+            distanceOnFoot: "20 min a piedi (in centro storico)",
+            priceRange: "€€€",
+            bookingUrl: "https://www.hotelgiottoassisi.it/",
+          },
+        ],
+      },
+      liveExperience: {
+        title: "Cosa aspettarsi dal vivo",
+        paragraphs: [
+          "Il tour estivo di Angelina Mango è pensato per i palchi all'aperto: scaletta più dinamica rispetto alla versione invernale teatrale, attenzione al ritmo per tenere il pubblico in piedi per oltre 90 minuti. Si alternano i brani di Nina (Melodrama, Per due come noi, Fila indiana) ai singoli più recenti e ai pezzi che l'hanno consacrata, come La noia e Che t'o dico a fa'.",
+          "La band è quella consolidata del progetto Nina: chitarre, basso, batteria, tastiere e cori. La voce di Angelina è il centro dello show: il tour insiste molto sulla resa live degli arrangiamenti, con sezioni acustiche e momenti più ballabili che si alternano nell'arco della serata.",
+        ],
+        bullets: [
+          "Durata stimata: circa 90-100 minuti di concerto",
+          "Formazione: band live + cori",
+          "Scaletta: brani da Nina + grandi singoli + La noia",
+          "Pubblico: posto unico in piedi, energia da concerto estivo",
+        ],
+      },
+      practicalInfo: {
+        title: "Informazioni pratiche",
+        paragraphs: [
+          "Lo show inizia alle 21:00 di mercoledì 5 agosto 2026. Assisi va raggiunta con largo anticipo: il centro storico è in salita e il Piazzale Rocca Maggiore si trova nella parte alta della città, raggiungibile solo a piedi tramite scalinate. Calcola almeno 20-30 minuti dal parcheggio scelto al piazzale, in base alla posizione.",
+          "L'estate ad Assisi è fresca la sera grazie all'altitudine, ma di giorno fa caldo: porta una giacca leggera o una felpa per il dopo-concerto. Scarpe comode sono indispensabili per le scalinate. Sono ammessi piccoli zaini, vietate bottiglie di vetro.",
+        ],
+        bullets: [
+          "Apertura porte: orario non ancora comunicato",
+          "Inizio concerto: ore 21:00",
+          "Trasporti: stazione FS Assisi-Santa Maria degli Angeli + bus per il centro",
+          "Salita finale: solo pedonale, prevedere scarpe comode",
+          "Biglietto: PDF su smartphone o stampato, documento d'identità a portata di mano",
+        ],
+      },
+      internalLinks: [
+        {
+          label: "Pooh allo Stadio Checcarini di Marsciano 2026",
+          href: "/pooh-stadio-checcarini-marsciano-2026",
+          description:
+            "Un'altra grande data umbra dell'estate 2026: settori, prezzi e parcheggi consigliati a Marsciano.",
+        },
+        {
+          label: "Salmo a Perugia per Umbria che Spacca",
+          href: "/salmo-perugia-2026-umbria-che-spacca-biglietti",
+          description:
+            "L'altro grande appuntamento urban dell'estate umbra: lineup, biglietti e info pratiche.",
+        },
+        {
+          label: "Come usare Carta Cultura per i concerti",
+          href: "/carta-cultura-concerti-come-usarla",
+          description:
+            "Verifica se puoi usare il bonus per il tuo biglietto e segui i passaggi corretti per generare il buono.",
+        },
+        {
+          label: "Nicolò Filippucci all'Arena 54 di Corciano",
+          href: "/nicolo-filippucci-arena-54-corciano-2026-biglietti",
+          description:
+            "Un altro nome forte della scena italiana che fa tappa in Umbria nel 2026: orari e prezzi.",
+        },
+      ],
+      sections: [
+        {
+          heading: "Assisi tappa simbolica del tour Nina",
+          paragraphs: [
+            "Le date estive di Nina canta nei Teatri d'Estate sono pensate come singoli eventi-cornice: ogni piazza italiana scelta ha una sua identità monumentale, e il pubblico paga per vivere la combinazione tra concerto e luogo. Assisi, con la Rocca Maggiore alle spalle del palco, è una delle cornici più richieste dal team del tour.",
+            "Per i fan di Angelina, la versione estiva del concerto è quella più adatta a chi vuole vivere lo show in piedi e con un'energia diversa rispetto ai teatri al chiuso: meno sezioni acustiche, più momenti corali e ballabili.",
+          ],
+        },
+        {
+          heading: "Cosa vedere ad Assisi prima del concerto",
+          paragraphs: [
+            "Se arrivi nel pomeriggio, la passeggiata classica parte dalla Basilica di San Francesco (parte bassa della città), risale lungo via San Francesco, attraversa Piazza del Comune e prosegue per via San Rufino fino alla Cattedrale di San Rufino. Da lì la salita finale verso la Rocca Maggiore prende circa 15 minuti a piedi.",
+            "Per cena, l'area intorno a Piazza del Comune e via Portica offre osterie con specialità umbre: torta al testo, strangozzi al tartufo, agnello alla brace. Conviene prenotare in anticipo, soprattutto nei giorni di concerto quando il centro si riempie rapidamente.",
+          ],
+          bullets: [
+            "Basilica di San Francesco: parte bassa, ingresso libero",
+            "Cattedrale di San Rufino: 10 min a piedi dalla Rocca",
+            "Piazza del Comune: cuore del centro, con il Tempio di Minerva",
+            "Rocca Minore: la fortezza gemella, panorama opposto",
+          ],
+        },
+        {
+          heading: "Treno o auto: come arrivare ad Assisi",
+          paragraphs: [
+            "La stazione di Assisi-Santa Maria degli Angeli si trova a circa 5 km dal centro storico ed è collegata da bus urbani frequenti (linea C). In treno da Roma ci vogliono circa 2h con il regionale + cambio a Foligno; da Firenze circa 2h30. Da Perugia il treno regionale impiega 25 minuti.",
+            "In auto, da Roma si esce a Orte e si prosegue sulla E45 in direzione Cesena fino all'uscita Assisi (circa 2h totali). Da Firenze si percorre la E45 in direzione opposta. Tutti i parcheggi del centro sono segnalati: il Porta Nuova è il più funzionale per la maggior parte dei visitatori, mentre Piazza Matteotti è il più vicino alla Rocca Maggiore.",
+          ],
+        },
+      ],
+      faq: [
+        {
+          question: "A che ora inizia il concerto di Angelina Mango ad Assisi?",
+          answer:
+            "Il concerto è programmato per mercoledì 5 agosto 2026 alle ore 21:00 al Piazzale Rocca Maggiore. L'orario di apertura porte non è ancora stato comunicato: indicativamente conviene salire al piazzale entro le 19:30-20:00.",
+        },
+        {
+          question: "Quanto costa il biglietto?",
+          answer:
+            "Il prezzo è di €45,00 per il posto unico, a cui si aggiungono €6,75 di diritti di prevendita per un totale di €51,75 a biglietto. Eventuali commissioni di pagamento dipendono dal metodo scelto al checkout su Ticket Italia.",
+        },
+        {
+          question: "Dove parcheggiare per il concerto al Piazzale Rocca Maggiore?",
+          answer:
+            "Il parcheggio più vicino è Piazza Matteotti, a circa 10 minuti di salita a piedi. In alternativa Porta Nuova (più funzionale ma a 20 min a piedi) e Porta Mojano (sotterraneo, 25 min). Porta San Giacomo è l'unico gratuito, a 15 min in salita.",
+        },
+        {
+          question: "Il biglietto è elettronico o cartaceo?",
+          answer:
+            "Il biglietto è elettronico: viene inviato in formato PDF all'indirizzo email indicato in fase d'acquisto. Puoi mostrarlo da smartphone o stamparlo; porta sempre con te un documento d'identità.",
+        },
+        {
+          question: "Cosa succede in caso di pioggia?",
+          answer:
+            "Il concerto si svolge regolarmente in caso di pioggia leggera, essendo un evento all'aperto senza copertura. Solo in caso di condizioni meteo estreme l'organizzazione AUCMA può comunicare rinvii o variazioni: controlla la scheda evento di Ticket Italia nelle ore precedenti.",
+        },
+      ],
+      cta: {
+        title: "Acquista i biglietti per Angelina Mango ad Assisi",
+        text:
+          "La data di Assisi del tour Nina canta nei Teatri d'Estate è una delle più richieste dell'estate umbra. Acquista subito su Ticket Italia per assicurarti il posto al Piazzale Rocca Maggiore il 5 agosto 2026.",
+        label: "Acquista su Ticket Italia",
+        href: "https://ticketitalia.com/angelina-mango-piazzale-rocca-maggiore-assisi-5-agosto-2026",
+      },
+    },
+  },
 ];
 
 export const publishedArticles = articles
