@@ -397,16 +397,46 @@ function extractArticleObject(fileContent: string): string {
 // Blocklist artisti/eventi già pubblicati (agents/blocklist.json)
 // ---------------------------------------------------------------------------
 
-const BLOCKLIST_PATH = path.join(__dirname, "blocklist.json");
+const BLOCKLIST_REMOTE_PATH = "agents/blocklist.json";
+const BLOCKLIST_LOCAL_PATH = path.join(__dirname, "blocklist.json");
 
-function loadBlocklist(): string[] {
+function parseBlocklist(raw: string): string[] {
+  const parsed = JSON.parse(raw);
+  if (!Array.isArray(parsed)) return [];
+  return parsed.map((s) => String(s).toLowerCase().trim()).filter(Boolean);
+}
+
+// Source of truth della blocklist = file su GitHub. Su Railway il filesystem
+// è effimero, quindi leggere dal repo remoto garantisce persistenza tra deploy.
+// In caso di errore di rete fallback al file locale (dev / primo bootstrap).
+async function loadBlocklist(): Promise<string[]> {
+  const githubRepo = process.env.GITHUB_REPO;
+  const githubToken = process.env.GITHUB_TOKEN;
+  const githubBranch = process.env.GITHUB_BRANCH ?? "main";
+
+  if (githubRepo && githubToken) {
+    try {
+      const { content } = await githubGetFile(
+        githubRepo,
+        githubToken,
+        BLOCKLIST_REMOTE_PATH,
+        githubBranch
+      );
+      const list = parseBlocklist(content);
+      console.log(`[blocklist] Caricata da GitHub: ${list.length} voci`);
+      return list;
+    } catch (err) {
+      console.warn("[blocklist] Lettura da GitHub fallita, fallback locale:", err);
+    }
+  }
+
   try {
-    const raw = fs.readFileSync(BLOCKLIST_PATH, "utf-8");
-    const parsed = JSON.parse(raw);
-    if (!Array.isArray(parsed)) return [];
-    return parsed.map((s) => String(s).toLowerCase().trim()).filter(Boolean);
+    const raw = fs.readFileSync(BLOCKLIST_LOCAL_PATH, "utf-8");
+    const list = parseBlocklist(raw);
+    console.log(`[blocklist] Caricata da filesystem locale: ${list.length} voci`);
+    return list;
   } catch (err) {
-    console.warn(`[blocklist] Impossibile leggere ${BLOCKLIST_PATH}:`, err);
+    console.warn(`[blocklist] Impossibile leggere ${BLOCKLIST_LOCAL_PATH}:`, err);
     return [];
   }
 }
@@ -426,7 +456,7 @@ async function appendArtistToBlocklist(artist: string): Promise<void> {
   const { sha, content } = await githubGetFile(
     githubRepo,
     githubToken,
-    "agents/blocklist.json",
+    BLOCKLIST_REMOTE_PATH,
     githubBranch
   );
 
@@ -449,7 +479,7 @@ async function appendArtistToBlocklist(artist: string): Promise<void> {
   await githubPutFile(
     githubRepo,
     githubToken,
-    "agents/blocklist.json",
+    BLOCKLIST_REMOTE_PATH,
     newContent,
     sha,
     githubBranch,
@@ -612,10 +642,10 @@ export async function runAutoPublishPipeline(): Promise<void> {
 
     const opportunitiesArr0 = opportunities as Record<string, unknown>[];
 
-    // STEP 1: filtro blocklist (agents/blocklist.json)
+    // STEP 1: filtro blocklist (agents/blocklist.json letto da GitHub)
     // Scarta opportunità il cui titolo o artista contiene una voce della blocklist
-    const blocklist = loadBlocklist();
-    console.log(`[blocklist] Caricate ${blocklist.length} voci:`, blocklist);
+    const blocklist = await loadBlocklist();
+    console.log(`[blocklist] Voci attive (${blocklist.length}):`, blocklist);
 
     const opportunitiesArr = opportunitiesArr0.filter((o) => {
       const title = ((o.title as string | undefined) ?? "").toLowerCase();
