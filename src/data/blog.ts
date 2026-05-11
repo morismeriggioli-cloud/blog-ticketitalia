@@ -2217,7 +2217,7 @@ export const articles: Article[] = [
     date: "2026-05-11",
     readTime: "6 min",
     author: "Redazione Ticket Italia",
-    image: "/images/maurizio-battista-barton-park-perugia-28-giugno-2026-hero.jpg",
+    image: "https://ticketitalia.com/image/cache/wp/gj/Mea%20nuove/Battista%202026-1500x1500.webp",
     body: {
       intro:
         "Maurizio Battista arriva al Barton Park di Perugia il 28 giugno 2026 alle ore 21:00 con il Tour 2025/26: una serata di stand-up sotto le stelle, nell'arena del parco urbano di Pian di Massiano. Biglietti su Ticket Italia: Platea a €61,53 e Gradinata a €43,07, prezzi finali al checkout con commissioni amministrative incluse.",
@@ -2387,7 +2387,7 @@ export const articles: Article[] = [
     date: "2026-05-11",
     readTime: "5 min",
     author: "Redazione Ticket Italia",
-    image: "/images/valentina-persia-teatro-lyrick-santa-maria-degli-angeli-23-maggio-2026-hero.jpg",
+    image: "https://ticketitalia.com/image/cache/wp/gj/Mea%20nuove/valentina%20Persia-1500x1500.webp",
     body: {
       intro:
         "Valentina Persia porta lo spettacolo 'Nata con la Guepiere' al Teatro Lyrick di Santa Maria degli Angeli, frazione di Assisi, sabato 23 maggio 2026 alle 21:00. Tre settori, prezzi finali al checkout su Ticket Italia: Primo €49,22, Secondo €43,07, Terzo €36,92 (commissioni amministrative incluse).",
@@ -2550,7 +2550,7 @@ export const articles: Article[] = [
     date: "2026-05-11",
     readTime: "7 min",
     author: "Redazione Ticket Italia",
-    image: "/images/litfiba-giardini-del-frontone-perugia-27-giugno-2026-hero.jpg",
+    image: "https://ticketitalia.com/image/cache/wp/gj/UMBRIA%20CHE%20SPACCA/Litfiba_Manifesto-1500x1500.webp",
     body: {
       intro:
         "I Litfiba sono headliner di una delle serate più attese di Umbria Che Spacca 2026: sabato 27 giugno ai Giardini del Frontone di Perugia, apertura cancelli ore 19:30, salita sul palco prevista per le 21:00. Posto unico €61,53 finale al checkout (€50,00 base + €7,50 prevendita + €4,03 commissioni amministrative). La data è già SOLD OUT su Ticket Italia.",
@@ -2925,7 +2925,7 @@ export const articles: Article[] = [
     date: "2026-05-11",
     readTime: "7 min",
     author: "Redazione Ticket Italia",
-    image: "/images/elisir-d-amore-teatro-nuovo-spoleto-18-20-settembre-2026-hero.jpg",
+    image: "https://ticketitalia.com/image/cache/wp/gj/Lirico%20Sperimentale/Elisir-1500x1500.webp",
     body: {
       intro:
         "L'Elisir d'Amore di Gaetano Donizetti torna al Teatro Nuovo Gian Carlo Menotti di Spoleto con tre repliche nel weekend del 18-20 settembre 2026, nell'ambito dell'80ª Stagione Lirica Sperimentale A. Belli. Una delle opere comiche più amate del repertorio italiano, eseguita in una stagione storica fra le più longeve d'Italia. Biglietti a partire da €21,50 finali su Ticket Italia.",
