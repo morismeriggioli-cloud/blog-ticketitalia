@@ -27,6 +27,16 @@ Questa regola precede tutte le altre. Un dato non verificabile non si scrive: si
 - Prima di scrivere, **verifica che la pagina evento esista e sia attiva** sull'URL `ticketitalia_url` fornito dallo Scout. Se la pagina non esiste o è 404, non scrivere l'articolo.
 - Se un campo (es. prezzo, orario apertura porte) non è leggibile dalla pagina evento, **scrivi "non ancora comunicato" o ometti il dato** — mai inventare.
 
+### Prezzi biglietti — solo il prezzo finale al checkout
+
+- I prezzi pubblicati negli articoli devono essere **SEMPRE il prezzo finale che paga l'utente** sulla pagina ticketitalia.com, con diritti di prevendita E commissioni amministrative **già incluse**.
+- **Copia il prezzo esattamente come appare nella pagina di acquisto** (es. "€55,37", "€74,90") — niente arrotondamenti, niente "circa", niente €XX-€XX se i settori sono noti.
+- **Mai calcolare o stimare le commissioni** sommando base + prevendita: prendi il numero finale così come lo mostra ticketitalia.com. Le commissioni amministrative variano per evento e non sono prevedibili.
+- Se l'articolo cita più settori, riporta per ciascun settore il **prezzo finale** del settore (non il base) — accompagnato dal nome del settore: es. "Poltrona Laterale: €74,90 (prezzo finale al checkout)".
+- È accettabile mostrare anche la **composizione del prezzo** (base + prevendita + commissioni) come dettaglio aggiuntivo, ma il numero protagonista — quello in `excerpt`, `intro`, `quickInfo`, `tickets.text` e nelle FAQ "quanto costa" — è SEMPRE il finale.
+- Se la pagina ticketitalia.com mostra solo "a partire da €X" senza esplicitare il finale, scrivi "a partire da €X (vedi composizione finale al checkout)" — non inventare il finale e non sommare commissioni a mano.
+- Se l'evento è chiuso/sold out e i prezzi non sono più visibili, ometti la sezione prezzi invece di riportare dati cached o stimati.
+
 ### Link CTA verso ticketitalia.com
 
 - `cta.href` deve essere **l'URL esatto della pagina evento** (per BOFU) o della pagina categoria (per MOFU/TOFU) su ticketitalia.com — quello dato dallo Scout in `ticketitalia_url`, oppure verificato manualmente sul sito.

@@ -1234,7 +1234,7 @@ export const articles: Article[] = [
     slug: "pooh-stadio-checcarini-marsciano-2026",
     title: "Pooh a Marsciano 2026: biglietti e info Stadio Checcarini",
     excerpt:
-      "I Pooh il 10 luglio 2026 allo Stadio Alberto Checcarini di Marsciano (PG): data zero del tour estivo \"60 - La nostra storia\". Biglietti da €70, info venue, parcheggi e hotel.",
+      "I Pooh il 10 luglio 2026 allo Stadio Alberto Checcarini di Marsciano (PG): data zero del tour estivo \"60 - La nostra storia\". Biglietti da €74,90 (prezzo finale al checkout), info venue, parcheggi e hotel.",
     category: "Concerti",
     categorySlug: "concerti",
     subcategory: "Pop",
@@ -1250,7 +1250,7 @@ export const articles: Article[] = [
     image: "https://ticketitalia.com/image/cache/wp/ge/EliteAgency/pooh%202026-1500x1500.webp",
     body: {
       intro:
-        "I Pooh il 10 luglio 2026 allo Stadio Alberto Checcarini di Marsciano (PG): è la data zero del tour estivo \"60 - La nostra storia\", parte della rassegna Musica per i Borghi. Biglietti da €70,00 — alta domanda, acquisto anticipato consigliato.",
+        "I Pooh il 10 luglio 2026 allo Stadio Alberto Checcarini di Marsciano (PG): è la data zero del tour estivo \"60 - La nostra storia\", parte della rassegna Musica per i Borghi. Biglietti da €74,90 (prezzo finale al checkout, commissioni incluse) — alta domanda, acquisto anticipato consigliato.",
       quickInfo: {
         title: "Informazioni rapide",
         text:
@@ -1259,17 +1259,20 @@ export const articles: Article[] = [
           "Artista: Pooh — tour \"60 - La nostra storia - Estate\" (data zero)",
           "Location: Stadio Alberto Checcarini, Via Salita Biscarini, Marsciano (PG)",
           "Data: venerdì 10 luglio 2026",
-          "Biglietto: a partire da €70,00 (totale biglietto, prevendita inclusa)",
+          "Biglietto: a partire da €74,90 (prezzo finale al checkout, commissioni incluse)",
           "Rassegna: Musica per i Borghi",
         ],
       },
       tickets: {
         title: "Biglietti Pooh Marsciano — prezzi e come acquistare",
         text:
-          "I biglietti per il concerto dei Pooh allo Stadio Checcarini di Marsciano partono da €70,00 (totale biglietto, prevendita inclusa) e arrivano fino a €95,00 per i settori migliori. Le commissioni di servizio si aggiungono alla cassa. I biglietti sono in formato elettronico e vengono consegnati via email dopo l'acquisto.",
+          "I biglietti per il concerto dei Pooh allo Stadio Checcarini di Marsciano vanno da €74,90 a €101,65: tutti prezzi finali al checkout, con diritto di prevendita e commissioni di servizio già incluse. I biglietti sono in formato elettronico e vengono consegnati via email dopo l'acquisto.",
         bullets: [
-          "Prezzo totale biglietto: da €70,00 a €95,00 (prevendita inclusa)",
-          "Costo finale al checkout: da €74,90 a €101,65 (commissioni di servizio incluse)",
+          "Poltrona Laterale: €74,90 (prezzo finale al checkout)",
+          "Poltrona CAT 2: €85,60 (prezzo finale al checkout)",
+          "Poltrona CAT 1: €90,95 (prezzo finale al checkout)",
+          "Poltronissima: €96,30 (prezzo finale al checkout)",
+          "Poltronissima Gold: €101,65 (prezzo finale al checkout)",
           "Formato: biglietto elettronico PDF consegnato via email",
           "Accesso: QR code da smartphone all'ingresso",
           "Acquisto: su Ticket Italia tramite il link nel CTA in fondo all'articolo",
@@ -1428,7 +1431,7 @@ export const articles: Article[] = [
         {
           question: "Quanto costano i biglietti per i Pooh a Marsciano?",
           answer:
-            "I biglietti partono da €70,00 (totale biglietto, prevendita inclusa) e arrivano fino a €95,00 per i settori migliori. Le commissioni di servizio si aggiungono alla cassa: il costo finale va da €74,90 a €101,65. Per disponibilità aggiornata dei settori consulta la pagina evento su Ticket Italia.",
+            "Il prezzo finale al checkout su Ticket Italia va da €74,90 (Poltrona Laterale) a €101,65 (Poltronissima Gold), con tutte le commissioni di servizio e i diritti di prevendita già inclusi. Per disponibilità aggiornata dei settori consulta la pagina evento su Ticket Italia.",
         },
         {
           question: "Come acquisto i biglietti per i Pooh allo Stadio Checcarini?",
@@ -1945,7 +1948,7 @@ export const articles: Article[] = [
     slug: "angelina-mango-piazzale-rocca-maggiore-assisi-5-agosto-2026",
     title: "Angelina Mango ad Assisi 5 agosto 2026: Nina canta nei Teatri d'Estate al Piazzale Rocca Maggiore",
     excerpt:
-      "Angelina Mango porta il tour Nina canta nei Teatri d'Estate al Piazzale Rocca Maggiore di Assisi il 5 agosto 2026: posto unico €45, biglietti su Ticket Italia.",
+      "Angelina Mango porta il tour Nina canta nei Teatri d'Estate al Piazzale Rocca Maggiore di Assisi il 5 agosto 2026: posto unico €55,37 (prezzo finale al checkout), biglietti su Ticket Italia.",
     category: "Concerti",
     categorySlug: "concerti",
     subcategory: "Pop",
@@ -1962,7 +1965,7 @@ export const articles: Article[] = [
     image: "https://ticketitalia.com/image/cache/wp/gj/Mea%20nuove/Amangonuova-1500x1500.webp",
     body: {
       intro:
-        "Angelina Mango fa tappa ad Assisi mercoledì 5 agosto 2026 con Nina canta nei Teatri d'Estate, il tour che porta l'album Nina nelle cornici monumentali italiane. Il palco è al Piazzale Rocca Maggiore, ai piedi della fortezza che domina la città. Posto unico a €45,00 (€51,75 con diritti di prevendita): biglietti elettronici disponibili su Ticket Italia.",
+        "Angelina Mango fa tappa ad Assisi mercoledì 5 agosto 2026 con Nina canta nei Teatri d'Estate, il tour che porta l'album Nina nelle cornici monumentali italiane. Il palco è al Piazzale Rocca Maggiore, ai piedi della fortezza che domina la città. Posto unico €55,37 a biglietto (prezzo finale al checkout, commissioni incluse): biglietti elettronici disponibili su Ticket Italia.",
       quickInfo: {
         title: "Informazioni rapide",
         text:
@@ -1971,18 +1974,19 @@ export const articles: Article[] = [
           "Artista: Angelina Mango",
           "Location: Piazzale Rocca Maggiore, Assisi (PG)",
           "Data: mercoledì 5 agosto 2026, ore 21:00",
-          "Prezzo: posto unico €45,00 (€51,75 con diritti)",
+          "Prezzo: posto unico €55,37 finale al checkout (commissioni incluse)",
           "Atmosfera: concerto all'aperto in cornice medievale, tour estivo",
         ],
       },
       tickets: {
         title: "Biglietti e prezzi",
         text:
-          "Per la data di Assisi è prevista un'unica fascia di prezzo, posto unico in piedi. Il biglietto base è €45,00; con i diritti di prevendita di €6,75 il totale arriva a €51,75 a biglietto, più eventuali commissioni di metodo di pagamento. Il formato è elettronico: PDF inviato via email subito dopo l'acquisto.",
+          "Per la data di Assisi è prevista un'unica fascia di prezzo, posto unico in piedi. Il prezzo finale al checkout su Ticket Italia è €55,37 a biglietto: composto da €45,00 di tariffa base, €6,75 di diritti di prevendita e €3,62 di commissioni amministrative. Il formato è elettronico: PDF inviato via email subito dopo l'acquisto.",
         bullets: [
-          "Posto unico - Intero: €45,00",
+          "Posto unico - Intero (base): €45,00",
           "Diritti di prevendita: €6,75",
-          "Totale a biglietto: €51,75",
+          "Commissioni amministrative: €3,62",
+          "Totale finale al checkout: €55,37",
           "Formato: biglietto elettronico (PDF via email)",
           "Promotore: AUCMA",
         ],
@@ -2168,7 +2172,7 @@ export const articles: Article[] = [
         {
           question: "Quanto costa il biglietto?",
           answer:
-            "Il prezzo è di €45,00 per il posto unico, a cui si aggiungono €6,75 di diritti di prevendita per un totale di €51,75 a biglietto. Eventuali commissioni di pagamento dipendono dal metodo scelto al checkout su Ticket Italia.",
+            "Il prezzo finale al checkout su Ticket Italia è €55,37 a biglietto per il posto unico. La composizione: €45,00 di tariffa base, €6,75 di diritti di prevendita e €3,62 di commissioni amministrative.",
         },
         {
           question: "Dove parcheggiare per il concerto al Piazzale Rocca Maggiore?",
