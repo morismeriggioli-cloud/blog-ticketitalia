@@ -2,22 +2,80 @@
  * Approval server — pubblica un articolo draft su richiesta HTTP.
  *
  * Uso: tsx agents/approve-server.ts
- * Endpoint: GET http://localhost:3001/approve?slug=SLUG
+ * Endpoint: GET http://localhost:3001/approve?slug=SLUG&token=TOKEN
+ *
+ * Sicurezza:
+ * - Bind di default su 127.0.0.1 (sovrascrivibile con APPROVE_SERVER_BIND)
+ * - Token obbligatorio via env APPROVE_SERVER_TOKEN; rifiuta avvio se mancante
+ *   (anche perché un endpoint che muta blog.ts senza auth non deve esistere)
+ * - Rate limit in-memory per IP (10 richieste / 60s, soft cap)
+ * - Confronto token con timingSafeEqual per evitare side-channel
  */
 
+import crypto from "crypto";
 import dotenv from "dotenv";
 dotenv.config();
 
-import express from "express";
+import express, { type NextFunction, type Request, type Response } from "express";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
-const PORT = 3001;
+const PORT = Number(process.env.APPROVE_SERVER_PORT ?? 3001);
+const BIND = process.env.APPROVE_SERVER_BIND ?? "127.0.0.1";
+
+const APPROVE_TOKEN = process.env.APPROVE_SERVER_TOKEN;
+if (!APPROVE_TOKEN || APPROVE_TOKEN.length < 24) {
+  console.error(
+    "[approve-server] APPROVE_SERVER_TOKEN non configurato o troppo corto (< 24 char). " +
+      "Genera un token con: node -e \"console.log(require('crypto').randomBytes(32).toString('hex'))\""
+  );
+  process.exit(1);
+}
 
 const app = express();
+app.disable("x-powered-by");
+
+// --- Rate limit in-memory: 10 richieste / 60s per IP -----------------------
+const RATE_WINDOW_MS = 60_000;
+const RATE_MAX = 10;
+const rateBuckets = new Map<string, number[]>();
+
+function rateLimit(req: Request, res: Response, next: NextFunction) {
+  const ip = req.ip ?? req.socket.remoteAddress ?? "unknown";
+  const now = Date.now();
+  const hits = (rateBuckets.get(ip) ?? []).filter((t) => now - t < RATE_WINDOW_MS);
+  if (hits.length >= RATE_MAX) {
+    res.status(429).send("Too many requests");
+    return;
+  }
+  hits.push(now);
+  rateBuckets.set(ip, hits);
+  next();
+}
+
+// --- Auth: token via query `?token=` o header `Authorization: Bearer ...` ---
+function requireToken(req: Request, res: Response, next: NextFunction) {
+  const headerToken =
+    typeof req.headers.authorization === "string" &&
+    req.headers.authorization.startsWith("Bearer ")
+      ? req.headers.authorization.slice(7)
+      : "";
+  const queryToken = typeof req.query.token === "string" ? req.query.token : "";
+  const provided = headerToken || queryToken;
+
+  const a = Buffer.from(provided);
+  const b = Buffer.from(APPROVE_TOKEN!);
+  const valid = a.length === b.length && crypto.timingSafeEqual(a, b);
+
+  if (!valid) {
+    res.status(401).send("Unauthorized");
+    return;
+  }
+  next();
+}
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -113,7 +171,7 @@ function htmlPage(
 // Endpoint principale
 // ---------------------------------------------------------------------------
 
-app.get("/approve", (req, res) => {
+app.get("/approve", rateLimit, requireToken, (req, res) => {
   const slug = typeof req.query.slug === "string" ? req.query.slug.trim() : "";
 
   if (!slug) {
@@ -217,7 +275,8 @@ app.get("/health", (_req, res) => {
 // Start
 // ---------------------------------------------------------------------------
 
-app.listen(PORT, () => {
-  console.log(`[approve-server] In ascolto su http://localhost:${PORT}`);
-  console.log(`[approve-server] Approva con: http://localhost:${PORT}/approve?slug=SLUG`);
+app.listen(PORT, BIND, () => {
+  console.log(`[approve-server] In ascolto su http://${BIND}:${PORT} (bind locale)`);
+  console.log(`[approve-server] Approva con: http://${BIND}:${PORT}/approve?slug=SLUG&token=<APPROVE_SERVER_TOKEN>`);
+  console.log("[approve-server] Token richiesto via query ?token= o header Authorization: Bearer …");
 });

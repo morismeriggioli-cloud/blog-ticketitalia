@@ -301,8 +301,15 @@ function buildHtml(article: ArticleNotification): string {
   }
 
   // --- PULSANTI CTA ---
+  // L'URL include il token di approve-server: il pulsante nell'email è l'unico
+  // canale d'invio ammesso, e l'email viene già recapitata in modo riservato a
+  // NOTIFY_EMAIL. Senza token l'endpoint risponde 401.
   const approveServerUrl = process.env.APPROVE_SERVER_URL ?? "http://localhost:3001";
-  const approveHref = `${approveServerUrl}/approve?slug=${encodeURIComponent(article.slug)}`;
+  const approveToken = process.env.APPROVE_SERVER_TOKEN ?? "";
+  const approveHref =
+    `${approveServerUrl}/approve` +
+    `?slug=${encodeURIComponent(article.slug)}` +
+    (approveToken ? `&token=${encodeURIComponent(approveToken)}` : "");
   const ctaButtons = `
 <table style="width:100%;margin:24px 0" cellpadding="0" cellspacing="0">
   <tr>
