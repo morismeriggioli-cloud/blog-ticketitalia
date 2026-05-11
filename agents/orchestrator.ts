@@ -174,9 +174,27 @@ async function fetchEventImage(eventUrl: string): Promise<string> {
 // Agente Redattore
 // ---------------------------------------------------------------------------
 
+export type ArticleObject = Record<string, unknown>;
+
+function extractJsonObject(raw: string): ArticleObject {
+  // Rimuove eventuali code fences ```json … ``` o ``` … ```
+  const fenceMatch = raw.match(/```(?:json)?\s*\n([\s\S]*?)```/);
+  const candidate = fenceMatch ? fenceMatch[1] : raw;
+
+  // Trova il primo `{` e l'ultimo `}` — JSON.parse farà il resto.
+  // Non serve un parser custom: JSON è un formato strettamente definito.
+  const firstBrace = candidate.indexOf("{");
+  const lastBrace = candidate.lastIndexOf("}");
+  if (firstBrace === -1 || lastBrace === -1 || lastBrace <= firstBrace) {
+    throw new Error("Risposta non contiene un oggetto JSON valido");
+  }
+  const json = candidate.slice(firstBrace, lastBrace + 1);
+  return JSON.parse(json) as ArticleObject;
+}
+
 export async function runRedattore(
   opportunity: Record<string, unknown>
-): Promise<{ slug: string; rawContent: string }> {
+): Promise<{ slug: string; article: ArticleObject }> {
   const systemPrompt = readPrompt("redattore", "redattore-prompt.md");
 
   const eventUrl = opportunity.ticketitalia_url as string | undefined;
@@ -212,29 +230,27 @@ IMMAGINE EVENTO:
 ${eventImage || "(non disponibile — usa il fallback /images/[slug]-hero.jpg)"}
 
 Istruzioni di output:
-- Rispondi SOLO con il contenuto del file TypeScript (import + export const article = {...})
-- Nessun markdown, nessuna spiegazione, solo il codice TypeScript valido
-- Inizia direttamente con: import type { Article } from "@/data/blog";
-- Usa l'IMMAGINE EVENTO fornita sopra come valore del campo image (se disponibile)`;
+- Rispondi SOLO con un oggetto JSON valido che rappresenti l'articolo.
+- Nessun markdown, nessun code fence, nessuna spiegazione: solo un oggetto JSON puro che inizia con "{" e finisce con "}".
+- Tutte le chiavi devono essere stringhe (con virgolette doppie). Tutti i valori stringa con virgolette doppie. Niente commenti, niente trailing comma, niente "as const", niente "import".
+- Lo schema dei campi corrisponde esattamente al tipo Article (slug, title, excerpt, date, author, category, categorySlug, image, readTime, status, funnelStage, articleType, tags, body, ...).
+- Usa l'IMMAGINE EVENTO fornita sopra come valore del campo image (se disponibile).`;
 
-  const raw = await callClaude(
-    systemPrompt,
-    userMessage,
-    "redattore"
-  );
+  const raw = await callClaude(systemPrompt, userMessage, "redattore");
 
-  const tsMatch =
-    raw.match(/```(?:typescript|ts)?\n([\s\S]*?)```/) ??
-    raw.match(/(import type[\s\S]*)/);
-  const tsContent = tsMatch ? (tsMatch[1] ?? tsMatch[0]).trim() : raw.trim();
+  const article = extractJsonObject(raw);
 
   const slug =
+    (article.slug as string | undefined) ??
     (opportunity.suggested_slug as string | undefined) ??
     `articolo-${today()}`;
 
-  console.log(`[redattore] Articolo generato in memoria: ${slug} (${tsContent.length} chars)`);
+  // Garantisce coerenza dello slug nell'oggetto (potrebbe servire a SEO / publish)
+  article.slug = slug;
 
-  return { slug, rawContent: tsContent };
+  console.log(`[redattore] Articolo generato in memoria: ${slug}`);
+
+  return { slug, article };
 }
 
 // ---------------------------------------------------------------------------
@@ -247,13 +263,13 @@ export interface SeoResult {
   keyword: string;
   funnelStage: string;
   seoScore: Record<string, string>;
-  rawContent: string;
+  article: ArticleObject;
   seoReport: string;
 }
 
 export async function runSeo(
   slug: string,
-  articleContent: string,
+  article: ArticleObject,
   keywords: string[]
 ): Promise<SeoResult> {
   const systemPrompt = readPrompt("seo", "seo-prompt.md");
@@ -262,14 +278,12 @@ export async function runSeo(
 
 KEYWORD PRINCIPALI (dal report Scout): ${keywords.join(", ")}
 
-ARTICOLO (${slug}.ts):
-\`\`\`typescript
-${articleContent}
-\`\`\`
+ARTICOLO (slug: ${slug}) — oggetto JSON:
+${JSON.stringify(article, null, 2)}
 
 Rispondi con DUE blocchi separati dal marcatore ---SEO-REPORT---:
 
-BLOCCO 1: articolo TypeScript ottimizzato (solo codice, senza markdown fences)
+BLOCCO 1: articolo ottimizzato come oggetto JSON puro (solo "{ ... }", nessun markdown, nessun code fence, nessuna spiegazione). Mantieni lo schema Article identico — modifica solo i valori (title, excerpt, slug, tags, intro, faq, internalLinks, ecc.).
 ---SEO-REPORT---
 BLOCCO 2: report SEO in formato markdown`;
 
@@ -278,21 +292,22 @@ BLOCCO 2: report SEO in formato markdown`;
   const separator = "---SEO-REPORT---";
   const parts = raw.split(separator);
 
-  let optimizedTs = parts[0]?.trim() ?? articleContent;
-  const tsMatch = optimizedTs.match(/```(?:typescript|ts)?\n([\s\S]*?)```/);
-  if (tsMatch?.[1]) optimizedTs = tsMatch[1].trim();
+  let optimizedArticle: ArticleObject;
+  try {
+    optimizedArticle = extractJsonObject(parts[0] ?? "");
+  } catch (err) {
+    console.warn(
+      "[seo] Impossibile estrarre JSON ottimizzato dalla risposta — mantengo l'articolo originale:",
+      err
+    );
+    optimizedArticle = article;
+  }
 
   const seoReport = parts[1]?.trim() ?? "Report SEO non generato.";
 
-  console.log(`[seo] Articolo ottimizzato in memoria (${optimizedTs.length} chars)`);
+  console.log(`[seo] Articolo ottimizzato in memoria`);
 
-  const titleMatch = optimizedTs.match(/title:\s*"([^"]+)"/);
-  const excerptMatch = optimizedTs.match(/excerpt:\s*"([^"]+)"/);
-  const funnelMatch = optimizedTs.match(/funnelStage:\s*"([^"]+)"/);
-  const seoScoreMatch = seoReport.match(
-    /Score SEO Stimato[\s\S]*?(?=##|$)/
-  );
-
+  const seoScoreMatch = seoReport.match(/Score SEO Stimato[\s\S]*?(?=##|$)/);
   const seoScore: Record<string, string> = {};
   seoScoreMatch?.[0]
     ?.split("\n")
@@ -303,12 +318,12 @@ BLOCCO 2: report SEO in formato markdown`;
     });
 
   return {
-    title: titleMatch?.[1] ?? slug,
-    excerpt: excerptMatch?.[1] ?? "",
+    title: (optimizedArticle.title as string | undefined) ?? slug,
+    excerpt: (optimizedArticle.excerpt as string | undefined) ?? "",
     keyword: keywords[0] ?? "",
-    funnelStage: funnelMatch?.[1] ?? "BOFU",
+    funnelStage: (optimizedArticle.funnelStage as string | undefined) ?? "BOFU",
     seoScore,
-    rawContent: optimizedTs,
+    article: optimizedArticle,
     seoReport,
   };
 }
@@ -333,11 +348,11 @@ export async function runPipeline(): Promise<void> {
     console.log(`[orchestrator] Opportunità selezionata: ${bestBofu.title}`);
 
     console.log("\n=== STEP 2: REDATTORE ===");
-    const { slug, rawContent } = await runRedattore(bestBofu);
+    const { slug, article } = await runRedattore(bestBofu);
 
     console.log("\n=== STEP 3: SEO ===");
     const keywords = (bestBofu.keywords as string[] | undefined) ?? [];
-    const seoResult = await runSeo(slug, rawContent, keywords);
+    const seoResult = await runSeo(slug, article, keywords);
 
     console.log("\n=== STEP 4: NOTIFICA EMAIL ===");
     await sendArticleNotification({
@@ -348,7 +363,7 @@ export async function runPipeline(): Promise<void> {
       filePath: `(in-memory) ${slug}.ts`,
       funnelStage: seoResult.funnelStage,
       seoScore: seoResult.seoScore,
-      rawContent: seoResult.rawContent,
+      articleData: seoResult.article,
     });
 
     console.log(`[orchestrator] Pipeline completata in ${Date.now() - startTime}ms`);
@@ -361,72 +376,6 @@ export async function runPipeline(): Promise<void> {
 // ---------------------------------------------------------------------------
 // autoPublish — inserisce l'articolo in blog.ts, committa e pusha
 // ---------------------------------------------------------------------------
-
-function extractArticleObject(fileContent: string): string {
-  const marker = "export const article";
-  const markerIdx = fileContent.indexOf(marker);
-  if (markerIdx === -1) throw new Error("Marker 'export const article' non trovato");
-
-  const objStart = fileContent.indexOf("{", markerIdx + marker.length);
-  if (objStart === -1) throw new Error("Apertura oggetto '{' non trovata");
-
-  // strMode: 0 = codice, 1 = stringa "..", 2 = stringa '..', 3 = template literal `..`
-  let strMode: 0 | 1 | 2 | 3 = 0;
-  let depth = 0;
-  // Stack delle profondità a cui siamo entrati in interpolazione ${...}
-  // Quando depth ritorna a uno di questi valori, riprende il template literal esterno.
-  const templateStack: number[] = [];
-  let escape = false;
-
-  for (let i = objStart; i < fileContent.length; i++) {
-    const ch = fileContent[i];
-
-    if (escape) { escape = false; continue; }
-    if (ch === "\\") { escape = true; continue; }
-
-    if (strMode === 0) {
-      if (ch === '"') { strMode = 1; continue; }
-      if (ch === "'") { strMode = 2; continue; }
-      if (ch === "`") { strMode = 3; continue; }
-      if (ch === "{") {
-        depth++;
-      } else if (ch === "}") {
-        depth--;
-        if (depth === 0) return fileContent.slice(objStart, i + 1);
-        if (templateStack.length > 0 && depth === templateStack[templateStack.length - 1]) {
-          templateStack.pop();
-          strMode = 3;
-        }
-      }
-    } else if (strMode === 1) {
-      if (ch === '"') strMode = 0;
-    } else if (strMode === 2) {
-      if (ch === "'") strMode = 0;
-    } else if (strMode === 3) {
-      if (ch === "`") {
-        strMode = 0;
-      } else if (ch === "$" && fileContent[i + 1] === "{") {
-        templateStack.push(depth);
-        depth++;
-        strMode = 0;
-        i++;
-      }
-    }
-  }
-
-  console.error(
-    `[extractArticleObject] Bilanciamento fallito — depth=${depth}, strMode=${strMode}, templateStack=${JSON.stringify(templateStack)}, lunghezza=${fileContent.length}, objStart=${objStart}`
-  );
-  console.error(
-    `[extractArticleObject] Primi 300 caratteri dall'oggetto:\n${fileContent.slice(objStart, objStart + 300)}`
-  );
-  console.error(
-    `[extractArticleObject] Ultimi 300 caratteri del file:\n${fileContent.slice(-300)}`
-  );
-  throw new Error(
-    `Oggetto articolo non bilanciato (depth finale=${depth}, strMode=${strMode}, template stack size=${templateStack.length})`
-  );
-}
 
 // ---------------------------------------------------------------------------
 // Blocklist artisti/eventi già pubblicati (agents/blocklist.json)
@@ -592,7 +541,7 @@ async function githubPutFile(
 export async function autoPublish(
   slug: string,
   title: string,
-  rawContent: string
+  article: ArticleObject
 ): Promise<string> {
   const githubRepo = process.env.GITHUB_REPO;
   const githubToken = process.env.GITHUB_TOKEN;
@@ -602,17 +551,11 @@ export async function autoPublish(
 
   const pubDate = today();
 
-  // Aggiorna status + publishedAt nel contenuto in memoria
-  let draftContent = rawContent;
-  draftContent = draftContent.replace(/status:\s*"draft"/, `status: "published"`);
-  if (/publishedAt:\s*"[^"]*"/.test(draftContent)) {
-    draftContent = draftContent.replace(/publishedAt:\s*"[^"]*"/, `publishedAt: "${pubDate}"`);
-  } else {
-    draftContent = draftContent.replace(
-      /status:\s*"published"/,
-      `status: "published",\n  publishedAt: "${pubDate}"`
-    );
-  }
+  // Aggiorna status + publishedAt direttamente sull'oggetto JSON.
+  // Niente più parsing di TS a mano: tutta la conversione passa per JSON.stringify.
+  article.status = "published";
+  article.publishedAt = pubDate;
+  article.slug = slug;
 
   // Legge blog.ts da GitHub e controlla duplicati
   const { sha, content: blogContent } = await githubGetFile(
@@ -626,9 +569,12 @@ export async function autoPublish(
     return pubDate;
   }
 
-  // Inserisce l'oggetto articolo nell'array articles[]
-  const rawObj = extractArticleObject(draftContent);
-  const indented = rawObj.split("\n").map((l) => `  ${l}`).join("\n");
+  // Serializza l'articolo come oggetto JSON e indenta per inserirlo nell'array.
+  // JSON è un sottoinsieme di TS: chiavi e valori in virgolette doppie sono validi
+  // dentro un Article[]. Niente template literal, niente parser ad hoc.
+  const articleJson = JSON.stringify(article, null, 2);
+  const indented = articleJson.split("\n").map((l) => `  ${l}`).join("\n");
+
   const insertionMarker = "\n];\n\nexport const publishedArticles";
   const idx = blogContent.indexOf(insertionMarker);
   if (idx === -1) throw new Error("[autoPublish] Marker di inserimento non trovato in blog.ts");
@@ -782,14 +728,14 @@ export async function runAutoPublishPipeline(): Promise<void> {
     console.log(`[orchestrator] Opportunità selezionata: ${bestBofu.title}`);
 
     console.log("\n=== STEP 2: REDATTORE ===");
-    const { slug, rawContent } = await runRedattore(bestBofu);
+    const { slug, article } = await runRedattore(bestBofu);
 
     console.log("\n=== STEP 3: SEO ===");
     const keywords = (bestBofu.keywords as string[] | undefined) ?? [];
-    const seoResult = await runSeo(slug, rawContent, keywords);
+    const seoResult = await runSeo(slug, article, keywords);
 
     console.log("\n=== STEP 4: AUTO-PUBLISH ===");
-    const pubDate = await autoPublish(slug, seoResult.title, seoResult.rawContent);
+    const pubDate = await autoPublish(slug, seoResult.title, seoResult.article);
     const articleUrl = `${siteUrl}/articoli/${slug}`;
 
     // Aggiorna blocklist remota con l'artista appena pubblicato

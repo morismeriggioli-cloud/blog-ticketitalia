@@ -16,6 +16,8 @@ Scrivi articoli completi per il blog di Ticket Italia a partire dalle opportunit
 - `ARTICLE_STRUCTURE_GUIDE.md` per le regole editoriali
 - `shared/article-schema.ts` per i tipi e i campi obbligatori per funnel stage
 
+**Output**: oggetto JSON puro (vedi sezione Output in fondo). NON TypeScript.
+
 ---
 
 ## Struttura per Funnel Stage
@@ -34,7 +36,7 @@ Scrivi articoli completi per il blog di Ticket Italia a partire dalle opportunit
    - `nearbyHotels`: 3 hotel reali vicini (sito ufficiale o Google Maps — mai aggregatori)
 4. Ricerca l'artista/evento: storia, rilevanza, tour precedenti, stile, pubblico
 5. Redigi l'articolo seguendo la struttura obbligatoria evento (vedi sotto)
-6. Salva in `output/articles/[slug].ts`
+6. Rispondi con l'oggetto JSON dell'articolo (vedi sezione Output)
 
 **Campi body obbligatori** (tutti):
 - `intro` — 1-2 frasi SEO che nominano artista + venue + data
@@ -246,14 +248,14 @@ Il campo `image` dell'articolo **deve sempre contenere l'URL reale dell'immagine
 2. Se `event_image` non è disponibile nell'input, usa come fallback `/images/[slug]-hero.jpg`
 3. Non inventare mai un URL immagine — usa solo quello fornito o il fallback
 
-**Esempio corretto:**
-```typescript
-image: "https://ticketitalia.com/image/cache/catalog/eventi/ermal-meta-2026-800x600.jpg",
+**Esempio corretto (in JSON):**
+```
+"image": "https://ticketitalia.com/image/cache/catalog/eventi/ermal-meta-2026-800x600.jpg"
 ```
 
 **Esempio sbagliato** (non fare così):
-```typescript
-image: "/images/ermal-meta-afterlife-club-perugia-2026-hero.jpg",  // ❌ placeholder inventato
+```
+"image": "/images/ermal-meta-afterlife-club-perugia-2026-hero.jpg"   ❌ placeholder inventato
 ```
 
 ---
@@ -291,21 +293,43 @@ cta:       { text: "...", description: "..." }         // ❌ manca title e labe
 
 ---
 
-## Output
+## Output — JSON puro (NON TypeScript)
 
-File TypeScript in `output/articles/[slug].ts`:
+Rispondi **solo con un oggetto JSON valido** che rappresenta l'articolo. Niente `import`, niente `export const`, niente `as const`, niente commenti, niente code fence, niente markdown attorno. La risposta deve iniziare con `{` e finire con `}`.
 
-```typescript
-import type { Article } from "@/data/blog";
+Regole sintattiche:
+- Tutte le chiavi tra virgolette doppie (`"slug"` non `slug`).
+- Tutti i valori stringa tra virgolette doppie. Niente backtick, niente template literal.
+- Niente trailing comma. Niente commenti `//`.
+- Tipi e nomi dei campi identici allo schema `Article` (vedi sezione Schema TypeScript qui sopra — i nomi dei campi sono gli stessi, cambia solo la sintassi: JSON invece di TS).
+- Niente espressioni o concatenazioni di stringhe — solo valori letterali.
 
-export const article: Article = {
-  slug: "...",
-  title: "...",
-  funnelStage: "BOFU" | "MOFU" | "TOFU",
-  articleType: "evento" | "guida" | "evergreen" | "stagionale",
-  // ... tutti i campi richiesti per il funnel stage
-};
+Esempio di formato (struttura minima — i campi obbligatori per il funnel stage corrente vanno aggiunti):
+
 ```
+{
+  "slug": "...",
+  "title": "...",
+  "excerpt": "...",
+  "date": "YYYY-MM-DD",
+  "author": "Redazione Ticket Italia",
+  "category": "Concerti",
+  "categorySlug": "concerti",
+  "image": "https://...",
+  "readTime": "8 min",
+  "status": "draft",
+  "funnelStage": "BOFU",
+  "articleType": "evento",
+  "tags": ["tag1", "tag2"],
+  "body": {
+    "intro": "...",
+    "quickInfo": { "title": "...", "text": "...", "bullets": ["..."] },
+    "faq": [{ "question": "...", "answer": "..." }]
+  }
+}
+```
+
+L'orchestratore parserà la risposta con `JSON.parse` e la inserirà direttamente in `src/data/blog.ts`. Qualunque carattere fuori da `{...}` (anche solo uno spazio prima di `{` va bene, ma niente testo aggiuntivo) o qualunque sintassi TS-only (chiavi non quotate, virgolette singole, template literal) farà fallire il parsing.
 
 ---
 

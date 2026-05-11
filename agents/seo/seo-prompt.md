@@ -8,10 +8,20 @@ Ottimizza gli articoli prodotti dal Redattore per il posizionamento organico su 
 
 ## Input
 
-- File articolo da `output/articles/[slug].ts`
+- Oggetto JSON dell'articolo prodotto dal Redattore (passato direttamente dall'orchestratore — non leggere file)
 - Keyword principali suggerite dallo Scout (da `scout-report-*.json`)
 - `shared/config.ts` per configurazione sito
 - Campo `funnelStage` dell'articolo per determinare la strategia SEO
+
+**Output**: rispondi con DUE blocchi separati dal marcatore `---SEO-REPORT---`:
+
+1. **Blocco 1**: oggetto JSON dell'articolo ottimizzato (puro, inizia con `{` finisce con `}` — nessun markdown, nessun code fence, nessuna spiegazione, nessun `import`/`export`).
+2. **Blocco 2**: report SEO in formato markdown (vedi sezione Formato Report).
+
+Vincoli sintattici per il blocco 1:
+- Chiavi sempre tra virgolette doppie. Valori stringa tra virgolette doppie. Niente trailing comma, niente commenti, niente template literal.
+- Mantieni lo schema `Article` identico al draft in input — modifica **solo i valori dei campi consentiti** (vedi sezione "Ottimizzazioni Consentite").
+- L'orchestratore farà `JSON.parse` sul blocco 1: qualsiasi carattere fuori dall'oggetto o sintassi TS-only farà fallire il parsing.
 
 ---
 
@@ -116,8 +126,10 @@ Ottimizza gli articoli prodotti dal Redattore per il posizionamento organico su 
 
 ## Output
 
-1. **Articolo ottimizzato**: sovrascrive `output/articles/[slug].ts` con le modifiche
-2. **Report SEO**: `output/articles/[slug]-seo-report.md`
+Due blocchi separati dal marcatore `---SEO-REPORT---` nella stessa risposta:
+
+1. **Articolo ottimizzato**: oggetto JSON puro (no markdown, no code fence, no `import`/`export`). L'orchestratore lo passa direttamente a `autoPublish` che lo serializza in `src/data/blog.ts` via `JSON.stringify`.
+2. **Report SEO**: markdown con la struttura sotto.
 
 ### Formato Report SEO
 

@@ -12,8 +12,8 @@ export interface ArticleNotification {
   filePath: string;
   funnelStage: string;
   seoScore?: Record<string, string>;
-  /** Contenuto grezzo del file .ts generato (usato per estrarre il body) */
-  rawContent?: string;
+  /** Oggetto Article già parsato (sostituisce il vecchio rawContent TypeScript). */
+  articleData?: Record<string, unknown>;
 }
 
 export interface PublishedNotification {
@@ -28,8 +28,8 @@ export interface PublishedNotification {
 }
 
 // ---------------------------------------------------------------------------
-// Parser leggero del file .ts generato da Claude
-// Estrae i campi body come stringhe/array senza dipendenze esterne.
+// Accesso al body dell'articolo via oggetto JSON parsato
+// (sostituisce i vecchi parser regex su TypeScript)
 // ---------------------------------------------------------------------------
 
 interface ParsedBody {
@@ -52,144 +52,59 @@ interface ParsedBody {
   ctaHref: string;
 }
 
-/** Estrae il valore di un campo stringa singolo: `field: "..."` */
-function extractStr(src: string, field: string): string {
-  const re = new RegExp(
-    `(?:^|[,{\\s])${field}:\\s*"((?:[^"\\\\]|\\\\[\\s\\S])*)"`,
-    "m"
-  );
-  const m = src.match(re);
-  return m ? m[1].replace(/\\n/g, "\n").replace(/\\"/g, '"') : "";
+type AnyObj = Record<string, unknown>;
+
+function asObj(v: unknown): AnyObj {
+  return v && typeof v === "object" ? (v as AnyObj) : {};
+}
+function asStr(v: unknown): string {
+  return typeof v === "string" ? v : "";
+}
+function asStrArr(v: unknown): string[] {
+  return Array.isArray(v) ? v.filter((x): x is string => typeof x === "string") : [];
 }
 
-/** Estrae il blocco testuale di una sezione delimitata da `field: {` … `}` */
-function extractBlock(src: string, field: string): string {
-  const start = src.indexOf(`${field}:`);
-  if (start === -1) return "";
-  let depth = 0;
-  let inStr = false;
-  let escape = false;
-  let blockStart = -1;
-  for (let i = start + field.length + 1; i < src.length; i++) {
-    const ch = src[i];
-    if (escape) { escape = false; continue; }
-    if (ch === "\\") { escape = true; continue; }
-    if (ch === '"' && !escape) { inStr = !inStr; continue; }
-    if (inStr) continue;
-    if (ch === "{") { if (depth === 0) blockStart = i; depth++; }
-    else if (ch === "}") {
-      depth--;
-      if (depth === 0 && blockStart !== -1) return src.slice(blockStart, i + 1);
-    }
-  }
-  return "";
-}
+function parseArticleBody(article: AnyObj): ParsedBody {
+  const body = asObj(article.body);
+  const quickInfo = asObj(body.quickInfo);
+  const tickets = asObj(body.tickets);
+  const artistContext = asObj(body.artistContext);
+  const location = asObj(body.location);
+  const practicalInfo = asObj(body.practicalInfo);
+  const cta = asObj(body.cta);
 
-/** Estrae tutti i valori stringa da un array TypeScript `[...]` */
-function extractArrayStrings(src: string, field: string): string[] {
-  const blockRe = new RegExp(`${field}:\\s*\\[`, "m");
-  const match = blockRe.exec(src);
-  if (!match) return [];
+  const sections = (Array.isArray(body.sections) ? body.sections : [])
+    .map((s) => {
+      const o = asObj(s);
+      return { heading: asStr(o.heading), paragraphs: asStrArr(o.paragraphs) };
+    })
+    .filter((s) => s.heading);
 
-  let depth = 0;
-  let inStr = false;
-  let escape = false;
-  const startIdx = match.index + match[0].length - 1; // posizione del `[`
-  let arrayContent = "";
-
-  for (let i = startIdx; i < src.length; i++) {
-    const ch = src[i];
-    if (escape) { escape = false; arrayContent += ch; continue; }
-    if (ch === "\\") { escape = true; arrayContent += ch; continue; }
-    if (ch === '"' && !escape) { inStr = !inStr; arrayContent += ch; continue; }
-    if (inStr) { arrayContent += ch; continue; }
-    if (ch === "[") { depth++; arrayContent += ch; }
-    else if (ch === "]") {
-      depth--;
-      if (depth === 0) { arrayContent += ch; break; }
-      arrayContent += ch;
-    } else {
-      arrayContent += ch;
-    }
-  }
-
-  // Estrai stringhe dal contenuto dell'array
-  const strings: string[] = [];
-  const strRe = /"((?:[^"\\]|\\.)*)"/g;
-  let m: RegExpExecArray | null;
-  while ((m = strRe.exec(arrayContent)) !== null) {
-    strings.push(m[1].replace(/\\n/g, "\n").replace(/\\"/g, '"'));
-  }
-  return strings;
-}
-
-/** Estrae tutte le occorrenze di un blocco `{ heading: "...", paragraphs: [...] }` */
-function extractSections(
-  src: string
-): Array<{ heading: string; paragraphs: string[] }> {
-  const sectionsBlock = extractBlock(src, "sections");
-  if (!sectionsBlock) return [];
-
-  const results: Array<{ heading: string; paragraphs: string[] }> = [];
-  const headingRe = /heading:\s*"((?:[^"\\]|\\.)*)"/g;
-  let m: RegExpExecArray | null;
-
-  while ((m = headingRe.exec(sectionsBlock)) !== null) {
-    const heading = m[1].replace(/\\"/g, '"');
-    // Estrai il blocco dell'oggetto corrente
-    const objStart = sectionsBlock.lastIndexOf("{", m.index);
-    const objBlock = extractBlock(sectionsBlock.slice(objStart), "{".slice(0));
-    const paragraphs = extractArrayStrings(objBlock, "paragraphs");
-    results.push({ heading, paragraphs });
-  }
-  return results;
-}
-
-/** Estrae le FAQ `{ question: "...", answer: "..." }` */
-function extractFaq(src: string): Array<{ question: string; answer: string }> {
-  const faqBlock = extractBlock(src, "faq");
-  if (!faqBlock) return [];
-
-  const results: Array<{ question: string; answer: string }> = [];
-  const questionRe = /question:\s*"((?:[^"\\]|\\.)*)"/g;
-  let m: RegExpExecArray | null;
-
-  while ((m = questionRe.exec(faqBlock)) !== null) {
-    const question = m[1].replace(/\\"/g, '"');
-    const objStart = faqBlock.lastIndexOf("{", m.index);
-    const objBlock = extractBlock(faqBlock.slice(objStart), "{".slice(0));
-    const answer = extractStr(objBlock, "answer");
-    results.push({ question, answer });
-  }
-  return results;
-}
-
-function parseArticleBody(rawTs: string): ParsedBody {
-  const quickInfoBlock = extractBlock(rawTs, "quickInfo");
-  const ticketsBlock = extractBlock(rawTs, "tickets");
-  const artistBlock = extractBlock(rawTs, "artistContext");
-  const locationBlock = extractBlock(rawTs, "location");
-  const practicalBlock = extractBlock(rawTs, "practicalInfo");
-  const ctaBlock = extractBlock(rawTs, "cta");
+  const faq = (Array.isArray(body.faq) ? body.faq : [])
+    .map((f) => {
+      const o = asObj(f);
+      return { question: asStr(o.question), answer: asStr(o.answer) };
+    })
+    .filter((f) => f.question);
 
   return {
-    intro: extractStr(rawTs, "intro"),
-    quickInfoTitle: extractStr(quickInfoBlock, "title"),
-    quickInfoBullets: extractArrayStrings(quickInfoBlock, "bullets"),
-    ticketsTitle: extractStr(ticketsBlock, "title"),
-    ticketsText: extractStr(ticketsBlock, "text"),
-    ticketsBullets: extractArrayStrings(ticketsBlock, "bullets"),
-    artistContextTitle: extractStr(artistBlock, "title"),
-    artistContextParagraphs: extractArrayStrings(artistBlock, "paragraphs"),
-    locationTitle: extractStr(locationBlock, "title"),
-    locationExperience: extractStr(locationBlock, "experience"),
-    locationAtmosphere: extractStr(locationBlock, "atmosphere"),
-    practicalInfoTitle: extractStr(practicalBlock, "title"),
-    practicalInfoBullets: extractArrayStrings(practicalBlock, "bullets"),
-    sections: extractSections(rawTs),
-    faq: extractFaq(rawTs),
-    ctaTitle: extractStr(ctaBlock, "title"),
-    ctaHref: extractStr(ctaBlock, "href"),
+    intro: asStr(body.intro),
+    quickInfoTitle: asStr(quickInfo.title),
+    quickInfoBullets: asStrArr(quickInfo.bullets),
+    ticketsTitle: asStr(tickets.title),
+    ticketsText: asStr(tickets.text),
+    ticketsBullets: asStrArr(tickets.bullets),
+    artistContextTitle: asStr(artistContext.title),
+    artistContextParagraphs: asStrArr(artistContext.paragraphs),
+    locationTitle: asStr(location.title),
+    locationExperience: asStr(location.experience),
+    locationAtmosphere: asStr(location.atmosphere),
+    practicalInfoTitle: asStr(practicalInfo.title),
+    practicalInfoBullets: asStrArr(practicalInfo.bullets),
+    sections,
+    faq,
+    ctaTitle: asStr(cta.title),
+    ctaHref: asStr(cta.href),
   };
 }
 
@@ -283,7 +198,7 @@ function esc(s: string): string {
 function buildHtml(article: ArticleNotification): string {
   const siteUrl = process.env.SITE_URL ?? "https://blog.ticketitalia.com";
   const now = new Date().toLocaleDateString("it-IT", { dateStyle: "long" });
-  const body = article.rawContent ? parseArticleBody(article.rawContent) : null;
+  const body = article.articleData ? parseArticleBody(article.articleData) : null;
 
   // --- SEZIONE SEO SCORE ---
   const seoScoreRows = article.seoScore
