@@ -2199,6 +2199,930 @@ export const articles: Article[] = [
       },
     },
   },
+  {
+    slug: "maurizio-battista-barton-park-perugia-28-giugno-2026",
+    title: "Maurizio Battista al Barton Park di Perugia il 28 giugno 2026: biglietti Tour 2025/26",
+    excerpt:
+      "Maurizio Battista porta il Tour 2025/26 al Barton Park di Perugia il 28 giugno 2026 alle 21:00. Platea €61,53 e Gradinata €43,07, prezzi finali al checkout su Ticket Italia.",
+    category: "Teatro & Spettacoli",
+    categorySlug: "teatro-spettacoli",
+    subcategory: "Commedia",
+    subcategorySlug: "commedia",
+    type: "evento",
+    status: "published",
+    publishedAt: "2026-05-11",
+    funnelStage: "BOFU",
+    articleType: "evento",
+    tags: ["Maurizio Battista", "Cabaret", "Comicità", "Barton Park Perugia", "Tour 2025-2026"],
+    date: "2026-05-11",
+    readTime: "6 min",
+    author: "Redazione Ticket Italia",
+    image: "/images/maurizio-battista-barton-park-perugia-28-giugno-2026-hero.jpg",
+    body: {
+      intro:
+        "Maurizio Battista arriva al Barton Park di Perugia il 28 giugno 2026 alle ore 21:00 con il Tour 2025/26: una serata di stand-up sotto le stelle, nell'arena del parco urbano di Pian di Massiano. Biglietti su Ticket Italia: Platea a €61,53 e Gradinata a €43,07, prezzi finali al checkout con commissioni amministrative incluse.",
+      quickInfo: {
+        title: "Informazioni rapide",
+        text:
+          "Stand-up comedy all'aperto nel grande parco urbano di Perugia, in formato arena con palco e settori distinti. Biglietteria attiva su Ticket Italia, formato elettronico via email.",
+        bullets: [
+          "Artista: Maurizio Battista — Tour 2025/26",
+          "Location: Barton Park, Perugia",
+          "Data: domenica 28 giugno 2026, ore 21:00",
+          "Prezzi finali: Platea €61,53 — Gradinata €43,07",
+          "Atmosfera: comedy all'aperto in parco urbano",
+        ],
+      },
+      tickets: {
+        title: "Biglietti Maurizio Battista al Barton Park — prezzi e settori",
+        text:
+          "Per la data di Perugia sono previsti due settori, con prezzo finale al checkout su Ticket Italia comprensivo di diritto di prevendita e commissioni amministrative. Il biglietto è elettronico (PDF via email): basta mostrare il QR code all'ingresso del parco.",
+        bullets: [
+          "Primo Settore Platea: €61,53 (prezzo finale al checkout, commissioni incluse)",
+          "Secondo Settore Gradinata: €43,07 (prezzo finale al checkout, commissioni incluse)",
+          "Formato: biglietto elettronico PDF via email",
+          "Accesso: QR code da smartphone, non serve stampare",
+          "Per biglietti accessibilità: contatta l'organizzatore con certificato di invalidità",
+        ],
+      },
+      artistContext: {
+        title: "Maurizio Battista: trent'anni di comicità romana",
+        paragraphs: [
+          "Maurizio Battista è uno dei comici romani più riconoscibili della scena italiana. Una carriera che attraversa decenni di televisione e teatro, costruita su un personaggio popolare, quotidiano, capace di trasformare il piccolo dettaglio della vita di tutti i giorni in materiale comico. La cifra è il monologo confidenziale: aneddoti, osservazioni sulla famiglia, sulla coppia, sulle abitudini italiane — raccontati con il ritmo lento del bar di quartiere.",
+          "Il Tour 2025/26 prosegue il format teatrale che Battista porta avanti da anni: uno show di stand-up costruito sull'interazione con il pubblico, senza scenografie ingombranti, focalizzato sul rapporto diretto fra comico e platea. Al Barton Park, all'aperto e in arena, il contesto si presta a una serata leggera, perfetta per inaugurare l'estate perugina con una risata.",
+        ],
+        bullets: [
+          "Carriera: oltre tre decenni tra televisione (Maurizio Costanzo Show, La Sai L'Ultima, Insegno) e teatro",
+          "Stile: stand-up romano, osservazione del quotidiano, monologo familiare",
+          "Tour 2025/26: format teatrale itinerante, serate a misura di pubblico generalista",
+          "Pubblico tipo: famiglie, gruppi di amici, fan storici della tv generalista",
+        ],
+      },
+      location: {
+        title: "Barton Park: il parco urbano-arena di Perugia",
+        venueType: "Parco urbano polifunzionale con teatro e arena all'aperto",
+        experience:
+          "Il Barton Park è un'oasi di 3 ettari nel cuore di Perugia, sviluppata come spazio polifunzionale che ospita un teatro e un'arena per eventi piccoli e grandi. Un percorso pedonale di oltre 1.200 metri completamente libero da barriere architettoniche attraversa il parco: significa che chiunque, indipendentemente dalla mobilità, può raggiungere il punto-arena senza ostacoli. Per uno show comico estivo è il contesto ideale, perché unisce l'informalità del parco urbano alla struttura tipica di un teatro all'aperto.",
+        suitability:
+          "Adatto al monologo comico: pochi fronzoli scenografici, foglie e cielo sopra il palco, distanza contenuta fra artista e pubblico nei settori frontali. La capienza distribuita su Platea e Gradinata permette di scegliere fra prima fila e visione d'insieme dall'alto.",
+        atmosphere:
+          "Serata estiva perugina, temperatura piacevole alla sera, ritmo informale e pubblico generalista. È il classico contesto da comedy all'aperto: si arriva con calma, ci si siede, ci si rilassa, si ride.",
+        paragraphs: [
+          "Il Barton Park nasce come spazio verde fruibile tutto l'anno e si attiva nei mesi estivi con una stagione di concerti, comedy, presentazioni di libri e format giornalistici (Stefano Nazzi, Roberta Bruzzone, Cristiano De André tra i nomi della stagione 2026). Per Maurizio Battista è la cornice giusta: lontano dai teatri formali, vicino alla cifra confidenziale dei suoi monologhi.",
+        ],
+        bullets: [
+          "Tipo: parco urbano di 3 ettari con teatro e arena all'aperto",
+          "Accessibilità: percorso pedonale di 1.200 m senza barriere architettoniche",
+          "Stagione: format estivi di comedy, concerti e incontri culturali",
+          "Indirizzo e parcheggi: consulta la pagina venue su Ticket Italia per la viabilità del giorno dell'evento",
+        ],
+      },
+      liveExperience: {
+        title: "Cosa aspettarsi dalla serata",
+        paragraphs: [
+          "Maurizio Battista non punta sull'effetto scenico: tutto lo show ruota attorno alla parola, ai tempi comici, al rapporto con il pubblico. La serata al Barton Park sarà uno stand-up classico, con il comico che alterna monologhi a momenti più diretti di interazione con la platea. Lo show dura circa 90 minuti, senza intervallo.",
+        ],
+        bullets: [
+          "Formato: stand-up con monologhi, no spalla, no scenografia complessa",
+          "Durata: circa 90 minuti senza intervallo",
+          "Inizio: ore 21:00",
+          "Apertura porte: anticipa di 30-45 minuti per trovare posto e parcheggio",
+        ],
+      },
+      practicalInfo: {
+        title: "Come arrivare e informazioni pratiche",
+        paragraphs: [
+          "Il Barton Park è all'interno del parco urbano di Perugia, raggiungibile in auto e a piedi dal centro città. La viabilità nei giorni di evento può cambiare: nei giorni precedenti il concerto controlla la pagina evento su Ticket Italia per eventuali comunicazioni ufficiali. Il biglietto è elettronico, lo ricevi in PDF dopo l'acquisto e mostri il QR code all'ingresso.",
+        ],
+        bullets: [
+          "Biglietto: PDF elettronico via email, QR code all'ingresso",
+          "Apertura porte: anticipata rispetto alle 21:00",
+          "Show all'aperto: porta una giacca leggera per la sera",
+          "Per accessibilità: contatta l'organizzatore con certificato di invalidità prima dell'acquisto",
+        ],
+      },
+      internalLinks: [
+        {
+          label: "Valentina Persia al Teatro Lyrick",
+          href: "/articoli/valentina-persia-teatro-lyrick-santa-maria-degli-angeli-23-maggio-2026",
+          description: "Un'altra serata di comicità in Umbria, stessa stagione, format teatrale.",
+        },
+        {
+          label: "Salmo a Perugia (Umbria Che Spacca)",
+          href: "/articoli/salmo-perugia-2026-umbria-che-spacca-biglietti",
+          description: "Il festival che anima l'estate perugina con i grandi nomi della musica.",
+        },
+        {
+          label: "Come usare Carta Cultura per gli eventi",
+          href: "/come-usare-carta-cultura-carta-docente-biglietti-eventi",
+          description: "Se hai diritto al bonus, verifica se è compatibile prima di acquistare.",
+        },
+      ],
+      sections: [
+        {
+          heading: "Perché è una serata da non perdere",
+          paragraphs: [
+            "Battista al Barton Park è una di quelle serate fatte apposta per spegnere il telefono e lasciarsi andare per un'ora e mezza. Niente coreografie, niente effetti — solo una voce romana riconoscibile e una platea che lo accompagna a tempo. È l'inaugurazione estiva ideale per chi ha bisogno di una pausa dalla velocità del lavoro o dei feed.",
+          ],
+        },
+        {
+          heading: "Consigli pratici per la serata",
+          paragraphs: [
+            "Arriva con almeno 30 minuti di anticipo: il parco si raggiunge a piedi attraversando il percorso pedonale di 1,2 km, quindi calcola tempi reali e non solo distanza in mappa. Le serate estive perugine sono fresche dopo il tramonto: una giacca leggera o una felpa torna sempre utile. Il biglietto è elettronico: scaricalo dalla mail prima di uscire di casa, così non dipendi dalla connessione dati in zona.",
+          ],
+          bullets: [
+            "Arriva 30 minuti prima dell'inizio",
+            "Porta una giacca leggera: la sera al parco rinfresca",
+            "Scarica il PDF del biglietto prima di partire",
+            "Verifica viabilità sul sito del Comune di Perugia nei giorni precedenti",
+          ],
+        },
+      ],
+      faq: [
+        {
+          question: "A che ora inizia lo spettacolo di Maurizio Battista al Barton Park?",
+          answer:
+            "Lo show inizia alle 21:00 di domenica 28 giugno 2026. Le porte aprono in anticipo: consiglio di arrivare almeno 30 minuti prima.",
+        },
+        {
+          question: "Quanto costano i biglietti?",
+          answer:
+            "Il prezzo finale al checkout su Ticket Italia è €61,53 per il Primo Settore Platea e €43,07 per il Secondo Settore Gradinata, comprensivo di diritto di prevendita e commissioni amministrative.",
+        },
+        {
+          question: "Il biglietto è elettronico?",
+          answer:
+            "Sì, è un PDF inviato all'indirizzo email indicato in fase d'acquisto. Mostri il QR code all'ingresso, da smartphone o stampato — non è obbligatorio stamparlo.",
+        },
+        {
+          question: "Dove si trova il Barton Park?",
+          answer:
+            "Il Barton Park è un parco urbano di 3 ettari a Perugia, con un percorso pedonale di 1.200 metri accessibile e senza barriere architettoniche. Per la viabilità e i parcheggi del giorno dell'evento consulta la pagina evento di Ticket Italia.",
+        },
+      ],
+      cta: {
+        title: "Acquista i biglietti per Maurizio Battista al Barton Park",
+        text:
+          "Stand-up di Maurizio Battista al Barton Park di Perugia il 28 giugno 2026, ore 21:00. Acquista subito su Ticket Italia: Platea €61,53 o Gradinata €43,07, prezzi finali al checkout.",
+        label: "Acquista su Ticket Italia",
+        href: "https://ticketitalia.com/maurizio-battista-barton-park-perugia-28-giugno-2026",
+      },
+    },
+  },
+  {
+    slug: "valentina-persia-teatro-lyrick-santa-maria-degli-angeli-23-maggio-2026",
+    title: "Valentina Persia 'Nata con la Guepiere' al Teatro Lyrick il 23 maggio 2026",
+    excerpt:
+      "Valentina Persia porta 'Nata con la Guepiere' al Teatro Lyrick di Santa Maria degli Angeli (Assisi) il 23 maggio 2026: prezzi finali al checkout da €36,92 a €49,22 su Ticket Italia.",
+    category: "Teatro & Spettacoli",
+    categorySlug: "teatro-spettacoli",
+    subcategory: "Commedia",
+    subcategorySlug: "commedia",
+    type: "evento",
+    status: "published",
+    publishedAt: "2026-05-11",
+    funnelStage: "BOFU",
+    articleType: "evento",
+    tags: ["Valentina Persia", "Cabaret", "Commedia", "Teatro Lyrick", "Santa Maria degli Angeli"],
+    date: "2026-05-11",
+    readTime: "5 min",
+    author: "Redazione Ticket Italia",
+    image: "/images/valentina-persia-teatro-lyrick-santa-maria-degli-angeli-23-maggio-2026-hero.jpg",
+    body: {
+      intro:
+        "Valentina Persia porta lo spettacolo 'Nata con la Guepiere' al Teatro Lyrick di Santa Maria degli Angeli, frazione di Assisi, sabato 23 maggio 2026 alle 21:00. Tre settori, prezzi finali al checkout su Ticket Italia: Primo €49,22, Secondo €43,07, Terzo €36,92 (commissioni amministrative incluse).",
+      quickInfo: {
+        title: "Informazioni rapide",
+        text:
+          "Serata di stand-up al femminile in una delle venue più note dell'Umbria, con tre fasce di prezzo per scegliere posizione e visuale.",
+        bullets: [
+          "Artista: Valentina Persia",
+          "Spettacolo: 'Nata con la Guepiere'",
+          "Location: Teatro Lyrick, S. Maria degli Angeli (PG)",
+          "Data: sabato 23 maggio 2026, ore 21:00",
+          "Prezzi finali: dal Primo Settore €49,22 al Terzo Settore €36,92",
+        ],
+      },
+      tickets: {
+        title: "Biglietti Valentina Persia al Teatro Lyrick — prezzi e settori",
+        text:
+          "Per questa data il Lyrick è configurato su tre settori con visibilità decrescente dal palco. I prezzi finali al checkout su Ticket Italia includono diritto di prevendita e commissioni amministrative. Biglietto elettronico (PDF via email): non serve stamparlo.",
+        bullets: [
+          "Primo Settore: €49,22 (prezzo finale al checkout, commissioni incluse)",
+          "Secondo Settore: €43,07 (prezzo finale al checkout, commissioni incluse)",
+          "Terzo Settore: €36,92 (prezzo finale al checkout, commissioni incluse)",
+          "Formato: PDF inviato via email, QR code all'ingresso",
+          "Per disabilità: contatta l'organizzatore allegando certificato di invalidità",
+        ],
+      },
+      artistContext: {
+        title: "Valentina Persia: dalla televisione al teatro",
+        paragraphs: [
+          "Valentina Persia è una delle voci più riconoscibili della comicità italiana al femminile. La sua carriera passa per la televisione (Bagaglino, Zelig, partecipazioni a reality e talent) e si è poi spostata stabilmente sul palco teatrale, dove costruisce monologhi che intrecciano osservazioni sulla vita quotidiana, sulla coppia, sulle dinamiche familiari.",
+          "'Nata con la Guepiere' è uno spettacolo che gioca sul confine fra autobiografia comica e racconto generazionale: l'idea della 'donna nata con un certo abito' diventa il filo conduttore per attraversare aneddoti, ricordi e una galleria di personaggi messi insieme in trent'anni di mestiere.",
+        ],
+        bullets: [
+          "Stile: monologo comico-narrativo con momenti musicali",
+          "Cifra: autobiografia, sguardo sulla coppia, racconto generazionale",
+          "Carriera: dal Bagaglino a Zelig, dal varietà al teatro",
+        ],
+      },
+      location: {
+        title: "Teatro Lyrick: il punto di riferimento per spettacoli e concerti in Umbria",
+        venueType: "Teatro polifunzionale al chiuso, sede di concerti, prosa e comedy",
+        experience:
+          "Il Teatro Lyrick di Santa Maria degli Angeli (frazione di Assisi) è una delle venue più attive dell'Umbria, con una stagione che mescola comedy, musical, concerti e spettacoli di prosa. La struttura moderna è pensata per ospitare grandi nomi della scena italiana: nel 2026 calendario ricco con Brunori Sas, Fiorella Mannoia, Marco Travaglio, oltre allo spettacolo di Valentina Persia.",
+        suitability:
+          "Adatto allo stand-up perché la disposizione frontale e la suddivisione in tre settori permettono al comico di lavorare sul rapporto diretto con la platea, mantenendo una visuale buona anche dai settori più lontani. L'acustica chiusa amplifica la voce senza bisogno di forzature.",
+        atmosphere:
+          "Atmosfera di teatro contemporaneo, formale ma non rigida. Il pubblico tipo del Lyrick è generalista, abitudinario, fedele alle stagioni teatrali umbre.",
+        paragraphs: [
+          "Santa Maria degli Angeli è la frazione di Assisi che sorge ai piedi del colle, attorno alla Basilica di Santa Maria degli Angeli. Il Teatro Lyrick è raggiungibile facilmente in auto dalla SS75 (uscita Santa Maria degli Angeli) ed è collegato in pochi minuti con il centro storico di Assisi via bus o auto.",
+        ],
+        bullets: [
+          "Tipo: teatro polifunzionale, configurazione frontale a tre settori",
+          "Stagione 2026: comedy, concerti, musical e prosa",
+          "Accesso: SS75 uscita Santa Maria degli Angeli",
+          "Per parcheggi e info viabilità: consulta la pagina venue su Ticket Italia",
+        ],
+      },
+      liveExperience: {
+        title: "Cosa aspettarsi dallo spettacolo",
+        paragraphs: [
+          "'Nata con la Guepiere' è uno show di stand-up con inserti narrativi, con cambi di ritmo fra il monologo classico e momenti più costruiti. Lo spettacolo ha una durata standard da teatro (intorno ai 90 minuti) e gioca molto sul rapporto con il pubblico: aspettati momenti di interazione, soprattutto dai settori frontali.",
+        ],
+        bullets: [
+          "Formato: stand-up con inserti narrativi e momenti di interazione",
+          "Durata: circa 90 minuti",
+          "Inizio: ore 21:00",
+          "Pubblico: generalista, adulto",
+        ],
+      },
+      practicalInfo: {
+        title: "Come arrivare e informazioni pratiche",
+        paragraphs: [
+          "Il Teatro Lyrick è in zona Santa Maria degli Angeli, frazione di Assisi a pochi minuti dall'uscita SS75. Per chi arriva in treno, la stazione di Assisi-Santa Maria degli Angeli è a circa 5-10 minuti a piedi. Il biglietto è elettronico: lo ricevi in PDF dopo l'acquisto e mostri il QR code all'ingresso, da smartphone o stampato.",
+        ],
+        bullets: [
+          "In auto: SS75 uscita Santa Maria degli Angeli",
+          "In treno: stazione Assisi-Santa Maria degli Angeli, a breve distanza dal teatro",
+          "Biglietto: PDF elettronico via email, QR code all'ingresso",
+          "Inizio show: ore 21:00",
+        ],
+      },
+      internalLinks: [
+        {
+          label: "Maurizio Battista al Barton Park di Perugia",
+          href: "/articoli/maurizio-battista-barton-park-perugia-28-giugno-2026",
+          description: "Un altro nome della comedy nazionale in Umbria, sempre stagione 2026.",
+        },
+        {
+          label: "Angelina Mango ad Assisi (Rocca Maggiore)",
+          href: "/articoli/angelina-mango-piazzale-rocca-maggiore-assisi-5-agosto-2026",
+          description: "Stesso comune, format diverso: concerto outdoor al Piazzale Rocca Maggiore.",
+        },
+        {
+          label: "Come usare Carta Cultura per gli eventi",
+          href: "/come-usare-carta-cultura-carta-docente-biglietti-eventi",
+          description: "Verifica se puoi usare il bonus prima dell'acquisto del biglietto.",
+        },
+      ],
+      sections: [
+        {
+          heading: "Perché vale la pena vederla dal vivo",
+          paragraphs: [
+            "Valentina Persia in televisione è una macchietta riconoscibile; a teatro lavora su un materiale più stratificato, in cui la comicità diventa anche racconto. 'Nata con la Guepiere' è il formato in cui dà il meglio: tempi teatrali, monologhi più lunghi, vere pause comiche — cose che il varietà televisivo non lascia mai respirare.",
+          ],
+        },
+        {
+          heading: "Quale settore scegliere",
+          paragraphs: [
+            "Il Primo Settore (€49,22) è la scelta naturale per chi vuole l'interazione diretta e la visione frontale del palco. Il Secondo (€43,07) mantiene una visuale ottima e abbassa il prezzo. Il Terzo (€36,92) è la fascia più economica, comunque dentro un teatro con buona acustica: chi ha sentito Persia dal vivo sa che la voce arriva ovunque senza problemi.",
+          ],
+        },
+      ],
+      faq: [
+        {
+          question: "Quando inizia lo spettacolo di Valentina Persia al Lyrick?",
+          answer:
+            "Lo show inizia alle 21:00 di sabato 23 maggio 2026. Le porte aprono in anticipo: consiglio di arrivare almeno 20-30 minuti prima per entrare con calma.",
+        },
+        {
+          question: "Quanto costano i biglietti?",
+          answer:
+            "Prezzo finale al checkout su Ticket Italia: Primo Settore €49,22, Secondo Settore €43,07, Terzo Settore €36,92. Commissioni amministrative e diritto di prevendita inclusi.",
+        },
+        {
+          question: "Dove si trova il Teatro Lyrick?",
+          answer:
+            "Il Teatro Lyrick è a Santa Maria degli Angeli, frazione di Assisi, in Umbria. Si raggiunge in auto dalla SS75 (uscita Santa Maria degli Angeli) o in treno (stazione Assisi-S.M. degli Angeli a breve distanza).",
+        },
+        {
+          question: "Il biglietto è cartaceo o elettronico?",
+          answer:
+            "Elettronico: PDF inviato via email all'indirizzo indicato in fase d'acquisto. Puoi mostrarlo da smartphone o stamparlo, ma stampare non è obbligatorio.",
+        },
+      ],
+      cta: {
+        title: "Acquista i biglietti per Valentina Persia al Teatro Lyrick",
+        text:
+          "Stand-up di Valentina Persia al Teatro Lyrick di Santa Maria degli Angeli, sabato 23 maggio 2026. Acquista subito su Ticket Italia: tre settori, prezzi finali al checkout da €36,92.",
+        label: "Acquista su Ticket Italia",
+        href: "https://ticketitalia.com/valentina-persia-teatro-lyrick-s-maria-degli-angeli-23-maggio-2026",
+      },
+    },
+  },
+  {
+    slug: "litfiba-giardini-del-frontone-perugia-umbria-che-spacca-27-giugno-2026",
+    title: "Litfiba a Umbria Che Spacca: 27 giugno 2026 ai Giardini del Frontone (sold out)",
+    excerpt:
+      "Litfiba ai Giardini del Frontone di Perugia per Umbria Che Spacca, sabato 27 giugno 2026 dalle 19:30. Posto unico €61,53 finale al checkout — evento sold out su Ticket Italia.",
+    category: "Eventi & Festival",
+    categorySlug: "eventi-festival",
+    subcategory: "Festival musicali",
+    subcategorySlug: "festival-musicali",
+    type: "evento",
+    status: "published",
+    publishedAt: "2026-05-11",
+    funnelStage: "BOFU",
+    articleType: "evento",
+    tags: ["Litfiba", "Umbria che Spacca", "Frontone", "Perugia", "Festival", "Rock italiano"],
+    date: "2026-05-11",
+    readTime: "7 min",
+    author: "Redazione Ticket Italia",
+    image: "/images/litfiba-giardini-del-frontone-perugia-27-giugno-2026-hero.jpg",
+    body: {
+      intro:
+        "I Litfiba sono headliner di una delle serate più attese di Umbria Che Spacca 2026: sabato 27 giugno ai Giardini del Frontone di Perugia, apertura cancelli ore 19:30, salita sul palco prevista per le 21:00. Posto unico €61,53 finale al checkout (€50,00 base + €7,50 prevendita + €4,03 commissioni amministrative). La data è già SOLD OUT su Ticket Italia.",
+      quickInfo: {
+        title: "Informazioni rapide",
+        text:
+          "Una delle serate-bandiera del festival perugino. Tutto esaurito: monitora la pagina evento per eventuali rilasci di biglietti o nuove disponibilità.",
+        bullets: [
+          "Artista: Litfiba",
+          "Festival: Umbria Che Spacca 2026",
+          "Location: Giardini del Frontone, Perugia",
+          "Data: sabato 27 giugno 2026, apertura ore 19:30",
+          "Prezzo finale al checkout: €61,53 (posto unico)",
+          "Stato: evento sold out",
+        ],
+      },
+      tickets: {
+        title: "Biglietti Litfiba al Frontone — prezzi e stato vendita",
+        text:
+          "Per la data di Perugia è prevista un'unica tipologia di biglietto, posto unico, con prezzo finale €61,53 al checkout (€50,00 prezzo base + €7,50 diritto di prevendita + €4,03 commissioni amministrative). I biglietti sono esauriti; per disponibilità last-minute monitora la pagina evento ufficiale.",
+        bullets: [
+          "Posto unico - Intero (base): €50,00",
+          "Diritto di prevendita: €7,50",
+          "Commissioni amministrative: €4,03",
+          "Totale finale al checkout: €61,53",
+          "Stato: sold out (verifica la pagina evento per rilasci dell'ultimo minuto)",
+          "Formato: biglietto elettronico PDF via email",
+        ],
+      },
+      artistContext: {
+        title: "Litfiba: la band-simbolo del rock italiano",
+        paragraphs: [
+          "I Litfiba sono una delle band più importanti del rock italiano. Fondati a Firenze nel 1980 da Piero Pelù e Ghigo Renzulli, hanno attraversato quattro decenni segnando la storia musicale del Paese con dischi come 17 Re, El Diablo, Terremoto, Spirito. La loro carriera ha conosciuto separazioni, ritorni e cambi di formazione, sempre con il filo conduttore di un rock energico e politicamente schierato.",
+          "Per Umbria Che Spacca 2026 la band torna in Umbria con uno show ad alto impatto: scaletta che alterna i grandi successi storici alle uscite più recenti, produzione luce e suono pensata per il contesto outdoor del Frontone.",
+        ],
+        bullets: [
+          "Fondati a Firenze nel 1980 (Piero Pelù, Ghigo Renzulli)",
+          "Album simbolo: 17 Re, El Diablo, Terremoto, Spirito",
+          "Stile: rock italiano, testi politicamente schierati",
+          "Pubblico: trasversale, dai fan storici alle nuove generazioni",
+        ],
+      },
+      location: {
+        title: "Giardini del Frontone: l'anima verde di Perugia",
+        venueType: "Giardini storici all'aperto, location iconica di Perugia per eventi estivi",
+        experience:
+          "I Giardini del Frontone sono il polmone verde e culturale di Perugia. Situati nel cuore della città, d'estate si trasformano in un anfiteatro naturale: il verde degli alberi fa da cornice ai suoni, le mura storiche creano acustica naturale, il centro città palpita a pochi metri di distanza. Capienza intorno alle 15.000 persone in configurazione festival.",
+        suitability:
+          "Perfetto per il rock dei Litfiba: spazio aperto, pubblico che si muove, energia che si espande senza vincoli di pareti riflettenti. La conformazione del terreno aiuta visibilità e acustica da quasi tutti i punti del prato.",
+        atmosphere:
+          "Notte d'estate perugina, mura del centro storico tutto attorno, pubblico multigenerazionale. È una delle cornici più riconoscibili dei festival italiani estivi.",
+        paragraphs: [
+          "I Giardini del Frontone hanno una storia di concerti leggendari e momenti culturali che hanno segnato Perugia. Per i Litfiba è il contesto perfetto: rock italiano in una piazza aperta, sotto un cielo che sa di estate, in una città che la musica la vive senza filtri.",
+        ],
+        bullets: [
+          "Acustica: naturale, amplificata da colline e mura storiche",
+          "Capienza: circa 15.000 persone in configurazione festival",
+          "Posizione: centro storico di Perugia, raggiungibile a piedi",
+          "Atmosfera: informale, partecipativa, tipica dei festival estivi",
+        ],
+        locationImage:
+          "https://ticketitalia.com/image/cache/wp/gj/Luoghi%20banner/Giardini%20del%20Frontone%20Perugia%20(1)-1400x300.webp",
+        nearbyParking: [
+          {
+            name: "Parcheggio Piazza Partigiani",
+            distanceOnFoot: "10 min a piedi",
+            type: "a pagamento",
+            notes: "Parcheggio custodito con scale mobili verso il centro storico",
+            mapsUrl: "https://maps.google.com/?q=Parcheggio+Piazza+Partigiani+Perugia",
+          },
+          {
+            name: "Parcheggio Piazzale Europa",
+            distanceOnFoot: "12 min a piedi",
+            type: "a pagamento",
+            notes: "Parcheggio custodito con scale mobili, vicino agli accessi al centro",
+            mapsUrl: "https://maps.google.com/?q=Parcheggio+Piazzale+Europa+Perugia",
+          },
+          {
+            name: "Parcheggio Mercato Coperto",
+            distanceOnFoot: "8 min a piedi",
+            type: "a pagamento",
+            notes: "Parcheggio con ascensore, posizione comoda per raggiungere il Frontone",
+            mapsUrl: "https://maps.google.com/?q=Parcheggio+Mercato+Coperto+Perugia",
+          },
+        ],
+        nearbyHotels: [
+          {
+            name: "Sina Brufani",
+            distanceOnFoot: "5 min a piedi",
+            priceRange: "€€€",
+            bookingUrl: "https://www.sinahotels.com/it/h/brufani-palace-perugia/",
+          },
+          {
+            name: "Sangallo Palace Hotel",
+            distanceOnFoot: "5 min a piedi",
+            priceRange: "€€",
+            bookingUrl: "https://www.sangallopalace.it/",
+          },
+          {
+            name: "Chocohotel",
+            distanceOnFoot: "20 min a piedi",
+            priceRange: "€",
+            bookingUrl: "https://www.chocohotel.it/",
+          },
+        ],
+      },
+      liveExperience: {
+        title: "Cosa aspettarsi dalla serata",
+        paragraphs: [
+          "I Litfiba al Frontone significano due ore di scaletta-bandiera del rock italiano: dai pezzi storici come 'Eroi nel vento', 'El Diablo', 'Tex' ai brani più recenti. Salita sul palco prevista per le 21:00, con possibili opening act fra le 19:30 e l'ingresso della band. Il pubblico è trasversale: vecchi fan, gente che arriva per i classici, nuove generazioni a scoprirli dal vivo.",
+        ],
+        bullets: [
+          "Apertura cancelli: ore 19:30",
+          "Inizio show Litfiba: ore 21:00 (orario indicativo)",
+          "Durata: circa 100-120 minuti",
+          "Pubblico: multigenerazionale, energico",
+        ],
+      },
+      practicalInfo: {
+        title: "Come arrivare e informazioni pratiche",
+        paragraphs: [
+          "I Giardini del Frontone sono nel centro storico di Perugia. L'auto è la scelta tipica per chi viene da fuori: lascia il mezzo nei parcheggi di scambio (Piazza Partigiani, Piazzale Europa, Mercato Coperto) e raggiungi i giardini in 8-12 minuti a piedi tramite scale mobili. Il biglietto è elettronico: PDF via email, QR code all'ingresso.",
+        ],
+        bullets: [
+          "Parcheggi: Piazza Partigiani, Piazzale Europa, Mercato Coperto (tutti a pagamento)",
+          "Da fuori Perugia: E45 o Raccordo Perugia-Bettolle, uscita Perugia centro",
+          "Biglietto: PDF elettronico via email, QR code all'ingresso",
+          "Apertura cancelli: ore 19:30",
+          "Inizio Litfiba: ore 21:00",
+        ],
+      },
+      internalLinks: [
+        {
+          label: "Salmo a Umbria Che Spacca",
+          href: "/articoli/salmo-perugia-2026-umbria-che-spacca-biglietti",
+          description: "Un'altra serata-bandiera del festival 2026 al Frontone.",
+        },
+        {
+          label: "Ermal Meta a Perugia (Afterlife Live Club)",
+          href: "/articoli/ermal-meta-perugia-2026-biglietti-afterlife-live-club",
+          description: "Format raccolto in club, opposto rispetto al Frontone open-air.",
+        },
+        {
+          label: "Come usare Carta Cultura per i concerti",
+          href: "/carta-cultura-concerti-come-usarla",
+          description: "Verifica se puoi usare il bonus per il tuo biglietto del festival.",
+        },
+      ],
+      sections: [
+        {
+          heading: "Perché Litfiba al Frontone è un appuntamento speciale",
+          paragraphs: [
+            "Il Frontone non è uno stadio: è una piazza-giardino con mura storiche tutto attorno. I Litfiba in una cornice così sono quello che la band è sempre stata: rock italiano dentro la città, non in un'arena anonima. La scaletta del 2026 punta sui classici e i pezzi recenti, ma è il contesto a fare la differenza.",
+          ],
+        },
+        {
+          heading: "Cosa fare se è sold out",
+          paragraphs: [
+            "Se sei arrivato all'evento dopo l'esaurimento dei biglietti, le opzioni concrete sono due: monitorare la pagina evento su Ticket Italia per eventuali rilasci dell'ultimo minuto (a volte arrivano biglietti restituiti) e verificare gli altri appuntamenti di Umbria Che Spacca 2026 ancora disponibili. Evita i circuiti di rivendita non ufficiali: prezzo gonfiato e zero garanzie.",
+          ],
+          bullets: [
+            "Monitora la pagina evento su Ticket Italia per rilasci last-minute",
+            "Esplora gli altri concerti del festival per date alternative",
+            "Evita la rivendita non ufficiale: nessuna garanzia di validità del biglietto",
+          ],
+        },
+      ],
+      faq: [
+        {
+          question: "Quanto costa il biglietto Litfiba al Frontone?",
+          answer:
+            "Il prezzo finale al checkout su Ticket Italia è €61,53 per il posto unico. La composizione: €50,00 prezzo base, €7,50 diritto di prevendita, €4,03 commissioni amministrative.",
+        },
+        {
+          question: "L'evento è ancora disponibile?",
+          answer:
+            "No, attualmente è SOLD OUT su Ticket Italia. Per eventuali rilasci dell'ultimo minuto controlla la pagina evento nelle ore precedenti al concerto.",
+        },
+        {
+          question: "A che ora aprono i cancelli e quando salgono sul palco i Litfiba?",
+          answer:
+            "Cancelli aperti dalle 19:30. La band sale sul palco intorno alle 21:00 (orario indicativo, possibili opening act in mezzo).",
+        },
+        {
+          question: "Dove parcheggiare?",
+          answer:
+            "I parcheggi consigliati sono Piazza Partigiani, Piazzale Europa e Mercato Coperto: tutti a pagamento, custoditi, con scale mobili o ascensori verso il centro storico. Distanza a piedi dai giardini: 8-12 minuti.",
+        },
+      ],
+      cta: {
+        title: "Scopri il programma di Umbria Che Spacca su Ticket Italia",
+        text:
+          "Il concerto Litfiba al Frontone del 27 giugno 2026 è sold out: controlla la pagina evento per eventuali rilasci e scopri gli altri appuntamenti del festival.",
+        label: "Vai alla pagina evento su Ticket Italia",
+        href: "https://ticketitalia.com/litfiba-giardini-del-frontone-perugia-umbria-che-spacca-27-giugno-2026",
+      },
+    },
+  },
+  {
+    slug: "perugia-flower-show-villa-colle-del-cardinale-23-24-maggio-2026",
+    title: "Perugia Flower Show 2026: mostra mercato a Villa del Colle del Cardinale, 23-24 maggio",
+    excerpt:
+      "Perugia Flower Show torna a Villa del Colle del Cardinale il 23 e 24 maggio 2026: mostra mercato di piante rare e inconsuete, corsi e laboratori. Biglietto intero €11,00 finale al checkout.",
+    category: "Eventi & Festival",
+    categorySlug: "eventi-festival",
+    subcategory: "Eventi culturali",
+    subcategorySlug: "eventi-culturali",
+    type: "evento",
+    status: "published",
+    publishedAt: "2026-05-11",
+    funnelStage: "BOFU",
+    articleType: "evento",
+    tags: ["Perugia Flower Show", "Mostra mercato", "Piante rare", "Villa Colle del Cardinale", "Botanica"],
+    date: "2026-05-11",
+    readTime: "5 min",
+    author: "Redazione Ticket Italia",
+    image: "https://ticketitalia.com/image/cache/wp/gj/Flower%20Show/PERUGIA%20(002)-1500x1500.webp",
+    body: {
+      intro:
+        "Perugia Flower Show torna nel weekend del 23 e 24 maggio 2026 a Villa del Colle del Cardinale: due giorni di mostra mercato dedicati a piante rare e inconsuete, con corsi di giardinaggio, seminari tematici e laboratori creativi. Biglietto giornaliero intero a €11,00 finale al checkout su Ticket Italia (€10,00 base + commissioni).",
+      quickInfo: {
+        title: "Informazioni rapide",
+        text:
+          "Weekend florovivaistico in una delle residenze d'epoca più note dell'Umbria. Mostra mercato + eventi collaterali gratuiti inclusi nel biglietto d'ingresso.",
+        bullets: [
+          "Evento: Perugia Flower Show 2026 — mostra mercato piante rare e inconsuete",
+          "Location: Villa del Colle del Cardinale, Perugia",
+          "Date: sabato 23 e domenica 24 maggio 2026",
+          "Biglietto: intero €11,00 finale al checkout su Ticket Italia",
+          "Inclusi: corsi di giardinaggio, seminari, laboratori",
+        ],
+      },
+      tickets: {
+        title: "Biglietti Perugia Flower Show — prezzo e cosa è incluso",
+        text:
+          "Per Perugia Flower Show 2026 è prevista un'unica tipologia di biglietto giornaliero, con prezzo finale al checkout €11,00 (€10,00 base + commissioni). Il biglietto include l'accesso alla mostra mercato e a tutti gli eventi collaterali gratuiti (corsi, seminari, laboratori). Per chi vuole partecipare a entrambe le giornate è disponibile l'abbonamento 2 giorni — controlla la pagina evento per il prezzo.",
+        bullets: [
+          "Biglietto intero giornaliero: €11,00 (prezzo finale al checkout)",
+          "Inclusi: mostra mercato + corsi di giardinaggio + seminari + laboratori creativi",
+          "Formato: biglietto elettronico PDF via email",
+          "Accesso: QR code da smartphone al controllo accessi",
+          "Abbonamento 2 giorni disponibile sulla pagina evento Ticket Italia",
+        ],
+      },
+      artistContext: {
+        title: "Perugia Flower Show: un appuntamento per appassionati di botanica",
+        paragraphs: [
+          "Perugia Flower Show è una manifestazione florovivaistica specializzata che si distingue dalla mostra mercato generalista: il focus è sulle piante rare e inconsuete, cioè specie poco diffuse nei vivai commerciali, varietà botaniche di nicchia, esemplari da collezione. Per chi si occupa di giardinaggio amatoriale o di paesaggismo, è una delle poche occasioni in Italia centrale per trovare materiale botanico difficile da reperire altrimenti.",
+          "Il programma collaterale è ricco quanto la mostra: corsi di giardinaggio per principianti e per esperti, seminari tematici condotti da agronomi e paesaggisti, laboratori creativi adatti anche a chi vuole avvicinarsi al verde senza basi pregresse.",
+        ],
+        bullets: [
+          "Format: mostra mercato di piante rare e inconsuete",
+          "Pubblico: appassionati di botanica, hobbisti, paesaggisti, neofiti curiosi",
+          "Programma: vendita piante + corsi + seminari + laboratori",
+        ],
+      },
+      location: {
+        title: "Villa del Colle del Cardinale: dimora storica per la mostra",
+        venueType: "Villa monumentale del Cinquecento, residenza d'epoca e spazio museale",
+        experience:
+          "Villa del Colle del Cardinale è la più nota tra i complessi residenziali umbri di epoca cinquecentesca. Una dimora storica prestigiosa, oggi anche luogo museale e sede di eventi ed esposizioni temporanee: la cornice ideale per una mostra mercato florovivaistica come il Flower Show, perché unisce architettura monumentale e spazi verdi.",
+        suitability:
+          "Lo spazio della villa permette di articolare la mostra fra giardini e padiglioni, con percorsi che alternano esposizione di piante, banchi di vendita, aree per i corsi e i laboratori. La conformazione del Colle del Cardinale è naturalmente adatta a una manifestazione botanica: terreno, vegetazione, prospettive.",
+        atmosphere:
+          "Atmosfera da weekend culturale all'aperto, pubblico misto fra appassionati e famiglie. Il maggio umbro è la stagione perfetta per visitare una villa così, tra fioriture e clima ancora mite.",
+        paragraphs: [
+          "La villa fu costruita nella metà del Cinquecento e nel tempo ha cambiato uso: dimora privata, struttura agricola, oggi luogo destinato alla fruizione culturale. Per Perugia Flower Show l'incontro funziona da entrambe le parti: la villa offre la cornice monumentale, la mostra le dà un programma di pubblico vivo.",
+        ],
+        bullets: [
+          "Tipo: villa monumentale cinquecentesca, residenza d'epoca",
+          "Funzione: luogo museale, sede eventi ed esposizioni temporanee",
+          "Posizione: Colle del Cardinale, Perugia",
+          "Per indirizzo esatto e parcheggi: consulta la pagina venue su Ticket Italia",
+        ],
+      },
+      liveExperience: {
+        title: "Cosa aspettarsi dalla due giorni",
+        paragraphs: [
+          "Il Flower Show non è una semplice esposizione: è un weekend partecipativo. Ti porti a casa piante che difficilmente troveresti altrove e nel frattempo segui un corso, fai un laboratorio, ascolti un seminario. Per chi è agli inizi è un'occasione per capire le basi del giardinaggio direttamente da chi lo fa di mestiere; per chi è esperto è il momento per scambiare con vivaisti specializzati.",
+        ],
+        bullets: [
+          "Visite: vai con calma, le due giornate permettono di non correre",
+          "Acquisto piante: porta contenitori adatti per il trasporto se vieni in auto",
+          "Corsi e laboratori: posti a disponibilità — verifica orari il giorno stesso",
+          "Famiglie con bambini: i laboratori creativi sono adatti anche ai più piccoli",
+        ],
+      },
+      practicalInfo: {
+        title: "Come arrivare e informazioni pratiche",
+        paragraphs: [
+          "Villa del Colle del Cardinale è raggiungibile in auto da Perugia centro in pochi minuti. Per indirizzo preciso e viabilità nei giorni della manifestazione consulta la pagina evento su Ticket Italia: in occasione del Flower Show l'organizzazione comunica i parcheggi temporanei e i percorsi di accesso. Il biglietto è elettronico: lo ricevi in PDF e mostri il QR code all'ingresso.",
+        ],
+        bullets: [
+          "Da Perugia centro: pochi minuti in auto verso il Colle del Cardinale",
+          "Biglietto: PDF elettronico via email, QR code all'ingresso",
+          "Validità: una giornata (controlla l'abbonamento 2 giorni se vuoi venire sabato e domenica)",
+          "Famiglie: laboratori creativi adatti a bambini e ragazzi",
+        ],
+      },
+      internalLinks: [
+        {
+          label: "Agriumbria: la grande fiera agricola di Bastia Umbra",
+          href: "/agriumbria-evento-biglietti-guida",
+          description: "Un altro evento di settore in Umbria, con un focus più ampio sull'agroalimentare.",
+        },
+        {
+          label: "Maurizio Battista al Barton Park di Perugia",
+          href: "/articoli/maurizio-battista-barton-park-perugia-28-giugno-2026",
+          description: "Un altro appuntamento della stagione estiva nei parchi urbani perugini.",
+        },
+      ],
+      sections: [
+        {
+          heading: "Perché vale il biglietto a €11,00",
+          paragraphs: [
+            "A €11 finali porti a casa un weekend con dentro tre cose insieme: una mostra mercato specializzata, un programma di corsi/seminari/laboratori inclusi, e l'accesso a una villa monumentale del Cinquecento. Per chi è appassionato di botanica è scontato; per chi è curioso senza avere ancora un giardino, è il modo più semplice per provare se quel mondo gli interessa.",
+          ],
+        },
+        {
+          heading: "Sabato o domenica: come scegliere",
+          paragraphs: [
+            "I dueRound giorni hanno carattere diverso. Il sabato è in generale più affollato, soprattutto nelle ore centrali, con tutti i corsi pieni. La domenica è più rilassata, con un pubblico di famiglie e tempi di acquisto più dilatati. Se vuoi seguire un corso specifico, controlla in anticipo il programma sulla pagina evento: alcuni laboratori si svolgono solo in una delle due giornate.",
+          ],
+        },
+      ],
+      faq: [
+        {
+          question: "Quanto costa il biglietto del Perugia Flower Show?",
+          answer:
+            "Il prezzo finale al checkout su Ticket Italia è €11,00 per il biglietto giornaliero intero (€10,00 base + commissioni). Per chi vuole partecipare a entrambi i giorni è disponibile l'abbonamento 2 giorni — verifica il prezzo direttamente sulla pagina evento.",
+        },
+        {
+          question: "I corsi e i laboratori sono inclusi?",
+          answer:
+            "Sì, il programma di eventi collaterali (corsi di giardinaggio base e specialistico, seminari tematici, laboratori creativi) è incluso nel biglietto d'ingresso, fino ai posti disponibili.",
+        },
+        {
+          question: "Dove si trova Villa del Colle del Cardinale?",
+          answer:
+            "La villa è sul Colle del Cardinale, a Perugia. Per indirizzo esatto, viabilità e parcheggi del weekend dell'evento consulta la pagina evento ufficiale su Ticket Italia.",
+        },
+        {
+          question: "L'evento è adatto alle famiglie?",
+          answer:
+            "Sì: i laboratori creativi sono pensati anche per bambini e ragazzi, e la cornice della villa permette una visita rilassata. La domenica è generalmente la giornata più tranquilla per le famiglie.",
+        },
+      ],
+      cta: {
+        title: "Acquista il biglietto per Perugia Flower Show 2026",
+        text:
+          "Due giorni di mostra mercato florovivaistica a Villa del Colle del Cardinale, 23-24 maggio 2026. Biglietto intero €11,00 finale al checkout su Ticket Italia, abbonamento 2 giorni disponibile.",
+        label: "Acquista su Ticket Italia",
+        href: "https://ticketitalia.com/perugia-flower-show-villa-colle-del-cardinale-pg-23-24-maggio-2026",
+      },
+    },
+  },
+  {
+    slug: "elisir-d-amore-teatro-nuovo-spoleto-18-20-settembre-2026",
+    title: "L'Elisir d'Amore al Teatro Nuovo G.C. Menotti di Spoleto: tre repliche dal 18 al 20 settembre 2026",
+    excerpt:
+      "L'Elisir d'Amore di Donizetti torna al Teatro Nuovo Gian Carlo Menotti di Spoleto dal 18 al 20 settembre 2026, parte dell'80ª Stagione Lirica Sperimentale A. Belli. Biglietti da €21,50 finali su Ticket Italia.",
+    category: "Teatro & Spettacoli",
+    categorySlug: "teatro-spettacoli",
+    subcategory: "Musical",
+    subcategorySlug: "musical",
+    type: "evento",
+    status: "published",
+    publishedAt: "2026-05-11",
+    funnelStage: "BOFU",
+    articleType: "evento",
+    tags: ["Elisir d'amore", "Donizetti", "Opera lirica", "Teatro Nuovo Spoleto", "Stagione Lirica Sperimentale"],
+    date: "2026-05-11",
+    readTime: "7 min",
+    author: "Redazione Ticket Italia",
+    image: "/images/elisir-d-amore-teatro-nuovo-spoleto-18-20-settembre-2026-hero.jpg",
+    body: {
+      intro:
+        "L'Elisir d'Amore di Gaetano Donizetti torna al Teatro Nuovo Gian Carlo Menotti di Spoleto con tre repliche nel weekend del 18-20 settembre 2026, nell'ambito dell'80ª Stagione Lirica Sperimentale A. Belli. Una delle opere comiche più amate del repertorio italiano, eseguita in una stagione storica fra le più longeve d'Italia. Biglietti a partire da €21,50 finali su Ticket Italia.",
+      quickInfo: {
+        title: "Informazioni rapide",
+        text:
+          "Melodramma giocoso in due atti di Donizetti, tre repliche in tre giorni consecutivi al Teatro Nuovo G.C. Menotti di Spoleto. Produzione dell'Istituzione Teatro Lirico Sperimentale A. Belli.",
+        bullets: [
+          "Opera: L'Elisir d'Amore — Gaetano Donizetti (1832)",
+          "Stagione: 80ª Stagione Lirica Sperimentale A. Belli, 2026",
+          "Location: Teatro Nuovo Gian Carlo Menotti, Spoleto (PG)",
+          "Repliche: venerdì 18 settembre ore 20:30, sabato 19 settembre ore 18:00, domenica 20 settembre ore 17:00",
+          "Prezzo: a partire da €21,50 finale al checkout (commissioni amministrative incluse)",
+        ],
+      },
+      tickets: {
+        title: "Biglietti L'Elisir d'Amore al Teatro Nuovo — prezzi e modalità",
+        text:
+          "Per le repliche di Spoleto i prezzi partono da €21,50 finali al checkout (commissioni amministrative già incluse). La fascia tariffaria varia in base al settore scelto — platea, palchi e galleria — e all'orario della replica. Il biglietto è elettronico: PDF via email subito dopo l'acquisto.",
+        bullets: [
+          "Prezzo a partire da: €21,50 (prezzo finale al checkout, commissioni incluse)",
+          "Tre repliche: venerdì 20:30, sabato 18:00, domenica 17:00",
+          "Settori: platea, palchi laterali, galleria (verifica la disponibilità per replica su Ticket Italia)",
+          "Formato: biglietto elettronico PDF via email",
+          "Per accessibilità: contatta l'organizzatore con certificato di invalidità prima dell'acquisto",
+        ],
+      },
+      artistContext: {
+        title: "Donizetti e l'Elisir d'Amore: la commedia che funziona da due secoli",
+        paragraphs: [
+          "L'Elisir d'Amore è il melodramma giocoso che ha consolidato la fama internazionale di Gaetano Donizetti. Andato in scena per la prima volta al Teatro della Cannobiana di Milano il 12 maggio 1832, in oltre due secoli non ha mai smesso di girare per i teatri del mondo. La trama — Nemorino innamorato di Adina che compra un finto elisir d'amore dal ciarlatano Dulcamara — è il prototipo della commedia romantica con happy ending, costruita su musica leggera e personaggi caricaturali ma teneri.",
+          "La Stagione Lirica Sperimentale A. Belli di Spoleto è una delle istituzioni più longeve nel panorama italiano: nata per dare opportunità ai giovani cantanti lirici dopo aver superato un concorso nazionale, mette in scena ogni anno produzioni che combinano cast emergenti e regie spesso sperimentali. Vedere l'Elisir qui significa vedere quello che è diventato un titolo classico nelle mani di una nuova generazione di interpreti.",
+        ],
+        bullets: [
+          "Opera: melodramma giocoso in due atti",
+          "Compositore: Gaetano Donizetti",
+          "Prima rappresentazione: 12 maggio 1832, Teatro della Cannobiana, Milano",
+          "Produzione: Istituzione Teatro Lirico Sperimentale A. Belli",
+          "Stagione: 80ª edizione (una delle stagioni liriche più longeve d'Italia)",
+        ],
+      },
+      location: {
+        title: "Teatro Nuovo Gian Carlo Menotti: il cuore dell'opera a Spoleto",
+        venueType: "Teatro storico, sede principale della Stagione Lirica Sperimentale",
+        experience:
+          "Il Teatro Nuovo Gian Carlo Menotti di Spoleto è il fulcro della vita musicale della città. Architettura tradizionale a ferro di cavallo, acustica progettata per la voce e l'orchestra, capienza intorno agli 800 posti: la cornice ideale per un titolo come l'Elisir, che fa della cantabilità lirica e del rapporto fra voce e platea il suo perno.",
+        suitability:
+          "L'Elisir d'Amore al Teatro Nuovo è la combinazione giusta: l'opera è scritta per teatri di queste dimensioni, dove l'orchestra non deve coprire la voce e la platea sente ogni sfumatura del recitativo. Per il pubblico significa visione e ascolto centrati sulla qualità musicale piuttosto che sull'effetto scenico.",
+        atmosphere:
+          "Atmosfera di teatro lirico storico, pubblico attento, applausi nei momenti giusti, silenzio durante i passaggi più delicati. Spoleto ha una tradizione musicale che parte dal Festival dei Due Mondi: il pubblico è educato all'ascolto e questa è una delle ragioni per cui la Stagione Lirica Sperimentale qui funziona.",
+        paragraphs: [
+          "Il teatro è intitolato a Gian Carlo Menotti, compositore italoamericano che a Spoleto fondò nel 1958 il Festival dei Due Mondi. Per la Stagione Lirica Sperimentale A. Belli è la casa storica, sede della maggior parte delle produzioni dell'anno.",
+        ],
+        bullets: [
+          "Acustica: progettata per voce lirica e orchestra",
+          "Capienza: circa 800 posti, ferro di cavallo tradizionale",
+          "Posizione: centro storico di Spoleto, raggiungibile a piedi",
+          "Storia: sede della Stagione Lirica Sperimentale A. Belli e legato al Festival dei Due Mondi",
+        ],
+        locationImage:
+          "https://ticketitalia.com/image/cache/wp/gj/Luoghi%20banner/344506502072015142421_galleriamedia1-1400x300.webp",
+        nearbyParking: [
+          {
+            name: "Parcheggio della Posterna",
+            distanceOnFoot: "10 min a piedi",
+            type: "a pagamento",
+            notes: "454 posti, €1,20/ora. Tapis roulant sotterraneo con uscita nei pressi del Teatro Nuovo",
+            mapsUrl: "https://maps.google.com/?q=Parcheggio+Posterna+Spoleto",
+          },
+          {
+            name: "Parcheggio Spoletosfera",
+            distanceOnFoot: "15 min a piedi",
+            type: "a pagamento",
+            notes: "414 posti coperti, aperto 24h. Raggiungibile da Viale dei Cappuccini",
+            mapsUrl: "https://maps.google.com/?q=Parcheggio+Spoletosfera+Spoleto",
+          },
+          {
+            name: "Parcheggio Pian di Boccio",
+            distanceOnFoot: "20 min a piedi",
+            type: "gratuito",
+            notes: "Parcheggio gratuito nel weekend, collegato al centro storico",
+            mapsUrl: "https://maps.google.com/?q=Pian+di+Boccio+Spoleto+parcheggio",
+          },
+        ],
+        nearbyHotels: [
+          {
+            name: "Hotel San Luca",
+            distanceOnFoot: "10 min a piedi",
+            priceRange: "€€",
+            bookingUrl: "https://www.hotelsanluca.com/",
+          },
+          {
+            name: "Hotel dei Duchi",
+            distanceOnFoot: "8 min a piedi",
+            priceRange: "€€",
+            bookingUrl: "https://www.hoteldeiduchi.com/",
+          },
+          {
+            name: "Boutique Hotel Aurora & Private Spa",
+            distanceOnFoot: "5 min a piedi",
+            priceRange: "€€",
+            bookingUrl: "https://www.hotelauroraspoleto.it/",
+          },
+        ],
+      },
+      liveExperience: {
+        title: "Cosa aspettarsi dalle repliche",
+        paragraphs: [
+          "L'Elisir d'Amore al Teatro Nuovo è quasi due ore di opera, con un intervallo nel mezzo. La produzione della Stagione Lirica Sperimentale A. Belli punta sui giovani cantanti che hanno superato il concorso nazionale: aspettati voci fresche, regie a volte audaci, un'orchestra in buca con i tempi tradizionali del melodramma giocoso.",
+        ],
+        bullets: [
+          "Durata: circa 2h con intervallo",
+          "Lingua: italiano (sovratitoli tipicamente non necessari per il pubblico italofono)",
+          "Cast: giovani cantanti della Stagione Lirica Sperimentale A. Belli",
+          "Sezioni di spicco: 'Una furtiva lagrima' (aria celebre di Nemorino, secondo atto)",
+        ],
+      },
+      practicalInfo: {
+        title: "Come arrivare e informazioni pratiche",
+        paragraphs: [
+          "Spoleto è raggiungibile da Roma in circa 1h30 di auto (A1 uscita Orte, poi E45) o in treno con i diretti per Ancona/Foligno. Il Teatro Nuovo è in pieno centro storico, raggiungibile a piedi da tutti i parcheggi principali in 10-20 minuti. Il biglietto è elettronico: PDF via email, QR code all'ingresso.",
+        ],
+        bullets: [
+          "Da Roma: A1 uscita Orte, poi SS204/E45 (~1h30)",
+          "In treno: stazione Spoleto, poi 15 min a piedi al teatro",
+          "Parcheggi: Posterna (con tapis roulant verso il teatro), Spoletosfera, Pian di Boccio (gratuito weekend)",
+          "Apertura porte: in genere 30-45 minuti prima dell'inizio replica",
+          "Biglietto: PDF elettronico via email, QR code all'ingresso",
+        ],
+      },
+      internalLinks: [
+        {
+          label: "Francesco Renga al Teatro Nuovo di Spoleto",
+          href: "/articoli/francesco-renga-spoleto-2026-biglietti-teatro-nuovo",
+          description: "Stessa venue, format diverso: concerto teatrale di un grande del pop italiano.",
+        },
+        {
+          label: "Claudio Baglioni in Piazza Duomo a Spoleto",
+          href: "/articoli/claudio-baglioni-la-vita-e-adesso-grandtour-piazza-duomo-spoleto-15-luglio-2026",
+          description: "Spoleto fuori dal teatro: la grande tappa estiva in piazza.",
+        },
+        {
+          label: "Come usare Carta Cultura per gli eventi",
+          href: "/come-usare-carta-cultura-carta-docente-biglietti-eventi",
+          description: "Bonus utilizzabile su molte produzioni liriche: verifica prima di acquistare.",
+        },
+      ],
+      sections: [
+        {
+          heading: "Perché l'Elisir d'Amore è il titolo giusto per iniziare con l'opera",
+          paragraphs: [
+            "Se non sei mai entrato in un teatro lirico, l'Elisir d'Amore è il titolo perfetto per cominciare. La trama è leggera e immediatamente comprensibile (chi cerca di conquistare chi, malintesi che si risolvono nel finale), la musica di Donizetti è cantabile, le arie più famose ('Una furtiva lagrima' su tutte) hanno la qualità di restare in testa anche a chi non ha mai ascoltato opera lirica.",
+          ],
+        },
+        {
+          heading: "Quale replica scegliere",
+          paragraphs: [
+            "Le tre date hanno orari diversi: venerdì 18 settembre alle 20:30 è la sera classica, sabato 19 alle 18:00 è la pomeridiana extended (si può cenare dopo a Spoleto), domenica 20 alle 17:00 è la pomeridiana classica con possibilità di rientro in giornata. Se vieni da Roma, la domenica 17:00 è la formula più comoda per chi non vuole fermarsi in città.",
+          ],
+        },
+      ],
+      faq: [
+        {
+          question: "Quanto costano i biglietti?",
+          answer:
+            "I prezzi partono da €21,50 finali al checkout su Ticket Italia, commissioni amministrative incluse. La fascia tariffaria completa varia per settore (platea, palchi, galleria): verifica la disponibilità della replica scelta sulla pagina evento.",
+        },
+        {
+          question: "Quante repliche ci sono?",
+          answer:
+            "Tre repliche al Teatro Nuovo G.C. Menotti di Spoleto: venerdì 18 settembre 2026 alle 20:30, sabato 19 alle 18:00, domenica 20 alle 17:00.",
+        },
+        {
+          question: "Cos'è la Stagione Lirica Sperimentale A. Belli?",
+          answer:
+            "È una delle stagioni liriche italiane più longeve, giunta nel 2026 all'80ª edizione. Mette in scena produzioni con giovani cantanti che hanno superato un concorso nazionale, spesso con regie sperimentali. È un riferimento per scoprire nuove voci del panorama operistico italiano.",
+        },
+        {
+          question: "Dove parcheggiare a Spoleto?",
+          answer:
+            "I parcheggi consigliati sono la Posterna (10 min a piedi dal teatro, con tapis roulant sotterraneo), Spoletosfera (coperto, 15 min a piedi) e Pian di Boccio (gratuito nel weekend, 20 min a piedi). Tutti collegati al centro storico.",
+        },
+        {
+          question: "Si può usare Carta Cultura?",
+          answer:
+            "Le produzioni liriche sono in genere ammesse al bonus Carta Cultura/Carta del Merito. Verifica direttamente al checkout su Ticket Italia se la singola data è compatibile e segui la procedura dal portale ufficiale del bonus.",
+        },
+      ],
+      cta: {
+        title: "Acquista i biglietti per L'Elisir d'Amore al Teatro Nuovo di Spoleto",
+        text:
+          "Tre repliche dal 18 al 20 settembre 2026 al Teatro Nuovo G.C. Menotti di Spoleto, 80ª Stagione Lirica Sperimentale A. Belli. Biglietti da €21,50 finali su Ticket Italia.",
+        label: "Acquista su Ticket Italia",
+        href: "https://ticketitalia.com/l-elisir-d-amore-teatro-nuovo-spoleto-dal-18-al-20-settembre-2026",
+      },
+    },
+  },
 ];
 
 export const publishedArticles = articles
