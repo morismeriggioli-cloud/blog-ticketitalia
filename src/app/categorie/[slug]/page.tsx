@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getCategoryBySlug, getCategoryPath } from "@/data/blog";
 import { categories } from "@/data/blog";
@@ -8,6 +9,18 @@ type LegacyCategoryPageProps = {
 
 export function generateStaticParams() {
   return categories.map((category) => ({ slug: category.slug }));
+}
+
+export async function generateMetadata({ params }: LegacyCategoryPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const category = getCategoryBySlug(slug);
+  return {
+    title: category ? `${category.name} — redirect` : "Redirect",
+    robots: { index: false, follow: true },
+    alternates: {
+      canonical: category ? getCategoryPath(category.slug) : "/categorie",
+    },
+  };
 }
 
 export default async function LegacyCategoryPage({ params }: LegacyCategoryPageProps) {

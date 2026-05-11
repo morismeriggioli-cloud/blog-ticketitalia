@@ -6,6 +6,14 @@ import { categories, getArticlesByCategory, getCategoryPath, getSubcategoryPath 
 export const metadata: Metadata = {
   title: "Categorie",
   description: "Esplora le categorie editoriali del blog Ticket Italia: concerti, teatro, festival, sport, nightlife, guide e news.",
+  alternates: {
+    canonical: "/categorie",
+  },
+  openGraph: {
+    title: "Categorie | Ticket Italia Blog",
+    description: "Esplora le categorie editoriali del blog Ticket Italia.",
+    url: "/categorie",
+  },
 };
 
 export default function CategoriesPage() {

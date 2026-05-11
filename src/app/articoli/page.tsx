@@ -9,9 +9,13 @@ export const metadata: Metadata = {
   title: "Articoli",
   description:
     "Archivio articoli Ticket Italia su concerti, festival, teatro, sport, family e nightlife.",
+  alternates: {
+    canonical: "/articoli",
+  },
   openGraph: {
     title: "Articoli | Ticket Italia Blog",
     description: "Guide e storie per scegliere i migliori eventi live in Italia.",
+    url: "/articoli",
   },
 };
 

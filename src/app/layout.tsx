@@ -26,12 +26,19 @@ export const metadata: Metadata = {
     siteName: "Ticket Italia Blog",
     locale: "it_IT",
     type: "website",
+    images: [
+      {
+        url: "/logo%20ticket%20italia%20(3).png",
+        alt: "Ticket Italia Blog",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Ticket Italia Blog",
     description:
       "Concerti, festival, teatro, sport e nightlife: scopri cosa vivere dal vivo.",
+    images: ["/logo%20ticket%20italia%20(3).png"],
   },
 };
 

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { HomeEventCategories } from "@/components/home/HomeEventCategories";
 import { HomeFeaturedArticles } from "@/components/home/HomeFeaturedArticles";
 import { HomeFinalCta } from "@/components/home/HomeFinalCta";
@@ -6,6 +7,15 @@ import { HomeHeroWow } from "@/components/home/HomeHeroWow";
 import { HomeTrends } from "@/components/home/HomeTrends";
 import { NewsletterSection } from "@/components/sections/NewsletterSection";
 import { getFeaturedArticles, getSpotlightArticle, publishedArticles } from "@/data/blog";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    url: "/",
+  },
+};
 
 export default function Home() {
   const spotlight = getSpotlightArticle();
