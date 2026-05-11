@@ -2272,9 +2272,50 @@ export const articles: Article[] = [
         ],
         bullets: [
           "Tipo: parco urbano di 3 ettari con teatro e arena all'aperto",
+          "Quartiere: Santa Lucia / Pian di Massiano, zona ovest di Perugia",
           "Accessibilità: percorso pedonale di 1.200 m senza barriere architettoniche",
           "Stagione: format estivi di comedy, concerti e incontri culturali",
-          "Indirizzo e parcheggi: consulta la pagina venue su Ticket Italia per la viabilità del giorno dell'evento",
+        ],
+        nearbyParking: [
+          {
+            name: "Parcheggio Pian di Massiano",
+            distanceOnFoot: "4 min a piedi",
+            type: "gratuito",
+            notes: "Park & ride principale di Perugia, capienza molto ampia, collegato al Mini Metrò che porta in centro storico",
+            mapsUrl: "https://www.google.com/maps/search/Parcheggio+Pian+di+Massiano+Perugia",
+          },
+          {
+            name: "Piazzale Nando Martellini",
+            distanceOnFoot: "6 min a piedi",
+            type: "gratuito",
+            mapsUrl: "https://www.google.com/maps/search/Piazzale+Nando+Martellini+Perugia",
+          },
+          {
+            name: "Piazzale dell'Imbattibilità",
+            distanceOnFoot: "7 min a piedi",
+            type: "gratuito",
+            mapsUrl: "https://www.google.com/maps/search/Piazzale+dell%27Imbattibilita+Perugia",
+          },
+        ],
+        nearbyHotels: [
+          {
+            name: "Al Massiano",
+            distanceOnFoot: "8 min a piedi",
+            priceRange: "€",
+            bookingUrl: "https://www.google.com/maps/search/Hotel+Al+Massiano+Perugia",
+          },
+          {
+            name: "Il Cigno",
+            distanceOnFoot: "16 min a piedi (o ~5 min in auto)",
+            priceRange: "€€",
+            bookingUrl: "https://www.google.com/maps/search/Il+Cigno+Hotel+Perugia",
+          },
+          {
+            name: "Hotel Giò Wine & Jazz Area",
+            distanceOnFoot: "16-17 min a piedi (o ~7 min in auto)",
+            priceRange: "€€€",
+            bookingUrl: "https://www.google.com/maps/search/Hotel+Gio+Perugia",
+          },
         ],
       },
       liveExperience: {
@@ -2440,10 +2481,53 @@ export const articles: Article[] = [
           "Santa Maria degli Angeli è la frazione di Assisi che sorge ai piedi del colle, attorno alla Basilica di Santa Maria degli Angeli. Il Teatro Lyrick è raggiungibile facilmente in auto dalla SS75 (uscita Santa Maria degli Angeli) ed è collegato in pochi minuti con il centro storico di Assisi via bus o auto.",
         ],
         bullets: [
+          "Indirizzo: Viale Gabriele D'Annunzio, 06081 Santa Maria degli Angeli (PG)",
           "Tipo: teatro polifunzionale, configurazione frontale a tre settori",
           "Stagione 2026: comedy, concerti, musical e prosa",
-          "Accesso: SS75 uscita Santa Maria degli Angeli",
-          "Per parcheggi e info viabilità: consulta la pagina venue su Ticket Italia",
+          "Accesso: SS75 uscita Santa Maria degli Angeli; stazione FS Assisi-S.M. degli Angeli a pochi minuti",
+        ],
+        nearbyParking: [
+          {
+            name: "Piazzale Guido Donegani",
+            distanceOnFoot: "4 min a piedi",
+            type: "a pagamento",
+            notes: "Tariffa da verificare in loco — parcheggio urbano in zona, il più vicino al teatro",
+            mapsUrl: "https://www.google.com/maps/search/Piazzale+Guido+Donegani+Santa+Maria+degli+Angeli",
+          },
+          {
+            name: "Parcheggio Stazione (Santa Maria degli Angeli)",
+            distanceOnFoot: "5 min a piedi",
+            type: "a pagamento",
+            notes: "Adiacente alla stazione FS Assisi-S.M. degli Angeli, comodo per chi arriva in treno",
+            mapsUrl: "https://www.google.com/maps/search/Parcheggio+Stazione+Santa+Maria+degli+Angeli",
+          },
+          {
+            name: "Piazzale Tarpani",
+            distanceOnFoot: "17 min a piedi (o ~3 min in auto)",
+            type: "gratuito",
+            notes: "Alternativa gratuita più distante, utile se i parcheggi più vicini sono pieni",
+            mapsUrl: "https://www.google.com/maps/search/Piazzale+Tarpani+Santa+Maria+degli+Angeli",
+          },
+        ],
+        nearbyHotels: [
+          {
+            name: "Domus Pacis",
+            distanceOnFoot: "9 min a piedi",
+            priceRange: "€€",
+            bookingUrl: "https://www.domuspacis.it/",
+          },
+          {
+            name: "Hotel Le Stuoie",
+            distanceOnFoot: "10 min a piedi",
+            priceRange: "€€",
+            bookingUrl: "https://www.google.com/maps/search/Hotel+Le+Stuoie+Santa+Maria+degli+Angeli",
+          },
+          {
+            name: "Hotel Antonelli",
+            distanceOnFoot: "11 min a piedi",
+            priceRange: "€€",
+            bookingUrl: "https://www.assisihotelantonelli.it/",
+          },
         ],
       },
       liveExperience: {
@@ -2822,8 +2906,44 @@ export const articles: Article[] = [
         bullets: [
           "Tipo: villa monumentale cinquecentesca, residenza d'epoca",
           "Funzione: luogo museale, sede eventi ed esposizioni temporanee",
-          "Posizione: Colle del Cardinale, Perugia",
-          "Per indirizzo esatto e parcheggi: consulta la pagina venue su Ticket Italia",
+          "Indirizzo: Strada Provinciale 171 di Colle del Cardinale, 06133 Colle Umberto (PG)",
+          "Contesto: zona rurale collinare a nord di Perugia, raggiungibile in auto",
+        ],
+        nearbyParking: [
+          {
+            name: "Parcheggi temporanei dell'evento (lungo SP 171)",
+            distanceOnFoot: "0-5 min a piedi",
+            type: "gratuito",
+            notes: "Aree di parcheggio allestite dall'organizzazione del Flower Show nei giorni della manifestazione — segui le indicazioni sulla SP 171 e i cartelli dell'evento",
+            mapsUrl: "https://www.google.com/maps/search/Villa+del+Colle+del+Cardinale+Perugia",
+          },
+          {
+            name: "Posteggi lungo la SP 171 di Colle del Cardinale",
+            distanceOnFoot: "5-15 min a piedi a seconda del punto",
+            type: "gratuito",
+            notes: "Parcheggi su strada nelle vicinanze della villa, in zona rurale — verifica i divieti e i giorni della manifestazione",
+            mapsUrl: "https://www.google.com/maps/search/SP+171+Colle+del+Cardinale+Perugia",
+          },
+        ],
+        nearbyHotels: [
+          {
+            name: "Agriturismo Casale dei Dotti",
+            distanceOnFoot: "~17 min a piedi (consigliata auto, ~3 min)",
+            priceRange: "€€",
+            bookingUrl: "https://www.google.com/maps/search/Casale+dei+Dotti+Colle+Umberto+Perugia",
+          },
+          {
+            name: "Agriturismo Casali del Toppello",
+            distanceOnFoot: "~5 min in auto",
+            priceRange: "€€",
+            bookingUrl: "https://www.casalideltoppello.it",
+          },
+          {
+            name: "Hotel Faina",
+            distanceOnFoot: "~5 min in auto",
+            priceRange: "€€",
+            bookingUrl: "https://www.google.com/maps/search/Hotel+Faina+Perugia",
+          },
         ],
       },
       liveExperience: {
