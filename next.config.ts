@@ -1,10 +1,10 @@
 import type { NextConfig } from "next";
 
-// IMPORTANT — `output: "export"` produce HTML statico: la funzione `headers()` qui
-// sotto NON viene applicata in produzione (Next non gira un server). Gli header di
-// sicurezza reali sono serviti dal layer hosting tramite `vercel.json`.
-// `headers()` resta utile solo per `next dev` e per documentare l'intento, così che
-// passando a server-mode (o a `next start`) la stessa policy sia già pronta.
+// Modalità server (non più `output: "export"`): serve la API route /api/subscribe
+// che parla con Brevo tenendo la chiave lato server. Le pagine del blog restano
+// pre-renderizzate (tutte usano generateStaticParams), quindi per l'utente nulla
+// cambia in termini di performance/SEO. `headers()` qui sotto ora viene applicato
+// davvero; `vercel.json` resta come ridondanza al layer hosting.
 const securityHeaders = [
   {
     key: "Strict-Transport-Security",
@@ -38,14 +38,12 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
-  output: "export",
   trailingSlash: true,
   images: {
-    // `unoptimized: true` è obbligatorio con `output: "export"`: l'optimizer Next
-    // richiede un server. Con questa flag `remotePatterns` non è applicato in
-    // produzione (gli URL esterni vengono passati al browser così come sono),
-    // quindi la whitelist non vincola la sicurezza — la difesa è la CSP
-    // `img-src 'self' https: data:` servita da vercel.json.
+    // `unoptimized: true`: gli articoli usano decine di host esterni (ticketitalia,
+    // siti hotel, ecc.) che non vale la pena enumerare in `remotePatterns`. Le
+    // immagini esterne passano al browser così come sono; la difesa è la CSP
+    // `img-src 'self' https: data:` (vercel.json + headers() qui sotto).
     unoptimized: true,
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com" },
